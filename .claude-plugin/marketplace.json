@@ -1,0 +1,15 @@
+{
+  "name": "afm-ai-toolkit",
+  "description": "Skills de arquitetura, código, DDD, design system e produto.",
+  "owner": {
+    "name": "Antonio Mellies"
+  },
+  "plugins": [
+    {
+      "name": "afm-ai-toolkit",
+      "source": "./",
+      "description": "Biblioteca de skills agnóstica de ferramenta: Clean Architecture, Clean Code, Architecture Hard Parts, DDD, microsserviços em produção, Material Design 3 e Product Discovery.",
+      "version": "1.0.0"
+    }
+  ]
+}

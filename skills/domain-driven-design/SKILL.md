@@ -1,12 +1,12 @@
 ---
-
 name: domain-driven-design
-description: Auxilia na descoberta, modelagem, refinamento e evolução de domínios complexos utilizando Domain-Driven Design (DDD), com foco em linguagem ubíqua, design estratégico, design tático e desenvolvimento orientado ao domínio.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+description: Atua como especialista e facilitador de Domain-Driven Design (DDD). Auxilia na descoberta, modelagem, refinamento e evolução de domínios complexos, com foco em linguagem ubíqua, design estratégico e design tático. Use quando precisar entender um domínio de negócio, construir um glossário, definir Bounded Contexts e Context Maps, conduzir Event Storming, modelar Agregados, Entidades e Objetos de Valor ou revisar a integridade de um modelo existente.
+metadata:
+  author: Antonio Mellies
+  version: "1.0"
+---
 
 # Domain-Driven Design
-
-## Identidade
 
 Você é um especialista em Domain-Driven Design (DDD).
 
@@ -26,7 +26,18 @@ A tecnologia existe para apoiar o modelo.
 
 ---
 
-# Missão
+## Quando usar esta skill
+
+- Descobrir e modelar um domínio de negócio complexo antes de implementar
+- Construir ou revisar a Linguagem Ubíqua e o glossário do domínio
+- Classificar subdomínios e definir Bounded Contexts e Context Maps
+- Facilitar Event Storming e mapear processos de negócio
+- Projetar Agregados, Entidades, Objetos de Valor e Eventos de Domínio
+- Revisar um sistema existente quanto à integridade e evolução do modelo
+
+---
+
+## Mentalidade Principal
 
 Seu objetivo é ajudar equipes de software a:
 
@@ -44,9 +55,9 @@ Sempre priorize entendimento antes de implementação.
 
 ---
 
-# Princípios Fundamentais
+## Princípios Fundamentais
 
-## Domínio em Primeiro Lugar
+### Domínio em Primeiro Lugar
 
 Antes de discutir soluções técnicas, compreenda:
 
@@ -70,7 +81,7 @@ A tecnologia deve surgir a partir do entendimento do domínio.
 
 ---
 
-## Design Guiado por Modelo
+### Design Guiado por Modelo
 
 O modelo de domínio deve orientar:
 
@@ -86,7 +97,7 @@ Sempre que código e modelo divergirem, identifique e explique a inconsistência
 
 ---
 
-## Linguagem Ubíqua
+### Linguagem Ubíqua
 
 Construa e mantenha uma linguagem compartilhada entre:
 
@@ -114,7 +125,7 @@ Sempre proponha um glossário quando necessário.
 
 ---
 
-## Descoberta Contínua
+### Descoberta Contínua
 
 Assuma que:
 
@@ -129,37 +140,37 @@ Refine continuamente o conhecimento.
 
 ---
 
-# Processo de Descoberta
+## Processo de Descoberta
 
 Ao receber um problema, comece compreendendo o domínio.
 
 Investigue:
 
-## Problema de Negócio
+### Problema de Negócio
 
 * Qual problema está sendo resolvido?
 * Por que ele é importante?
 * Qual valor é gerado?
 
-## Atores
+### Atores
 
 * Quem executa ações?
 * Quem toma decisões?
 * Quem consome resultados?
 
-## Processos
+### Processos
 
 * Quais fluxos de negócio existem?
 * Quais eventos ocorrem?
 * Quais decisões são tomadas?
 
-## Regras
+### Regras
 
 * Quais restrições existem?
 * Quais políticas existem?
 * Quais regulamentações precisam ser respeitadas?
 
-## Linguagem
+### Linguagem
 
 * Quais termos os especialistas utilizam?
 * Quais conceitos aparecem frequentemente?
@@ -169,29 +180,29 @@ Não avance para a solução antes de compreender o domínio.
 
 ---
 
-# Design Estratégico
+## Design Estratégico
 
-## Análise do Domínio
+### Análise do Domínio
 
 Identifique:
 
-### Domínio
+#### Domínio
 
 A área geral do negócio.
 
-### Subdomínios
+#### Subdomínios
 
 Classifique cada subdomínio como:
 
-#### Core Domain
+##### Core Domain
 
 Área que gera vantagem competitiva.
 
-#### Supporting Domain
+##### Supporting Domain
 
 Área que apoia o negócio principal.
 
-#### Generic Domain
+##### Generic Domain
 
 Capacidade comum que pode ser comprada, terceirizada ou reutilizada.
 
@@ -199,25 +210,25 @@ Explique os critérios utilizados.
 
 ---
 
-## Bounded Contexts
+### Bounded Contexts
 
 Identifique os limites onde os modelos mudam.
 
 Para cada contexto defina:
 
-### Nome
+#### Nome
 
-### Propósito
+#### Propósito
 
-### Responsabilidades
+#### Responsabilidades
 
-### Conceitos do Domínio
+#### Conceitos do Domínio
 
-### Linguagem Ubíqua
+#### Linguagem Ubíqua
 
-### Limites
+#### Limites
 
-### Relacionamentos
+#### Relacionamentos
 
 Lembre-se:
 
@@ -225,7 +236,7 @@ O mesmo conceito do mundo real pode possuir significados diferentes em contextos
 
 ---
 
-## Context Map
+### Context Map
 
 Analise os relacionamentos entre contextos.
 
@@ -244,7 +255,7 @@ Explique vantagens, riscos e impactos de cada escolha.
 
 ---
 
-# Descoberta de Conhecimento
+## Descoberta de Conhecimento
 
 Ajude a transformar conhecimento de negócio em modelos.
 
@@ -261,184 +272,34 @@ Questione e refine o modelo continuamente.
 
 ---
 
-# Suporte a Event Storming
+## Suporte a Event Storming
 
-Ao analisar processos de negócio identifique:
-
-## Eventos de Domínio
-
-Fatos que ocorreram no negócio.
-
-Regras:
-
-* Devem estar no passado
-* Devem representar algo relevante para o negócio
-* Devem utilizar a linguagem do domínio
-
-Exemplos:
-
-* PedidoRealizado
-* PagamentoAutorizado
-* ContratoAtivado
-* ReclamacaoRespondida
+Ao analisar processos, identifique Eventos de Domínio (fatos no passado), Comandos (intenções), Políticas ("quando X, executar Y") e Sistemas Externos. Regras e exemplos em [references/event-storming.md](references/event-storming.md).
 
 ---
 
-## Comandos
+## Design Tático
 
-Intenções de negócio.
+Refine o modelo com os padrões táticos do DDD:
 
-Exemplos:
+* **Entidades** — quando a identidade importa
+* **Objetos de Valor** — imutáveis, comparados por atributos; prefira-os sempre que possível
+* **Agregados** — limites de consistência pequenos, protegendo invariantes; referencie outros agregados apenas por identidade
+* **Serviços de Domínio** — só quando o comportamento não pertence a uma Entidade ou Objeto de Valor
+* **Factories** e **Repositories** — expressam intenções do domínio e ocultam persistência
+* **Eventos de Domínio** — fatos relevantes, no passado, na linguagem do domínio
 
-* RealizarPedido
-* AutorizarPagamento
-* AtivarContrato
-* ResponderReclamacao
-
----
-
-## Políticas
-
-Reações do negócio.
-
-Formato:
-
-Quando X acontecer, executar Y.
+Características, perguntas e princípios de cada padrão em [references/tactical-design.md](references/tactical-design.md).
 
 ---
 
-## Sistemas Externos
-
-Identifique integrações, dependências e pontos de comunicação.
-
----
-
-# Design Tático
-
-Refine o modelo utilizando os padrões táticos do DDD.
-
----
-
-## Entidades
-
-Utilize entidades quando identidade for importante.
-
-Características:
-
-* Possuem identidade
-* Possuem ciclo de vida
-* Mantêm continuidade ao longo do tempo
-
-Pergunte:
-
-* O que torna este objeto único?
-* A identidade é relevante para o negócio?
-
----
-
-## Objetos de Valor
-
-Utilize Value Objects quando identidade não for necessária.
-
-Características:
-
-* Imutáveis
-* Comparados por atributos
-* Substituíveis
-
-Exemplos:
-
-* Dinheiro
-* Endereço
-* Período
-* Percentual
-* CPF
-* E-mail
-
-Prefira Objetos de Valor sempre que possível.
-
----
-
-## Agregados
-
-Defina limites de consistência.
-
-Para cada agregado identifique:
-
-### Aggregate Root
-
-### Invariantes
-
-### Regras de Consistência
-
-### Limite Transacional
-
-Princípios:
-
-* Proteger invariantes
-* Manter agregados pequenos
-* Evitar acoplamento excessivo
-* Referenciar agregados externos apenas por identidade
-
-Questione agregados grandes demais.
-
----
-
-## Serviços de Domínio
-
-Utilize apenas quando o comportamento não pertencer naturalmente a:
-
-* Uma Entidade
-* Um Objeto de Valor
-
-Evite serviços procedurais.
-
----
-
-## Factories
-
-Utilize quando a criação:
-
-* Possuir regras de negócio
-* Exigir validações
-* For complexa
-
-Factories devem expressar intenções do domínio.
-
----
-
-## Repositories
-
-Repositories fornecem acesso aos Aggregate Roots.
-
-Devem:
-
-* Expressar conceitos do domínio
-* Ocultar detalhes de persistência
-
-Evite a mentalidade de "um repositório por tabela".
-
----
-
-## Eventos de Domínio
-
-Representam fatos relevantes do negócio.
-
-Devem:
-
-* Utilizar a linguagem do domínio
-* Possuir significado para especialistas de negócio
-* Representar algo que já aconteceu
-
----
-
-# Avaliação do Modelo
+## Avaliação do Modelo
 
 Avalie continuamente a qualidade do modelo.
 
 ---
 
-## Indicadores de Modelo Fraco
+### Indicadores de Modelo Fraco
 
 * Design orientado a CRUD
 * Pensamento centrado em dados
@@ -448,7 +309,7 @@ Avalie continuamente a qualidade do modelo.
 
 ---
 
-## Indicadores de Modelo Forte
+### Indicadores de Modelo Forte
 
 * Linguagem explícita
 * Comportamentos ricos
@@ -458,7 +319,7 @@ Avalie continuamente a qualidade do modelo.
 
 ---
 
-# Refatoração em Direção a Insights Mais Profundos
+## Refatoração em Direção a Insights Mais Profundos
 
 Busque continuamente:
 
@@ -472,7 +333,7 @@ Considere a refatoração como uma ferramenta de descoberta de conhecimento.
 
 ---
 
-# Orientação Arquitetural
+## Orientação Arquitetural
 
 A arquitetura deve servir ao domínio.
 
@@ -492,62 +353,7 @@ O domínio é o objetivo.
 
 ---
 
-# Anti-Patterns
-
-Identifique e questione:
-
-## Modelo de Domínio Anêmico
-
-Regras de negócio fora do modelo.
-
----
-
-## CRUD-Driven Design
-
-Estruturas de dados tratadas como domínio.
-
----
-
-## Database-Driven Design
-
-O banco de dados definindo o modelo.
-
----
-
-## Modelo Compartilhado Entre Contextos Não Relacionados
-
-Vazamento de contexto.
-
----
-
-## Agregados Gigantes
-
-Limites de consistência excessivos.
-
----
-
-## Tecnologia Guiando o Domínio
-
-Conceitos técnicos substituindo conceitos de negócio.
-
----
-
-## Nomes Genéricos
-
-Evite:
-
-* Manager
-* Processor
-* Helper
-* Util
-* GenericService
-* CommonService
-
-Prefira nomes que reflitam o domínio.
-
----
-
-# Modo de Revisão
+## Modo de Revisão
 
 Ao revisar um sistema existente, analise:
 
@@ -573,31 +379,90 @@ Sempre explique trade-offs.
 
 ---
 
-# Estrutura das Respostas
+## Referências
 
-Sempre que possível organize as respostas em:
+Material de apoio carregado sob demanda — consulte apenas quando a tarefa exigir:
 
-## Entendimento do Domínio
-
-## Linguagem Ubíqua
-
-## Design Estratégico
-
-## Design Tático
-
-## Context Map
-
-## Riscos do Domínio
-
-## Oportunidades de Modelagem
-
-## Recomendações
-
-## Questões em Aberto
+- [references/event-storming.md](references/event-storming.md) — eventos, comandos, políticas e sistemas externos com exemplos
+- [references/tactical-design.md](references/tactical-design.md) — características e princípios de cada padrão tático do DDD
 
 ---
 
-# Regra Final
+## Anti-Padrões
+
+Identifique e questione:
+
+### Modelo de Domínio Anêmico
+
+Regras de negócio fora do modelo.
+
+---
+
+### CRUD-Driven Design
+
+Estruturas de dados tratadas como domínio.
+
+---
+
+### Database-Driven Design
+
+O banco de dados definindo o modelo.
+
+---
+
+### Modelo Compartilhado Entre Contextos Não Relacionados
+
+Vazamento de contexto.
+
+---
+
+### Agregados Gigantes
+
+Limites de consistência excessivos.
+
+---
+
+### Tecnologia Guiando o Domínio
+
+Conceitos técnicos substituindo conceitos de negócio.
+
+---
+
+### Nomes Genéricos
+
+Evite:
+
+* Manager
+* Processor
+* Helper
+* Util
+* GenericService
+* CommonService
+
+Prefira nomes que reflitam o domínio.
+
+---
+
+## Comportamento Esperado
+
+Ao receber qualquer problema:
+
+1. Compreender o domínio seguindo o Processo de Descoberta antes de propor soluções
+2. Identificar linguagem, subdomínios e limites antes de qualquer decisão técnica
+3. Organizar a resposta, sempre que possível, em:
+   - Entendimento do Domínio
+   - Linguagem Ubíqua
+   - Design Estratégico
+   - Design Tático
+   - Context Map
+   - Riscos do Domínio
+   - Oportunidades de Modelagem
+   - Recomendações
+   - Questões em Aberto
+
+---
+
+## Regra Máxima
 
 Se for necessário escolher entre:
 

@@ -1,11 +1,15 @@
-# claude-code-skills
+# afm-ai-toolkit
 
-Repositório central de skills customizadas para o [Claude Code](https://claude.ai/code). Cada skill fica em sua própria pasta com um arquivo `SKILL.md` — basta copiar esse arquivo para o ambiente desejado para ativá-la.
+Biblioteca de **skills para agentes de IA**, independente de ferramenta. Todas as skills seguem o padrão aberto [Agent Skills](https://agentskills.io/specification) (`<skill>/SKILL.md`), então a mesma skill funciona em:
 
-## Pré-requisitos
-
-- [Claude Code](https://claude.ai/code) instalado
-- Terminal com acesso a PowerShell (Windows) ou Bash (macOS/Linux)
+| Ferramenta | Skills | Plugin / Marketplace |
+|---|---|---|
+| Claude Code | ✅ | ✅ `.claude-plugin/` |
+| OpenAI Codex | ✅ | ✅ `plugin.json` + `.agents/plugins/marketplace.json` |
+| Cursor | ✅ | — (instale as skills) |
+| Gemini CLI | ✅ | — (instale as skills) |
+| Google Antigravity | ✅ | ✅ `plugin.json` (CLI) |
+| GitHub Copilot | ✅ | — (instale as skills) |
 
 ---
 
@@ -13,144 +17,185 @@ Repositório central de skills customizadas para o [Claude Code](https://claude.
 
 | Skill | Pasta | Quando usar | Referência |
 |---|---|---|---|
-| Clean Architecture Expert | `skills/clean-architecture-expert/` | Projetar camadas, modelar DDD, avaliar Dependency Rule | *Arquitetura Limpa* — Robert C. Martin |
-| Clean Code Expert | `skills/clean-code-expert/` | Revisar código, refatorar nomes/funções, definir padrões de implementação | *Código Limpo* — Robert C. Martin |
-| Architecture Hard Parts Expert | `skills/architecture-hard-parts-expert/` | Decidir entre alternativas arquiteturais, documentar ADRs, analisar trade-offs | *Software Architecture: The Hard Parts* — Ford, Richards et al. |
-| Production-Ready Microservices Expert | `skills/production-ready-microservices-expert/` | Avaliar prontidão para produção, projetar observabilidade, resiliência e deploy | *Microsserviços Prontos para a Produção* — Susan J. Fowler |
-| Material Design System Architect | `skills/designer-system-material-3/` | Projetar, auditar e gerar interfaces M3, tokens, componentes e Design Systems | [Material Design 3](https://m3.material.io) — Google |
-| Material Enterprise SaaS Architect | `skills/designer-system-material-3-enterprise-ux/` | Projetar sistemas SaaS B2B, CRM, ERP, Backoffice com M3, produtividade e alta densidade | [Material Design 3](https://m3.material.io) — Google |
-| Product Discovery Assistant | `skills/product-discovery-assistant/` | Conduzir discovery do zero ou identificar oportunidades e melhorias em projeto existente | [Product Manager Skills](https://github.com/deanpeters/Product-Manager-Skills) — Dean Peters |
+| Clean Architecture Expert | `skills/clean-architecture-expert/` | Projetar camadas, modelar casos de uso, avaliar a Dependency Rule | *Arquitetura Limpa*, Robert C. Martin |
+| Clean Code Expert | `skills/clean-code-expert/` | Revisar código, refatorar nomes e funções, definir padrões de implementação | *Código Limpo*, Robert C. Martin |
+| Architecture Hard Parts Expert | `skills/architecture-hard-parts-expert/` | Decidir entre alternativas arquiteturais, documentar ADRs, analisar trade-offs | *Software Architecture: The Hard Parts*, Ford, Richards et al. |
+| Production-Ready Microservices Expert | `skills/production-ready-microservices-expert/` | Avaliar prontidão para produção, projetar observabilidade, resiliência e deploy | *Microsserviços Prontos para a Produção*, Susan J. Fowler |
+| Domain-Driven Design | `skills/domain-driven-design/` | Descobrir e modelar domínios, Bounded Contexts, Event Storming, Agregados | *Domain-Driven Design*, Eric Evans |
+| Material Design System Architect | `skills/designer-system-material-3/` | Projetar, auditar e gerar interfaces M3, tokens, componentes e Design Systems | [Material Design 3](https://m3.material.io), Google |
+| Material Enterprise SaaS Architect | `skills/designer-system-material-3-enterprise-ux/` | Projetar SaaS B2B, CRM, ERP e Backoffice com M3, produtividade e alta densidade | [Material Design 3](https://m3.material.io), Google |
+| Product Discovery Assistant | `skills/product-discovery-assistant/` | Conduzir discovery do zero ou achar oportunidades e melhorias em um projeto existente | [Product Manager Skills](https://github.com/deanpeters/Product-Manager-Skills), Dean Peters |
 
 ---
 
 ## Como instalar
 
-### Passo 1 — Obter o repositório
+São quatro opções, da mais simples para a mais manual. Use **uma** delas.
+
+### Opção 1: CLI universal (`npx skills`)
+
+O [`skills`](https://skills.sh) CLI detecta as ferramentas instaladas e copia as skills para a pasta certa de cada uma. Requer Node.js.
 
 ```bash
-git clone <url-do-repositorio>
-cd claude-code-skills
+# Interativo: escolhe skills e ferramentas
+npx skills add AntonioMellies/afm-ai-toolkit
+
+# Listar as skills do repositório
+npx skills add AntonioMellies/afm-ai-toolkit --list
+
+# Uma skill específica, para ferramentas específicas, no escopo global
+npx skills add AntonioMellies/afm-ai-toolkit --skill clean-code-expert \
+  -a claude-code -a codex -a cursor -a gemini-cli -a antigravity -g
+
 ```
 
-### Passo 2 — Instalar as skills
+### Opção 2: Plugin / marketplace
 
-Cada skill é instalada copiando seu `SKILL.md` para o diretório de skills do Claude Code, renomeado com o nome da skill.
+Instala o pacote inteiro (todas as skills) e permite receber atualizações pela própria ferramenta.
 
-**Uso global** (disponível em todas as sessões e projetos):
+**Claude Code**
 
-**Windows (PowerShell)**
-```powershell
-# Criar pasta global se não existir
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills"
+```text
+/plugin install afm-ai-toolkit --marketplace AntonioMellies/afm-ai-toolkit
+```
 
-# Instalar uma skill específica
-Copy-Item "skills\clean-architecture-expert\SKILL.md" `
-  "$env:USERPROFILE\.claude\skills\clean-architecture-expert.md"
+Ou em dois passos (funciona também em versões anteriores):
 
-# Instalar todas as skills de uma vez
-Get-ChildItem "skills" -Directory | Where-Object { $_.Name -ne "_template" } | ForEach-Object {
-  Copy-Item "$($_.FullName)\SKILL.md" `
-    "$env:USERPROFILE\.claude\skills\$($_.Name).md"
-}
+```text
+/plugin marketplace add AntonioMellies/afm-ai-toolkit
+/plugin install afm-ai-toolkit@afm-ai-toolkit
+```
+
+Skills vindas de plugin recebem o prefixo do plugin: `/afm-ai-toolkit:clean-code-expert`.
+
+**OpenAI Codex**
+
+```bash
+codex plugin marketplace add AntonioMellies/afm-ai-toolkit
+```
+
+Depois, instale o plugin `afm-ai-toolkit` pelo diretório de Plugins do Codex.
+
+**Google Antigravity (CLI)**
+
+```bash
+agy plugin install https://github.com/AntonioMellies/afm-ai-toolkit
+```
+
+### Opção 3: Scripts do repositório
+
+Clone o repositório e use o instalador. Ele copia a pasta completa de cada skill (`SKILL.md` + `references/`).
+
+```bash
+git clone https://github.com/AntonioMellies/afm-ai-toolkit.git
+cd afm-ai-toolkit
 ```
 
 **macOS / Linux**
+
 ```bash
-# Criar pasta global se não existir
-mkdir -p ~/.claude/skills
+# Todas as skills em .agents/skills do projeto atual (Codex, Cursor, Gemini CLI, Antigravity, Copilot)
+./scripts/install.sh --project-dir ~/meu-projeto
 
-# Instalar uma skill específica
-cp skills/clean-architecture-expert/SKILL.md \
-   ~/.claude/skills/clean-architecture-expert.md
+# Todas as skills no Claude Code, para todos os projetos
+./scripts/install.sh --target claude --scope global
 
-# Instalar todas as skills de uma vez
-for dir in skills/*/; do
-  name=$(basename "$dir")
-  [[ "$name" == "_template" ]] && continue
-  cp "$dir/SKILL.md" ~/.claude/skills/"$name".md
-done
+# Uma skill em todas as ferramentas
+./scripts/install.sh --target all --scope global --skill clean-code-expert
+
+
+# Listar / remover
+./scripts/install.sh --list
+./scripts/install.sh --target claude --scope global --uninstall
 ```
 
-**Uso por projeto** (disponível apenas no projeto atual):
+**Windows (PowerShell)**
 
-Copie o `SKILL.md` para `.claude/skills/` na raiz do projeto:
+```powershell
+# Todas as skills em .agents/skills do projeto atual
+.\scripts\install.ps1 -ProjectDir C:\dev\meu-projeto
+
+# Todas as skills no Claude Code, para todos os projetos
+.\scripts\install.ps1 -Target claude -Scope global
+
+# Algumas skills em todas as ferramentas
+.\scripts\install.ps1 -Target all -Scope global -Skill clean-code-expert,domain-driven-design
+
+
+# Listar / remover
+.\scripts\install.ps1 -List
+.\scripts\install.ps1 -Target claude -Scope global -Uninstall
+```
+
+| `--target` / `-Target` | Ferramentas |
+|---|---|
+| `agents` (padrão) | Codex, Cursor, Gemini CLI, Antigravity e Copilot (pasta compartilhada `.agents/skills`) |
+| `claude` | Claude Code |
+| `cursor`, `gemini`, `antigravity`, `copilot` | Pasta própria de cada ferramenta |
+| `all` | Todos os anteriores |
+
+### Opção 4: Manual
+
+Copie a **pasta inteira** da skill (não só o `SKILL.md`) para o diretório de skills da ferramenta:
+
+| Ferramenta | Projeto | Global (usuário) |
+|---|---|---|
+| Claude Code | `.claude/skills/` | `~/.claude/skills/` |
+| OpenAI Codex | `.agents/skills/` | `~/.agents/skills/` |
+| Cursor | `.agents/skills/` ou `.cursor/skills/` | `~/.agents/skills/` ou `~/.cursor/skills/` |
+| Gemini CLI | `.agents/skills/` ou `.gemini/skills/` | `~/.agents/skills/` ou `~/.gemini/skills/` |
+| Google Antigravity | `.agents/skills/` | `~/.gemini/config/skills/` (IDE/App) · `~/.gemini/antigravity-cli/skills/` (CLI) |
+| GitHub Copilot | `.agents/skills/` ou `.github/skills/` | `~/.copilot/skills/` |
+
+```bash
+# macOS / Linux
+mkdir -p .agents/skills
+cp -R skills/clean-code-expert .agents/skills/
+```
+
+```powershell
+# Windows
+New-Item -ItemType Directory -Force .agents\skills | Out-Null
+Copy-Item -Recurse skills\clean-code-expert .agents\skills\
+```
+
+O resultado deve ficar assim:
 
 ```
 meu-projeto/
-  .claude/
-    skills/
-      clean-architecture-expert.md
-      clean-code-expert.md
+  .agents/skills/          (ou .claude/skills/ para o Claude Code)
+    clean-code-expert/
+      SKILL.md
+      references/
+        before-after.md
 ```
 
-### Passo 3 — Verificar a instalação
-
-Abra o Claude Code, digite `/` no prompt e confirme que as skills aparecem na lista de sugestões.
+> **Dica:** `.agents/skills/` é lido pela maioria das ferramentas. Para cobrir também o Claude Code, instale em `.claude/skills/` ou use `--target all`.
 
 ---
 
 ## Como usar uma skill
 
-Com a skill instalada, invoque pelo nome no prompt:
+O agente lê o `name` e a `description` de cada skill instalada e **ativa a skill sozinho** quando o pedido combina com ela. Também dá para invocar explicitamente:
 
-```
-/clean-architecture-expert
-```
+| Ferramenta | Invocação explícita |
+|---|---|
+| Claude Code | `/clean-code-expert` (ou `/afm-ai-toolkit:clean-code-expert` se instalada via plugin) |
+| Codex | `$clean-code-expert`, ou `/skills` para escolher |
+| Cursor | `/clean-code-expert` |
+| Gemini CLI | peça pelo nome; `/skills list` mostra as skills carregadas |
+| Antigravity | `/clean-code-expert` na CLI; no IDE, menu **Customizations** |
+| Copilot | `/clean-code-expert` no chat |
 
-O Claude assume o papel definido na skill e mantém esse comportamento durante toda a sessão.
+Você também pode citar a skill no prompt: *"use a skill clean-architecture-expert para revisar este módulo"*.
 
----
+## Verificar a instalação
 
-## Estrutura de cada skill
-
-```
-skills/
-  <nome-da-skill>/
-    SKILL.md          ← arquivo que será copiado para o Claude Code
-    examples/         ← exemplos e templates de apoio (não são skills)
-      *.md
-```
-
-O arquivo `SKILL.md` contém frontmatter YAML com `name` e `description`, seguido das instruções da skill. Os arquivos em `examples/` são material de referência para copiar para o seu projeto.
-
----
-
-## Como adicionar uma nova skill
-
-1. Copie a pasta `skills/_template/` e renomeie para `skills/<nome-da-skill>/`
-2. Edite `SKILL.md` preenchendo todas as seções obrigatórias
-3. Crie a pasta `examples/` com pelo menos um arquivo de apoio
-4. Adicione uma linha na tabela de skills acima
-5. Se houver livro de referência, adicione o PDF em `references/books/` com o padrão `Título - Autor.pdf`
-
-### Estrutura obrigatória do SKILL.md
-
-```markdown
----
-name: nome-da-skill
-description: Atua como [papel]. [Foco principal em uma linha].
----
-
-## Quando usar esta skill
-## Mentalidade Principal
-## [Seções específicas]
-## Anti-Padrões
-## Comportamento Esperado
-## Regra Máxima
-```
-
----
-
-## Como desinstalar uma skill
-
-```powershell
-# Windows
-Remove-Item "$env:USERPROFILE\.claude\skills\nome-da-skill.md"
-```
-```bash
-# macOS / Linux
-rm ~/.claude/skills/nome-da-skill.md
-```
+- **Claude Code**: digite `/` e procure a skill, ou use `/plugin` para ver o plugin.
+- **Codex**: `/skills`.
+- **Cursor**: Settings → Rules/Skills, ou digite `/`.
+- **Gemini CLI**: `/skills list`.
+- **Antigravity**: menu **Customizations** no painel do agente, ou `agy plugin list`.
 
 ---
 
@@ -158,51 +203,27 @@ rm ~/.claude/skills/nome-da-skill.md
 
 ```
 skills/
-  clean-architecture-expert/
-    SKILL.md
-    examples/
-      hexagonal-structure.md
-      use-case-example.md
-  clean-code-expert/
-    SKILL.md
-    examples/
-      before-after.md
-  architecture-hard-parts-expert/
-    SKILL.md
-    examples/
-      trade-off-table.md
-      adr-template.md
-  production-ready-microservices-expert/
-    SKILL.md
-    examples/
-      production-checklist.md
-      observability-setup.md
-  designer-system-material-3/
-    SKILL.md
-    examples/
-      m3-color-tokens.md
-      m3-component-map.md
-      m3-design-review.md
-  designer-system-material-3-enterprise-ux/
-    SKILL.md
-    examples/
-      enterprise-layout-patterns.md
-      enterprise-crud-patterns.md
-      enterprise-design-review.md
-  product-discovery-assistant/
-    SKILL.md
-    examples/
-      csd-opportunity-tree-template.md
-      interview-guide-template.md
-      rice-prioritization-template.md
-  _template/
-    SKILL.md
-references/
-  books/
-    Arquitetura Limpa - Robert C. Martin.pdf
-    Código Limpo - Robert C. Martin.pdf
-    Software Architecture The Hard Parts - Ford, Richards et al.pdf
-    Microsserviços Prontos para a Produção - Susan J. Fowler.pdf
-CLAUDE.md
-README.md
+  <nome-da-skill>/
+    SKILL.md              ← instruções da skill (padrão Agent Skills)
+    references/           ← material de apoio carregado sob demanda
+templates/skill/          ← ponto de partida para novas skills
+references/books/         ← livros de referência (PDF)
+scripts/                  ← instaladores (install.sh, install.ps1)
+plugin.json               ← plugin portátil (Agent Plugins)
+.claude-plugin/           ← plugin e marketplace do Claude Code
+.agents/plugins/          ← marketplace do Codex
+AGENTS.md                 ← regras para contribuidores e agentes
 ```
+
+Cada `SKILL.md` tem frontmatter YAML (`name`, `description`, `metadata`) seguido das instruções. Os arquivos em `references/` são carregados pelo agente só quando a tarefa precisa deles, e você também pode copiá-los como templates para o seu projeto.
+
+---
+
+## Contribuindo
+
+O formato obrigatório do `SKILL.md`, o limite de 500 linhas, as regras de neutralidade e o checklist de nova skill estão em [AGENTS.md](AGENTS.md). Resumo:
+
+1. Copie `templates/skill/` para `skills/<nome-da-skill>/`. O nome da pasta deve ser igual ao `name`.
+2. Preencha o `SKILL.md` (≤ 500 linhas) e crie pelo menos um arquivo em `references/`.
+3. Valide com `agentskills validate skills/<nome-da-skill>` (`pip install skills-ref`).
+4. Adicione a skill à tabela acima e incremente `version` nos manifests de plugin.

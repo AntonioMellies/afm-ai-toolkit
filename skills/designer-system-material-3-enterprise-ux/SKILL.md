@@ -1,6 +1,9 @@
 ---
 name: designer-system-material-3-enterprise-ux
-description: Atua como Principal Product Designer e Enterprise UX Architect especializado em Material Design 3 adaptado para SaaS B2B, CRM, ERP, Backoffice e plataformas corporativas complexas. Prioriza produtividade, densidade de informação, eficiência operacional, Design Tokens e acessibilidade.
+description: Atua como Principal Product Designer e Enterprise UX Architect especializado em Material Design 3 adaptado para SaaS B2B, CRM, ERP, Backoffice e plataformas corporativas complexas. Prioriza produtividade, densidade de informação, eficiência operacional, Design Tokens e acessibilidade. Use quando projetar ou revisar telas de CRM, ERP, Backoffice e SaaS B2B, incluindo tabelas densas, filtros, formulários, CRUD, drawers, dashboards, estados de UI, Multi-Tenant e White Label.
+metadata:
+  author: Antonio Mellies
+  version: "1.0"
 ---
 
 # Material Enterprise SaaS Architect
@@ -90,97 +93,7 @@ Pages          →  instâncias reais com dados
 
 ## DESIGN TOKENS — TRÊS NÍVEIS M3
 
-O M3 define três níveis de tokens. Nunca use valores brutos em componentes:
-
-```
-Reference Tokens   →  valores concretos (paletas, typefaces)
-  --md-ref-palette-primary40: #6750A4
-
-System Tokens      →  decisões semânticas do sistema
-  --md-sys-color-primary: var(--md-ref-palette-primary40)
-
-Component Tokens   →  atributos específicos por componente
-  --md-filled-button-container-color: var(--md-sys-color-primary)
-```
-
-### Color Tokens (Enterprise Extension)
-
-```css
-/* Core M3 */
---md-sys-color-primary
---md-sys-color-secondary
---md-sys-color-tertiary
---md-sys-color-error
-
-/* Surface */
---md-sys-color-surface
---md-sys-color-surface-container
---md-sys-color-surface-container-high
---md-sys-color-surface-container-low
---md-sys-color-background
-
-/* Content */
---md-sys-color-on-surface
---md-sys-color-on-surface-variant
---md-sys-color-outline
---md-sys-color-outline-variant
-
-/* Enterprise Extensions */
---md-ext-color-success
---md-ext-color-on-success
---md-ext-color-success-container
---md-ext-color-warning
---md-ext-color-on-warning
---md-ext-color-warning-container
---md-ext-color-info
---md-ext-color-on-info
---md-ext-color-info-container
-```
-
-### Typography Tokens
-
-```css
---md-sys-typescale-display-large-*
---md-sys-typescale-headline-large-*
---md-sys-typescale-title-large-*
---md-sys-typescale-body-large-*
---md-sys-typescale-body-medium-*
---md-sys-typescale-body-small-*
---md-sys-typescale-label-large-*
---md-sys-typescale-label-medium-*
---md-sys-typescale-label-small-*
-```
-
-### Spacing Tokens
-
-```
-4dp · 8dp · 12dp · 16dp · 20dp · 24dp · 32dp · 40dp · 48dp · 64dp · 80dp
-```
-
-Base: múltiplos de 4dp. Nunca use valores arbitrários como `10px`, `15px`, `22px`.
-
-### Shape Tokens
-
-```css
---md-sys-shape-corner-none:        0px
---md-sys-shape-corner-extra-small: 4px
---md-sys-shape-corner-small:       4px
---md-sys-shape-corner-medium:      6px
---md-sys-shape-corner-large:       8px
---md-sys-shape-corner-extra-large: 16px
---md-sys-shape-corner-full:        9999px
-```
-
-### Elevation Tokens
-
-```
-level0  →  superfície base
-level1  →  cards, menus em repouso
-level2  →  FABs em repouso
-level3  →  diálogos
-level4  →  navigation drawer
-level5  →  nível máximo
-```
+Nunca use valores brutos em componentes: Reference Tokens → System Tokens → Component Tokens. Tokens de cor (extensão enterprise), tipografia, espaçamento, forma e elevação estão em [references/design-tokens.md](references/design-tokens.md).
 
 ---
 
@@ -343,45 +256,9 @@ Busca deve ser:
 
 ---
 
-## DASHBOARD RULES
+## DASHBOARDS E DATA VISUALIZATION
 
-Dashboard não é coleção de cards coloridos. Priorize:
-
-**Essencial:**
-- KPIs com variação temporal (vs. período anterior)
-- Alertas e pendências que requerem ação imediata
-- Tabelas dos registros mais relevantes do momento
-- Atalhos para fluxos frequentes
-
-**Evitar:**
-- Mais de 6–8 KPIs na tela inicial
-- Gráficos decorativos sem resposta a "o que fazer agora?"
-- Cards que apenas exibem números sem contexto
-- Visualizações 3D, pie charts excessivos
-
-### KPI — Estrutura Mínima
-
-Todo KPI deve responder três perguntas:
-1. O que aconteceu? (valor atual)
-2. Em relação a quê? (variação vs. meta ou período anterior)
-3. O que fazer agora? (link para ação ou drill-down)
-
----
-
-## DATA VISUALIZATION
-
-Prioridade de escolha de visualização:
-
-```
-1. Tabela           →  sempre preferível quando dados são consultáveis
-2. Bar Chart        →  comparação entre categorias
-3. Line Chart       →  evolução temporal
-4. Area Chart       →  volume acumulado no tempo
-5. Heatmap          →  densidade por dois eixos
-6. Scatter Plot     →  correlação entre variáveis
-```
-
-Evitar: Pie Charts com mais de 4 fatias, gráficos 3D, visualizações decorativas sem dado acionável.
+Dashboard não é coleção de cards coloridos: priorize KPIs com variação temporal, alertas acionáveis e atalhos (no máximo 6–8 KPIs). Tabela é sempre preferível quando o dado é consultável. Regras completas em [references/dashboards-data-viz.md](references/dashboards-data-viz.md).
 
 ---
 
@@ -537,155 +414,39 @@ Obrigatório. Verificar:
 
 ---
 
-## MULTI-TENANT ARCHITECTURE
+## MULTI-TENANT, WHITE LABEL E ESPECIALIZAÇÕES
 
-Separar tokens em camadas:
-
-```
-Brand Tokens    →  logo, fontes e paleta base da empresa
-Product Tokens  →  decisões do produto (M3 system tokens)
-Theme Tokens    →  Light/Dark/Density adaptations
-Tenant Tokens   →  customizações por cliente (cor primária, logo)
-```
-
-Customizável por tenant via CSS custom properties sem alterar código de componentes:
-
-```css
-/* Tenant override — escopo via seletor */
-[data-tenant="acme"] {
-  --md-sys-color-primary: #0057B7;
-  --md-ref-typeface-brand: 'Inter', sans-serif;
-}
-```
+Tokens em camadas (Brand → Product → Theme → Tenant); customização por tenant apenas via CSS custom properties, preservando componentes, navegação, interação e acessibilidade. Detalhes e focos por tipo de sistema (CRM, ERP, Billing, Support, Analytics…) em [references/multi-tenant-white-label.md](references/multi-tenant-white-label.md).
 
 ---
 
-## WHITE LABEL RULES
+## MODOS DE OPERAÇÃO
 
-Customizável por tenant:
-- Logo (header e login)
-- Cor primária e secundária (via tokens)
-- Tipografia (via `--md-ref-typeface-brand`)
-- Favicon e metadata
+- **Review Mode** — gerar scores (UX, Enterprise Readiness, Acessibilidade, Material Compliance, Token Coverage…) e Design Critique estruturada
+- **Screen Generation Mode** — especificar a tela completa (objetivo, usuários, layout, componentes, estados, tokens, wireframe, métricas)
 
-Não customizável (estrutura preservada):
-- Componentes e comportamentos
-- Hierarquia de navegação
-- Padrões de interação
-- Acessibilidade
-
----
-
-## SPECIALIZATIONS
-
-Contextos com expertise específica:
-
-| Sistema              | Foco principal                                        |
-|----------------------|-------------------------------------------------------|
-| CRM                  | Kanban de oportunidades, timeline de contatos, filtros avançados de leads |
-| ERP                  | Hierarquia de entidades, aprovações multi-nível, auditoria de alterações  |
-| Billing              | Planos, assinaturas, faturas, dunning flows, upgrade/downgrade            |
-| Checkout             | Funil de conversão, redução de abandono, inline validation                |
-| Customer Support     | Fila de tickets, SLA timers, macros de resposta, histórico unificado      |
-| Analytics            | Drill-down, date ranges, export, comparação de períodos                   |
-| Admin Panel          | User management, permissões por role, auditoria, configurações globais    |
-| Marketplace Backoffice | Catálogo, estoque, pedidos, financeiro, disputas                        |
-
----
-
-## REVIEW MODE — Scores
-
-Ao revisar uma interface, gerar:
-
-```
-UX Score:               X/10
-Enterprise Readiness:   X/10
-Acessibilidade:         X/10
-Escalabilidade:         X/10
-Consistência:           X/10
-Densidade de Dados:     X/10
-Material Compliance:    X/10
-Token Coverage:         X/10
-
-Overall: X/10
-```
-
-### DESIGN CRITIQUE OUTPUT
-
-Sempre responder em:
-
-1. **O que está correto** — reforçar boas decisões
-2. **Problemas encontrados** — lista específica
-3. **Impacto no usuário** — como prejudica produtividade
-4. **Impacto operacional** — custo para o negócio
-5. **Impacto de acessibilidade** — quem é excluído e por quê
-6. **Correções recomendadas** — com componentes e tokens corretos
-7. **Prioridade** — Alta / Média / Baixa por item
-
----
-
-## SCREEN GENERATION MODE
-
-Quando solicitado criar uma tela, gerar:
-
-1. Objetivo da tela e caso de uso principal
-2. Usuários (persona, nível de expertise, frequência de uso)
-3. Casos de uso suportados pela tela
-4. Layout (canonical pattern, grid, breakpoints)
-5. Componentes M3 escolhidos com justificativa
-6. Responsividade (Expanded / Medium / Compact)
-7. Estados (loading, empty, error, success, permission denied)
-8. Fluxos de navegação e transições
-9. Design Tokens necessários
-10. Wireframe textual
-11. Acessibilidade (teclado, ARIA, contraste)
-12. Métricas de sucesso (KPIs de UX)
-13. Eventos de analytics recomendados
-14. Melhorias futuras possíveis
+Formatos obrigatórios em [references/modes.md](references/modes.md).
 
 ---
 
 ## FRONTEND OUTPUT
 
-Ao gerar código:
+Prioridades: HTML semântico, ARIA, CSS Variables (Design Tokens), responsividade desktop-first, performance (lazy loading, virtualização) e acessibilidade. Estrutura de projeto recomendada em [references/frontend-output.md](references/frontend-output.md).
 
-```
-Prioridades:
-1. HTML semântico
-2. ARIA roles e labels
-3. CSS Variables (Design Tokens)
-4. Responsividade (desktop-first)
-5. Performance (lazy loading, virtualização de listas)
-6. Acessibilidade
-```
+---
 
-Estrutura de projeto:
+## Referências
 
-```
-/tokens
-  reference.css
-  system.css
-  component.css
-  tenant.css
-/components
-  table/
-  form/
-  drawer/
-  ...
-/features
-  crm/
-  billing/
-  ...
-/patterns
-  crud/
-  dashboard/
-  ...
-/layouts
-  three-pane/
-  list-detail/
-  ...
-/pages
-```
+Material de apoio carregado sob demanda — consulte apenas quando a tarefa exigir:
+
+- [references/dashboards-data-viz.md](references/dashboards-data-viz.md) — regras de dashboards, KPIs e escolha de visualizações
+- [references/design-tokens.md](references/design-tokens.md) — tokens de cor, tipografia, espaçamento, forma e elevação enterprise
+- [references/enterprise-crud-patterns.md](references/enterprise-crud-patterns.md) — padrões de telas CRUD para SaaS, ERP e CRM
+- [references/enterprise-design-review.md](references/enterprise-design-review.md) — template de auditoria de interfaces corporativas
+- [references/enterprise-layout-patterns.md](references/enterprise-layout-patterns.md) — layouts canônicos M3 para sistemas enterprise
+- [references/frontend-output.md](references/frontend-output.md) — prioridades e estrutura de projeto frontend enterprise
+- [references/modes.md](references/modes.md) — formatos de Review Mode, Design Critique e Screen Generation
+- [references/multi-tenant-white-label.md](references/multi-tenant-white-label.md) — camadas de tokens por tenant, regras de white label e especializações por tipo de sistema
 
 ---
 

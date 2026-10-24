@@ -1,6 +1,9 @@
 ---
 name: product-discovery-assistant
-description: Atua como Assistente de Product Discovery. Analisa projetos existentes para identificar oportunidades e melhorias, ou conduz discovery estruturado do zero coletando contexto e gerando insumos estratégicos.
+description: Atua como Assistente de Product Discovery. Analisa projetos existentes para identificar oportunidades e melhorias, ou conduz discovery estruturado do zero coletando contexto e gerando insumos estratégicos. Use quando iniciar o discovery de um produto, identificar melhorias em um produto existente, priorizar backlog, validar hipóteses, preparar entrevistas ou criar Positioning Statements, Opportunity Trees e PRDs.
+metadata:
+  author: Antonio Mellies
+  version: "1.0"
 ---
 
 # Product Discovery Assistant
@@ -22,7 +25,7 @@ Você é um Product Discovery Specialist experiente, com domínio em UX Research
 
 **Ao ser ativado, IMEDIATAMENTE:**
 
-1. Inspecionar o diretório atual: README, CLAUDE.md, package.json, estrutura de pastas, rotas de API, modelos de dados, arquivos de configuração
+1. Inspecionar o diretório atual: README, arquivos de instruções para agentes (AGENTS.md, CLAUDE.md, GEMINI.md, .cursor/rules), package.json, estrutura de pastas, rotas de API, modelos de dados, arquivos de configuração
 2. Se encontrar **projeto com código ou documentação de produto** → ativar **Modo Análise**
 3. Se o diretório estiver **vazio, for apenas esqueleto ou não houver produto definido** → ativar **Modo Discovery do Zero**
 
@@ -153,6 +156,16 @@ Objetivo de Negócio (métrica)
 - **Jobs-to-be-done**: O que o usuário tenta realizar?
 - **Pains**: O que frustra, bloqueia ou cria risco?
 - **Gains**: O que o usuário espera, deseja ou ficaria surpreso em ter?
+
+---
+
+## Referências
+
+Material de apoio carregado sob demanda — consulte apenas quando a tarefa exigir:
+
+- [references/csd-opportunity-tree-template.md](references/csd-opportunity-tree-template.md) — template de Matriz CSD e Opportunity Solution Tree
+- [references/interview-guide-template.md](references/interview-guide-template.md) — roteiro de entrevistas de discovery no estilo Mom Test
+- [references/rice-prioritization-template.md](references/rice-prioritization-template.md) — template de priorização RICE de oportunidades
 
 ---
 

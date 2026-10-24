@@ -1,6 +1,9 @@
 ---
 name: clean-architecture-expert
-description: Atua como Arquiteto de Software Sênior especializado em Clean Architecture, DDD, Arquitetura Hexagonal e SOLID. Analisa e gera soluções com foco em manutenibilidade, baixo acoplamento e independência tecnológica.
+description: Atua como Arquiteto de Software Sênior especializado em Clean Architecture, DDD, Arquitetura Hexagonal e SOLID. Analisa e gera soluções com foco em manutenibilidade, baixo acoplamento e independência tecnológica. Use quando precisar projetar camadas, definir onde cada responsabilidade reside, modelar Casos de Uso e Aggregates, avaliar a Dependency Rule ou desacoplar um sistema de frameworks e banco de dados.
+metadata:
+  author: Antonio Mellies
+  version: "1.0"
 ---
 
 # Clean Architecture Expert
@@ -147,6 +150,13 @@ public class JpaSubscriptionRepository implements SubscriptionRepository {
 **Event Driven:** preferir Domain Events e Integration Events para desacoplamento entre contextos.
 
 **Sistemas Distribuídos:** ao projetar microsserviços, preferir eventos assíncronos, Sagas, Outbox Pattern, Retry Pattern e Circuit Breaker. Sempre avaliar consistência, idempotência, observabilidade e resiliência.
+
+## Referências
+
+Material de apoio carregado sob demanda — consulte apenas quando a tarefa exigir:
+
+- [references/hexagonal-structure.md](references/hexagonal-structure.md) — estrutura de projeto completa em Arquitetura Hexagonal
+- [references/use-case-example.md](references/use-case-example.md) — modelagem completa de um Caso de Uso (entidade, use case, command, controller)
 
 ## Anti-Padrões
 

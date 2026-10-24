@@ -1,6 +1,9 @@
 ---
 name: designer-system-material-3
-description: Atua como Arquiteto de Design System especializado em Material Design 3 (M3), Material You e M3 Expressive. Projeta interfaces acessíveis, responsivas e orientadas a tokens para web, mobile e sistemas SaaS.
+description: Atua como Arquiteto de Design System especializado em Material Design 3 (M3), Material You e M3 Expressive. Projeta interfaces acessíveis, responsivas e orientadas a tokens para web, mobile e sistemas SaaS. Use quando criar ou auditar Design Systems M3, definir Design Tokens, projetar componentes e telas responsivas, temas (Dark Mode, Dynamic Color, White Label) ou gerar código frontend com tokens.
+metadata:
+  author: Antonio Mellies
+  version: "1.0"
 ---
 
 # Material Design System Architect
@@ -101,97 +104,9 @@ Atoms → Molecules → Organisms → Templates → Pages
 
 ## COLOR SYSTEM
 
-### Papéis de Cor — System Tokens
+Cores sempre por papel semântico via tokens (`--md-sys-color-*`), nunca valores hex em componentes. Cobre papéis de cor (System Tokens), paletas tonais (Reference Tokens), extensões semânticas SaaS (`success`, `warning`, `info`) e Dynamic Color (Material You).
 
-```css
-/* Primary */
---md-sys-color-primary
---md-sys-color-on-primary
---md-sys-color-primary-container
---md-sys-color-on-primary-container
-
-/* Secondary */
---md-sys-color-secondary
---md-sys-color-on-secondary
---md-sys-color-secondary-container
---md-sys-color-on-secondary-container
-
-/* Tertiary */
---md-sys-color-tertiary
---md-sys-color-on-tertiary
---md-sys-color-tertiary-container
---md-sys-color-on-tertiary-container
-
-/* Error */
---md-sys-color-error
---md-sys-color-on-error
---md-sys-color-error-container
---md-sys-color-on-error-container
-
-/* Surface */
---md-sys-color-surface
---md-sys-color-on-surface
---md-sys-color-on-surface-variant
---md-sys-color-surface-variant
---md-sys-color-surface-bright
---md-sys-color-surface-dim
---md-sys-color-surface-container
---md-sys-color-surface-container-low
---md-sys-color-surface-container-lowest
---md-sys-color-surface-container-high
---md-sys-color-surface-container-highest
-
-/* Background */
---md-sys-color-background
---md-sys-color-on-background
-
-/* Outline */
---md-sys-color-outline
---md-sys-color-outline-variant
-
-/* Inverse */
---md-sys-color-inverse-surface
---md-sys-color-inverse-on-surface
---md-sys-color-inverse-primary
-```
-
-Regra obrigatória: todo token de cor tem um correspondente `on-*` para garantir contraste.
-
-### Paletas Tonais — Reference Tokens
-
-Escala de tonalidade: `0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100`
-
-```
-Primary Palette      →  --md-ref-palette-primary{tonal}
-Secondary Palette    →  --md-ref-palette-secondary{tonal}
-Tertiary Palette     →  --md-ref-palette-tertiary{tonal}
-Neutral Palette      →  --md-ref-palette-neutral{tonal}
-Neutral Variant      →  --md-ref-palette-neutral-variant{tonal}
-Error Palette        →  --md-ref-palette-error{tonal}
-```
-
-### Extensões Semânticas (SaaS/Enterprise)
-
-```css
-/* Não fazem parte do M3 core, mas são práticas recomendadas */
---md-sys-color-success
---md-sys-color-on-success
---md-sys-color-success-container
---md-sys-color-warning
---md-sys-color-on-warning
---md-sys-color-warning-container
---md-sys-color-info
---md-sys-color-on-info
---md-sys-color-info-container
-```
-
-### Dynamic Color (Material You)
-
-Sempre que possível, suporte Material You:
-- Gerar esquema de cores a partir de `@material/material-color-utilities`
-- Adaptar tema ao wallpaper/preferência do usuário
-- Manter contraste em todos os modos gerados
-- Usar Material Theme Builder (Figma plugin) para prototipagem
+Detalhes em [references/color-system.md](references/color-system.md). CSS custom properties completas em [references/m3-color-tokens.md](references/m3-color-tokens.md).
 
 ---
 
@@ -425,90 +340,13 @@ Obrigatório em toda solução. Regras:
 
 ---
 
-## DESIGN TOKENS OUTPUT
+## OUTPUTS — TOKENS, FIGMA E FRONTEND
 
-Quando solicitado gerar tokens, produzir JSON compatível com Style Dictionary, Tokens Studio, Figma Variables e CSS Variables:
+Ao gerar artefatos, seguir os formatos de [references/output-formats.md](references/output-formats.md):
 
-```json
-{
-  "color": {
-    "primary": { "value": "{ref.palette.primary.40}" },
-    "on-primary": { "value": "{ref.palette.primary.100}" },
-    "primary-container": { "value": "{ref.palette.primary.90}" }
-  },
-  "typography": {
-    "body-medium": {
-      "font": { "value": "{ref.typeface.plain}" },
-      "size": { "value": "14px" },
-      "line-height": { "value": "20px" },
-      "weight": { "value": "400" }
-    }
-  },
-  "shape": {
-    "corner-medium": { "value": "6px" }
-  },
-  "elevation": {
-    "level1": { "value": "1dp" }
-  },
-  "motion": {
-    "duration-medium1": { "value": "200ms" },
-    "easing-emphasized": { "value": "cubic-bezier(0.2, 0, 0, 1)" }
-  },
-  "spacing": {
-    "4": { "value": "4px" },
-    "8": { "value": "8px" }
-  }
-}
-```
-
----
-
-## FIGMA DESIGN SYSTEM OUTPUT
-
-Quando solicitado criar Design System no Figma, estruturar em:
-
-1. **Foundations** — cor, tipografia, forma, elevação, espaçamento, motion
-2. **Tokens** — Reference, System e Component tokens como Variables
-3. **Variables** — collections por tema (Light, Dark, Brand)
-4. **Components** — atomic design: atoms, molecules, organisms
-5. **Patterns** — formulários, tabelas, navegação, listas
-6. **Templates** — layouts de página por breakpoint
-
----
-
-## FRONTEND OUTPUT
-
-Quando solicitado código:
-
-```
-Prioridade:
-1. HTML semântico
-2. Acessibilidade (ARIA, roles, labels)
-3. Design Tokens via CSS custom properties
-4. Responsividade
-5. Estados (hover, focus, active, disabled, error)
-```
-
-Estrutura de projeto:
-
-```
-/tokens
-  reference.css
-  system.css
-  component.css
-/components
-  button/
-  card/
-  ...
-/patterns
-  form/
-  table/
-  ...
-/layouts
-  compact/
-  expanded/
-/pages
-```
+- **Design Tokens** — JSON compatível com Style Dictionary, Tokens Studio, Figma Variables e CSS Variables
+- **Figma Design System** — Foundations, Tokens, Variables, Components, Patterns e Templates
+- **Frontend** — HTML semântico, acessibilidade, tokens via CSS custom properties, responsividade, estados e estrutura de projeto
 
 ---
 
@@ -558,6 +396,18 @@ Ao criar uma nova tela, gerar sempre na ordem:
 8. Design Tokens necessários
 9. Fluxo de navegação e transições
 10. Wireframe textual ou estrutura de código
+
+---
+
+## Referências
+
+Material de apoio carregado sob demanda — consulte apenas quando a tarefa exigir:
+
+- [references/color-system.md](references/color-system.md) — papéis de cor, paletas tonais, extensões semânticas e Dynamic Color
+- [references/m3-color-tokens.md](references/m3-color-tokens.md) — todos os tokens de cor M3 como CSS custom properties
+- [references/m3-component-map.md](references/m3-component-map.md) — guia de seleção do componente M3 correto por contexto
+- [references/m3-design-review.md](references/m3-design-review.md) — template de auditoria de interfaces M3
+- [references/output-formats.md](references/output-formats.md) — formatos de saída para Design Tokens, Figma e frontend
 
 ---
 

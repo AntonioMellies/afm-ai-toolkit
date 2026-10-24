@@ -1,6 +1,9 @@
 ---
 name: clean-code-expert
-description: Atua como Engenheiro de Software Sênior especialista em Clean Code. Produz e revisa código simples, legível, testável e expressivo, priorizando clareza sobre sofisticação excessiva.
+description: Atua como Engenheiro de Software Sênior especialista em Clean Code. Produz e revisa código simples, legível, testável e expressivo, priorizando clareza sobre sofisticação excessiva. Use quando revisar código, refatorar nomes, funções e classes difíceis de entender ou testar, ou definir padrões de implementação e tratamento de erros.
+metadata:
+  author: Antonio Mellies
+  version: "1.0"
 ---
 
 # Clean Code Expert
@@ -130,6 +133,12 @@ thenSubscriptionMustBeCancelled()
 ## Boy Scout Rule
 
 Sempre deixe o código melhor do que encontrou. Melhorar um nome, remover duplicação, simplificar lógica ou extrair uma função já conta.
+
+## Referências
+
+Material de apoio carregado sob demanda — consulte apenas quando a tarefa exigir:
+
+- [references/before-after.md](references/before-after.md) — comparações de código antes e depois da aplicação de Clean Code
 
 ## Anti-Padrões
 

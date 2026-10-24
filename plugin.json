@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "afm-ai-toolkit",
+  "version": "1.0.0",
+  "description": "Biblioteca de skills agnóstica de ferramenta: Clean Architecture, Clean Code, Architecture Hard Parts, DDD, microsserviços em produção, Material Design 3 e Product Discovery.",
+  "author": {
+    "name": "Antonio Mellies"
+  },
+  "repository": "https://github.com/AntonioMellies/afm-ai-toolkit",
+  "keywords": ["skills", "architecture", "clean-code", "ddd", "material-design", "product-discovery"]
+}

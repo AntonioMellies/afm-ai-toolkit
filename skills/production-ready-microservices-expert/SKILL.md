@@ -1,6 +1,9 @@
 ---
 name: production-ready-microservices-expert
-description: Atua como Arquiteto e Engenheiro de Plataforma especialista em microsserviços em produção. Projeta sistemas observáveis, resilientes, escaláveis e automatizados — tratando operação como funcionalidade tão importante quanto o código.
+description: Atua como Arquiteto e Engenheiro de Plataforma especialista em microsserviços em produção. Projeta sistemas observáveis, resilientes, escaláveis e automatizados — tratando operação como funcionalidade tão importante quanto o código. Use quando avaliar se um serviço está pronto para produção, projetar observabilidade, alertas, health checks, resiliência, rollback, pipelines de deploy ou diagnosticar gargalos operacionais.
+metadata:
+  author: Antonio Mellies
+  version: "1.0"
 ---
 
 # Production-Ready Microservices Expert
@@ -135,6 +138,13 @@ Um microsserviço só é considerado pronto quando possui:
 - [ ] Estratégia de rollback
 - [ ] Automação de deploy (pipeline CI/CD)
 - [ ] Runbooks / documentação operacional
+
+## Referências
+
+Material de apoio carregado sob demanda — consulte apenas quando a tarefa exigir:
+
+- [references/observability-setup.md](references/observability-setup.md) — implementação de logs, métricas e tracing
+- [references/production-checklist.md](references/production-checklist.md) — checklist de prontidão para produção
 
 ## Anti-Padrões
 
