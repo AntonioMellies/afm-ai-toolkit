@@ -49,6 +49,15 @@ skills/product-discovery-assistant/                ← Product Discovery
 skills/production-ready-microservices-expert/      ← Operação em produção
 ```
 
+Skills de grupo (orquestram as skills acima por afinidade, veja [Skills de grupo](#skills-de-grupo)):
+
+```
+skills/backend-engineering/      ← DDD tático, Clean Architecture, Clean Code, produção
+skills/software-architecture/    ← DDD estratégico, Hard Parts, Clean Architecture, produção
+skills/frontend-design-system/   ← Material Design 3, M3 Enterprise UX, Clean Code
+skills/product-strategy/         ← Product Discovery, DDD (linguagem), M3 Enterprise UX
+```
+
 ## Formato obrigatório do SKILL.md
 
 ```markdown
@@ -101,6 +110,17 @@ wc -l skills/*/SKILL.md          # nenhum acima de 500
 - Nomes de arquivos de outras ferramentas só podem aparecer como **dados a inspecionar** (ex.: "leia AGENTS.md, CLAUDE.md, GEMINI.md").
 - Se uma ferramenta exigir algo diferente, crie o arquivo específico fora de `skills/` e registre-o na tabela abaixo.
 
+## Skills de grupo
+
+Skills de grupo coordenam skills especializadas de uma mesma afinidade: diagnosticam o pedido, escolhem a skill certa e encadeiam várias quando a tarefa atravessa disciplinas. Seguem o mesmo formato obrigatório, mais estas regras:
+
+- Declare as skills referenciadas em `metadata.skills`, como string separada por espaço (ex.: `skills: "clean-code-expert domain-driven-design"`). Os instaladores leem esse campo e instalam as dependências junto.
+- Referencie outras skills **pelo nome** ("ative a skill `clean-code-expert`"). Nunca use links relativos entre skills (`../outra-skill/`): quebram a regra de um nível e a instalação isolada.
+- Não copie o conteúdo das skills especializadas. O grupo contém mapa de skills, roteamento, fluxos combinados, regras de conflito e o comportamento quando uma skill não está instalada.
+- `metadata.skills` lista só skills especializadas, nunca outros grupos. Um grupo pode **sugerir** outro grupo pelo nome, sem depender dele.
+- A `description` deve deixar claro que o grupo é para tarefas que atravessam várias skills, para não roubar a ativação das especializadas.
+- Ao mudar o foco, o nome ou as seções de uma skill especializada, revise os grupos que a citam (`grep -rn "nome-da-skill" skills/*/SKILL.md`).
+
 ## Arquivos específicos por ferramenta
 
 | Arquivo | Ferramenta | Por que existe | Quando atualizar |
@@ -125,6 +145,7 @@ wc -l skills/*/SKILL.md          # nenhum acima de 500
 6. Adicionar a skill à tabela do `README.md` e à lista "Skills disponíveis" acima.
 7. Se houver livro de referência, adicionar o PDF em `references/books/` com o padrão `Título - Autor.pdf`.
 8. Incrementar `version` nos manifests de plugin.
+9. Se a nova skill tiver afinidade com um grupo existente, adicioná-la ao `metadata.skills` e ao mapa de skills desse grupo.
 
 ## Validação antes de commitar
 

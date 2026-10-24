@@ -6,6 +6,7 @@
   .\scripts\install.ps1                                   # todas as skills em .agents/skills do diretório atual
   .\scripts\install.ps1 -Target claude -Scope global      # todas as skills em ~/.claude/skills
   .\scripts\install.ps1 -Target all -Skill clean-code-expert
+  .\scripts\install.ps1 -Skill backend-engineering         # skill de grupo + as skills que ela referencia
   .\scripts\install.ps1 -List
   .\scripts\install.ps1 -Target claude -Scope global -Uninstall
 #>
@@ -21,7 +22,7 @@ param(
   # Raiz do projeto de destino quando -Scope project
   [string]$ProjectDir = (Get-Location).Path,
 
-  # Instala só estas skills (padrão: todas)
+  # Instala só estas skills e as que elas referenciam (padrão: todas)
   [string[]]$Skill,
 
   [switch]$List,
@@ -53,11 +54,33 @@ $destinations = @{
 }
 
 $targets = if ($Target -eq 'all') { 'agents', 'claude', 'cursor', 'gemini', 'antigravity', 'copilot' } else { @($Target) }
-$selected = if ($Skill) { $Skill } else { $available }
+$selected = @(if ($Skill) { $Skill } else { $available })
 
 foreach ($name in $selected) {
   if ($name -notin $available) {
     throw "Skill não encontrada: $name (use -List)"
+  }
+}
+
+# Skills de grupo declaram as skills que referenciam em metadata.skills: "a b c"
+function Get-SkillDependencies([string]$name) {
+  $lines = Get-Content (Join-Path (Join-Path $skillsDir $name) 'SKILL.md') -Encoding UTF8
+  for ($i = 1; $i -lt $lines.Count -and $lines[$i] -ne '---'; $i++) {
+    if ($lines[$i] -match '^  skills: *"(.*)"$') { return -split $Matches[1] }
+  }
+}
+
+# Inclui as dependências das skills de grupo (a desinstalação remove só as nomeadas)
+if (-not $Uninstall) {
+  foreach ($name in @($selected)) {
+    foreach ($dep in Get-SkillDependencies $name) {
+      if ($dep -notin $available) {
+        throw "Dependência não encontrada: $dep (declarada em $name)"
+      }
+      if ($dep -in $selected) { continue }
+      $selected += $dep
+      Write-Host "dependência  $dep  (de $name)"
+    }
   }
 }
 

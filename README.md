@@ -26,6 +26,19 @@ Biblioteca de **skills para agentes de IA**, independente de ferramenta. Todas a
 | Material Enterprise SaaS Architect | `skills/designer-system-material-3-enterprise-ux/` | Projetar SaaS B2B, CRM, ERP e Backoffice com M3, produtividade e alta densidade | [Material Design 3](https://m3.material.io), Google |
 | Product Discovery Assistant | `skills/product-discovery-assistant/` | Conduzir discovery do zero ou achar oportunidades e melhorias em um projeto existente | [Product Manager Skills](https://github.com/deanpeters/Product-Manager-Skills), Dean Peters |
 
+### Skills de grupo (por afinidade)
+
+Pontos de entrada que coordenam as skills acima. Use quando a tarefa atravessa várias disciplinas ou quando não estiver claro qual skill escolher: o grupo diagnostica o pedido, aciona a skill certa e encadeia várias quando necessário.
+
+| Skill de grupo | Pasta | Quando usar | Skills incluídas |
+|---|---|---|---|
+| Backend Engineering | `skills/backend-engineering/` | Feature de backend de ponta a ponta, revisão de serviço, refatoração de legado | `domain-driven-design`, `clean-architecture-expert`, `clean-code-expert`, `production-ready-microservices-expert` |
+| Software Architecture | `skills/software-architecture/` | Decompor monólito, desenhar sistema distribuído, revisar ou evoluir uma arquitetura | `domain-driven-design`, `architecture-hard-parts-expert`, `clean-architecture-expert`, `production-ready-microservices-expert` |
+| Frontend & Design System | `skills/frontend-design-system/` | Design System e telas, tela do token ao código, revisão de frontend, telas enterprise | `designer-system-material-3`, `designer-system-material-3-enterprise-ux`, `clean-code-expert` |
+| Product Strategy | `skills/product-strategy/` | Da ideia ao MVP, evolução de produto, validação com protótipo, PRD com domínio e fluxos | `product-discovery-assistant`, `domain-driven-design`, `designer-system-material-3-enterprise-ux` |
+
+Instale o grupo **junto com as skills incluídas**. Os scripts do repositório e os plugins já fazem isso; no `npx skills`, repita `--skill` para cada uma (veja [Como instalar](#como-instalar)).
+
 ---
 
 ## Como instalar
@@ -47,6 +60,10 @@ npx skills add AntonioMellies/afm-ai-toolkit --list
 npx skills add AntonioMellies/afm-ai-toolkit --skill clean-code-expert \
   -a claude-code -a codex -a cursor -a gemini-cli -a antigravity -g
 
+# Skill de grupo: inclua também as skills que ela coordena
+npx skills add AntonioMellies/afm-ai-toolkit --skill backend-engineering \
+  --skill domain-driven-design --skill clean-architecture-expert \
+  --skill clean-code-expert --skill production-ready-microservices-expert
 ```
 
 ### Opção 2: Plugin / marketplace
@@ -103,6 +120,8 @@ cd afm-ai-toolkit
 # Uma skill em todas as ferramentas
 ./scripts/install.sh --target all --scope global --skill clean-code-expert
 
+# Uma skill de grupo (as skills que ela coordena são instaladas junto)
+./scripts/install.sh --target claude --scope global --skill backend-engineering
 
 # Listar / remover
 ./scripts/install.sh --list
@@ -121,6 +140,8 @@ cd afm-ai-toolkit
 # Algumas skills em todas as ferramentas
 .\scripts\install.ps1 -Target all -Scope global -Skill clean-code-expert,domain-driven-design
 
+# Uma skill de grupo (as skills que ela coordena são instaladas junto)
+.\scripts\install.ps1 -Target claude -Scope global -Skill frontend-design-system
 
 # Listar / remover
 .\scripts\install.ps1 -List
@@ -134,9 +155,11 @@ cd afm-ai-toolkit
 | `cursor`, `gemini`, `antigravity`, `copilot` | Pasta própria de cada ferramenta |
 | `all` | Todos os anteriores |
 
+Com `--skill`/`-Skill`, os scripts leem o campo `metadata.skills` das skills de grupo e instalam as dependências automaticamente. A desinstalação remove só as skills nomeadas, porque as dependências podem estar em uso por outras skills.
+
 ### Opção 4: Manual
 
-Copie a **pasta inteira** da skill (não só o `SKILL.md`) para o diretório de skills da ferramenta:
+Copie a **pasta inteira** da skill (não só o `SKILL.md`) para o diretório de skills da ferramenta. Para uma skill de grupo, copie também as pastas listadas em `metadata.skills` no `SKILL.md` dela:
 
 | Ferramenta | Projeto | Global (usuário) |
 |---|---|---|
