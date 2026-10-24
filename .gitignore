@@ -1,0 +1,9 @@
+# IDEs e editores
+.idea/
+.vscode/
+*.swp
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
