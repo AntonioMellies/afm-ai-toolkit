@@ -56,9 +56,9 @@ Estruturar: objetivo de negócio → oportunidades (dores e desejos do usuário)
 
 **Passo 5 — Priorização RICE**
 Para cada oportunidade identificada, aplicar:
-- **Reach**: Quantos usuários afeta por período?
-- **Impact**: Impacto na métrica principal (1=mínimo, 2=médio, 3=alto)
-- **Confidence**: Confiança na estimativa (%)
+- **Reach**: Quantos usuários afeta por período (ex.: por trimestre)?
+- **Impact**: Impacto na métrica principal por usuário (0.25=mínimo, 0.5=baixo, 1=médio, 2=alto, 3=massivo)
+- **Confidence**: Confiança na estimativa (100%=alta, 80%=média, 50%=baixa; abaixo disso é aposta)
 - **Effort**: Person-weeks estimadas
 - **Score** = (R × I × C) / E
 
@@ -114,7 +114,7 @@ Propor concretamente:
 - Exemplo: "Me conta a última vez que você teve que [contexto do problema]. Como você resolveu?"
 - Nunca: "Você usaria um produto que fizesse X?"
 
-**POL Probes (Probe-Of-Learning):**
+**POL Probes (Proof of Life Probes):**
 Experimentos leves para validar hipóteses antes de construir:
 - Landing page com formulário de interesse
 - Wizard of Oz (processo manual antes de automatizar)

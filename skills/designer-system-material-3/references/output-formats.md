@@ -22,7 +22,7 @@ Quando solicitado gerar tokens, produzir JSON compatível com Style Dictionary, 
     }
   },
   "shape": {
-    "corner-medium": { "value": "6px" }
+    "corner-medium": { "value": "12px" }
   },
   "elevation": {
     "level1": { "value": "1dp" }

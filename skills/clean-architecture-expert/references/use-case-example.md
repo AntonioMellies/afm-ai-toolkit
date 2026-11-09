@@ -112,6 +112,6 @@ public class SubscriptionController {
 ## O que observar neste exemplo
 
 - A regra de negócio (`cancel`) vive na entidade, não no controller nem no use case
-- O use case apenas orquestra — não contém lógica de negócio
+- O use case contém as regras específicas da aplicação (quando e em que ordem invocar as entidades); as regras cruciais de negócio ficam na entidade (Arquitetura Limpa, cap. 20, PDF p.263-264)
 - O controller não conhece a entidade `Subscription`, apenas o command
 - `SubscriptionRepository` e `EventPublisher` são interfaces — o domínio não sabe como são implementadas

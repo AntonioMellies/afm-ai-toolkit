@@ -63,6 +63,8 @@ Resumo dos fluxos; passos, entregáveis e handoffs em [references/workflows.md](
 - **Refatoração de legado**: `domain-driven-design` (redescobrir a linguagem) → `clean-architecture-expert` (isolar o domínio) → `clean-code-expert` (Boy Scout Rule em cada passo)
 - **Serviço novo para produção**: `production-ready-microservices-expert` (projetar a operação primeiro) → `clean-architecture-expert` → `clean-code-expert`
 
+Os fluxos e as regras de conflito respondem a perguntas diferentes. A **ordem de um fluxo** diz por onde começar e muda com o objetivo: ao construir, o modelo vem primeiro; ao revisar ou ao preparar produção, o risco operacional vem primeiro. A **precedência de conflito** (seção abaixo) só vale quando duas recomendações divergem sobre o mesmo ponto.
+
 ## Conflitos entre Skills
 
 Quando as recomendações divergirem:

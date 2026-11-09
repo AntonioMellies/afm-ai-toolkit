@@ -7,8 +7,8 @@
 | Parâmetro | O que medir | Escala |
 |-----------|-------------|--------|
 | **Reach** | Quantos usuários são afetados por trimestre | Número real estimado |
-| **Impact** | Impacto na métrica principal por usuário | 0.25 = mínimo / 1 = médio / 2 = alto / 3 = massivo |
-| **Confidence** | Confiança na estimativa | % (ex: 80% = 0.8) |
+| **Impact** | Impacto na métrica principal por usuário | 3 = massivo / 2 = alto / 1 = médio / 0.5 = baixo / 0.25 = mínimo |
+| **Confidence** | Confiança na estimativa | 100% = alta / 80% = média / 50% = baixa (abaixo de 50% é aposta) |
 | **Effort** | Person-weeks de trabalho total | Número real estimado |
 
 ---

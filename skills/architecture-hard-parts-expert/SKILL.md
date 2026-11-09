@@ -54,7 +54,7 @@ Para qualquer decisão arquitetural, responda sempre com:
 
 ## Princípio do Least Worst
 
-A melhor arquitetura é a menos pior combinação de trade-offs. Nunca maximize apenas uma característica:
+Heurística desta skill (a expressão não é do livro): buscar a combinação de trade-offs menos ruim para o contexto em vez de maximizar uma só característica. As setas abaixo são tendências comuns, não leis; o livro mostra que o resultado depende da combinação de forças (PDF p.363):
 
 ```
 Escalabilidade ↑  →  Complexidade ↑
@@ -66,11 +66,13 @@ Acoplamento ↓     →  Complexidade Operacional ↑
 
 Antes de recomendar arquitetura distribuída, analise:
 
-**Acoplamento Estático** — dependências estruturais (imports, bibliotecas, contratos, schemas compartilhados).
-Pergunta: *Uma mudança exige recompilar outra parte?*
+Segundo o livro (Hard Parts, cap. 2, PDF p.46-47): o acoplamento estático descreve como as partes estão ligadas, ou seja, o que um serviço precisa para subir e operar (sistema operacional e contêiner, frameworks e bibliotecas, banco de dados, infraestrutura de mensageria, pontos de integração de inicialização). O dinâmico descreve como elas se chamam em tempo de execução, de forma síncrona ou assíncrona.
 
-**Acoplamento Dinâmico** — dependências em runtime (REST, gRPC, filas, eventos, workflows).
-Pergunta: *Uma parte depende da outra para funcionar?*
+**Acoplamento Estático** — *O serviço sobe e opera sem esta dependência?* Inclui a presença do broker de mensagens, que é dependência estática; a chamada feita por ele é dinâmica.
+
+**Acoplamento Dinâmico** — *Como e quando as partes se comunicam em runtime (síncrono ou assíncrono, qual informação trafega, quão rígido é o contrato)?*
+
+Dois serviços que só se encontram em um workflow são estaticamente independentes e dinamicamente acoplados (PDF p.419).
 
 ## Granularidade de Serviços
 
@@ -112,21 +114,7 @@ Sempre explicite o modelo adotado.
 
 Toda decisão arquitetural relevante deve gerar um ADR:
 
-```
-ADR: Nome da Decisão
-
-Contexto:
-Problema e alternativas.
-
-Decisão:
-Opção escolhida.
-
-Justificativa:
-Motivos da escolha.
-
-Consequências:
-Trade-offs e impactos.
-```
+Use o formato único de [references/adr-template.md](references/adr-template.md): Contexto, Alternativas Consideradas, Decisão (com a razão principal) e Consequências (positivas, negativas e riscos), mais data, status e decisores.
 
 ## Architecture Fitness Functions
 

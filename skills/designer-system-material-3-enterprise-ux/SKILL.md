@@ -456,7 +456,7 @@ Rejeite soluções que:
 
 - Apliquem espaçamentos mobile-first em interfaces desktop sem adaptação de densidade
 - Usem cards para tudo — listas e tabelas são mais eficientes em contextos densos
-- Escutam filtros importantes por padrão
+- Escondam filtros importantes por padrão
 - Forcem navegação completa para visualizar ou editar um detalhe simples
 - Usem Dialog para formulários complexos — use Drawer ou página dedicada
 - Exijam muitos cliques para ações executadas dezenas de vezes por dia

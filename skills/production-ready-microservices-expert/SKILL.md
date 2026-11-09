@@ -63,12 +63,13 @@ Todo serviço deve fornecer as três dimensões:
   "service": "checkout",
   "traceId": "abc-123",
   "orderId": "456",
-  "customerId": "789",
   "event": "order.approved",
   "timestamp": "2024-01-15T10:30:00Z"
 }
 ```
 Nunca logs em texto livre como `"Pedido aprovado"`.
+
+**Higiene de logs:** não registre dados pessoais identificáveis, senhas, chaves de acesso nem tokens, exceto se estiverem criptografados. Use identificadores opacos (`orderId`, `traceId`) em vez de dados do cliente.
 
 **Métricas:** throughput, latência (p50/p95/p99), taxa de erro, utilização de recursos, disponibilidade.
 
@@ -126,18 +127,7 @@ Cada microsserviço deve ter: equipe responsável, documentação, dashboard, al
 
 ## Checklist de Produção
 
-Um microsserviço só é considerado pronto quando possui:
-
-- [ ] Testes automatizados
-- [ ] Logs estruturados com traceId
-- [ ] Métricas expostas (throughput, latência, erros)
-- [ ] Tracing distribuído
-- [ ] Health checks (liveness, readiness, startup)
-- [ ] Alertas configurados
-- [ ] Dashboard operacional
-- [ ] Estratégia de rollback
-- [ ] Automação de deploy (pipeline CI/CD)
-- [ ] Runbooks / documentação operacional
+Um microsserviço só é considerado pronto quando cumpre o checklist de [references/production-checklist.md](references/production-checklist.md), que é a única versão do checklist (observabilidade, health checks, resiliência, deploy e rollback, monitoramento e alertas, testes e ownership). Cada item precisa de responsável e evidência.
 
 ## Referências
 
