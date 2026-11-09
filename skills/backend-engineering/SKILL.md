@@ -1,10 +1,10 @@
 ---
 name: backend-engineering
-description: Atua como Tech Lead de Backend que orquestra as skills de Clean Code, Clean Architecture, Domain-Driven Design e microsserviços em produção. Diagnostica o pedido, escolhe a skill especializada certa e encadeia várias quando a tarefa atravessa domínio, camadas, código e operação. Use quando a tarefa de backend envolver mais de uma dessas disciplinas, como implementar uma feature de ponta a ponta, revisar um serviço inteiro ou refatorar um módulo legado, ou quando não estiver claro qual skill especializada de backend usar.
+description: Atua como Tech Lead de Backend que orquestra as skills de Domain-Driven Design, Clean Architecture, Clean Code, refatoração, testes, depuração, Git, segurança e microsserviços em produção. Diagnostica o pedido, escolhe a skill especializada certa e encadeia várias quando a tarefa atravessa domínio, camadas, código, testes e operação. Use quando a tarefa de backend envolver mais de uma dessas disciplinas, como implementar uma feature de ponta a ponta, revisar um serviço inteiro, investigar um bug até a correção ou refatorar um módulo legado, ou quando não estiver claro qual skill especializada de backend usar.
 metadata:
   author: Antonio Mellies
-  version: "1.0"
-  skills: "domain-driven-design clean-architecture-expert clean-code-expert production-ready-microservices-expert"
+  version: "2.0"
+  skills: "domain-driven-design clean-architecture-expert clean-code-expert refactoring-expert testing-tdd-expert systematic-debugging git-workflow-expert security-backend-expert production-ready-microservices-expert"
 ---
 
 # Backend Engineering
@@ -38,7 +38,12 @@ Decisões fluem de fora para dentro do código: **domínio → estrutura → có
 |---|---|---|
 | `domain-driven-design` | Regras de negócio confusas, nomes ambíguos, Agregados, Entidades, Objetos de Valor, Eventos de Domínio | Linguagem Ubíqua, modelo tático, invariantes |
 | `clean-architecture-expert` | Onde cada responsabilidade mora, camadas, Ports & Adapters, Dependency Rule, Casos de Uso | Estrutura de pacotes, casos de uso, fronteiras com infraestrutura |
-| `clean-code-expert` | Nomes, funções grandes, aninhamento, duplicação, tratamento de erros, testes | Código legível e testável, refatorações pontuais |
+| `clean-code-expert` | Nomes, funções grandes, comentários, formatação, objetos e erros, classes, heurísticas de code review | Código legível, achados de revisão por heurística |
+| `refactoring-expert` | Código legado difícil de mudar, smells, duplicação, refatoração em passos pequenos | Smell identificado, refatorações aplicáveis e sequência segura |
+| `testing-tdd-expert` | Escrever ou revisar testes, TDD, cobertura que não protege, testes frágeis | Casos de teste, estratégia de testes, verificação por execução |
+| `systematic-debugging` | Bug, falha intermitente, regressão, stack trace, "não reproduz" | Reprodução, hipótese testada, teste que falha, correção da causa raiz |
+| `git-workflow-expert` | Commits, mensagem de commit, PR, branch, histórico, release | Plano de commits e descrição de PR |
+| `security-backend-expert` | Autenticação, autorização, entrada de dados, segredos, injeção, logs | Checklist por categoria e achados com severidade |
 | `production-ready-microservices-expert` | Observabilidade, health checks, resiliência, deploy, rollback, escalabilidade | Checklist de produção, plano de operação |
 
 Para ativar uma skill, cite-a pelo nome (ex.: "ative a skill `clean-code-expert`") e siga as instruções dela na etapa correspondente.
@@ -49,7 +54,12 @@ Sinais no pedido → skill responsável:
 
 - "regra de negócio", "invariante", "agregado", "entidade", "nome do conceito" → `domain-driven-design`
 - "camada", "use case", "controller com lógica", "acoplado ao framework/ORM", "porta", "adapter" → `clean-architecture-expert`
-- "legibilidade", "função grande", "refatorar este método", "code review", "nomes ruins" → `clean-code-expert`
+- "legibilidade", "função grande", "nomes ruins", "code review" → `clean-code-expert`
+- "refatorar", "code smell", "mau cheiro", "duplicação", "legado difícil de mudar" → `refactoring-expert`
+- "teste", "TDD", "cobertura", "mock", "teste frágil" → `testing-tdd-expert`
+- "bug", "erro", "stack trace", "intermitente", "regressão", "não reproduz" → `systematic-debugging`
+- "commit", "PR", "branch", "merge", "histórico" → `git-workflow-expert`
+- "autenticação", "autorização", "injeção", "segredo", "senha", "vulnerabilidade" → `security-backend-expert`
 - "produção", "logs", "métricas", "tracing", "alerta", "health check", "deploy", "rollback" → `production-ready-microservices-expert`
 
 Se o pedido cabe inteiro em uma skill, delegue diretamente e não force um fluxo combinado.
@@ -58,9 +68,10 @@ Se o pedido cabe inteiro em uma skill, delegue diretamente e não force um fluxo
 
 Resumo dos fluxos; passos, entregáveis e handoffs em [references/workflows.md](references/workflows.md).
 
-- **Nova feature**: `domain-driven-design` (modelo tático) → `clean-architecture-expert` (caso de uso e camadas) → `clean-code-expert` (implementação) → `production-ready-microservices-expert` (operação)
-- **Revisão de serviço**: `production-ready-microservices-expert` (riscos operacionais) → `clean-architecture-expert` (Dependency Rule) → `domain-driven-design` (Modo de Revisão do modelo) → `clean-code-expert` (código)
-- **Refatoração de legado**: `domain-driven-design` (redescobrir a linguagem) → `clean-architecture-expert` (isolar o domínio) → `clean-code-expert` (Boy Scout Rule em cada passo)
+- **Nova feature**: `domain-driven-design` (modelo tático) → `clean-architecture-expert` (caso de uso e camadas) → `testing-tdd-expert` + `clean-code-expert` (implementação guiada por testes) → `security-backend-expert` (entradas, acesso e segredos) → `production-ready-microservices-expert` (operação) → `git-workflow-expert` (commits e PR)
+- **Revisão de serviço**: `production-ready-microservices-expert` (riscos operacionais) → `clean-architecture-expert` (Dependency Rule) → `domain-driven-design` (Modo de Revisão do modelo) → `security-backend-expert` (superfícies de ataque) → `clean-code-expert` (código) → `testing-tdd-expert` (lacunas de teste)
+- **Refatoração de legado**: `domain-driven-design` (redescobrir a linguagem) → `clean-architecture-expert` (isolar o domínio) → `testing-tdd-expert` (rede de testes) → `refactoring-expert` (passos pequenos) → `clean-code-expert` (Boy Scout Rule)
+- **Bug até a correção**: `systematic-debugging` (reproduzir, isolar, hipótese, teste que falha) → `testing-tdd-expert` (teste de regressão) → `git-workflow-expert` (commit da correção)
 - **Serviço novo para produção**: `production-ready-microservices-expert` (projetar a operação primeiro) → `clean-architecture-expert` → `clean-code-expert`
 
 Os fluxos e as regras de conflito respondem a perguntas diferentes. A **ordem de um fluxo** diz por onde começar e muda com o objetivo: ao construir, o modelo vem primeiro; ao revisar ou ao preparar produção, o risco operacional vem primeiro. A **precedência de conflito** (seção abaixo) só vale quando duas recomendações divergem sobre o mesmo ponto.
