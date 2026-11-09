@@ -1,0 +1,285 @@
+# Registro de leitura (rascunho): fowler-refatoracao
+
+Gerado por script a partir das notas dos leitores. Cada item: capítulo/seção, páginas (PDF), relevância avaliada e decisão sugerida. Revisão humana por amostragem pendente.
+
+Seções registradas: 87
+
+
+## Bloco 01_p001-080 (lido: PDF p.1-80)
+
+- **Front matter: capa, copyright, dedicatória (PDF p.1-4)**
+  - Relevância: todos os artefatos: NENHUMA.
+  - Decisão sugerida: descartar (metadado; só útil para referência bibliográfica: tradução Lúcia A. Kinoshita, original Addison-Wesley 2019).
+- **Sumário (PDF p.5-9) — registro estrutural, sem detalhar**
+  - Relevância: refactoring-expert: ALTA (mapa do catálogo completo com nomes PT/EN para os blocos seguintes); api-design-expert: MÉDIA (Cap.11 é o capítulo de APIs, lista de 10 refatorações); testing-tdd-expert: MÉDIA (Cap.4); code-review-expert: ALTA (lista dos 24 smells).
+  - Decisão sugerida: usar como índice de cobertura para conferir os blocos seguintes; nomes PT/EN em refactoring-expert/references/catalogo.md.
+- **Apresentação da primeira edição (Erich Gamma) (PDF p.10-11)**
+  - Relevância: refactoring-expert: MÉDIA (justifica o formato motivação+mecanismo; disciplina de pequenos passos).
+  - Decisão sugerida: descartar o restante; usar só a ideia "refatoração sistemática, passo a passo" como princípio.
+- **Prefácio (PDF p.12-17)**
+  - Relevância: refactoring-expert: MÉDIA (definição e filosofia); testing-tdd-expert: BAIXA; api-design-expert: NENHUMA; code-review-expert: BAIXA.
+  - Decisão sugerida: usar a definição em refactoring-expert/SKILL.md (Mentalidade Principal); descartar história e agradecimentos.
+- **Cap.1 Refatoração: primeiro exemplo (PDF p.20-70)**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em refactoring-expert (workflow e exemplo resumido de sequência de refatorações, em references/processo.md) e testing-tdd-expert (pré-requisito de testes); apenas resumo de 1 linha em code-review-expert.
+- **Cap.2 Princípios da refatoração (PDF p.71-80) [continua no próximo bloco: seções sobre quando refatorar, problemas, Yagni, desempenho etc. a partir da p.80]**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em refactoring-expert/SKILL.md (definição, dois chapéus, quando refatorar) e references/principios.md; testing-tdd-expert: só a regra dos dois chapéus em 1-2 linhas.
+
+## Bloco 02_p081-160 (lido: PDF p.?)
+
+- **Cap. 2 (continuação): Princípios de refatoração, seções "Quando refatorar" (final) até "Indo além" (PDF p.81-106) [continua do bloco anterior]**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em refactoring-expert (princípios, economia, quando não refatorar, desempenho, mudança em paralelo, branches/CI); secundário em testing-tdd-expert (seção de testes/legado), api-design-expert (interface publicada) e code-review-expert (refatorar em revisão).
+- **Cap. 3: "Maus cheiros" no código (Kent Beck e Martin Fowler) (PDF p.107-125)**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em refactoring-expert (references/smells.md com os 24 itens, sinal + refatoração sugerida) e em code-review-expert (checklist de smells).
+- **Cap. 4: Escrevendo testes (PDF p.126-144)**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em testing-tdd-expert (references com regras e padrões) e em refactoring-expert (pré-requisito de testes); descartar o código específico de Mocha/Chai ou usá-lo só como ilustração neutra.
+- **Cap. 5: Apresentação do catálogo (PDF p.145-147)**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em refactoring-expert (modelo de formato de cada entrada do catálogo).
+- **Cap. 6: Primeiro conjunto de refatorações (PDF p.148-160) [continua no próximo bloco; neste bloco só o início]**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em refactoring-expert (references/catalogo-mecanica.md); completar Internalizar função com o bloco seguinte (exemplo).
+
+## Bloco 03_p161-240 (lido: PDF p.?)
+
+- **Internalizar função (Inline Function), final (PDF p.161-162) [continua do bloco anterior]**
+  - Relevância: refactoring-expert: ALTA (princípio de passo pequeno e retorno ao último verde); testing-tdd-expert: MÉDIA (ciclo "falhou -> voltar ao último verde"); api-design-expert: NENHUMA; code-review-expert: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert (regra de reduzir o passo quando os testes falham); testing-tdd-expert como exemplo do uso de testes como rede.
+- **Extrair variável (Extract Variable) (PDF p.162-167)**
+  - Relevância: refactoring-expert: ALTA (catálogo + mecanismo); clean-code-expert (artefato existente): ALTA; code-review-expert: BAIXA (expressão complexa sem nome como sinal); testing-tdd-expert: BAIXA; api-design-expert: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert/references (catálogo de refatorações com mecanismo).
+- **Internalizar variável (Inline Variable) (PDF p.167-168)**
+  - Relevância: refactoring-expert: ALTA (catálogo + mecanismo); demais: NENHUMA/BAIXA.
+  - Decisão sugerida: usar em refactoring-expert.
+- **Mudar declaração de função (Change Function Declaration) (PDF p.168-177)**
+  - Relevância: refactoring-expert: ALTA (mecanismo simples e de migração completos); api-design-expert: ALTA (migração gradual, API publicada, deprecação, parâmetro como acoplamento/escolha de contrato, nomes como junções); code-review-expert: MÉDIA (nome ruim/parâmetro inadequado como critério); testing-tdd-expert: MÉDIA (asserção para validar migração; testar a cada passo).
+  - Decisão sugerida: usar em refactoring-expert (mecânica) e api-design-expert (migração de API publicada: nova função, deprecar antiga, remover quando todos migrarem; "pausar a refatoração"); sinal de nome ruim em code-review-expert.
+- **Encapsular variável (Encapsulate Variable) (PDF p.177-182)**
+  - Relevância: refactoring-expert: ALTA; api-design-expert: MÉDIA (getter devolvendo cópia/valor imutável como contrato; controle de acesso a estado compartilhado); code-review-expert: MÉDIA (variável global/mutável ampla, campo público como sinal); testing-tdd-expert: BAIXA (testes pegam cópias que quebram expectativa).
+  - Decisão sugerida: usar em refactoring-expert (mecanismo); sinais de dados globais/campos públicos em code-review-expert.
+- **Renomear variável (Rename Variable) (PDF p.182-185)**
+  - Relevância: refactoring-expert: ALTA (mecanismo + caso de constante/publicada); clean-code-expert: ALTA; api-design-expert: MÉDIA (variável/constante publicada não pode ser renomeada; usar cópia/alias de transição); code-review-expert: MÉDIA (nome pouco claro).
+  - Decisão sugerida: usar em refactoring-expert; nota sobre "publicada" em api-design-expert.
+- **Introduzir objeto de parâmetros (Introduce Parameter Object) (PDF p.185-190)**
+  - Relevância: refactoring-expert: ALTA (mecanismo); api-design-expert: ALTA (lista de parâmetros, objeto de parâmetros/range como contrato, evolução compatível ao adicionar parâmetro antes de remover); code-review-expert: MÉDIA (agrupamento de dados como sinal); clean-code-expert: MÉDIA.
+  - Decisão sugerida: usar em refactoring-expert e api-design-expert (parâmetros agrupados em tipo de valor).
+- **Combinar funções em classe (Combine Functions into Class) (PDF p.190-195)**
+  - Relevância: refactoring-expert: ALTA; clean-code-expert/clean-architecture-expert: MÉDIA; code-review-expert: MÉDIA (lógica duplicada espalhada, funções que giram em torno do mesmo registro); api-design-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert.
+- **Combinar funções em transformação (Combine Functions into Transform) (PDF p.195-200)**
+  - Relevância: refactoring-expert: ALTA; testing-tdd-expert: MÉDIA (teste de não-mutação da entrada com oráculo); api-design-expert: MÉDIA (enrich vs transform, imutabilidade nas fronteiras); code-review-expert: BAIXA (duplicação de lógica de derivação).
+  - Decisão sugerida: usar em refactoring-expert; exemplo do teste de entrada inalterada em testing-tdd-expert.
+- **Separar em fases (Split Phase) (PDF p.200-206)**
+  - Relevância: refactoring-expert: ALTA; clean-architecture-expert: MÉDIA (separar fases/parse de entrada vs lógica); code-review-expert: MÉDIA (função que mistura duas tarefas); testing-tdd-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert.
+- **CAPÍTULO 7: Encapsulamento (introdução) (PDF p.207-208)**
+  - Relevância: refactoring-expert: MÉDIA (índice do capítulo); api-design-expert: MÉDIA (ocultar segredos/informação como critério).
+  - Decisão sugerida: usar como contexto em refactoring-expert.
+- **Encapsular registro (Encapsulate Record) (PDF p.208-217)**
+  - Relevância: refactoring-expert: ALTA; api-design-expert: MÉDIA (ocultar representação, dados brutos vs objeto, cópia/proxy); testing-tdd-expert: MÉDIA (usar cobertura de testes + deep copy como detector de atualizações esquecidas); code-review-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert; truque deep copy como detector em testing-tdd-expert.
+- **Encapsular coleção (Encapsulate Collection) (PDF p.217-221)**
+  - Relevância: refactoring-expert: ALTA; api-design-expert: ALTA (contrato de getters de coleção: cópia vs proxy, consistência, add/remove explícitos, decisão sobre remoção de ausente); code-review-expert: ALTA (getter que devolve lista mutável é achado de revisão); testing-tdd-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert, api-design-expert e como critério em code-review-expert.
+- **Substituir primitivo por objeto (Replace Primitive with Object) (PDF p.221-226)**
+  - Relevância: refactoring-expert: ALTA; clean-architecture-expert/domain-driven-design (existentes): ALTA (value object); api-design-expert: MÉDIA (tipos de domínio no lugar de strings mágicas, validação na fronteira); code-review-expert: ALTA (obsessão por primitivos, comparações com strings literais como achado); testing-tdd-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert e code-review-expert (sinal: strings/números com comportamento espalhado).
+- **Substituir variável temporária por consulta (Replace Temp with Query) (PDF p.226-230)**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: BAIXA; testing-tdd-expert: BAIXA (const como verificação); api-design-expert: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert.
+- **Extrair classe (Extract Class) (PDF p.230-233)**
+  - Relevância: refactoring-expert: ALTA (sinais + mecanismo); code-review-expert: ALTA (sinais de classe com múltiplas responsabilidades); clean-architecture-expert/clean-code-expert: MÉDIA; api-design-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert e como critérios de revisão (sinais) em code-review-expert.
+- **Internalizar classe (Inline Class) (PDF p.234-236)**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: BAIXA (classe preguiçosa referida em outro capítulo); demais: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert.
+- **Ocultar delegação (Hide Delegate) (PDF p.237-239)**
+  - Relevância: refactoring-expert: ALTA; api-design-expert: MÉDIA (não vazar estrutura interna na interface); code-review-expert: MÉDIA (cadeias de chamadas a.b.c como sinal); clean-architecture-expert: MÉDIA.
+  - Decisão sugerida: usar em refactoring-expert; sinal "cliente navega objeto delegado" em code-review-expert.
+- **Remover intermediário (Remove Middle Man) (PDF p.239-240) [continua no próximo bloco]**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: MÉDIA (Intermediário como smell, equilíbrio com Lei de Demeter); api-design-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert (par Ocultar delegação/Remover intermediário e a ideia de reajustar o nível de ocultação).
+- **refactoring-expert (catálogo de maus cheiros + mecânica)**
+  - Relevância: (não registrada)
+  - Decisão sugerida: (não registrada)
+- **testing-tdd-expert**
+  - Relevância: (não registrada)
+  - Decisão sugerida: (não registrada)
+- **api-design-expert**
+  - Relevância: (não registrada)
+  - Decisão sugerida: (não registrada)
+- **code-review-expert**
+  - Relevância: (não registrada)
+  - Decisão sugerida: (não registrada)
+
+## Bloco 04_p241-320 (lido: PDF p.241-320)
+
+- **Remover intermediário (Remove Middle Man) (PDF p.241-242) [continua do bloco anterior; só o final do exemplo]**
+  - Relevância: refactoring-expert: MÉDIA, complementa o par Ocultar delegado/Remover intermediário (Lei de Demeter tratada como julgamento); api-design-expert: BAIXA; testing-tdd-expert: NENHUMA; code-review-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert (references: mecânica de Remover intermediário, ao lado do bloco anterior).
+- **Substituir algoritmo (Substitute Algorithm) (PDF p.242-243)**
+  - Relevância: refactoring-expert: ALTA (entrada de catálogo com mecânica); testing-tdd-expert: MÉDIA (testes de caracterização da função inteira e comparação antigo vs. novo); api-design-expert: NENHUMA; code-review-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert (catálogo, mecânica); mencionar a técnica de comparar antigo vs. novo em testing-tdd-expert.
+- **Capítulo 8: Movendo recursos (PDF p.244-288) (introdução, p.244)**
+  - Relevância: refactoring-expert: ALTA. Decisão: usar (catálogo).
+  - Decisão sugerida: (não registrada)
+- **Mover função (Move Function) (PDF p.244-254) [anteriormente: Mover método / Move Method]**
+  - Relevância: refactoring-expert: ALTA (mecânica completa + heurísticas); testing-tdd-expert: MÉDIA (linter/análise estática e testes como feedback a cada passo da cópia); api-design-expert: MÉDIA (função/classe de delegação como ponte de migração); code-review-expert: MÉDIA (função que usa mais dados de outro contexto = sinal de mover, "inveja de recursos" no sentido da heurística do p.245, nome do smell não aparece aqui).
+  - Decisão sugerida: usar em refactoring-expert (catálogo, mecânica, heurísticas de decisão).
+- **Mover campo (Move Field) (PDF p.254-260)**
+  - Relevância: refactoring-expert: ALTA; testing-tdd-expert: MÉDIA (asserção como verificação de invariante, testes que revelam ordem de inicialização); api-design-expert: MÉDIA (acessores encapsulando mudança de estrutura; clientes continuam funcionando); code-review-expert: ALTA (sinais de campo no lugar errado: campos passados juntos, mudança em cascata, atualização duplicada).
+  - Decisão sugerida: usar em refactoring-expert (mecânica + sinais); sinais de campo mal colocado em code-review-expert; asserção como rede de segurança em testing-tdd-expert.
+- **Mover instruções para uma função (Move Statements into Function) (PDF p.260-264) [inversa de Mover instruções para os pontos de chamada]**
+  - Relevância: refactoring-expert: ALTA; testing-tdd-expert: BAIXA (testar a cada conversão); api-design-expert: BAIXA; code-review-expert: MÉDIA (código duplicado em volta de chamadas).
+  - Decisão sugerida: usar em refactoring-expert (catálogo, mecânica, truque do nome provisório buscável).
+- **Mover instruções para os pontos de chamada (Move Statements to Callers) (PDF p.264-270) [inversa da anterior]**
+  - Relevância: refactoring-expert: ALTA; testing-tdd-expert: BAIXA; api-design-expert: MÉDIA (função pública cujo contrato muda: ajustar fronteira chamador/chamado); code-review-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert (catálogo, mecânica).
+- **Substituir código internalizado por chamada de função (Replace Inline Code with Function Call) (PDF p.270-271)**
+  - Relevância: refactoring-expert: ALTA (curta); code-review-expert: MÉDIA (reinvenção de função existente/biblioteca, com o teste do nome para evitar falsa duplicação); demais: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert e como critério em code-review-expert.
+- **Deslocar instruções (Slide Statements) (PDF p.272-277) [anteriormente: Consolidar fragmentos condicionais duplicados]**
+  - Relevância: refactoring-expert: ALTA (regras de interferência = critério de segurança); testing-tdd-expert: ALTA (testes como detector de interferência; melhorar testes antes se não confiáveis; passos menores quando falha); api-design-expert: NENHUMA; code-review-expert: MÉDIA (efeitos colaterais ocultos, CQS como critério de legibilidade).
+  - Decisão sugerida: usar em refactoring-expert (mecânica e regras de interferência) e testing-tdd-expert (papel dos testes nesse tipo de passo).
+- **Dividir laço (Split Loop) (PDF p.277-280)**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: ALTA (laço com duas responsabilidades é sinal revisável; argumento contra objeção de "dois laços = lento"); testing-tdd-expert: BAIXA; api-design-expert: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert (catálogo, mecânica, resposta à objeção de desempenho) e como critério em code-review-expert.
+- **Substituir laço por pipeline (Replace Loop with Pipeline) (PDF p.281-286)**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: MÉDIA (laços "loops" como sinal; variável de controle apagável); testing-tdd-expert: BAIXA; api-design-expert: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert (catálogo, mecânica).
+- **Remover código morto (Remove Dead Code) (PDF p.286-288)**
+  - Relevância: refactoring-expert: ALTA (curta); code-review-expert: ALTA (código comentado/morto deve ser apontado); api-design-expert: BAIXA; testing-tdd-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert e code-review-expert.
+- **Capítulo 9: Organizando dados (PDF p.289-309) (introdução, p.289)**
+  - Relevância: (não registrada)
+  - Decisão sugerida: usar em refactoring-expert (catálogo).
+- **Separar variável (Split Variable) (PDF p.289-293) [anteriormente: Remover atribuições a parâmetros; Separar variável temporária]**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: ALTA (variável reutilizada com dois propósitos; reatribuição de parâmetro); testing-tdd-expert: BAIXA; api-design-expert: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert (mecânica) e code-review-expert (critério).
+- **Renomear campo (Rename Field) (PDF p.293-297)**
+  - Relevância: refactoring-expert: ALTA; api-design-expert: ALTA (migração gradual de nome com aceitação de ambos os nomes no construtor, depois remoção do antigo = padrão de depreciação/compatibilidade); testing-tdd-expert: MÉDIA (testes decidem se usa procedimento gradual); code-review-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert (mecânica) e api-design-expert (migração com período de coexistência de nomes). Observação: o livro aplica a ideia em código interno, não a APIs públicas versionadas [fora do livro: generalização].
+- **Substituir variável derivada por consulta (Replace Derived Variable with Query) (PDF p.297-301)**
+  - Relevância: refactoring-expert: ALTA; testing-tdd-expert: MÉDIA (asserção + testes para validar a hipótese antes de substituir); code-review-expert: ALTA (estado duplicado/derivado mantido manualmente); api-design-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert (mecânica) e code-review-expert (critério); asserção como técnica em testing-tdd-expert.
+- **Mudar referência para valor (Change Reference to Value) (PDF p.301-305) [inversa de Mudar valor para referência]**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: MÉDIA (objeto compartilhado mutável vs. valor imutável); api-design-expert: MÉDIA (imutabilidade como propriedade de contratos; passar dado imutável sem medo); testing-tdd-expert: MÉDIA (teste de igualdade por valor, casos nulos/outros tipos); domain-driven-design não é candidato aqui, mas o texto cita Objeto de Valor.
+  - Decisão sugerida: usar em refactoring-expert (mecânica); testes de equals em testing-tdd-expert (nota breve).
+- **Mudar valor para referência (Change Value to Reference) (PDF p.305-309) [inversa da anterior]**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: MÉDIA (cópias duplicadas da mesma entidade, global acoplado); api-design-expert: BAIXA; testing-tdd-expert: BAIXA (injeção do repositório ajuda testabilidade, mas o livro não diz isso aqui).
+  - Decisão sugerida: usar em refactoring-expert (mecânica).
+- **Capítulo 10: Simplificando lógicas condicionais (PDF p.310-320) (introdução, p.310) [continua no próximo bloco]**
+  - Relevância: (não registrada)
+  - Decisão sugerida: usar em refactoring-expert (catálogo).
+- **Decompor condicional (Decompose Conditional) (PDF p.310-313)**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: ALTA (condicional complexa sem nome de intenção); clean-code relacionado, mas fora dos candidatos; testing-tdd-expert/api-design-expert: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert (mecânica) e code-review-expert.
+- **Consolidar expressão condicional (Consolidate Conditional Expression) (PDF p.313-316)**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: MÉDIA (sequência de guardas com mesmo resultado); testing-tdd-expert: NENHUMA; api-design-expert: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert.
+- **Substituir condicional aninhada por cláusulas de guarda (Replace Nested Conditional with Guard Clauses) (PDF p.316-320) [continua no próximo bloco: o exemplo "invertendo condições" é truncado no fim de p.320]**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: ALTA (aninhamento profundo mascarando o fluxo principal; mito do ponto único de saída); clean-code relacionado; testing-tdd-expert: NENHUMA; api-design-expert: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert (mecânica, critério if/else vs. guarda) e code-review-expert.
+
+## Bloco 05_p321-400 (lido: PDF p.321-400)
+
+- **Substituir condicional aninhada por cláusulas de guarda (Replace Nested Conditional with Guard Clauses), final do exemplo (PDF p.321) [continua do bloco anterior]**
+  - Relevância: refactoring-expert: MÉDIA, ilustra a mecânica passo a passo (a entrada da refatoração está no bloco anterior); code-review-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert apenas como exemplo complementar; fonte principal é o bloco 04.
+- **Substituir condicional por polimorfismo (Replace Conditional with Polymorphism) (PDF p.322-339)**
+  - Relevância: refactoring-expert: ALTA, mecânica completa passo a passo mais dois exemplos (switch por tipo e caso base com variação) e o alerta de exagero; code-review-expert: MÉDIA, sinal "mesmo switch repetido em várias funções" e nome com "And"; testing-tdd-expert: MÉDIA, ritmo "um ramo, compila e testa" e throw como rede de segurança; api-design-expert: NENHUMA.
+  - Decisão sugerida: usar em refactoring-expert/references (ficha da refatoração com procedimento e os dois usos: por tipo e caso base+variação); critério do "And" e do exagero também como regra.
+- **Introduzir caso especial (Introduce Special Case) (PDF p.340-353)**
+  - Relevância: refactoring-expert: ALTA, mecânica completa e técnica de migração incremental (extrair a comparação, armadilha de valor inesperado); code-review-expert: MÉDIA, sinal "mesmo teste de valor especial espalhado por vários clientes com a mesma reação"; testing-tdd-expert: BAIXA, armadilha e teste a cada passo; api-design-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert/references (ficha da refatoração + técnica "extrair a comparação para migrar em pequenos passos").
+- **Introduzir asserção (Introduce Assertion) (PDF p.353-356)**
+  - Relevância: refactoring-expert: MÉDIA, ficha curta da refatoração; testing-tdd-expert: MÉDIA, relação asserções x código autotestável, asserção no setter; code-review-expert: MÉDIA, critério asserção (erro de programador) versus validação de entrada externa; api-design-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert (ficha) e em testing-tdd-expert/code-review-expert apenas como regra "asserção para erro de programador, validação para dado externo".
+- **Capítulo 11, Refatorando APIs: introdução (PDF p.357-358)**
+  - Relevância: api-design-expert: MÉDIA, mapa de refatorações de interface de função/classe (não cobre APIs remotas); refactoring-expert: ALTA, índice do capítulo.
+  - Decisão sugerida: usar em refactoring-expert (índice de refatorações de API) e em api-design-expert com cautela, restrito a design de assinaturas.
+- **Separar consulta de modificador (Separate Query from Modifier) (PDF p.358-361)**
+  - Relevância: api-design-expert: ALTA, regra comando-consulta e mecânica de separação; refactoring-expert: ALTA; code-review-expert: MÉDIA, sinal "nome com 'And'/getXAndDoY, função que lê e altera"; testing-tdd-expert: BAIXA, consultas puras são mais fáceis de testar.
+  - Decisão sugerida: usar em api-design-expert e refactoring-expert/references.
+- **Parametrizar função (Parameterize Function) (PDF p.361-365)**
+  - Relevância: refactoring-expert: ALTA (ficha completa); code-review-expert: MÉDIA, sinal de funções quase idênticas que só diferem em literais; api-design-expert: MÉDIA.
+  - Decisão sugerida: usar em refactoring-expert/references.
+- **Remover argumento de flag (Remove Flag Argument) (PDF p.365-370)**
+  - Relevância: api-design-expert: ALTA (definição precisa de flag e como remover); code-review-expert: ALTA, é um mau cheiro de assinatura com critério objetivo; refactoring-expert: ALTA.
+  - Decisão sugerida: usar em api-design-expert, code-review-expert (critério) e refactoring-expert/references (mecânica).
+- **Preservar objeto inteiro (Preserve Whole Object) (PDF p.370-375)**
+  - Relevância: refactoring-expert: ALTA (ficha + variação por extração); api-design-expert: ALTA, regra de assinatura e a exceção de dependência; code-review-expert: MÉDIA, Inveja de recursos/lista longa de parâmetros.
+  - Decisão sugerida: usar em refactoring-expert/references e api-design-expert. A técnica geral "nova função com prefixo pesquisável, chamar a antiga, migrar chamadas, internalizar, renomear" é reutilizável (é o padrão de migração de assinatura).
+- **Substituir parâmetro por consulta (Replace Parameter with Query) (PDF p.375-379)**
+  - Relevância: api-design-expert: ALTA (critérios de quando um parâmetro deve existir); refactoring-expert: ALTA; code-review-expert: MÉDIA (parâmetro derivável de outro).
+  - Decisão sugerida: usar em api-design-expert e refactoring-expert/references, junto com a inversa.
+- **Substituir consulta por parâmetro (Replace Query with Parameter) (PDF p.379-383)**
+  - Relevância: api-design-expert: ALTA (trade-off acoplamento x ônus do chamador; funções puras); testing-tdd-expert: MÉDIA, funções referencialmente transparentes são mais fáceis de testar; refactoring-expert: ALTA; code-review-expert: BAIXA.
+  - Decisão sugerida: usar em api-design-expert, refactoring-expert/references; ponto de testabilidade em testing-tdd-expert.
+- **Remover método de escrita (Remove Setting Method) (PDF p.383-386)**
+  - Relevância: api-design-expert: ALTA (intenção de imutabilidade expressa na interface); refactoring-expert: ALTA; code-review-expert: MÉDIA (setter desnecessário, script de criação).
+  - Decisão sugerida: usar em refactoring-expert/references e api-design-expert (imutabilidade por construção).
+- **Substituir construtor por função de factory (Replace Constructor with Factory Function) (PDF p.386-388)**
+  - Relevância: api-design-expert: ALTA (nomear criação, flexibilidade de retorno); refactoring-expert: ALTA; code-review-expert: BAIXA ("código de tipo como string literal" é citado como cheiro).
+  - Decisão sugerida: usar em refactoring-expert/references e api-design-expert.
+- **Substituir função por comando (Replace Function with Command) (PDF p.388-396)**
+  - Relevância: refactoring-expert: ALTA (técnica para quebrar função longa com muitas variáveis locais + critério para preferir função); testing-tdd-expert: BAIXA, possibilidade de testar subfunções do comando; api-design-expert: BAIXA; code-review-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert/references (ficha + técnica "variáveis locais para campos para destravar Extrair função").
+- **Substituir comando por função (Replace Command with Function) (PDF p.396-400)**
+  - Relevância: refactoring-expert: ALTA (ficha); testing-tdd-expert: MÉDIA, uso dos testes como rede (deixar o campo para o teste falhar; lacuna de teste → novo teste); api-design-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert/references; truque do teste que falha em testing-tdd-expert (exemplo de "teste como detector de passo esquecido").
+
+## Bloco 06_p401-480 (lido: PDF p.401-480)
+
+- **Capítulo 12 - Lidando com herança: introdução (PDF p.401) [início do capítulo; provavelmente começa neste bloco]**
+  - Relevância: refactoring-expert: ALTA (mapa do capítulo); testing-tdd-expert: BAIXA; api-design-expert: NENHUMA; code-review-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert (índice de refatorações de herança).
+- **Subir método (Pull Up Method) (PDF p.401-404) - inversa de Descer método**
+  - Relevância: refactoring-expert: ALTA (mecânica + sinal de duplicação); testing-tdd-expert: MÉDIA (diferenças revelam falta de teste); code-review-expert: MÉDIA (duplicação entre subclasses).
+  - Decisão sugerida: usar em refactoring-expert/references (mecânica de herança).
+- **Subir campo (Pull Up Field) (PDF p.405-406) - inversa de Descer campo**
+  - Relevância: refactoring-expert: ALTA (passos); demais: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert.
+- **Subir corpo do construtor (Pull Up Constructor Body) (PDF p.406-410)**
+  - Relevância: refactoring-expert: ALTA; demais: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert (cuidado com ordem de inicialização).
+- **Descer método (Push Down Method) (PDF p.410-412) - inversa de Subir método**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: BAIXA.
+  - Decisão sugerida: (não registrada)
+- **Descer campo (Push Down Field) (PDF p.412-413) - inversa de Subir campo**
+  - Relevância: refactoring-expert: ALTA (curta).
+  - Decisão sugerida: (não registrada)
+- **Substituir código de tipos por subclasses (Replace Type Code with Subclasses) (PDF p.413-421)**
+  - Relevância: refactoring-expert: ALTA; testing-tdd-expert: MÉDIA (truque de quebrar o retorno para provar que o teste cobre o caminho; testar a cada passo); code-review-expert: MÉDIA (código de tipo + switches = smell).
+  - Decisão sugerida: usar em refactoring-expert; truque do teste "paranóico" em testing-tdd-expert.
+- **Remover subclasse (Remove Subclass) (PDF p.421-426) - anteriormente Substituir subclasse por campos; inversa de Substituir código de tipos por subclasses**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: MÉDIA (subclasse ociosa, instanceof); testing-tdd-expert: BAIXA.
+  - Decisão sugerida: (não registrada)
+- **Extrair superclasse (Extract Superclass) (PDF p.427-432)**
+  - Relevância: refactoring-expert: ALTA.
+  - Decisão sugerida: (não registrada)
+- **Condensar hierarquia (Collapse Hierarchy) (PDF p.432-433)**
+  - Relevância: refactoring-expert: ALTA (curta); code-review-expert: BAIXA (smell Elemento ocioso/Generalidade especulativa).
+  - Decisão sugerida: (não registrada)
+- **Substituir subclasse por delegação (Replace Subclass with Delegate) (PDF p.433-452)**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: MÉDIA (herança de eixo único, `instanceof`, acoplamento sub/superclasse); testing-tdd-expert: MÉDIA ("espero que alguns testes falhem", boa suíte para detectar falhas em subclasse); api-design-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert/references (herança vs delegação).
+- **Substituir superclasse por delegação (Replace Superclass with Delegate) (PDF p.453-459) - anteriormente Substituir herança por delegação**
+  - Relevância: refactoring-expert: ALTA; code-review-expert: ALTA (critério: subclasse que não satisfaz todo contrato do pai, Stack/List, tipo-instância); api-design-expert: MÉDIA (expor só a interface necessária via delegação, não herdar API inteira); testing-tdd-expert: BAIXA.
+  - Decisão sugerida: usar em refactoring-expert e code-review-expert (critérios de herança indevida).
+- **Bibliografia (PDF p.460-463)**
+  - Relevância: todas BAIXA (só pistas de leitura); testing-tdd-expert e api-design-expert: BAIXA (títulos mf-stc/mf-tc/mf-tdd; mf-pc/mf-bba para migração gradual de API).
+  - Decisão sugerida: descartar como conteúdo; títulos podem servir de "ver também" (marcar como [fora do bloco] se usados).
+- **Lista de refatorações (PDF p.464-466)**
+  - Relevância: refactoring-expert: ALTA (lista-mestre de nomes PT/EN para a skill).
+  - Decisão sugerida: usar em refactoring-expert (glossário PT/EN dos nomes).
+- **Tabela "Maus cheiros no código" -> refatorações comuns (PDF p.467-469)**
+  - Relevância: refactoring-expert: ALTA (tabela smell->refatoração; núcleo do catálogo de maus cheiros); code-review-expert: ALTA (nomes de smells como critério de revisão e a ação sugerida); testing-tdd-expert: NENHUMA; api-design-expert: MÉDIA (Lista longa de parâmetros, Remover argumento de flag, Introduzir objeto de parâmetros, Mudar declaração de função, Separar consulta de modificador, Encapsular).
+  - Decisão sugerida: usar em refactoring-expert (references/smells-para-refatoracoes) e code-review-expert (tabela de apoio).
+- **Propaganda e páginas de editora (PDF p.470-480)**
+  - Relevância: NENHUMA em todos. Decisão: descartar.
+  - Decisão sugerida: (não registrada)
