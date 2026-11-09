@@ -36,7 +36,7 @@ Use este checklist antes de promover qualquer serviço para produção. Cada ite
 
 - [ ] **Dashboard operacional** com métricas de negócio e infraestrutura
 - [ ] **Alertas configurados** para: taxa de erro > threshold, latência p95 > SLA, lag de consumer, uso de recursos
-- [ ] **Runbooks** documentados para os alertas mais comuns
+- [ ] **Runbooks** documentados para cada alerta (o livro pede um roteiro por alerta)
 
 ## Testes
 
