@@ -1,10 +1,10 @@
-# Exemplos: Antes e Depois — Clean Code
+# Exemplos: antes e depois
 
-Comparações práticas de código com e sem aplicação dos princípios de Clean Code.
+Comparações de código em Java, todas originais. Cada exemplo indica a base no livro *Código Limpo* (páginas em fontes.md) ou marca a convenção desta skill.
 
 ---
 
-## 1. Nomes que revelam intenção
+## 1. Nomes que revelam intenção (livro, capítulo 2)
 
 **Antes:**
 ```java
@@ -22,7 +22,9 @@ public boolean hasEnoughBalanceForDeposit(Customer customer, int depositAmount) 
 
 ---
 
-## 2. Funções com uma única responsabilidade
+## 2. Função com passos em um único nível (livro, capítulo 3 e G30, G34, G36)
+
+Os passos de `processOrder` ficam um nível abaixo do nome. O objeto `Order` responde pelo que sabe, e quem chama não navega por `Customer`.
 
 **Antes:**
 ```java
@@ -46,74 +48,74 @@ public void processOrder(Order order) {
 **Depois:**
 ```java
 public void processOrder(Order order) {
-    validateOrder(order);
-    applyDiscount(order);
+    validate(order);
+    order.applyLoyaltyDiscount();
     orderRepository.save(order);
-    notifyCustomer(order);
+    confirmationNotifier.notifyConfirmed(order);
 }
 
-private void validateOrder(Order order) {
-    if (order.getCustomerId() == null) throw new InvalidOrderException("missing customer");
-    if (order.getItems().isEmpty()) throw new InvalidOrderException("empty order");
-}
-
-private void applyDiscount(Order order) {
-    if (order.getCustomer().isPremium()) {
-        order.applyDiscount(0.1);
-    }
-}
-
-private void notifyCustomer(Order order) {
-    emailService.send(order.getCustomer().getEmail(), "Order confirmed");
+private void validate(Order order) {
+    if (order.hasNoCustomer()) throw new InvalidOrderException("missing customer");
+    if (order.hasNoItems()) throw new InvalidOrderException("empty order");
 }
 ```
 
+Contrapeso (livro, capítulo 12): não divida além do que ajuda a leitura. Se `validate` tivesse uma linha, mantê-la inline seria aceitável.
+
 ---
 
-## 3. Guard Clauses em vez de aninhamento
+## 3. Aninhamento profundo (livro: um ou dois níveis; G28, G29)
 
 **Antes:**
 ```java
 public void cancelSubscription(Subscription subscription) {
-    if (subscription != null) {
-        if (subscription.isActive()) {
-            if (subscription.canBeCancelled()) {
-                subscription.cancel();
-                repository.save(subscription);
-            }
+    if (subscription.isActive()) {
+        if (subscription.canBeCancelled()) {
+            subscription.cancel();
+            repository.save(subscription);
         }
     }
 }
 ```
 
-**Depois:**
+**Depois (encapsulando a condição, sem negações):**
 ```java
 public void cancelSubscription(Subscription subscription) {
-    if (subscription == null) return;
-    if (!subscription.isActive()) return;
-    if (!subscription.canBeCancelled()) return;
+    if (subscription.isCancellable()) {
+        subscription.cancel();
+        repository.save(subscription);
+    }
+}
+```
+
+**Alternativa, convenção desta skill (retorno antecipado):**
+```java
+public void cancelSubscription(Subscription subscription) {
+    if (!subscription.isCancellable()) return;
 
     subscription.cancel();
     repository.save(subscription);
 }
 ```
 
+A versão com retorno antecipado usa uma condição negativa, que o livro pede para evitar (G29), em troca de menos indentação. Escolha a que ficar mais clara. Observação: o exemplo não verifica se `subscription` é nulo, porque o livro orienta a não passar null como argumento por padrão.
+
 ---
 
-## 4. Objetos ao invés de primitivos
+## 4. Agrupar parâmetros em objetos (livro: agrupar; rótulo Value Object é convenção desta skill)
 
 **Antes:**
 ```java
-public void registerCustomer(String name, String email, String cpf, String phone) {
-    // qual String é qual?
+public void registerCustomer(String name, String email, String taxId, String phone) {
+    // qual String é qual? quatro parâmetros
 }
 ```
 
 **Depois:**
 ```java
-public void registerCustomer(CustomerName name, Email email, CPF cpf, PhoneNumber phone) {
-    // cada tipo carrega sua própria validação
-}
+public void registerCustomer(CustomerRegistration registration) { ... }
+
+public record CustomerRegistration(CustomerName name, Email email, TaxId taxId, Phone phone) {}
 
 public record Email(String value) {
     public Email {
@@ -122,9 +124,11 @@ public record Email(String value) {
 }
 ```
 
+O livro sustenta agrupar parâmetros que formam um conceito e evitar muitos parâmetros. Criar um tipo por valor de domínio é convenção desta skill.
+
 ---
 
-## 5. Tratamento de erro sem retornos nulos
+## 5. Erro sem retorno nulo (livro, capítulo 7)
 
 **Antes:**
 ```java
@@ -147,13 +151,13 @@ public Customer findCustomer(CustomerId id) {
     return repository.findById(id)
         .orElseThrow(() -> new CustomerNotFoundException(id));
 }
-
-// no chamador: sem checagem de nulo, exceção propagada ou tratada onde faz sentido
 ```
+
+O livro pede lançar exceção ou devolver um objeto de caso especial (e coleção vazia em vez de null). O uso de `Optional` é convenção desta skill.
 
 ---
 
-## 6. Comentário desnecessário vs. código autoexplicativo
+## 6. Condição com nome e sem comentário (livro: G28, G25 e capítulo 4)
 
 **Antes:**
 ```java
@@ -165,7 +169,73 @@ if (customer.getStatus() == 1 && customer.getRole() == 2) {
 
 **Depois:**
 ```java
-if (customer.isActive() && customer.hasAdminRole()) {
+if (customer.mayCancel()) {
     cancel();
+}
+```
+
+`mayCancel()` esconde os números mágicos e dispensa o comentário. A condição vive no objeto que conhece o `status` e o `role`.
+
+---
+
+## 7. Switch por tipo (livro: G23 e capítulo 3)
+
+**Antes:**
+```java
+Money shippingCost(Shipment shipment) {
+    switch (shipment.type()) {
+        case STANDARD: return standardCost(shipment);
+        case EXPRESS:  return expressCost(shipment);
+        case PICKUP:   return Money.ZERO;
+        default: throw new IllegalArgumentException("type " + shipment.type());
+    }
+}
+```
+
+**Depois:**
+```java
+interface ShippingMethod { Money cost(Shipment shipment); }
+
+class StandardShipping implements ShippingMethod { ... }
+class ExpressShipping implements ShippingMethod { ... }
+class Pickup implements ShippingMethod {
+    public Money cost(Shipment shipment) { return Money.ZERO; }
+}
+
+// o único switch fica na criação do objeto
+ShippingMethod methodFor(ShippingType type) {
+    switch (type) {
+        case STANDARD: return new StandardShipping();
+        case EXPRESS:  return new ExpressShipping();
+        case PICKUP:   return new Pickup();
+        default: throw new IllegalArgumentException("type " + type);
+    }
+}
+```
+
+Se novas operações forem mais prováveis que novos tipos, o switch pode ser a melhor escolha (livro, capítulo 6, anti-simetria).
+
+---
+
+## 8. Efeito colateral no nome (livro: capítulo 3 e N7)
+
+**Antes:**
+```java
+public boolean checkPassword(String user, String password) {
+    boolean ok = credentials.matches(user, password);
+    if (ok) session.start(user);   // efeito escondido
+    return ok;
+}
+```
+
+**Depois (duas funções com um nome honesto cada):**
+```java
+public boolean passwordMatches(String user, String password) {
+    return credentials.matches(user, password);
+}
+
+public void signIn(String user, String password) {
+    if (!passwordMatches(user, password)) throw new InvalidCredentialsException(user);
+    session.start(user);
 }
 ```
