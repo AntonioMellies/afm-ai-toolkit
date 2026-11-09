@@ -65,7 +65,7 @@ Princípios:
 * Proteger invariantes
 * Manter agregados pequenos
 * Evitar acoplamento excessivo
-* Referenciar agregados externos apenas por identidade
+* Referenciar agregados externos por identidade (convenção desta skill; Evans admite referências a outras raízes, p.121)
 
 Questione agregados grandes demais.
 

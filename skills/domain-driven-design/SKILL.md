@@ -3,7 +3,7 @@ name: domain-driven-design
 description: Atua como especialista e facilitador de Domain-Driven Design (DDD). Auxilia na descoberta, modelagem, refinamento e evolução de domínios complexos, com foco em linguagem ubíqua, design estratégico e design tático. Use quando precisar entender um domínio de negócio, construir um glossário, definir Bounded Contexts e Context Maps, conduzir Event Storming, modelar Agregados, Entidades e Objetos de Valor ou revisar a integridade de um modelo existente.
 metadata:
   author: Antonio Mellies
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Domain-Driven Design
@@ -200,7 +200,7 @@ Classifique cada subdomínio como:
 
 ##### Supporting Domain
 
-Área que apoia o negócio principal.
+Área que apoia o negócio principal (termo desta skill; o livro de Evans nomeia Core Domain e Generic Subdomains).
 
 ##### Generic Domain
 
@@ -242,7 +242,7 @@ Analise os relacionamentos entre contextos.
 
 Considere:
 
-* Partnership
+* Partnership (termo da literatura posterior de DDD; não consta no livro de Evans)
 * Shared Kernel
 * Customer/Supplier
 * Conformist
@@ -284,9 +284,9 @@ Refine o modelo com os padrões táticos do DDD:
 
 * **Entidades** — quando a identidade importa
 * **Objetos de Valor** — imutáveis, comparados por atributos; prefira-os sempre que possível
-* **Agregados** — limites de consistência pequenos, protegendo invariantes; referencie outros agregados apenas por identidade
+* **Agregados** — limites de consistência pequenos, protegendo invariantes; referencie outros agregados por identidade (convenção desta skill; Evans admite referências a outras raízes, p.121)
 * **Serviços de Domínio** — só quando o comportamento não pertence a uma Entidade ou Objeto de Valor
-* **Factories** e **Repositories** — expressam intenções do domínio e ocultam persistência
+* **Factories** e **Repositories** — expressam intenções do domínio; é o Repository, não a Factory, que oculta a persistência (Evans, p.142)
 * **Eventos de Domínio** — fatos relevantes, no passado, na linguagem do domínio
 
 Características, perguntas e princípios de cada padrão em [references/tactical-design.md](references/tactical-design.md).
@@ -385,6 +385,11 @@ Material de apoio carregado sob demanda — consulte apenas quando a tarefa exig
 
 - [references/event-storming.md](references/event-storming.md) — eventos, comandos, políticas e sistemas externos com exemplos
 - [references/tactical-design.md](references/tactical-design.md) — características e princípios de cada padrão tático do DDD
+- [references/evans-camada-anticorrupcao-e-legado.md](references/evans-camada-anticorrupcao-e-legado.md) — padrões do Context Map, Anticorruption Layer e integração com legado
+- [references/evans-destilacao-do-dominio.md](references/evans-destilacao-do-dominio.md) — Core Domain, Generic Subdomains, Vision Statement, Segregated e Abstract Core
+- [references/evans-estrutura-em-larga-escala.md](references/evans-estrutura-em-larga-escala.md) — Evolving Order, Responsibility Layers, Knowledge Level e quando não aplicar
+- [references/evans-agregados-repositorios-fabricas.md](references/evans-agregados-repositorios-fabricas.md) — regras de agregado, fábricas, repositórios, serviços, módulos e padrões de projeto no modelo
+- [references/fontes.md](references/fontes.md) — rastreabilidade regra a página (Evans) e divergências da skill com o livro
 
 ---
 
