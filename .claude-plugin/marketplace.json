@@ -8,8 +8,8 @@
     {
       "name": "afm-ai-toolkit",
       "source": "./",
-      "description": "Biblioteca de skills agnóstica de ferramenta: Clean Architecture, Clean Code, refatoração, testes e TDD, depuração, Git, segurança de backend, banco de dados e migrações, Architecture Hard Parts, DDD, microsserviços em produção, React/Next.js, Material Design 3, Product Discovery, hipóteses e experimentos, métricas de produto e análise de mercado, com skills de grupo por afinidade. No Claude Code, inclui também hooks de proteção e subagents de revisão.",
-      "version": "1.3.0"
+      "description": "Biblioteca de skills agnóstica de ferramenta: Clean Architecture, Clean Code, refatoração, testes e TDD, depuração, Git, segurança de backend, banco de dados e migrações, Architecture Hard Parts, DDD, microsserviços em produção, React/Next.js, Material Design 3, Product Discovery, hipóteses e experimentos, especificação de produto, métricas de produto e análise de mercado, com skills de grupo por afinidade. No Claude Code, inclui também hooks de proteção e subagents de revisão.",
+      "version": "1.4.0"
     }
   ]
 }

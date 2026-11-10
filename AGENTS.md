@@ -58,6 +58,7 @@ skills/domain-driven-design/                       ← DDD estratégico e tátic
 skills/database-and-migrations-expert/             ← Banco de dados em produção, migrações
 skills/product-discovery-assistant/                ← Product Discovery, árvore de oportunidades
 skills/hypothesis-and-experiments/                 ← Hipóteses, experimentos, evidência
+skills/prd-writer/                                 ← Especificação de produto, avaliação de oportunidade
 skills/product-metrics/                            ← Métricas de produto (Lean Analytics)
 skills/market-competitive-analysis/                ← Estratégia de mercado, mercado-alvo, preço
 skills/production-ready-microservices-expert/      ← Operação em produção
