@@ -67,7 +67,7 @@ O PDF é escaneado (sem texto extraível). O texto foi obtido com Tesseract 5.4 
 - Figuras, diagramas e muitas tabelas não foram extraídos; só legendas e texto.
 - Indentação de código se perdeu; código dos exemplos não deve ser copiado das notas.
 - Alguns capítulos continuam de um bloco no outro; o registro marca "continua".
-- As notas completas (`notas/`) são material de trabalho local, fora do git (veja `.gitignore`); os registros por livro, versionados, são o índice. Citações só de trecho curto, com página.
+- As notas completas (`notas/`) estão versionadas (decisão do usuário em 2026-11-10, para rastreabilidade e para reproduzir a verificação de citações); os registros por livro são o índice. Elas contêm paráfrases e citações curtas de livros protegidos: ao publicar o repositório, decida se `notas/` e `references/books/` devem ficar de fora.
 - Leitura feita por modelo: os registros são rascunhos que o usuário revisa por amostragem antes de virarem base de skill.
 
 ## Achados que já alteram o plano
