@@ -1,0 +1,34 @@
+{
+  "description": "Guardrails do afm-ai-toolkit: proteção de arquivos, bloqueio de comandos destrutivos, formatação por extensão e verificação antes de encerrar. Desligue com AFM_HOOKS_DISABLE=1 ou .afm-hooks.json.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/protect-files.mjs"], "timeout": 10 }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/block-destructive-bash.mjs"], "timeout": 10 }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/format-on-edit.mjs"], "timeout": 30 }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/verify-before-stop.mjs"], "timeout": 180 }
+        ]
+      }
+    ]
+  }
+}

@@ -153,13 +153,16 @@ Classes utilitárias CSS: `.md-typescale-{role}-{size}`
 Padrão de token: `--md-sys-shape-corner-{scale}`
 
 ```css
---md-sys-shape-corner-none:        0px
---md-sys-shape-corner-extra-small: 4px
---md-sys-shape-corner-small:       4px   /* referência componentes pequenos */
---md-sys-shape-corner-medium:      6px   /* referência componentes médios */
---md-sys-shape-corner-large:       8px   /* referência componentes grandes */
---md-sys-shape-corner-extra-large: 16px
---md-sys-shape-corner-full:        9999px
+--md-sys-shape-corner-none:                 0px
+--md-sys-shape-corner-extra-small:          4px
+--md-sys-shape-corner-small:                8px
+--md-sys-shape-corner-medium:               12px
+--md-sys-shape-corner-large:                16px
+--md-sys-shape-corner-large-increased:      20px
+--md-sys-shape-corner-extra-large:          28px
+--md-sys-shape-corner-extra-large-increased: 32px
+--md-sys-shape-corner-extra-extra-large:    48px
+--md-sys-shape-corner-full:                 9999px
 ```
 
 Nunca defina `border-radius` com valores arbitrários.

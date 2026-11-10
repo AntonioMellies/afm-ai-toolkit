@@ -1,10 +1,10 @@
 ---
 name: frontend-design-system
-description: Atua como Líder de Frontend e Design System que orquestra as skills de Material Design 3, Material Design 3 Enterprise UX e Clean Code. Decide se a tarefa pede fundamentos do Design System, padrões de sistemas corporativos densos ou qualidade do código frontend, e encadeia as três quando necessário. Use quando a tarefa de interface envolver mais de uma dessas disciplinas, como criar um Design System e as telas que o usam, construir uma tela de ponta a ponta do token ao componente, revisar um frontend inteiro ou implementar telas enterprise, ou quando não estiver claro qual skill de design ou frontend usar.
+description: Atua como Líder de Frontend e Design System que orquestra as skills de Material Design 3, Material Design 3 Enterprise UX, implementação em React e Next.js e Clean Code. Decide se a tarefa pede fundamentos do Design System, padrões de sistemas corporativos densos, implementação de telas em React/Next.js ou qualidade do código frontend, e encadeia as necessárias. Use quando a tarefa de interface envolver mais de uma dessas disciplinas, como criar um Design System e as telas que o usam, construir uma tela de ponta a ponta do token ao componente, revisar um frontend inteiro ou implementar telas enterprise, ou quando não estiver claro qual skill de design ou frontend usar.
 metadata:
   author: Antonio Mellies
-  version: "1.0"
-  skills: "designer-system-material-3 designer-system-material-3-enterprise-ux clean-code-expert"
+  version: "2.0"
+  skills: "designer-system-material-3 designer-system-material-3-enterprise-ux frontend-implementation clean-code-expert"
 ---
 
 # Frontend & Design System
@@ -38,7 +38,8 @@ Fundamentos antes de padrões, padrões antes de código: **tokens → component
 |---|---|---|
 | `designer-system-material-3` | Tokens (cor, tipografia, forma, elevação, espaçamento, motion), componentes M3, temas, Dark Mode, Dynamic Color, responsividade geral | Fundamentos do Design System, tokens JSON, mapa de componentes, REVIEW MODE |
 | `designer-system-material-3-enterprise-ux` | CRM, ERP, Backoffice, tabelas densas, filtros, CRUD, drawers, dashboards, Multi-Tenant, White Label | Layout canônico, padrões de tela enterprise, Screen Generation Mode |
-| `clean-code-expert` | Qualidade do código frontend: nomes, componentes grandes, duplicação, tratamento de erros, testes | Código legível, componentes pequenos e testáveis |
+| `frontend-implementation` | Implementar telas em React e Next.js (App Router): Server/Client Components, estado e efeitos, formulários, acessibilidade, testes de UI | Componentes e telas implementados com as práticas oficiais do framework |
+| `clean-code-expert` | Qualidade do código frontend: nomes, componentes grandes, duplicação, tratamento de erros, heurísticas de code review | Código legível, componentes pequenos |
 
 Para ativar uma skill, cite-a pelo nome (ex.: "ative a skill `designer-system-material-3`") e siga as instruções dela na etapa correspondente.
 
@@ -48,7 +49,8 @@ Sinais no pedido → skill responsável:
 
 - "tokens", "paleta", "tema", "dark mode", "dynamic color", "tipografia", "qual componente M3" → `designer-system-material-3`
 - "CRM", "ERP", "backoffice", "admin", "tabela com muitas colunas", "filtros", "CRUD", "drawer", "dashboard", "tenant", "white label" → `designer-system-material-3-enterprise-ux`
-- "componente React/Angular/Vue grande", "refatorar este componente", "code review do frontend", "nomes", "duplicação" → `clean-code-expert`
+- "React", "Next.js", "App Router", "Server Component", "useEffect", "formulário", "Server Action", "teste de componente", "acessibilidade do código" → `frontend-implementation`
+- "componente grande", "refatorar este componente", "code review do frontend", "nomes", "duplicação" → `clean-code-expert`
 
 Em produto corporativo, `designer-system-material-3-enterprise-ux` tem precedência para decisões de tela; `designer-system-material-3` continua dono dos fundamentos. Se o pedido cabe inteiro em uma skill, delegue diretamente.
 
@@ -57,9 +59,9 @@ Em produto corporativo, `designer-system-material-3-enterprise-ux` tem precedên
 Resumo dos fluxos; passos, entregáveis e handoffs em [references/workflows.md](references/workflows.md).
 
 - **Design System novo**: `designer-system-material-3` (tokens e componentes) → `designer-system-material-3-enterprise-ux` (camadas de tenant e padrões, se corporativo) → `clean-code-expert` (estrutura do código do DS)
-- **Tela de ponta a ponta**: `designer-system-material-3-enterprise-ux` ou `designer-system-material-3` (especificação da tela) → `designer-system-material-3` (tokens e componentes faltantes) → `clean-code-expert` (implementação)
+- **Tela de ponta a ponta**: `designer-system-material-3-enterprise-ux` ou `designer-system-material-3` (especificação da tela) → `designer-system-material-3` (tokens e componentes faltantes) → `frontend-implementation` (implementação em React/Next.js) → `clean-code-expert` (qualidade do código)
 - **Revisão de frontend**: `designer-system-material-3` (REVIEW MODE) → `designer-system-material-3-enterprise-ux` (Review Mode enterprise, se corporativo) → `clean-code-expert` (código)
-- **Implementação enterprise**: `designer-system-material-3-enterprise-ux` (layout canônico, estados, densidade) → `clean-code-expert` (componentes e testes)
+- **Implementação enterprise**: `designer-system-material-3-enterprise-ux` (layout canônico, estados, densidade) → `frontend-implementation` (componentes, estados e testes de UI) → `clean-code-expert` (qualidade)
 
 ## Conflitos entre Skills
 

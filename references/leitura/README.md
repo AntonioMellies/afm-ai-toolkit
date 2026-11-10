@@ -1,0 +1,79 @@
+# Registro de leitura das fontes (Passo 0)
+
+Evidência de que o conteúdo dos livros de `references/books/` foi lido no arquivo original, capítulo a capítulo, antes de qualquer artefato ser criado a partir deles. **Estado: rascunho, revisão humana por amostragem pendente.** Segunda rodada (2026-11-10): 11 livros de produto, estratégia, métricas, precificação e banco de dados; ver "Rodada 2" abaixo.
+
+## Como foi feito
+
+1. Texto extraído de cada PDF com `pdftotext -layout`, dividido em blocos de ~80 páginas com marcadores `=== PDF PAGINA N ===` (`ferramentas/split.py`).
+2. Cada bloco lido integralmente por um leitor independente, seguindo `ferramentas/leitura-instrucoes.md`: só o que está no texto, paráfrase com página, citações literais de até 25 palavras, marcação `[fora do livro]` para o que não está no texto.
+3. Para os livros que já alimentam skills (Hard Parts, Arquitetura Limpa, Susan Fowler), cada bloco inclui a seção "Auditoria da skill atual" (afirmações confirmadas, não suportadas e lacunas).
+4. Checagem automática das citações contra o texto do bloco (`ferramentas/check_quotes.py`).
+5. Registro compacto por livro, gerado das notas (`ferramentas/consolidate.py`).
+
+Páginas citadas são as do PDF (`PDF p.N`). A extração não traz a numeração impressa, exceto onde as notas indicam "impr.".
+
+## Cobertura
+
+| Livro | Idioma do PDF | Blocos lidos | Registro | Notas completas |
+|---|---|---|---|---|
+| Evans, *Domain-Driven Design* | inglês | 6 de 6 | [evans-ddd.md](evans-ddd.md) | `notas/evans-ddd__*.md` |
+| Fowler, *Refatoração* | português | 6 de 6 | [fowler-refatoracao.md](fowler-refatoracao.md) | `notas/fowler-refatoracao__*.md` |
+| Gamma et al., *Padrões de Projetos* | português | 4 de 4 | [gof.md](gof.md) | `notas/gof__*.md` |
+| Goodliffe, *Como ser um Programador Melhor* | português | 6 de 6 | [goodliffe.md](goodliffe.md) | `notas/goodliffe__*.md` |
+| Ford/Richards et al., *Software Architecture: The Hard Parts* | inglês | 6 de 6 | [hard-parts.md](hard-parts.md) | `notas/hard-parts__*.md` |
+| Martin, *Arquitetura Limpa* | português | 6 de 6 | [arquitetura-limpa.md](arquitetura-limpa.md) | `notas/arquitetura-limpa__*.md` |
+| Susan Fowler, *Microsserviços Prontos para a Produção* | português | 3 de 3 | [susan-fowler.md](susan-fowler.md) | `notas/susan-fowler__*.md` |
+| Martin, *Código Limpo* | português (PDF escaneado, lido por OCR) | 5 de 5 | [codigo-limpo.md](codigo-limpo.md) | `notas/codigo-limpo__*.md` |
+
+## Rodada 2: produto, estratégia, métricas, precificação e banco de dados (11 livros)
+
+Livros em inglês, em PDF (cite `p.N`) ou EPUB/AZW3 convertido em seções (cite `s.N` + capítulo). Citações entre aspas são literais em inglês, até 25 palavras.
+
+| Livro | Formato | Blocos lidos | Registro |
+|---|---|---|---|
+| Torres, *Continuous Discovery Habits* | PDF | 2 de 2 | [torres-cdh.md](torres-cdh.md) |
+| Fitzpatrick, *The Mom Test* | PDF | 2 de 2 | [mom-test.md](mom-test.md) |
+| Bland e Osterwalder, *Testing Business Ideas* | PDF (muito visual) | 5 de 5 | [testing-business-ideas.md](testing-business-ideas.md) |
+| Savoia, *The Right It* | AZW3 → EPUB | 3 de 3 | [the-right-it.md](the-right-it.md) |
+| Croll e Yoskovitz, *Lean Analytics* | PDF | 5 de 5 | [lean-analytics.md](lean-analytics.md) |
+| Lafley e Martin, *Playing to Win* | PDF | 3 de 3 | [playing-to-win.md](playing-to-win.md) |
+| Moore, *Crossing the Chasm* (3ª ed.) | EPUB | 4 de 4 (um bloco é só propaganda) | [crossing-the-chasm.md](crossing-the-chasm.md) |
+| Ramanujam e Tacke, *Monetizing Innovation* | EPUB | 4 de 4 | [monetizing-innovation.md](monetizing-innovation.md) |
+| Osterwalder et al., *Value Proposition Design* | PDF (muito visual, 107 páginas por OCR em inglês) | 8 de 8 | [value-proposition-design.md](value-proposition-design.md) |
+| Ambler e Sadalage, *Refactoring Databases* | EPUB | 7 de 7 | [refactoring-databases.md](refactoring-databases.md) |
+| Cagan, *Inspired* (2ª ed.) | PDF | 5 de 5 | [inspired-cagan.md](inspired-cagan.md) |
+
+**Inspired** (Cagan, 2ª ed., 370 páginas): o primeiro arquivo recebido tinha 2 páginas de propaganda e foi substituído pelo livro. Lido em 5 blocos (2026-11-10), registro em [inspired-cagan.md](inspired-cagan.md). Os capítulos de organização, liderança e cultura de times foram avaliados e, em geral, descartados por falta de critério acionável.
+
+**Limites de cobertura.** *Testing Business Ideas* e *Value Proposition Design* são livros de canvases, ícones e figuras: a extração traz só o texto. As escalas de custo, tempo e força da evidência dos cartões de experimento, os canvases e os diagramas **não foram lidos**. Em *Testing Business Ideas* as tabelas em colunas saem intercaladas no modo `-layout`; por isso a verificação de citações também consulta uma extração sem layout (`chunks_raw`). Em *Refactoring Databases* (2006, exemplos em Oracle/PL/SQL) o código aparece fragmentado em seções minúsculas e não foi usado.
+
+## Verificação das citações
+
+| Conjunto | Citações no formato `"…" [p.N]` | Achadas literalmente no bloco |
+|---|---|---|
+| Evans, Fowler, GoF, Goodliffe | 356 | 329 (92%) |
+| Hard Parts, Arquitetura Limpa, Susan Fowler | 198 | 167 (84%) |
+| Código Limpo (OCR) | 65 | 60 (92%) |
+| Rodada 2 (11 livros, inglês) | 1093 | 991 literais (91%); 64 só presentes na página citada, sobretudo *Testing Business Ideas* (colunas intercaladas); 38 não achadas |
+
+As ausentes têm três causas conhecidas: (a) o PDF perde ligaduras `fi`/`fl` (`modi cações`) e o leitor corrigiu o texto; (b) paráfrases entre aspas, sobretudo em português sobre texto em inglês; (c) quebras de linha e aspas curvas. As causas (a) foram confirmadas em amostra. **Nenhuma citação ausente pode sustentar regra de skill sem conferência manual no PDF. Citação que só aparece "na página" (todas as palavras presentes, mas não em sequência) vale como indício, não como prova literal; o verificador `check_quotes.py` as conta à parte.** O Hard Parts tem a pior taxa (41 de 59).
+
+## OCR do Código Limpo
+
+O PDF é escaneado (sem texto extraível). O texto foi obtido com Tesseract 5.4 (idioma `por`, 250 dpi, PyMuPDF para renderizar) via `ferramentas/ocr.py`, fora do repositório. A prosa é legível; o código-fonte dos listados está muito corrompido e **não deve ser usado**. Páginas citadas são as do PDF. O leitor marcou a confiança do OCR (BOA, MÉDIA, RUIM) em cada capítulo; regras que dependem de texto ilegível foram descartadas.
+
+## Problemas conhecidos
+
+- Figuras, diagramas e muitas tabelas não foram extraídos; só legendas e texto.
+- Indentação de código se perdeu; código dos exemplos não deve ser copiado das notas.
+- Alguns capítulos continuam de um bloco no outro; o registro marca "continua".
+- As notas completas (`notas/`) estão versionadas (decisão do usuário em 2026-11-10, para rastreabilidade e para reproduzir a verificação de citações); os registros por livro são o índice. Elas contêm paráfrases e citações curtas de livros protegidos: ao publicar o repositório, decida se `notas/` e `references/books/` devem ficar de fora.
+- Leitura feita por modelo: os registros são rascunhos que o usuário revisa por amostragem antes de virarem base de skill.
+
+## Achados que já alteram o plano
+
+- Susan Fowler **não** trata de segurança; segurança backend fica sem base local (só OWASP, externa).
+- Fowler cap. 11 trata de interface de código, não de API HTTP; Susan Fowler recomenda **não** versionar APIs de endpoint (p.40-41), o que contradiz `production-ready-microservices-expert/references/production-checklist.md` (linha de "versionamento de API"). `api-design-expert` não tem base local.
+- O exemplo de log da skill de produção expõe `customerId`; o livro pede higiene de logs (Susan Fowler p.187).
+- As skills `clean-architecture-expert` e `architecture-hard-parts-expert` misturam regras do livro com preferências próprias (Event Driven por padrão, Sagas, Outbox, "least worst", "sempre/nunca"), sem respaldo nos blocos lidos. A árvore de pacotes por camada contraria Arquitetura Limpa p.383-384.
+- Evans cobre estrutura em larga escala, destilação do domínio, camada anticorrupção e DDD com legado, ausentes ou rasos em `domain-driven-design`.

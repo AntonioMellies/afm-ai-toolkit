@@ -16,7 +16,8 @@ Cada fluxo lista as etapas, a skill responsável, o que a etapa recebe e o que e
    - Produto corporativo → `designer-system-material-3-enterprise-ux` (Screen Generation Mode: objetivo, usuários, layout canônico, componentes, estados, tokens, wireframe)
    - Produto geral → `designer-system-material-3` (SYSTEM DESIGN MODE)
 2. `designer-system-material-3` — completar tokens e componentes que a tela exige e ainda não existem no Design System.
-3. `clean-code-expert` — implementação: componentes com uma responsabilidade, nomes que revelam intenção, estados tratados explicitamente, testes.
+3. `frontend-implementation` — implementação em React/Next.js: Server vs Client Components, estado, formulários, acessibilidade e testes de UI.
+4. `clean-code-expert` — qualidade: componentes com uma responsabilidade, nomes que revelam intenção, estados tratados explicitamente.
 
 ## Revisão de frontend
 

@@ -18,7 +18,6 @@ Referência de implementação das três dimensões de observabilidade para micr
   "spanId": "span-789",
   "event": "order.approved",
   "orderId": "order-001",
-  "customerId": "cust-42",
   "amount": 199.90,
   "durationMs": 45
 }
@@ -34,7 +33,6 @@ MDC.put("service", "checkout");
 // Usar log estruturado
 log.info("order.approved",
     kv("orderId", order.getId()),
-    kv("customerId", order.getCustomerId()),
     kv("amount", order.getAmount())
 );
 ```

@@ -76,13 +76,16 @@ Base: múltiplos de 4dp. Nunca use valores arbitrários como `10px`, `15px`, `22
 ### Shape Tokens
 
 ```css
---md-sys-shape-corner-none:        0px
---md-sys-shape-corner-extra-small: 4px
---md-sys-shape-corner-small:       4px
---md-sys-shape-corner-medium:      6px
---md-sys-shape-corner-large:       8px
---md-sys-shape-corner-extra-large: 16px
---md-sys-shape-corner-full:        9999px
+--md-sys-shape-corner-none:                 0px
+--md-sys-shape-corner-extra-small:          4px
+--md-sys-shape-corner-small:                8px
+--md-sys-shape-corner-medium:               12px
+--md-sys-shape-corner-large:                16px
+--md-sys-shape-corner-large-increased:      20px
+--md-sys-shape-corner-extra-large:          28px
+--md-sys-shape-corner-extra-large-increased: 32px
+--md-sys-shape-corner-extra-extra-large:    48px
+--md-sys-shape-corner-full:                 9999px
 ```
 
 ### Elevation Tokens

@@ -1,0 +1,324 @@
+# Registro de leitura (rascunho): value-proposition-design
+
+Gerado por script a partir das notas dos leitores. Cada item: capítulo/seção, páginas (PDF), relevância avaliada e decisão sugerida. Revisão humana por amostragem pendente.
+
+Seções registradas: 98
+
+
+## Bloco 01_p001-084 (lido: 1-84; p.=PDF, s.=seção do ebook)
+
+- **Capa, créditos, sumário (PDF p.1-7)**
+  - Relevância: todos NENHUMA. Decisão: descartar (estrutura apenas).
+  - Decisão sugerida: (não registrada)
+- **Introdução: por que usar o VPD (PDF p.8-17)**
+  - Relevância: hypothesis-and-experiments: BAIXA (motivação genérica de testar); product-discovery-assistant: BAIXA; pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: descartar (apenas contexto).
+- **Ferramentas e processo (PDF p.20-29)**
+  - Relevância: pricing-and-monetization: MÉDIA (definição de Revenue Streams como valor capturado via preço que o cliente aceita pagar; Profit); product-discovery-assistant: MÉDIA (VP Canvas como plug-in do BMC; Search/Design/Test/Evolve); hypothesis-and-experiments: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant (relação VP Canvas-BMC) e como referência pontual em pricing-and-monetization (definição de Revenue Streams).
+- **Contexto de uso: startups x organizações estabelecidas (PDF p.30-36)**
+  - Relevância: hypothesis-and-experiments: BAIXA; product-discovery-assistant: BAIXA (contexto); pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: descartar (ou nota de contexto sobre desafios de organizações estabelecidas).
+- **Argumentos para vender o VPD internamente (PDF p.42-43)**
+  - Relevância: todas BAIXA/NENHUMA. Decisão: descartar.
+  - Decisão sugerida: usar em product-discovery-assistant (referência de VP Canvas).
+- **Customer Jobs (PDF p.54-56)**
+  - Relevância: product-discovery-assistant: ALTA (tipologia de jobs, supporting jobs, contexto, importância); hypothesis-and-experiments: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Customer Pains (PDF p.57-59)**
+  - Relevância: product-discovery-assistant: ALTA (tipologia de pains e perguntas-guia); hypothesis-and-experiments: MÉDIA (tornar pains mensuráveis para criar critérios testáveis).
+  - Decisão sugerida: usar em product-discovery-assistant (perguntas de entrevista); regra de concretude em hypothesis-and-experiments.
+- **Customer Gains (PDF p.61-63)**
+  - Relevância: product-discovery-assistant: ALTA (tipologia de gains e perguntas); pricing-and-monetization: BAIXA (menciona "cost savings" como tipo de gain e "como medem custo" nas perguntas, sem método de preço); hypothesis-and-experiments: MÉDIA (concretude/medição).
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Exemplo "Business Book Reader" e como construir o perfil (PDF p.64-70)**
+  - Relevância: product-discovery-assistant: ALTA; hypothesis-and-experiments: ALTA (ranking inicial é hipótese a testar; critério "testar até refletir prioridades do cliente").
+  - Decisão sugerida: usar em product-discovery-assistant e hypothesis-and-experiments.
+- **Exercício "Step into your customers' shoes" (PDF p.71-77)**
+  - Relevância: product-discovery-assistant: ALTA (procedimento em 5 passos); hypothesis-and-experiments: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Boas práticas e erros comuns no mapeamento (PDF p.78-81)**
+  - Relevância: product-discovery-assistant: ALTA (checklist de erros comuns, regras anti-viés); hypothesis-and-experiments: MÉDIA.
+  - Decisão sugerida: usar em product-discovery-assistant (checklist de qualidade do perfil).
+
+## Bloco 02_p085-168 (lido: 85-168; p.=PDF, s.=seção do ebook)
+
+- **Pain Relievers (PDF p.85-88) [continua do bloco anterior: p.85 é o fim de "Relevance" de seção anterior]**
+  - Relevância: product-discovery-assistant: ALTA, as 9 perguntas-guia de pain relievers e a regra "poucas dores, extremas" aplicam-se direto ao VPC. hypothesis-and-experiments: MÉDIA, relevância essencial vs nice-to-have gera hipóteses a testar. pricing-and-monetization: BAIXA, só "eliminar barreiras à adoção (menor investimento inicial)".
+  - Decisão sugerida: usar em product-discovery-assistant (references: value-proposition-canvas).
+- **Gain Creators (PDF p.89-91)**
+  - Relevância: product-discovery-assistant: ALTA, lista de perguntas-guia de gain creators. hypothesis-and-experiments: MÉDIA. pricing-and-monetization: BAIXA ("menor custo de propriedade", "economia de custos" como ganho).
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Mapeamento da Value Map e exercício (PDF p.92-106)**
+  - Relevância: product-discovery-assistant: ALTA, regras de preenchimento e erros comuns do canvas. hypothesis-and-experiments: MÉDIA, "scoreboard" ligado à Value Map (ver p.138). pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (regras de preenchimento e anti-padrões do VPC).
+- **Fit (PDF p.107-118)**
+  - Relevância: product-discovery-assistant: ALTA, definição exata dos três fits e do exercício de checagem. hypothesis-and-experiments: ALTA, fit em estágios define o que cada estágio precisa de evidência. pricing-and-monetization: MÉDIA, critério de business model fit = receita > custo de criar e entregar.
+  - Decisão sugerida: usar em product-discovery-assistant e hypothesis-and-experiments.
+- **Perfis de cliente em B2B e multi-stakeholder (PDF p.119-123)**
+  - Relevância: product-discovery-assistant: ALTA, mapa de stakeholders B2B para entrevistas e personas. hypothesis-and-experiments: MÉDIA, hipóteses por papel. pricing-and-monetization: MÉDIA, distinção economic buyer vs end user vs decision maker.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Fits múltiplos: intermediários e plataformas (PDF p.124-126)**
+  - Relevância: product-discovery-assistant: MÉDIA. hypothesis-and-experiments: BAIXA. pricing-and-monetization: BAIXA, só menciona modelos multilado sem preço.
+  - Decisão sugerida: usar em product-discovery-assistant (nota curta) ou descartar.
+- **Exemplo do cinema e contexto (PDF p.127-137)**
+  - Relevância: product-discovery-assistant: ALTA, perfil por contexto (When/Where/With whom/Constraints) e concorrência além da categoria. hypothesis-and-experiments: MÉDIA, "scoreboard" para hipóteses de perfil e de mapa. pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Início do capítulo "Design" e características de grandes propostas (PDF p.139-154)**
+  - Relevância: product-discovery-assistant: ALTA, 10 características como checklist de avaliação de propostas. hypothesis-and-experiments: MÉDIA. pricing-and-monetization: MÉDIA, itens 7 ("some will pay a lot of money for"), 8 e 9 (diferenciação/competição) aplicáveis à análise competitiva.
+  - Decisão sugerida: usar em product-discovery-assistant (checklist); item 7-9 como referência para pricing-and-monetization/market-competitive-analysis.
+- **Prototyping Possibilities (PDF p.155-168)**
+  - Relevância: product-discovery-assistant: MÉDIA, técnicas de protótipo e timebox. hypothesis-and-experiments: ALTA, definição de prototyping (desirability, feasibility, viability) e MVP; princípios. pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+
+## Bloco 03_p169-252 (lido: 169-252; p.=PDF, s.=seção do ebook)
+
+- **Dicas finais de prototipagem (itens 7-10) (PDF p.169-172) [continua do bloco anterior]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, princípio de falhar barato e registrar aprendizados; product-discovery-assistant: BAIXA; pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (princípio de protótipo barato, registro de aprendizados), em frase curta.
+- **Napkin sketches (PDF p.173-182) [Processo]**
+  - Relevância: product-discovery-assistant: MÉDIA, formato de ideação e priorização leve (dotmocracy) antes do VPC; hypothesis-and-experiments: BAIXA; pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (ideação: critérios de napkin sketch e aviso de que votação não decide).
+- **Ad-libs (PDF p.183-184) [Exercício]**
+  - Relevância: product-discovery-assistant: MÉDIA, formato de frase para posicionamento rápido, mas o mapeamento das lacunas não pode ser afirmado a partir do texto; hypothesis-and-experiments: BAIXA.
+  - Decisão sugerida: usar com cautela; citar apenas a estrutura e a ideia "3 a 5 direções", sem inventar rótulos.
+- **Prototipar com o Value Proposition Canvas (PDF p.185-187) [Processo]**
+  - Relevância: product-discovery-assistant: ALTA (uso do VPC como protótipo iterativo, com limite de tempo); hypothesis-and-experiments: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **2.2 Pontos de partida: 16 áreas-gatilho (PDF p.188-190)**
+  - Relevância: product-discovery-assistant: MÉDIA (a regra "pode começar fora do cliente, mas termina em job/pain/gain"); demais: NENHUMA.
+  - Decisão sugerida: usar só a regra da p.189; não reconstruir as 16 áreas.
+- **Restrições de design para gerar ideias (PDF p.191-196) [Processo]**
+  - Relevância: pricing-and-monetization: MÉDIA, nomeia padrões de receita (assinatura, base+consumível, low-cost com extras pagos, plataforma) mas sem análise de preço; product-discovery-assistant: MÉDIA, ideação por constraints.
+  - Decisão sugerida: usar em pricing-and-monetization como lista de padrões de modelo de receita (1 linha cada, com atribuição ao livro); ideação em product-discovery-assistant.
+- **Livros e revistas como fonte de ideias (PDF p.198-205) [Processo]**
+  - Relevância: product-discovery-assistant: BAIXA (técnica de workshop); demais: NENHUMA.
+  - Decisão sugerida: descartar (técnica de facilitação periférica), no máximo uma linha.
+- **Push vs. Pull (PDF p.206-208)**
+  - Relevância: product-discovery-assistant: ALTA, distingue ponto de partida tecnologia vs mercado e a exigência de achar problem-solution fit; hypothesis-and-experiments: MÉDIA, ciclo build-measure-learn citado.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Exercício Push: tecnologia em busca de jobs, pains e gains (PDF p.210-217)**
+  - Relevância: product-discovery-assistant: MÉDIA (sequência perfil->esboço->avaliação do fit, marcando suposições); hypothesis-and-experiments: MÉDIA (suposições do perfil devem virar evidência).
+  - Decisão sugerida: usar em product-discovery-assistant (passo de marcar o perfil como suposição até haver evidência).
+- **Pull: identificar jobs de alto valor (PDF p.218-223)**
+  - Relevância: product-discovery-assistant: ALTA, critério explícito de priorização de jobs; pricing-and-monetization: MÉDIA, "lucrativo" liga volume ou disposição a pagar prêmio à priorização; hypothesis-and-experiments: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant (priorização de jobs/pains/gains) e referência em pricing-and-monetization (disposição a pagar).
+- **Exercício Pull: seleção de jobs (PDF p.224-227)**
+  - Relevância: product-discovery-assistant: ALTA (matriz de priorização com 4 critérios e escala de pontos; ressalva de escopo e evidência).
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Seis formas de inovar a partir do perfil do cliente (PDF p.228-234)**
+  - Relevância: product-discovery-assistant: MÉDIA (catálogo de movimentos de inovação a partir do perfil); pricing-and-monetization: BAIXA (AWS: tornar acessível a quem tinha orçamento menor, sem análise de preço).
+  - Decisão sugerida: usar em product-discovery-assistant (lista de 6 perguntas-gatilho, 1 linha cada).
+- **2.3 Entendendo clientes: seis técnicas (PDF p.235-242)**
+  - Relevância: hypothesis-and-experiments: ALTA (comparativo de fontes de evidência por dificuldade/viés; Scientist é o único marcado como funcionando bem para ideias novas); product-discovery-assistant: ALTA (mistura de técnicas de pesquisa).
+  - Decisão sugerida: usar em hypothesis-and-experiments e product-discovery-assistant (tabela das 6 técnicas).
+- **Data Detective: começar com informação existente (PDF p.243-249)**
+  - Relevância: product-discovery-assistant: MÉDIA (checklist de fontes de dados secundários); hypothesis-and-experiments: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant (fontes iniciais de dados), em uma lista curta.
+- **The Journalist: entrevistar clientes, início (PDF p.250-252) [continua no próximo bloco]**
+  - Relevância: product-discovery-assistant: ALTA (continuação no bloco 04); hypothesis-and-experiments: MÉDIA.
+  - Decisão sugerida: usar junto com o bloco 04.
+
+## Bloco 04_p253-336 (lido: 253-336; p.=PDF, s.=seção do ebook)
+
+- **Exercício de entrevistas com clientes, passos 2 a 7 (PDF p.253-258) [continua do bloco anterior: passo 1 e título do exercício não estão neste bloco]**
+  - Relevância: product-discovery-assistant: ALTA, fluxo de entrevista (roteiro derivado do perfil, captura, padrões, síntese por segmento). hypothesis-and-experiments: MÉDIA, perguntas de entrevista como teste de hipóteses de perfil. pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Ground Rules for Interviewing (PDF p.259-268)**
+  - Relevância: product-discovery-assistant: ALTA, regras de entrevista com formulações exatas de perguntas e contra-exemplos (conhecimento específico, mas o modelo sem o livro conhece Mom Test). hypothesis-and-experiments: ALTA, entrevistas insuficientes para decisões críticas; complementar com observação e experimentos. pricing-and-monetization: BAIXA, pergunta de "decision criteria" ao comprar.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **The Anthropologist: observar o mundo do cliente (PDF p.269-278)**
+  - Relevância: product-discovery-assistant: MÉDIA, técnicas de imersão e worksheet. hypothesis-and-experiments: MÉDIA, observação como fonte de evidência diferente de entrevista. pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (referência curta).
+- **Identify Patterns in Customer Research (PDF p.279-285)**
+  - Relevância: product-discovery-assistant: ALTA, síntese de padrões e outliers (bellwether, positive deviance). hypothesis-and-experiments: MÉDIA. pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Find Your Earlyvangelist (PDF p.286-291)**
+  - Relevância: product-discovery-assistant: ALTA, checklist de 5 sinais de earlyvangelist para recrutar entrevistados/primeiros clientes. hypothesis-and-experiments: ALTA, critério de seleção de participantes de experimentos. pricing-and-monetization: MÉDIA, critério 5 (orçamento existente ou adquirível) como sinal de disposição a pagar.
+  - Decisão sugerida: usar em product-discovery-assistant e hypothesis-and-experiments.
+- **10 Questions to Assess Your Value Proposition (PDF p.292-303)**
+  - Relevância: product-discovery-assistant: ALTA, checklist de avaliação de propostas. hypothesis-and-experiments: MÉDIA, priorização de protótipos a testar. pricing-and-monetization: MÉDIA, perguntas 7 a 10 (disposição a pagar, diferenciação, imitabilidade) para análise competitiva.
+  - Decisão sugerida: usar em product-discovery-assistant; perguntas 7 a 10 também em pricing-and-monetization/market-competitive-analysis.
+- **Simulate the Voice of the Customer (PDF p.304-307)**
+  - Relevância: product-discovery-assistant: MÉDIA, role-play como validação interna prévia. hypothesis-and-experiments: MÉDIA, deixa explícito que é teste "na sala", não evidência de mercado. pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant (nota curta).
+- **Understand the Context e exemplo Participatory TV (PDF p.308-311)**
+  - Relevância: product-discovery-assistant: BAIXA, exemplo. hypothesis-and-experiments: BAIXA. pricing-and-monetization: BAIXA, menciona apenas preço por assinatura como linha da tabela, sem análise.
+  - Decisão sugerida: descartar (ou nota de 1 linha sobre mapa de ambiente: oportunidade vs ameaça).
+- **Value Proposition Design vs. Competitors, Strategy Canvas (PDF p.312-323)**
+  - Relevância: product-discovery-assistant: MÉDIA, Strategy Canvas ligado a relievers/creators. hypothesis-and-experiments: BAIXA. pricing-and-monetization: ALTA para market-competitive-analysis, passo a passo concreto de comparação competitiva usando fatores derivados da value map e escala 0 a 10; (preço só se for incluído como fator, o livro não diz).
+  - Decisão sugerida: usar em pricing-and-monetization (referência de market-competitive-analysis) e product-discovery-assistant.
+- **Avoid Cognitive Murder e apresentar propostas (PDF p.324-326)**
+  - Relevância: product-discovery-assistant: MÉDIA, apresentação de VPC e PRD. hypothesis-and-experiments: BAIXA. pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (nota curta) ou descartar.
+- **Master the Art of Critique (PDF p.327-331)**
+  - Relevância: product-discovery-assistant: MÉDIA, hierarquia opinião/experiência/fatos de mercado para classificar evidência. hypothesis-and-experiments: ALTA, três tipos de feedback com riscos de cada um; fatos de mercado reduzem incerteza. pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Collect Efficient Feedback with de Bono's Thinking Hats (PDF p.332-336) [continua no próximo bloco]**
+  - Relevância: product-discovery-assistant: BAIXA. hypothesis-and-experiments: MÉDIA, método estruturado para coletar risco/fraqueza (black hat). pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar em hypothesis-and-experiments após ler o próximo bloco; por ora incompleto.
+
+## Bloco 05_p337-420 (lido: 337-420; p.=PDF, s.=seção do ebook)
+
+- **De Bono's Thinking Hats, final do exercício (PDF p.337-339) [continua do bloco anterior]**
+  - Relevância para os artefatos candidatos: product-discovery-assistant: BAIXA, técnica de workshop de crítica de ideias, útil só como dinâmica opcional. hypothesis-and-experiments: BAIXA. pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: descartar (dinâmica de facilitação genérica); no máximo uma linha em referência de workshops, se existir.
+- **Process: Vote Visually with Dotmocracy (PDF p.341-347)**
+  - Relevância: product-discovery-assistant: MÉDIA, priorização rápida de alternativas antes de testar; deixa claro que é critério interno, não evidência. hypothesis-and-experiments: BAIXA. pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (referência de priorização), com a ressalva "voto interno não substitui teste de mercado".
+- **Process: Define Criteria and Select Prototypes (PDF p.348-354)**
+  - Relevância: product-discovery-assistant: MÉDIA, catálogo de critérios de seleção e escala 0-10 para ranquear opções antes de testar. hypothesis-and-experiments: MÉDIA, passo final liga a seleção ao teste de mercado. pricing-and-monetization: BAIXA, critérios financeiros (receita, margens) são genéricos.
+  - Decisão sugerida: usar em product-discovery-assistant (matriz de seleção de alternativas); citar no hypothesis-and-experiments como ponte seleção -> teste.
+- **2.9 Finding the Right Business Model: abertura (PDF p.355-358)**
+  - Relevância: product-discovery-assistant: MÉDIA, define a relação VPC (valor ao cliente, zoom in) x BMC (valor ao negócio, zoom out). pricing-and-monetization: MÉDIA, lembra que proposta sem receita > custo não sobrevive. hypothesis-and-experiments: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Caso Azuri (Eight19): vai-e-vem entre proposta de valor e modelo (PDF p.359-368)**
+  - Relevância: pricing-and-monetization: ALTA/MÉDIA (marcar MÉDIA), exemplo de mudar o modelo de receita (venda -> aluguel/assinatura -> pay-as-you-go por raspadinha) para remover a barreira de preço inicial e resolver a cobrança. hypothesis-and-experiments: MÉDIA, ciclo observar barreira -> "what if" -> iterar. product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar como exemplo curto em pricing-and-monetization (modelo de receita responde à barreira de acesso/pagamento do cliente).
+- **Exercício: From Value Proposition to Business Model (PDF p.369-379)**
+  - Relevância: product-discovery-assistant: MÉDIA, perguntas B1-B5 como checagem de reposicionamento (nova VP, novo segmento, novo perfil, ajustar benefícios, fit). hypothesis-and-experiments: BAIXA/MÉDIA (marcar BAIXA). pricing-and-monetization: BAIXA, A1 menciona prototipar modelo de receita.
+  - Decisão sugerida: usar B1-B5 como perguntas-guia em product-discovery-assistant.
+- **Stress Testing with Numbers: ilustração MedTech (PDF p.380-385)**
+  - Relevância: pricing-and-monetization: ALTA, exemplo numérico de modelo transacional vs. receita recorrente de consumíveis, com unit economics (preço, custo variável, volume, comissão, fixo). hypothesis-and-experiments: MÉDIA, números como hipóteses a validar e sanity check antes de testar. product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em pricing-and-monetization (exemplo de esboço de unit economics e de comparação de modelos de receita), marcando "premissas não validadas".
+- **Exercício: Seven Questions to Assess Your Business Model Design (PDF p.386-393)**
+  - Relevância: pricing-and-monetization: ALTA, perguntas 2 (receita recorrente), 3 (earn before spending) e 4 (custos) avaliam a mecânica de receita; contra-exemplos de modelo. hypothesis-and-experiments: MÉDIA, cada pergunta vira hipótese de modelo a testar. product-discovery-assistant: MÉDIA, avaliação do modelo ao redor da VP.
+  - Decisão sugerida: usar em pricing-and-monetization (checklist de 7 perguntas de design de modelo de receita) com os polos e exemplos como citados.
+- **2.6 Designing in Established Organizations: abertura e espectro Invent-Improve (PDF p.394-399)**
+  - Relevância: product-discovery-assistant: MÉDIA, classificar iniciativa como invent/extend/improve define atitude (risco, fracasso, evidência) e processo. hypothesis-and-experiments: MÉDIA, em invent "search, test and evaluate", baixo conhecimento do cliente e fracasso faz parte do aprendizado; em improve "refine, plan, execute". pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant (passo de enquadramento da iniciativa) e referenciar em hypothesis-and-experiments (nível de incerteza x tipo de teste).
+- **Exemplo: The Business Book of the Future (PDF p.400-405)**
+  - Relevância: product-discovery-assistant: BAIXA, ilustra invent/extend/improve. pricing-and-monetization: BAIXA. hypothesis-and-experiments: NENHUMA.
+  - Decisão sugerida: descartar (exemplo ilustrativo); a classificação invent/extend/improve já está registrada acima.
+- **Reinvent by Shifting from Products to Services: caso Hilti (PDF p.406-409)**
+  - Relevância: pricing-and-monetization: MÉDIA, exemplo de mudar de venda de produto para assinatura de serviço a partir de um job mais importante (ganho: margem, recorrência, diferenciação). product-discovery-assistant: MÉDIA, ilustra como descobrir um job mais relevante reposiciona a VP. hypothesis-and-experiments: BAIXA.
+  - Decisão sugerida: usar como exemplo em pricing-and-monetization e product-discovery-assistant (job -> serviço -> receita recorrente).
+- **The Perfect Workshop Setting / Compose Your Workshop (PDF p.411-420)**
+  - Relevância: product-discovery-assistant: BAIXA/MÉDIA (marcar BAIXA), logística de workshop; o menu confirma a sequência sugerida do livro (prototipar -> escolher -> avaliar vs. ambiente/concorrência -> vai-e-vem com modelo -> números -> 7 perguntas -> preparar testes: extrair e priorizar hipóteses -> desenhar teste -> mix de experimentos -> roteiro de testes). hypothesis-and-experiments: MÉDIA, mostra a ordem "Extracting Hypotheses, Prioritizing Hypotheses, Test Design, Choose a Mix of Experiments, Test Road Map" (apenas nomes, sem conteúdo). pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar só a ordem dos módulos de teste como confirmação de sequência; descartar logística de workshop.
+
+## Bloco 06_p421-504 (lido: 421-504; p.=PDF, s.=seção do ebook)
+
+- **Lessons Learned / abertura da Parte 3 (PDF p.421-426) [continua do bloco anterior]**
+  - Relevância: hypothesis-and-experiments: BAIXA (enquadramento); product-discovery-assistant: BAIXA; pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: descartar (apenas contexto), exceto a ideia "proposta de valor depende do modelo de negócio".
+- **Start Experimenting to Reduce Risk; Business Plans vs. Experimentation (PDF p.427-429)**
+  - Relevância: hypothesis-and-experiments: ALTA (justificativa: evidência antes de plano; gasto crescente com a certeza); product-discovery-assistant: MÉDIA; pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (princípio "gaste proporcional à certeza").
+- **10 Testing Principles (PDF p.430-440)**
+  - Relevância: hypothesis-and-experiments: ALTA (princípios 6, 7, 8, 9, 10 viram regras); product-discovery-assistant: ALTA (princípio 7: testar o círculo antes do quadrado); pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments e product-discovery-assistant.
+- **Customer Development e Lean Startup (PDF p.441-449)**
+  - Relevância: hypothesis-and-experiments: ALTA (ciclo hipótese, build, measure, learn; MVP é para aprender); product-discovery-assistant: MÉDIA (etapas de discovery/validation); pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **3.1 What to Test: círculo, quadrado, retângulo (PDF p.450-458)**
+  - Relevância: hypothesis-and-experiments: ALTA (ordem círculo, quadrado, retângulo; perguntas-guia); product-discovery-assistant: ALTA (Value Proposition Canvas: validar jobs/pains/gains antes de pain relievers/gain creators); pricing-and-monetization: MÉDIA (p.457-458: testar receita > custo e como gerar receita; sem método de preço).
+  - Decisão sugerida: usar em hypothesis-and-experiments e product-discovery-assistant; em pricing-and-monetization, apenas a equação e a pergunta sobre revenue streams.
+- **Overview of the Testing Process: extrair e priorizar hipóteses (PDF p.459-470)**
+  - Relevância: hypothesis-and-experiments: ALTA (definição de hipótese de negócio, perguntas de extração, priorização por "mata a ideia"); product-discovery-assistant: ALTA; pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (definição e ordem de prioridade).
+- **Test Card (PDF p.471-480)**
+  - Relevância: hypothesis-and-experiments: ALTA (campos do Test Card; limiar definido antes; série de testes; ranqueamento); product-discovery-assistant: MÉDIA; pricing-and-monetization: BAIXA (exemplo de AdWords não é de preço).
+  - Decisão sugerida: usar em hypothesis-and-experiments (template de cartão de teste com campos e limiar).
+- **Learning Card e o que fazer depois (PDF p.481-488)**
+  - Relevância: hypothesis-and-experiments: ALTA (Learning Card; árvore de decisão pós-teste); product-discovery-assistant: MÉDIA; pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **How Quickly Are You Learning? (PDF p.489-493)**
+  - Relevância: hypothesis-and-experiments: ALTA (começar barato/rápido; sequência de instrumentos); product-discovery-assistant: MÉDIA; pricing-and-monetization: BAIXA (estudo de mercado só para mudanças incrementais).
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Five Data Traps to Avoid (PDF p.494-501)**
+  - Relevância: hypothesis-and-experiments: ALTA (cinco armadilhas com dicas; contra-exemplo Dropbox); product-discovery-assistant: MÉDIA (falso positivo/negativo ao validar dores); pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (lista de armadilhas).
+- **Choose a Mix of Experiments (PDF p.502-504)**
+  - Relevância: hypothesis-and-experiments: ALTA (dizer vs fazer; custo, confiabilidade, tempo; definição de experimento); product-discovery-assistant: MÉDIA; pricing-and-monetization: BAIXA (disposição a pagar é exemplo clássico de dizer vs fazer, mas o livro não o diz aqui [fora do livro]).
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+
+## Bloco 07_p505-588 (lido: 505-588; p.=PDF, s.=seção do ebook)
+
+- **Mapa de experimentos / matriz de evidência (PDF p.505-506) [continua do bloco anterior]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, taxonomia dizer/fazer e contato/observação (só rótulos). product-discovery-assistant: BAIXA. pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar como apoio de catálogo em hypotheses-and-experiments, citando só os rótulos; marcar "conteúdo visual não lido".
+- **Produzir evidência com Call to Action (PDF p.507-510)**
+  - Relevância: hypothesis-and-experiments: ALTA, definição de CTA e regra "mais investimento = evidência mais forte; baixo investimento cedo". product-discovery-assistant: ALTA (validação do fit). pricing-and-monetization: MÉDIA (willingness to pay como categoria de evidência).
+  - Decisão sugerida: usar em hypothesis-and-experiments (força de evidência por investimento do sujeito) e como critério de sequência de testes.
+- **Ad Tracking (PDF p.511-512)**
+  - Relevância: hypothesis-and-experiments: ALTA, experimento passo a passo de baixo custo. product-discovery-assistant: MÉDIA. pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo de experimentos, estágio inicial).
+- **Unique Link Tracking (PDF p.513-517)**
+  - Relevância: hypothesis-and-experiments: MÉDIA/ALTA, experimento barato para B2B. product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo).
+- **MVP Catalog (PDF p.518-527)**
+  - Relevância: hypothesis-and-experiments: ALTA, definição de MVP e catálogo ordenado por custo/requisitos. product-discovery-assistant: ALTA (MVP como teste de hipótese, não como produto menor). pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (definição de MVP e catálogo).
+- **Illustrations, Storyboards, and Scenarios (PDF p.528-533)**
+  - Relevância: hypothesis-and-experiments: ALTA, procedimento com números (8-12 propostas, 4-5 reuniões). product-discovery-assistant: ALTA, perguntas-guia sobre jobs/pains/gains.
+  - Decisão sugerida: usar em hypothesis-and-experiments e product-discovery-assistant (perguntas de entrevista).
+- **Life-Size Experiments (PDF p.534-536)**
+  - Relevância: hypothesis-and-experiments: MÉDIA, ordem custo crescente e CTA com dinheiro. pricing-and-monetization: BAIXA/MÉDIA (depósito escalonado como sinal de disposição de pagar).
+  - Decisão sugerida: usar em hypothesis-and-experiments (nota sobre custo e CTA).
+- **Landing Page (MVP) (PDF p.537-542)**
+  - Relevância: hypothesis-and-experiments: ALTA, anatomia e métricas de funil. product-discovery-assistant: MÉDIA. pricing-and-monetization: MÉDIA (venda simulada como evidência mais forte).
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Split Testing (PDF p.543-546)**
+  - Relevância: hypothesis-and-experiments: ALTA, critério numérico (significância > 95%), uma variável por vez. pricing-and-monetization: MÉDIA (preço e descontos como itens testáveis).
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Innovation Games (Hohmann) (PDF p.547-549)**
+  - Relevância: hypothesis-and-experiments: MÉDIA. product-discovery-assistant: MÉDIA/ALTA (técnicas de priorização de pains e features).
+  - Decisão sugerida: usar como catálogo em product-discovery-assistant.
+- **Speed Boat (PDF p.550-553)**
+  - Relevância: product-discovery-assistant: ALTA, técnica de pains com ordem de intensidade. hypothesis-and-experiments: MÉDIA.
+  - Decisão sugerida: usar em product-discovery-assistant (técnica de validação de pains).
+- **Product Box (PDF p.554-557)**
+  - Relevância: product-discovery-assistant: MÉDIA. hypothesis-and-experiments: BAIXA/MÉDIA.
+  - Decisão sugerida: usar em product-discovery-assistant (catálogo).
+- **Buy a Feature (PDF p.558-562)**
+  - Relevância: product-discovery-assistant: ALTA (priorização de features com restrição). pricing-and-monetization: MÉDIA (preço de itens baseado em custo ou mercado, mas é jogo de priorização, não de preço).
+  - Decisão sugerida: usar em product-discovery-assistant e hypothesis-and-experiments.
+- **Mock Sales (PDF p.563-567)**
+  - Relevância: pricing-and-monetization: ALTA, mock sale com A/B de preço, hierarquia de evidência (clique < transação simulada) e advertência de pré-venda. hypothesis-and-experiments: ALTA.
+  - Decisão sugerida: usar em pricing-and-monetization e hypothesis-and-experiments.
+- **Presales (PDF p.568-570)**
+  - Relevância: pricing-and-monetization: ALTA/MÉDIA (pré-venda como teste de disposição de pagar; carta de intenção em B2B). hypothesis-and-experiments: ALTA.
+  - Decisão sugerida: usar em hypothesis-and-experiments e pricing-and-monetization.
+- **The Testing Process (PDF p.571-578)**
+  - Relevância: hypothesis-and-experiments: ALTA, sequência shape, extract, design tests, learning loop, capture, measure; e decisão pós-experimento: aprender mais, iterar, pivotar, avançar. product-discovery-assistant: ALTA (três fits: problem-solution, product-market, business model).
+  - Decisão sugerida: usar em hypothesis-and-experiments (sequência do processo).
+- **Measure Your Progress / Progress Board (PDF p.579-588)**
+  - Relevância: hypothesis-and-experiments: MÉDIA, ideia de manter quadro de testes com estados (planejado, construído, medido, aprendido) e marcar elementos como validados/invalidados. product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar como apoio em hypothesis-and-experiments, sem detalhar campos não lidos.
+
+## Bloco 08_p589-666 (lido: 589-666; p.=PDF, s.=seção do ebook)
+
+- **Estudo de caso Owlet (PDF p.589-604) [continua do bloco anterior: introdução do caso pode ter começado antes]**
+  - Relevância: hypothesis-and-experiments: ALTA (exemplo completo de formato hipótese-métrica-teste-dado-resultado, custo e tempo por teste, pivô por segmento); product-discovery-assistant: ALTA (pivô de segmento após evidência de que "ease of use is not a pain"; escolha de segmento menos preocupado por menor risco); pricing-and-monetization: ALTA (Teste 4: A/B de preço, 3 rodadas, 1.170 pessoas, US$ 299; vender vs alugar; disposição a pagar medida com administradores, 0 por cento).
+  - Decisão sugerida: usar em hypothesis-and-experiments (exemplo trabalhado), pricing-and-monetization (teste de preço A/B e teste de disposição a pagar com compradores) e product-discovery-assistant (pivô por segmento).
+- **Lessons Learned da Parte 3 (PDF p.605)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (reforça dizer vs fazer); pricing-and-monetization: MÉDIA (cita "willingness to pay" como evidência comportamental, sem método); product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar apenas a frase "dizer vs fazer, incluindo disposição a pagar" em hypothesis-and-experiments.
+- **Parte 4: Evolve, Create Alignment (PDF p.606-613)**
+  - Relevância: hypothesis-and-experiments: NENHUMA; product-discovery-assistant: MÉDIA (usar o VP Canvas para comunicar proposta a stakeholders); pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: descartar na maior parte; opcional, ideia de mensagem baseada em jobs/pains/gains no product-discovery-assistant.
+- **Measure and Monitor (PDF p.614-616)**
+  - Relevância: hypothesis-and-experiments: BAIXA; product-discovery-assistant: MÉDIA (indicadores por bloco de valor, com alvo); pricing-and-monetization: BAIXA.
+  - Decisão sugerida: descartar (baixa especificidade), exceto a ideia de meta por indicador ligada ao bloco do canvas.
+- **Improve Relentlessly (PDF p.617-618)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (forma do Test Card como "We believe that / To verify that / And measure / We are right if" é plausível mas o OCR é incerto); product-discovery-assistant: BAIXA; pricing-and-monetization: NENHUMA.
+  - Decisão sugerida: usar com cautela; confirmar o texto dos campos do Test Card em outro bloco (p.472) antes de citar.
+- **Reinvent Yourself Constantly (PDF p.619-621)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (experimentos de cliente como régua contra opinião); product-discovery-assistant: MÉDIA (perguntas de revisão de jobs/pains/gains ao longo do tempo); pricing-and-monetization: BAIXA.
+  - Decisão sugerida: usar as perguntas de p.620-621 como checklist de revisão periódica no product-discovery-assistant.
+- **Estudo de caso Taobao (PDF p.622-633)**
+  - Relevância: hypothesis-and-experiments: BAIXA; product-discovery-assistant: MÉDIA (novo ativo vira nova proposta para novo cliente); pricing-and-monetization: BAIXA (receitas só aparecem em imagem).
+  - Decisão sugerida: descartar, exceto a ideia de revisar ativos para novas propostas.
+- **Lessons Learned da Parte 4 (PDF p.634)**
+  - Relevância: todos: BAIXA.
+  - Decisão sugerida: descartar.
+- **Afterword (PDF p.635) e Glossário (PDF p.636-640)**
+  - Relevância: product-discovery-assistant: ALTA (definições exatas de Customer Profile, Value Map, Pain Relievers, Gain Creators, Fit, Jobs to Be Done, Customer Pains/Gains, Products and Services); hypothesis-and-experiments: ALTA (Hypothesis, Evidence, Experiment/Test, MVP, Learning Card, Test Card, Call to Action, Lean Start-up, Prototyping); pricing-and-monetization: BAIXA (Business Model definição).
+  - Decisão sugerida: usar em product-discovery-assistant e hypothesis-and-experiments como definições canônicas (cuidar da paráfrase; citar no máximo as curtas).
+- **Agradecimentos, equipe, prereaders e bios (PDF p.641-649) (somente estrutura)**
+  - Relevância: nenhuma para os três artefatos.
+  - Decisão sugerida: descartar.
+- **Índice remissivo (PDF p.650-666) (somente estrutura)**
+  - Relevância: pricing-and-monetization: MÉDIA (apenas aponta onde está "willingness to pay" p.219 impresso e Pre Sales/Mock Sales/Buy a Feature); hypothesis-and-experiments: MÉDIA (mapa da Experiment Library); product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar como mapa para localizar as páginas impressas 219 e 234-237 nos blocos anteriores; não citar como regra.

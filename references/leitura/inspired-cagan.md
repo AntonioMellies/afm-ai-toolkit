@@ -1,0 +1,273 @@
+# Registro de leitura (rascunho): inspired
+
+Gerado por script a partir das notas dos leitores. Cada item: capítulo/seção, páginas (PDF), relevância avaliada e decisão sugerida. Revisão humana por amostragem pendente.
+
+Seções registradas: 84
+
+
+## Bloco 01_p001-074 (lido: 1-74; p.=PDF, s.=seção do ebook)
+
+- **Elogios, folha de rosto, copyright, dedicatória (PDF p.1-14)**
+  - Relevância: (não registrada)
+  - Decisão sugerida: (não registrada)
+- **Sumário (PDF p.15-18) [só estrutura]**
+  - Relevância: (não registrada)
+  - Decisão sugerida: (não registrada)
+- **Preface to the Second Edition (PDF p.19-20, impr. xvii-xviii)**
+  - Relevância: prd-writer: BAIXA; product-discovery-assistant: BAIXA (enquadramento: "técnica certa para o problema"); hypothesis-and-experiments: NENHUMA; product-metrics: NENHUMA.
+  - Decisão sugerida: descartar (exceto princípio de "escolher a técnica pelo problema").
+- **Parte I intro: Lessons from Top Tech Companies (PDF p.21-23, impr. 1-3)**
+  - Relevância: prd-writer: BAIXA; product-discovery-assistant: BAIXA (motivação); demais: NENHUMA.
+  - Decisão sugerida: descartar.
+- **Cap. 1 Behind Every Great Product (PDF p.25-26, impr. 5-6)**
+  - Relevância: prd-writer: BAIXA; product-discovery-assistant: BAIXA (papéis); demais: NENHUMA.
+  - Decisão sugerida: descartar (ou nota de composição de time).
+- **Caps. 2-5 Tecnologia, Startups, Growth-stage, Enterprise (PDF p.27-34, impr. 7-14)**
+  - Relevância: product-discovery-assistant: BAIXA (contexto de estágio); product-metrics: BAIXA; demais: NENHUMA.
+  - Decisão sugerida: descartar (contexto).
+- **Cap. 6 The Root Causes of Failed Product Efforts (PDF p.35-41, impr. 15-21)**
+  - Relevância: prd-writer: ALTA como contra-argumento (requirements/user stories escritos antes de validar risco são o modelo criticado; PRD deve registrar hipóteses e evidências, não prometer solução); product-discovery-assistant: ALTA (tese central: validar antes de construir; "half of ideas won't work"); hypothesis-and-experiments: MÉDIA (premissa de que a maioria das ideias falha e exige iteração/A-B testing); product-metrics: MÉDIA (outcome vs output; "time to money").
+  - Decisão sugerida: usar em prd-writer (aviso: não tratar requisitos como solução validada; incluir estado de evidência) e em product-discovery-assistant (princípio "ideias são hipóteses").
+- **Cap. 7 Beyond Lean and Agile (PDF p.43-44, impr. 23-24)**
+  - Relevância: product-discovery-assistant: ALTA (definição exata dos 4 riscos e dos 3 princípios); prd-writer: ALTA (seção de riscos deve usar os 4 tipos; "problema, não feature"; definição colaborativa em vez de handoff de requisitos); hypothesis-and-experiments: MÉDIA (riscos como alvo dos testes; alerta contra "testar tudo"); product-metrics: BAIXA (menciona outcome/business results sem métrica).
+  - Decisão sugerida: usar em product-discovery-assistant e prd-writer (taxonomia dos 4 riscos, nomes em inglês consistentes).
+- **Cap. 8 Key Concepts (PDF p.45-50, impr. 25-30)**
+  - Relevância: product-discovery-assistant: ALTA (definição de discovery/delivery, 4 perguntas, saída = backlog validado, MVP como protótipo); hypothesis-and-experiments: ALTA (protótipo como experimento barato; cadência 10 a 20 por semana; MVP não é produto); prd-writer: MÉDIA (o backlog só deve receber itens validados; protótipo funciona como forma de comunicar/validar antes de especificar; "produto holístico" amplia escopo do documento); product-metrics: BAIXA (product/market fit definido sem métrica).
+  - Decisão sugerida: usar em product-discovery-assistant, hypothesis-and-experiments (regra "MVP = protótipo") e prd-writer (item só entra no backlog após evidência).
+- **Parte II intro e Product Teams overview (PDF p.51-52, impr. 31-32)**
+  - Relevância: todos: BAIXA/NENHUMA. Decisão: descartar.
+  - Decisão sugerida: (não registrada)
+- **Cap. 9 Principles of Strong Product Teams (PDF p.53-60, impr. 33-40)**
+  - Relevância: product-discovery-assistant: BAIXA (composição de time multifuncional e quem participa de discovery); prd-writer: BAIXA (justifica por que PRD não é handoff entre silos); demais: NENHUMA.
+  - Decisão sugerida: descartar (nota de contexto sobre time multifuncional).
+- **Cap. 10 The Product Manager (PDF p.61-72, impr. 41-52)**
+  - Relevância: product-discovery-assistant: MÉDIA (papel do PM em discovery: conhecimento de cliente, dados, negócio, mercado; stakeholders; soluções não vêm só de clientes/vendas); prd-writer: MÉDIA (backlog só com itens que valem a pena; PM = PO; stakeholders e restrições de negócio devem aparecer no documento; engenharia/design pedem evidência); product-metrics: MÉDIA (PM começa o dia com analytics; KPIs LTV, ARPU/ARPA, CAC, cost of sales, contribution margin só nomeados); hypothesis-and-experiments: BAIXA (A/B tests citados como parte da rotina).
+  - Decisão sugerida: usar em prd-writer e product-discovery-assistant (stakeholders e restrições; evidência exigida por engenharia/design); lista de KPIs só como vocabulário em product-metrics.
+- **Cap. 11 The Product Designer (PDF p.73-74, impr. 53-54) [continua no próximo bloco; truncado no meio de uma lista]**
+  - Relevância: product-discovery-assistant: BAIXA (designer como parceiro em discovery); prd-writer: MÉDIA (substitui o handoff de requisitos por colaboração); demais: NENHUMA.
+  - Decisão sugerida: descartar neste bloco; retomar no bloco seguinte.
+
+## Bloco 02_p075-148 (lido: 75-148; p.=PDF, s.=seção do ebook)
+
+- **Ch.11 (fim) The Product Designer: prototipação, teste com usuários, interação/visual, ausência de design (PDF p.75-78) [continua do bloco anterior]**
+  - Relevância: prd-writer: MÉDIA, a situação (2) e a regra "user stories de alto nível sem design empurram o design para engenheiros" qualificam o papel de uma spec; product-discovery-assistant: MÉDIA, designer co-descobre, testa semanalmente; hypothesis-and-experiments: MÉDIA, cadência semanal de testes e user testing avalia valor, não só usabilidade; product-metrics: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (papéis e cadência de teste) e como contexto em prd-writer (PRD não substitui o design colaborativo).
+- **Ch.12 The Engineers (PDF p.79-82)**
+  - Relevância: prd-writer: MÉDIA, PM descreve problema/contexto, não prescreve a implementação; product-discovery-assistant: MÉDIA, engenheiros participam da descoberta (viabilidade) e tech lead tem responsabilidade explícita; hypothesis-and-experiments: BAIXA; product-metrics: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (papéis); em prd-writer, regra de não prescrever "como".
+- **Ch.13 Product Marketing Managers (PDF p.83-85)**
+  - Relevância: product-discovery-assistant: MÉDIA, as dimensões de viabilidade de negócio (mercado, diferenciação, aquisição, canais) e distinção posicionamento vs. mensagem; prd-writer: BAIXA; hypothesis-and-experiments: BAIXA; product-metrics: BAIXA (custo de aquisição citado só como critério).
+  - Decisão sugerida: usar em product-discovery-assistant (itens de viabilidade de negócio) como referência secundária.
+- **Ch.14 The Supporting Roles (PDF p.87-89)**
+  - Relevância: hypothesis-and-experiments: MÉDIA, distinção generativa/evaluativa, qualitativo/quantitativo, "live-data tests" nomeados; product-discovery-assistant: MÉDIA, aprendizado compartilhado, não delegar pesquisa; product-metrics: BAIXA, papel do analista; prd-writer: NENHUMA.
+  - Decisão sugerida: usar em hypothesis-and-experiments/product-discovery-assistant (regra do aprendizado compartilhado e classificação generativa vs. evaluativa).
+- **Ch.15 Profile: Jane Manning of Google (AdWords) (PDF p.91-93)**
+  - Relevância: prd-writer: BAIXA, só menciona que houve uma "first spec" após a descoberta; product-discovery-assistant: BAIXA, exemplo de mapeamento de objeções de stakeholders; demais: NENHUMA.
+  - Decisão sugerida: descartar como regra (usar no máximo como exemplo ilustrativo de stakeholders).
+- **Part Two (fim): People @ Scale, Ch.16 The Role of Leadership (PDF p.94-98)**
+  - Relevância: prd-writer: BAIXA/MÉDIA como contra-ponto (documentar tudo não funciona; código é fonte definitiva do estado atual, não da justificativa); demais: NENHUMA.
+  - Decisão sugerida: descartar para skills, exceto nota em prd-writer: PRD não deve tentar ser documentação completa do sistema (registrar racionale/história é o que o código não guarda: inferência minha a partir da frase "not usually the rationale or the history" [p.98]).
+- **Ch.17 The Head of Product Role (PDF p.99-105)**
+  - Relevância: todos os artefatos: NENHUMA/BAIXA (contexto organizacional); product-discovery-assistant: BAIXA (definição de cultura de produto: testar e aprender rápido).
+  - Decisão sugerida: descartar.
+- **Ch.18 The Head of Technology Role (PDF p.107-110)**
+  - Relevância: product-metrics: BAIXA (métricas de entrega/qualidade da organização, não do produto); product-discovery-assistant: BAIXA (engenheiros na descoberta, medir participação); demais: NENHUMA.
+  - Decisão sugerida: descartar (no máximo nota de que participação de engenharia na descoberta é medida de saúde do processo).
+- **Ch.19 The Delivery Manager Role (PDF p.111-112)**
+  - Relevância: todos: BAIXA/NENHUMA (relacionado indiretamente a compromissos de data, ver Ch.23).
+  - Decisão sugerida: descartar.
+- **Ch.20 Principles of Structuring Product Teams + Autonomy @ Scale (PDF p.113-122)**
+  - Relevância: product-discovery-assistant: BAIXA/MÉDIA (contexto de times: visão + objetivos de negócio por time; um PM por time); prd-writer: BAIXA; hypothesis-and-experiments: NENHUMA; product-metrics: NENHUMA.
+  - Decisão sugerida: descartar para as skills de produto; manter a regra "contexto = visão + objetivos de negócio, sem prescrever a solução" em product-discovery-assistant.
+- **Ch.21 Profile: Lea Hickman of Adobe (PDF p.123-126)**
+  - Relevância: todos: BAIXA (protótipo como ferramenta de alinhamento/visão, não como teste).
+  - Decisão sugerida: descartar.
+- **Part III abertura e "Product Roadmaps: Overview" (PDF p.127-129)**
+  - Relevância: prd-writer: BAIXA; product-discovery-assistant: MÉDIA (outcome vs. output); product-metrics: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant (definição outcome vs. output).
+- **Ch.22 The Problems with Product Roadmaps (PDF p.131-133)**
+  - Relevância: product-discovery-assistant: ALTA (os quatro modos de falha, a premissa "metade falha", discovery como competência central); hypothesis-and-experiments: ALTA (premissa: testar em horas/dias com usuários, clientes, engenheiros e stakeholders; cada um valida um risco); prd-writer: MÉDIA (um PRD não deve ser lido como compromisso; separar ideias de compromissos); product-metrics: MÉDIA ("time to money" como conceito).
+  - Decisão sugerida: usar em product-discovery-assistant e hypothesis-and-experiments (quatro riscos mapeados a quem valida: ver p.139); em prd-writer, aviso sobre PRD/roadmap virando compromisso.
+- **Ch.23 The Alternative to Roadmaps (PDF p.135-140)**
+  - Relevância: product-metrics: ALTA (objetivo de negócio com resultado-chave mensurável; outcome vs. output; "time to money"); hypothesis-and-experiments: ALTA (descoberta antes de compromisso, validação por tipo de parte); product-discovery-assistant: ALTA (contexto = visão + objetivos de negócio, quem valida o quê); prd-writer: MÉDIA (PRD deve ancorar em objetivo de negócio mensurável e declarar o que não é compromisso até a descoberta).
+  - Decisão sugerida: usar em product-discovery-assistant, product-metrics, hypothesis-and-experiments e prd-writer (ver Candidatos a regra).
+- **Ch.24 (início) Product Vision and Product Strategy (PDF p.141-147; capítulo continua no próximo bloco)**
+  - Relevância: product-discovery-assistant: ALTA (visão vs. estratégia, um mercado por vez, TAM/GTM/TTM); prd-writer: MÉDIA (visão "não é spec"; PRD deriva da estratégia, foco em um mercado por vez, "menor produto entregável"); product-metrics: BAIXA (TAM, GTM, TTM como critérios de priorização); hypothesis-and-experiments: BAIXA (visão só se testa um pouco).
+  - Decisão sugerida: usar em product-discovery-assistant (e como ancoragem de contexto em prd-writer).
+
+## Bloco 03_p149-222 (lido: 149-222; p.=PDF, s.=seção do ebook)
+
+- **Cap. 25 Principles of Product Vision (PDF p.149-151, impr. 129-131)**
+  - Relevância: prd-writer: BAIXA; product-discovery-assistant: MÉDIA (princípio 2 e 8: pivô de visão vs pivô de discovery); hypothesis-and-experiments: BAIXA; product-metrics: NENHUMA.
+  - Decisão sugerida: usar só princípios 2 e 8 em product-discovery-assistant; resto descartar.
+- **Cap. 26 Principles of Product Strategy (PDF p.153-154, impr. 133-134)**
+  - Relevância: prd-writer: BAIXA; product-discovery-assistant: MÉDIA (foco em um segmento por vez); hypothesis-and-experiments: NENHUMA; product-metrics: NENHUMA.
+  - Decisão sugerida: usar princípio 1 em product-discovery-assistant (regra "um alvo por release"); resto descartar.
+- **Cap. 27 Product Principles (PDF p.155-156, impr. 135-136)**
+  - Relevância: todas BAIXA/NENHUMA. Decisão sugerida: descartar (talvez nota em prd-writer: princípios de produto resolvem conflitos de decisão).
+  - Decisão sugerida: (não registrada)
+- **Intro "Product Objectives" (PDF p.157-158, impr. 137-138)**
+  - Relevância: product-metrics: MÉDIA (resultado vs output); hypothesis-and-experiments: BAIXA. Decisão: descartar além do que o cap. 28 cobre.
+  - Decisão sugerida: (não registrada)
+- **Cap. 28 The OKR Technique (PDF p.159-161, impr. 139-141)**
+  - Relevância: product-metrics: MÉDIA (KR = resultado de negócio, não output; escala de pontuação); hypothesis-and-experiments: BAIXA; prd-writer: BAIXA (PRD deveria ligar-se a objetivo/KR do time, vide Cap. 35); product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar pontos 1, 2, 5, 9, 10, 12 em product-metrics (referência de OKR).
+- **Cap. 29 Product Team Objectives (PDF p.163-165, impr. 143-145)**
+  - Relevância: product-metrics: MÉDIA; demais: BAIXA/NENHUMA.
+  - Decisão sugerida: usar como contexto em product-metrics (OKR por time de produto).
+- **Intro "Product @ Scale" (PDF p.166)**
+  - Relevância: todas NENHUMA/BAIXA. Descartar.
+  - Decisão sugerida: (não registrada)
+- **Cap. 30 Product Objectives @ Scale (PDF p.167-169, impr. 147-149)**
+  - Relevância: todas NENHUMA/BAIXA. Decisão: descartar.
+  - Decisão sugerida: (não registrada)
+- **Cap. 31 Product Evangelism (PDF p.171-173, impr. 151-153)**
+  - Relevância: prd-writer: MÉDIA (argumento de que user stories sozinhas não mostram o conjunto; protótipo comunica melhor); product-discovery-assistant: BAIXA; demais: NENHUMA.
+  - Decisão sugerida: usar ponto 1 como justificativa em prd-writer (complementar PRD com protótipo/story map).
+- **Cap. 32 Profile: Alex Pressland of the BBC (PDF p.175-177)**
+  - Relevância: hypothesis-and-experiments: BAIXA (exemplo: experimentos medindo alcance/engajamento antes de propor visão). Descartar.
+  - Decisão sugerida: (não registrada)
+- **Parte IV "The Right Process" (PDF p.179-180, impr. 159-160)**
+  - Relevância: product-discovery-assistant: MÉDIA (papéis, tempo). Decisão: usar o número "30 min a 1 h/dia" como detalhe de papéis, opcional.
+  - Decisão sugerida: (não registrada)
+- **Overview: Product Discovery (PDF p.181-183, impr. 161-163)**
+  - Relevância: product-discovery-assistant: ALTA (propósito da discovery, definição de "product"); hypothesis-and-experiments: ALTA (discovery barata vs delivery); prd-writer: MÉDIA (spec de algo ainda não validado = desperdício); product-metrics: BAIXA (menciona instrumentação como critério de "product").
+  - Decisão sugerida: usar em product-discovery-assistant e hypothesis-and-experiments.
+- **Cap. 33 Principles of Product Discovery (PDF p.185-190, impr. 165-170)**
+  - Relevância: product-discovery-assistant: ALTA; hypothesis-and-experiments: ALTA (P5-P8, iterações 10-20/semana, custo 10x menor); prd-writer: MÉDIA (P4 contra cascata requisitos->design; P8 feasibility antes de sprint planning; P9 viabilidade de negócio cobre áreas); product-metrics: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (riscos e princípios) e hypothesis-and-experiments (iteração de discovery, P6-P8).
+- **Cap. 34 Discovery Techniques Overview (PDF p.191-194, impr. 171-174)**
+  - Relevância: product-discovery-assistant: ALTA (mapa de técnicas por risco); hypothesis-and-experiments: ALTA (distinção prova vs evidência; escolher técnica por risco); demais: BAIXA.
+  - Decisão sugerida: usar como estrutura de roteamento "risco -> categoria de teste" em hypothesis-and-experiments.
+- **Discovery Framing Techniques, visão geral (PDF p.195-198, impr. 175-178)**
+  - Relevância: product-discovery-assistant: ALTA (framing, riscos de negócio por área, viés de risco); hypothesis-and-experiments: ALTA (quando NÃO testar; testar só onde há risco ou discordância); prd-writer: MÉDIA (roadmap como lista de soluções; enquadrar o problema); product-metrics: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant e hypothesis-and-experiments.
+- **Cap. 35 Opportunity Assessment Technique (PDF p.199-201, impr. 179-181)**
+  - Relevância: prd-writer: ALTA (as 4 perguntas como cabeçalho mínimo: objetivo, KRs, problema do cliente, mercado-alvo; ancorar PRD a OKR do time; ressalva de trabalho estratégico); product-discovery-assistant: ALTA (técnica de enquadramento para a maioria dos trabalhos); product-metrics: MÉDIA (KR definido antes do trabalho; "o quanto é suficiente?"); hypothesis-and-experiments: BAIXA.
+  - Decisão sugerida: usar em prd-writer (seção mínima) e product-discovery-assistant.
+- **Cap. 36 Customer Letter Technique (PDF p.203-205, impr. 183-185)**
+  - Relevância: prd-writer: MÉDIA (técnica opcional de enquadramento de benefício para iniciativas grandes); product-discovery-assistant: ALTA (técnica de framing para efforts maiores, e aviso de que não valida demanda); hypothesis-and-experiments: MÉDIA (aviso: validar com colegas ≠ validar com clientes); product-metrics: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (escolha da técnica de framing por tamanho) e nota em hypothesis-and-experiments.
+- **Cap. 37 Startup Canvas Technique + caixa "The Biggest Risk" (PDF p.207-210, impr. 187-190)**
+  - Relevância: product-discovery-assistant: ALTA (priorizar risco de valor/solução antes de modelo de negócio; viés de risco confortável); hypothesis-and-experiments: ALTA (ordem de hipóteses: valor primeiro; paridade não basta); prd-writer: BAIXA; product-metrics: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant e hypothesis-and-experiments (regra de ordem de risco).
+- **Discovery Planning Techniques, visão geral (PDF p.211)**
+  - Relevância: product-discovery-assistant: MÉDIA. Incluído no cap. 39.
+  - Decisão sugerida: (não registrada)
+- **Cap. 38 Story Map Technique (PDF p.213-214, impr. 193-194)**
+  - Relevância: prd-writer: ALTA (estrutura de user stories em mapa: atividades > tarefas > stories; críticas acima; fatiar releases; stories do mapa vão para o backlog; prototipo + story map como par de artefatos); product-discovery-assistant: ALTA (técnica de planejamento/ideação/framing); hypothesis-and-experiments: MÉDIA (mapa atualizado a partir do feedback de protótipo); product-metrics: NENHUMA.
+  - Decisão sugerida: usar em prd-writer (organizar user stories em story map em vez de lista plana) e product-discovery-assistant.
+- **Cap. 39 Customer Discovery Program Technique (PDF p.215-222, impr. 195-202)**
+  - Relevância: product-discovery-assistant: ALTA (técnica + números + critérios de recrutamento + demand reality check); hypothesis-and-experiments: MÉDIA (6 referências como evidência de confiança, não significância; teste de demanda por dificuldade de recrutar 4-5); prd-writer: BAIXA (um produto geral, não features dos seis clientes); product-metrics: BAIXA (referência como indicador antecedente de sucesso, não métrica quantitativa).
+  - Decisão sugerida: usar em product-discovery-assistant.
+
+## Bloco 04_p223-296 (lido: 223-296; p.=PDF, s.=seção do ebook)
+
+- **Customer Discovery Program Technique, parte final + "Defining Product/Market Fit" (PDF p.223-224, impr. 203-204) [continua do bloco anterior]**
+  - Relevância: prd-writer: NENHUMA. product-discovery-assistant: MÉDIA, critério de product/market fit (40% / seis referências). hypothesis-and-experiments: BAIXA. product-metrics: ALTA, teste Sean Ellis com população filtrada e limiar de 40%, e critério alternativo B2B.
+  - Decisão sugerida: usar em product-metrics (critério PMF) e product-discovery-assistant.
+- **Capítulo 40, Profile: Martina Lauchengco of Microsoft (PDF p.225-227, impr. 205-207)**
+  - Relevância: prd-writer: NENHUMA. product-discovery-assistant: BAIXA, ilustra valor para o cliente versus eficiência interna. hypothesis-and-experiments: NENHUMA. product-metrics: NENHUMA.
+  - Decisão sugerida: descartar (anedota).
+- **Discovery Ideation Techniques, Overview (PDF p.228-229, impr. 208-209)**
+  - Relevância: prd-writer: BAIXA. product-discovery-assistant: ALTA, contrapõe ideias vindas de roadmap/stakeholders a problemas de negócio dados ao time. hypothesis-and-experiments: MÉDIA, ideia empolgante não dispensa teste. product-metrics: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Capítulo 41, Customer Interviews (PDF p.231-233, impr. 211-213)**
+  - Relevância: prd-writer: NENHUMA. product-discovery-assistant: ALTA, as quatro perguntas, cadência mínima e composição trio. hypothesis-and-experiments: MÉDIA, entrevista não é para provar. product-metrics: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (referência de entrevistas).
+- **Capítulo 42, Concierge Test Technique (PDF p.235-236, impr. 215-216)**
+  - Relevância: prd-writer: NENHUMA. product-discovery-assistant: ALTA, técnica de descoberta e distinção em relação a suporte. hypothesis-and-experiments: BAIXA, aqui serve para gerar ideias. product-metrics: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant.
+- **Capítulo 43, The Power of Customer Misbehavior (PDF p.237-239, impr. 217-219)**
+  - Relevância: prd-writer: NENHUMA. product-discovery-assistant: MÉDIA, fonte de oportunidades. hypothesis-and-experiments: NENHUMA. product-metrics: BAIXA, monitorar uso não planejado.
+  - Decisão sugerida: usar em product-discovery-assistant (fonte de ideias, curta).
+- **Capítulo 44, Hack Days (PDF p.241-242, impr. 221-222)**
+  - Relevância: prd-writer: NENHUMA. product-discovery-assistant: MÉDIA, técnica de ideação. hypothesis-and-experiments: BAIXA. product-metrics: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (referência curta).
+- **Discovery Prototyping Techniques, Overview (PDF p.243-245, impr. 223-225)**
+  - Relevância: prd-writer: MÉDIA, protótipo como parte da especificação (ver cap.45). product-discovery-assistant: ALTA, taxonomia de protótipos. hypothesis-and-experiments: ALTA, escolha do protótipo conforme o que se quer testar. product-metrics: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (references) e product-discovery-assistant.
+- **Capítulo 45, Principles of Prototypes (PDF p.247-248, impr. 227-228)**
+  - Relevância: prd-writer: ALTA, o protótipo substitui/lidera a especificação e o que o complementa (use cases, business rules, acceptance criteria) e quando. product-discovery-assistant: ALTA, princípios e riscos. hypothesis-and-experiments: ALTA, regra de custo (ordem de magnitude) e fidelidade mínima suficiente. product-metrics: NENHUMA.
+  - Decisão sugerida: usar em prd-writer (condições de complemento do protótipo) e hypothesis-and-experiments.
+- **Capítulo 46, Feasibility Prototype Technique (PDF p.249-251, impr. 229-231)**
+  - Relevância: prd-writer: BAIXA, riscos de viabilidade podem entrar como pré-requisito antes do spec. product-discovery-assistant: ALTA, lista de situações de risco técnico e papel do PM. hypothesis-and-experiments: ALTA, protótipo de viabilidade como experimento descartável, 1-2 dias. product-metrics: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant e hypothesis-and-experiments.
+- **Capítulo 47, User Prototype Technique (PDF p.253-254, impr. 233-234)**
+  - Relevância: prd-writer: MÉDIA, protótipo de usuário é "uma das mais importantes ferramentas de comunicação". product-discovery-assistant: ALTA. hypothesis-and-experiments: ALTA, contra-exemplo (aprovação verbal não valida valor). product-metrics: NENHUMA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (armadilha) e prd-writer (protótipo como comunicação).
+- **Capítulo 48, Live-Data Prototype Technique (PDF p.255-257, impr. 235-237)**
+  - Relevância: prd-writer: NENHUMA. product-discovery-assistant: MÉDIA. hypothesis-and-experiments: ALTA, definição, custo relativo e limites do protótipo com dados reais. product-metrics: MÉDIA, instrumentação só dos casos testados, comparação com produto atual.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Capítulo 49, Hybrid Prototype Technique (PDF p.259-260, impr. 239-240)**
+  - Relevância: prd-writer: NENHUMA. product-discovery-assistant: MÉDIA. hypothesis-and-experiments: ALTA, Wizard of Oz como experimento barato, qualitativo. product-metrics: NENHUMA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Discovery Testing Techniques, Overview (PDF p.261-262, impr. 241-242)**
+  - Relevância: prd-writer: MÉDIA, os quatro riscos devem estar tratados antes do spec. product-discovery-assistant: ALTA, definição exata dos quatro riscos e ordem típica. hypothesis-and-experiments: ALTA, hipótese por risco, ordem de teste. product-metrics: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant e hypothesis-and-experiments.
+- **Capítulo 50, Testing Usability (PDF p.263-269, impr. 243-249)**
+  - Relevância: prd-writer: BAIXA. product-discovery-assistant: ALTA, procedimento completo. hypothesis-and-experiments: ALTA, usabilidade qualitativa com protótipo, três resultados por tarefa, nada de relatório longo. product-metrics: NENHUMA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (references/usability-test) e product-discovery-assistant.
+- **Capítulo 51, Testing Value (PDF p.271-272, impr. 251-252)**
+  - Relevância: prd-writer: BAIXA. product-discovery-assistant: ALTA, valor primeiro, feature parity como armadilha. hypothesis-and-experiments: ALTA, as três famílias de teste de valor. product-metrics: MÉDIA, eficácia como métrica.
+  - Decisão sugerida: usar em hypothesis-and-experiments e product-discovery-assistant.
+- **Capítulo 52, Demand Testing Techniques + "Discovery Testing in Risk-Averse Companies" (PDF p.273-278, impr. 253-258)**
+  - Relevância: prd-writer: NENHUMA. product-discovery-assistant: ALTA, fake door e landing page como teste de demanda. hypothesis-and-experiments: ALTA, procedimento e regras (sem pista visual; comparar CTR; 1% de exposição; gentle deployment). product-metrics: MÉDIA, CTR comparado a expectativas/outras features.
+  - Decisão sugerida: usar em hypothesis-and-experiments (fake door, landing, risk-averse) e product-discovery-assistant.
+- **Capítulo 53, Qualitative Value Testing Techniques (PDF p.279-283, impr. 259-263)**
+  - Relevância: prd-writer: BAIXA. product-discovery-assistant: ALTA. hypothesis-and-experiments: ALTA, métodos de valor (dinheiro, reputação, tempo, acesso), sequência, cadência. product-metrics: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments e product-discovery-assistant.
+- **Capítulo 54, Quantitative Value Testing Techniques + papel da analytics (PDF p.285-292, impr. 265-272)**
+  - Relevância: prd-writer: BAIXA, requisito de instrumentação por feature. product-discovery-assistant: MÉDIA. hypothesis-and-experiments: ALTA, A/B de descoberta 99/1, invite-only, customer discovery program, quant e qual combinados. product-metrics: ALTA, cinco usos, sete categorias, instrumentação obrigatória, outcome vs output.
+  - Decisão sugerida: usar em product-metrics e hypothesis-and-experiments.
+- **Capítulo 55, Testing Feasibility + "Discovery for Hardware Products" (PDF p.293-296, impr. 273-276)**
+  - Relevância: prd-writer: MÉDIA, não exigir estimativa sob pressão; viabilidade antes da especificação. product-discovery-assistant: ALTA, dez perguntas de viabilidade e postura do PM. hypothesis-and-experiments: MÉDIA, protótipo de viabilidade como experimento, hardware. product-metrics: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (checklist de viabilidade).
+
+## Bloco 05_p297-370 (lido: 297-370; p.=PDF, s.=seção do ebook)
+
+- **Cap. 56 Testing Business Viability (PDF p.297-302, impr. 277-282) [continua do bloco anterior]**
+  - Relevância: prd-writer: MÉDIA, lista de stakeholders/restrições vira seção "restrições de negócio e aprovações" do PRD; product-discovery-assistant: ALTA, quarto risco (viabilidade de negócio) com stakeholders e momento de teste; hypothesis-and-experiments: MÉDIA, distinção user test x demo x walkthrough evita testes enviesados; product-metrics: BAIXA.
+  - Decisão sugerida: usar em product-discovery-assistant (risco de viabilidade de negócio, stakeholders) e hypothesis-and-experiments (user test vs demo vs walkthrough).
+- **Cap. 57 Profile: Kate Arnold of Netflix (PDF p.303-305, impr. 283-285)**
+  - Relevância: product-discovery-assistant: BAIXA (exemplo de viabilidade de negócio guiando solução); demais: NENHUMA.
+  - Decisão sugerida: descartar (anedótico), no máximo exemplo.
+- **Parte "Transformation Techniques" Overview (PDF p.306, impr. 286)**
+  - Relevância: (não registrada)
+  - Decisão sugerida: (não registrada)
+- **Cap. 58 Discovery Sprint Technique (PDF p.307-310, impr. 287-290)**
+  - Relevância: product-discovery-assistant: MÉDIA, definição e gatilhos para sprint; hypothesis-and-experiments: MÉDIA, sprint termina sempre com teste com usuários reais e protótipo de alta fidelidade; prd-writer: BAIXA; product-metrics: NENHUMA.
+  - Decisão sugerida: usar em product-discovery-assistant (quando propor discovery sprint) com a definição exata.
+- **Cap. 59 Pilot Team Technique (PDF p.311-312, impr. 291-292)**
+  - Relevância: todos os candidatos: BAIXA/NENHUMA (adoção organizacional). Decisão: descartar.
+  - Decisão sugerida: (não registrada)
+- **Cap. 60 Weaning an Organization Off Roadmaps (PDF p.313-314, impr. 293-294)**
+  - Relevância: product-metrics: MÉDIA, ligar feature a métrica de resultado (ex. conversão), medir antes/depois e declarar fracasso de resultado mesmo com entrega; prd-writer: MÉDIA, PRD deve declarar o resultado de negócio e a métrica-alvo atual vs esperada, não só a feature; hypothesis-and-experiments: BAIXA; product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em product-metrics e prd-writer (campo "resultado de negócio esperado + baseline").
+- **Process @ Scale, Overview (PDF p.315-316, impr. 295-296)**
+  - Relevância: NENHUMA/BAIXA. Decisão: descartar.
+  - Decisão sugerida: (não registrada)
+- **Cap. 61 Managing Stakeholders (PDF p.317-324, impr. 297-304)**
+  - Relevância: prd-writer: ALTA, sign-off só sobre protótipo de alta fidelidade, não slides; stakeholders com poder de veto; preview na discovery antes do backlog; product-discovery-assistant: ALTA, risco de viabilidade de negócio, 1:1 com stakeholders, dados em vez de opinião; hypothesis-and-experiments: MÉDIA, resolver impasse de opinião com teste rápido; product-metrics: NENHUMA.
+  - Decisão sugerida: usar em prd-writer (fluxo de aprovação) e product-discovery-assistant (mapa de stakeholders e viabilidade).
+- **Cap. 62 Communicating Product Learnings (PDF p.325-326, impr. 305-306)**
+  - Relevância: hypothesis-and-experiments: BAIXA/MÉDIA (comunicar aprendizados relevantes, não minúcias); product-metrics: BAIXA. Decisão: opcional, uma regra curta.
+  - Decisão sugerida: (não registrada)
+- **Cap. 63 Profile: Camille Hearst of Apple (PDF p.327-328, impr. 307-308)**
+  - Relevância: (não registrada)
+  - Decisão sugerida: (não registrada)
+- **Parte V The Right Culture (PDF p.329-330) e Cap. 64 Good Product Team/Bad Product Team (PDF p.331-334, impr. 311-314)**
+  - Relevância: prd-writer: ALTA, requisitos coletados de vendas/clientes/stakeholders e pedidos via documentos são marcas de time ruim; protótipo na discovery, não só em sprint planning; product-metrics: MÉDIA, instrumentação como obrigatória, celebrar impacto e não entrega; product-discovery-assistant: ALTA, contato semanal com clientes, engenheiros na discovery; hypothesis-and-experiments: MÉDIA, ideias favoritas falham e exigem iterações.
+  - Decisão sugerida: usar como antipadrões em prd-writer e product-discovery-assistant.
+- **Cap. 65 Top Reasons for Loss of Innovation (PDF p.335-338, impr. 315-317)**
+  - Relevância: product-discovery-assistant: MÉDIA (estratégia focada, engenheiros na discovery, tempo para inovar); prd-writer: BAIXA; product-metrics: NENHUMA. Decisão: usar parcialmente (checagem de saúde do time).
+  - Decisão sugerida: (não registrada)
+- **Cap. 66 Top Reasons for Loss of Velocity (PDF p.339-341, impr. 319-321)**
+  - Relevância: product-discovery-assistant: MÉDIA (engenharia e design em discovery); product-metrics: BAIXA (frequência de release ao menos quinzenal como sinal); prd-writer: BAIXA. Decisão: opcional.
+  - Decisão sugerida: (não registrada)
+- **Cap. 67 Establishing a Strong Product Culture (PDF p.343-346, impr. 323-326)**
+  - Relevância: todos os candidatos: BAIXA, contexto cultural. Decisão: descartar ou nota de contexto.
+  - Decisão sugerida: (não registrada)
+- **Agradecimentos, Sobre o autor, Learning More, Índice, EULA (PDF p.347-370)**
+  - Relevância: NENHUMA. Decisão: descartar.
+  - Decisão sugerida: (não registrada)

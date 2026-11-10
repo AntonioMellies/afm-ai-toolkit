@@ -1,0 +1,285 @@
+# Registro de leitura (rascunho): evans-ddd
+
+Gerado por script a partir das notas dos leitores. Cada item: capítulo/seção, páginas (PDF), relevância avaliada e decisão sugerida. Revisão humana por amostragem pendente.
+
+Seções registradas: 87
+
+
+## Bloco 01_p001-075 (lido: PDF p.1-75)
+
+- **Capa, sumário, copyright, elogios, dedicatória (PDF p.1-9)**
+  - Relevância: domain-driven-design: BAIXA (mapa dos capítulos para organizar references/); clean-architecture-expert: NENHUMA; hard-parts: NENHUMA.
+  - Decisão sugerida: usar o sumário só como índice de cobertura para os próximos blocos (confirma que os temas de v1.1 como Anticorruption Layer, Distillation, Context Map estão nos Cap. 14-15, fora deste bloco); descartar o resto.
+- **Prefácio de Martin Fowler (PDF p.10)**
+  - Relevância: domain-driven-design: MÉDIA (frase de enquadramento para "Quando usar"/"Mentalidade"); demais: NENHUMA.
+  - Decisão sugerida: usar como enquadramento no SKILL.md de domain-driven-design (1 linha); sem referência dedicada.
+- **Prefácio do autor, "Contrasting Three Projects", "The Challenge of Complexity", "Design Versus Development Process", "Structure of This Book", "Who Should Read", "A Domain-Driven Team" (PDF p.12-20)**
+  - Relevância: domain-driven-design: ALTA para a seção "Quando usar/Mentalidade" (quando o DDD compensa; pré-requisitos de processo; modos de falha dos 3 projetos como sinais de alerta); architecture-hard-parts: BAIXA (enquadramento); clean-architecture: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (referência "quando-ddd-compensa" ou seção de pré-requisitos e anti-sinais: modelador separado do código, falta de linguagem comum, sucesso inicial simples que ossifica). O livro vai além de lista curta aqui ao dar os três cenários narrados como casos de falha/sucesso.
+- **Introdução à Parte I (PDF p.24-26)**
+  - Relevância: domain-driven-design: ALTA (definição de modelo e os três usos; base de "Mentalidade Principal"); clean-architecture-expert: BAIXA; hard-parts: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (SKILL.md, definição de modelo/três usos; reforçar que modelo != diagrama).
+- **Cap. 1: Crunching Knowledge (PDF p.27-39)**
+  - Relevância: domain-driven-design: ALTA (processo de knowledge crunching passo a passo, 5 ingredientes, exemplo trabalhado de extração de conceito oculto com Policy/Strategy, exemplo de modelo profundo; boa matéria-prima para o "exemplo trabalhado" de v1.1); clean-architecture-expert: BAIXA (regra de negócio escondida em método de aplicação, vai ao Cap. 4); architecture-hard-parts: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (referências: processo de descoberta/knowledge crunching; exemplo trabalhado "overbooking" antes/depois, citando que a regra do 10% sai da guard clause e vira conceito nomeado). Onde o livro vai além de listas: o exemplo é completo (diálogo, código antes/depois, motivos), algo que listas curtas não capturam.
+- **Cap. 2: Communication and the Use of Language (PDF p.40-55)**
+  - Relevância: domain-driven-design: ALTA (UBIQUITOUS LANGUAGE completa: definição, vocabulário, como evoluir, testes de saúde, o antipadrão de tradução, regra de que linguagem e modelo mudam juntos, critérios de documentação, exemplo dos dois diálogos); clean-architecture-expert: BAIXA (nomes que revelam intenção; teste de documento vivo); architecture-hard-parts: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (referência dedicada "linguagem-ubiqua": sinais de linguagem fraturada, procedimento "modeling out loud", teste de aderência de documentos, exemplo Cargo Router em duas versões). Onde o livro vai além de lista curta: os dois diálogos paralelos e as três versões da mesma frase são exemplos de aplicação prontos para virar exemplo trabalhado.
+- **Cap. 3: Binding Model and Implementation (PDF p.57-69)**
+  - Relevância: domain-driven-design: ALTA (MODEL-DRIVEN DESIGN, HANDS-ON MODELERS, modelo único, exemplo trabalhado PCB procedural vs. model-driven, aviso sobre modelo de análise paralelo); clean-architecture-expert: MÉDIA (separação entre modelo de domínio e UI/infra aparece como motivação; "Façade" e services/repositórios no exemplo; ligação com independência de tecnologia); architecture-hard-parts: BAIXA (custo da separação arquiteto/implementador, feedback atrasado).
+  - Decisão sugerida: usar em domain-driven-design (referências: "model-driven-design e modelagem mão na massa", exemplo trabalhado PCB/bus; anti-padrões: modelo de análise separado, arquiteto de torre de marfim, UI com ilusão de modelo diferente). Considerar mencionar HANDS-ON MODELERS em clean-architecture-expert/architecture-hard-parts como anti-padrão de governança (arquiteto sem código).
+- **Introdução à Parte II (PDF p.70-71)**
+  - Relevância: domain-driven-design: BAIXA; clean-architecture-expert: BAIXA; hard-parts: NENHUMA.
+  - Decisão sugerida: descartar (usar no máximo a referência a responsibility-driven design/design by contract como fontes).
+- **Cap. 4: Isolating the Domain, abertura e Layered Architecture (PDF p.72-75) [continua no próximo bloco]**
+  - Relevância: clean-architecture-expert: ALTA (quatro camadas, papel fino da camada de aplicação, regra de negócio no domínio, motivos de isolamento; base canônica para a seção de camadas); domain-driven-design: ALTA (Layered Architecture é a pré-condição do MODEL-DRIVEN DESIGN; tática); architecture-hard-parts: BAIXA (menção a deploy distribuído por camadas).
+  - Decisão sugerida: usar em domain-driven-design (referência de design tático: camadas e onde cada regra mora) e em clean-architecture-expert (citar Evans como origem da separação das 4 camadas e da camada de aplicação fina; registrar a diferença de direção de dependência). Concluir a leitura no próximo bloco antes de fechar a regra.
+
+## Bloco 02_p076-150 (lido: PDF p.76-150)
+
+- **Cap. 4 (final): Relating the Layers / Architectural Frameworks (PDF p.76-77) [continua do bloco anterior]**
+  - Relevância para os artefatos candidatos: domain-driven-design: MÉDIA, regra "framework a serviço do modelo / uso seletivo" e a infra como SERVICE sem conhecimento do domínio; clean-architecture-expert: MÉDIA, mesma ideia de infra abaixo do domínio e frameworks como detalhe (evidência de Evans, base para exemplos); architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (references de camadas/DDD tático) e como evidência de apoio em clean-architecture-expert.
+- **Cap. 4 (final): The Domain Layer Is Where the Model Lives (PDF p.78) [continua do bloco anterior]**
+  - Relevância: domain-driven-design: ALTA, justificativa do isolamento do domínio como pré-requisito; clean-architecture-expert: ALTA, argumento de base para a camada de entidades/domínio; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (reference de camadas e isolamento) e citar em clean-architecture-expert.
+- **Cap. 4 (final): The Smart UI "Anti-Pattern" (PDF p.79-81) [continua do bloco anterior]**
+  - Relevância: domain-driven-design: ALTA, é critério de quando NÃO usar DDD (seção "quando usar/não usar" que a skill atual provavelmente não cobre com este grau de detalhe); clean-architecture-expert: MÉDIA, trade-off de custo de camadas para sistemas simples; architecture-hard-parts-expert: MÉDIA, é uma análise de trade-off (vantagens/desvantagens, custo de saída irreversível, "não cubra a aposta") que serve de exemplo de decisão arquitetural.
+  - Decisão sugerida: usar em domain-driven-design (reference "quando aplicar DDD / Smart UI / alternativas: Transaction Script"); exemplo de trade-off em architecture-hard-parts-expert (opcional).
+- **Cap. 4 (final): Other Kinds of Isolation (PDF p.82) [continua do bloco anterior]**
+  - Relevância: domain-driven-design: BAIXA (apenas ponteiro; o conteúdo real está nos Caps. 14 e 15 em outro bloco).
+  - Decisão sugerida: descartar neste bloco (ver Caps. 14-15 em outros blocos).
+- **Cap. 5 (intro): A Model Expressed in Software (PDF p.83-84)**
+  - Relevância: domain-driven-design: MÉDIA (panorama).
+  - Decisão sugerida: usar apenas como estrutura; o conteúdo está nas seções seguintes.
+- **Associations (PDF p.85-90)**
+  - Relevância: domain-driven-design: ALTA, três técnicas de simplificação de associações + exemplo trabalhado reaproveitável (com a ressalva do SQL concatenado); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (reference de DDD tático: associações), reescrevendo exemplo sem SQL concatenado.
+- **Entities (a.k.a. Reference Objects) (PDF p.91-96)**
+  - Relevância: domain-driven-design: ALTA, critérios de decisão (quando algo é ENTITY, exemplos assento/depósito/cliente, opções de identificador com armadilhas) para enriquecer a skill rasa; clean-architecture-expert: MÉDIA, ENTITY como núcleo da camada de domínio; architecture-hard-parts-expert: BAIXA (ID global em sistemas distribuídos, só tangencial).
+  - Decisão sugerida: usar em domain-driven-design (reference DDD tático: Entidades e identidade, com exemplos do estádio e do depósito).
+- **Value Objects (PDF p.97-102)**
+  - Relevância: domain-driven-design: ALTA, critérios "quem pergunta" (Address), WHOLE VALUE, regras de compartilhamento/mutabilidade, exemplos; clean-architecture-expert: MÉDIA (VALUE OBJECT na camada de entidades); architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (reference Value Objects, com o exemplo Address por contexto, que também ilustra dependência de bounded context).
+- **Services (PDF p.103-106)**
+  - Relevância: domain-driven-design: ALTA, três tipos de serviço com exemplo trabalhado (funds transfer) e critério de 3 características; clean-architecture-expert: ALTA, fronteira application service vs domain service vs infra (Use Cases/Interactors); architecture-hard-parts-expert: BAIXA (só granularidade em sistemas distribuídos, tangencial).
+  - Decisão sugerida: usar em domain-driven-design (reference Services e partição por camada) e em clean-architecture-expert (mapeamento application/domain service).
+- **Modules (a.k.a. Packages) (PDF p.107-111)**
+  - Relevância: domain-driven-design: ALTA, módulos como parte do modelo + antipadrão do empacotamento por camada técnica (com relato do projeto de quatro camadas); clean-architecture-expert: ALTA, argumenta contra estruturação por camada técnica que fragmenta o conceito e produz modelo anêmico (impacta "package by feature" vs "by layer"); architecture-hard-parts-expert: MÉDIA, mostra custo oculto de flexibilidade especulativa ("distribuir caso precise").
+  - Decisão sugerida: usar em domain-driven-design (reference de módulos/empacotamento) e clean-architecture-expert (estrutura de pastas/pacotes); anedota do projeto de quatro camadas como exemplo trabalhado de anti-padrão.
+- **Modeling Paradigms (PDF p.112-115)**
+  - Relevância: domain-driven-design: MÉDIA, regras de ouro para mistura de paradigmas e quando evitar rules engine (nota de contexto; DDD funcional/event sourcing [fora do livro]); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar parcialmente em domain-driven-design (heurísticas "não lute contra o paradigma", "seja cético com ferramentas"); descartar o histórico de OODB, exceto a lição de granularidade/contenção como ponte para agregados.
+- **Cap. 6 (intro): The Life Cycle of a Domain Object (PDF p.116-117)**
+  - Relevância: domain-driven-design: MÉDIA (estrutura do capítulo).
+  - Decisão sugerida: usar apenas como ordem de apresentação.
+- **Aggregates (PDF p.118-125)**
+  - Relevância: domain-driven-design: ALTA, é o catálogo de regras de agregado + exemplo trabalhado PO com locking/deadlock e decisão por conhecimento de negócio (exatamente o "exemplo trabalhado" que faltava); architecture-hard-parts-expert: ALTA/MÉDIA, ilustra trade-off consistência forte intra-agregado vs eventual entre agregados, contenção vs integridade, ligação com granularidade de dados; clean-architecture-expert: MÉDIA, agregado como unidade transacional que o repositório persiste.
+  - Decisão sugerida: usar em domain-driven-design (reference "agregados, repositórios e fábricas": regras + exemplo PO) e referenciar em architecture-hard-parts-expert (consistência por fronteira de agregado).
+- **Factories (PDF p.127-134)**
+  - Relevância: domain-driven-design: ALTA, requisitos de FACTORY, onde colocá-la, quando bastar construtor, criação vs reconstituição; clean-architecture-expert: MÉDIA, criação de entidades/agregados na camada de domínio sem acoplar casos de uso aos detalhes; architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (reference agregados/repositórios/fábricas).
+- **Repositories (PDF p.135-143)**
+  - Relevância: domain-driven-design: ALTA, definição, quando existir, query hard-coded vs SPECIFICATION, não commitar, não "find or create"; clean-architecture-expert: ALTA, repositório como abstração que desacopla domínio da persistência, testes com versão em memória; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (reference agregados/repositórios/fábricas) e em clean-architecture-expert (portas de persistência).
+- **Designing Objects for Relational Databases (PDF p.144-145)**
+  - Relevância: domain-driven-design: MÉDIA, orientações para persistência e legado (liga a "DDD com legado" via Cap. 14); clean-architecture-expert: MÉDIA, tensão modelo de domínio vs esquema de banco; architecture-hard-parts-expert: BAIXA/MÉDIA, acesso de terceiros ao armazém (integração via banco) como acoplamento que trava refatoração.
+  - Decisão sugerida: usar em domain-driven-design (reference persistência/legado) com nota para clean-architecture-expert.
+- **Cap. 7: Using the Language: An Extended Example (PDF p.146-150) [continua no próximo bloco]**
+  - Relevância: domain-driven-design: ALTA, base do "exemplo trabalhado" ponta a ponta (cargo shipping), a ser completada com o próximo bloco; clean-architecture-expert: MÉDIA (application layer como coordenador); architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (reference com exemplo trabalhado; ler junto com blocos seguintes).
+
+## Bloco 03_p151-225 (lido: PDF p.151-225)
+
+- **Cap. 7 (continuação; o título do capítulo não aparece neste bloco, [fora do livro] não afirmado) - Distinguindo ENTITIES e VALUE OBJECTS no domínio de shipping (PDF p.151-152) [continua do bloco anterior]**
+  - Relevância: domain-driven-design: ALTA (exemplo trabalhado de ENTITY vs VALUE OBJECT com critério de decisão e chave de identidade vinda do especialista); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (exemplo trabalhado em references/, ex.: caso de carga/shipping com decisões entity/value e justificativas).
+- **Cap. 7: Desenho de associações no domínio de shipping (PDF p.153-154)**
+  - Relevância: domain-driven-design: ALTA (restringir direção de associações; modelo vs implementação como graus de liberdade); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (agregados/repositórios/fábricas e exemplo trabalhado).
+- **Cap. 7: Fronteiras de AGGREGATE e seleção de REPOSITORIES (PDF p.155-158)**
+  - Relevância: domain-driven-design: ALTA (critérios práticos para fronteira de agregado e para decidir quais agregados têm repositório, ancorados em requisitos); clean-architecture-expert: MÉDIA (repositório por raiz de agregado, interface de acesso ao domínio); architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (references/agregados-repositorios-fabricas e exemplo trabalhado); citar brevemente em clean-architecture-expert na parte de repositórios.
+- **Cap. 7: Cenários, criação de objetos (FACTORIES e construtores) (PDF p.159-162)**
+  - Relevância: domain-driven-design: ALTA (exemplo trabalhado de FACTORY, protótipo de agregado, construtor com invariantes); clean-architecture-expert: BAIXA/MÉDIA (criação de agregados com invariantes no domínio); architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (agregados/repositórios/fábricas; exemplo trabalhado).
+- **Cap. 7: "Pause for Refactoring" - design alternativo do agregado Cargo (PDF p.163-164)**
+  - Relevância: domain-driven-design: ALTA (exemplo concreto de ajustar fronteira de agregado por contenção; trade-offs); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: MÉDIA (trade-off simplicidade/desempenho/contenção em transações; análogo a decisões de acoplamento de dados, mas em escala de agregado, sem sistemas distribuídos).
+  - Decisão sugerida: usar em domain-driven-design (exemplo trabalhado e agregados); possível nota curta como exemplo de trade-off em architecture-hard-parts-expert (baixa prioridade).
+- **Cap. 7: MODULES no modelo de shipping (PDF p.165-167)**
+  - Relevância: domain-driven-design: MÉDIA (módulos por conceito de domínio, anti-padrão de empacotar por tipo técnico); clean-architecture-expert: MÉDIA/ALTA (contraste "package by layer/pattern" vs "package by domain concept", útil para estrutura de pastas); architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (exemplo trabalhado/tático) e citar em clean-architecture-expert como anti-padrão de organização de pacotes.
+- **Cap. 7: Nova funcionalidade "Allocation Checking": ANTICORRUPTION LAYER, SERVICE, ENTERPRISE SEGMENT (PDF p.168-172)**
+  - Relevância: domain-driven-design: ALTA (exemplo trabalhado completo de ACL como SERVICE + FACADE, realocação de regra para o domínio, enriquecer modelo em vez de conformar-se); clean-architecture-expert: ALTA (camada de aplicação não contém regra de negócio; port/adapter que traduz sistema externo para o modelo de domínio; escondida atrás de interface com nome do domínio); architecture-hard-parts-expert: MÉDIA (cache de dados duplicados em integração remota como trade-off de desempenho vs consistência/complexidade).
+  - Decisão sugerida: usar em domain-driven-design (references/camada-anticorrupcao + exemplo trabalhado) e em clean-architecture-expert (adapter/ACL, regra de negócio fora da camada de aplicação). Citar trade-off de cache em architecture-hard-parts-expert só se houver seção de integração.
+- **Introdução da Parte III: "Refactoring Toward Deeper Insight" (PDF p.173-176)**
+  - Relevância: domain-driven-design: ALTA (a skill atual é rasa; este texto sustenta uma seção sobre evolução do modelo, "modelo profundo vs ingênuo", níveis de refactoring e o exemplo vessel voyage/bill of lading); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (references: evolução do modelo e exemplo trabalhado). Para "destilação do domínio", só o ponteiro de que Cap. 15 é alavanca de breakthrough (conteúdo está em outro bloco).
+- **Cap. 8: Breakthrough (PDF p.177-187)**
+  - Relevância: domain-driven-design: ALTA (estudo de caso com sinais para suspeitar de modelo errado, checklist de decisão de refatoração arriscada, ligação com linguagem ubíqua); clean-architecture-expert: NENHUMA/BAIXA; architecture-hard-parts-expert: MÉDIA (a decisão com 4 perguntas do gerente é um exemplo de análise de trade-off custo/risco/timing, mas é anedota de domínio, não de sistemas distribuídos).
+  - Decisão sugerida: usar em domain-driven-design (exemplo trabalhado e seção "DDD com legado / evolução de modelo"); eventual referência cruzada em architecture-hard-parts-expert como exemplo de decisão de refatoração de alto risco (opcional, baixa prioridade).
+- **Cap. 9: Making Implicit Concepts Explicit - "Digging Out Concepts" (PDF p.189-200)**
+  - Relevância: domain-driven-design: ALTA (técnicas concretas de descoberta e dois exemplos trabalhados; muito além de "construir um glossário"); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (exemplo trabalhado: Itinerary e Accrual; seção "descoberta de conceitos" com sinais: termo ausente no design, desajeitamento, contradições, literatura).
+- **Cap. 9: Como modelar tipos menos óbvios de conceitos: constraints explícitas, processos como objetos de domínio (PDF p.201-203)**
+  - Relevância: domain-driven-design: ALTA (constraints e processos explícitos, critério de decisão e sinais); clean-architecture-expert: MÉDIA (regras de negócio em objetos de domínio e não em código procedural, quando extrair para política/estratégia); architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (tático/exemplo trabalhado) e referência breve em clean-architecture-expert (regras no domínio).
+- **Cap. 9: SPECIFICATION (PDF p.203-216)**
+  - Relevância: domain-driven-design: ALTA (padrão tático com os três usos, tensão com REPOSITORY, trade-offs de implementação, exemplo trabalhado); clean-architecture-expert: ALTA (regra de negócio no domínio, não em use case/aplicação; repositório sem vazar regra; vazamento de esquema de tabelas para o domínio como violação da Dependency Rule); architecture-hard-parts-expert: BAIXA (só o argumento de desacoplar implementação de interface para trabalho paralelo).
+  - Decisão sugerida: usar em domain-driven-design (references: SPECIFICATION + REPOSITORY, exemplo do packer, protótipo para desbloquear equipes); citar regra "regra de negócio não sobe para a camada de aplicação" em clean-architecture-expert.
+- **Cap. 10: Supple Design - introdução e Intention-Revealing Interfaces (PDF p.218-224) [continua no próximo bloco]**
+  - Relevância: domain-driven-design: ALTA (padrões de design tático; nomes pelo propósito na linguagem ubíqua; teste primeiro); clean-architecture-expert: MÉDIA (interfaces que expressam intenção e escondem mecanismo); architecture-hard-parts-expert: NENHUMA. Cruza com clean-code-expert (nomes e interfaces), fora dos candidatos.
+  - Decisão sugerida: usar em domain-driven-design (design tático/supple design); nota de cruzamento para clean-code-expert se houver oportunidade.
+- **Cap. 10: Side-Effect-Free Functions (PDF p.225) [continua no próximo bloco; texto termina no meio de frase]**
+  - Relevância: domain-driven-design: ALTA/MÉDIA (design tático: separação comando/consulta, VALUE OBJECT imutável); clean-architecture-expert: MÉDIA (funções puras na camada de domínio, testabilidade); architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (design tático, supple design) quando concluir com o próximo bloco.
+
+## Bloco 04_p226-300 (lido: PDF p.226-300)
+
+- **Cap. 10 (continuação): Supple Design. Side-Effect-Free Functions, exemplo Paint Mixing (PDF p.226-229) [continua do bloco anterior]**
+  - Relevância: domain-driven-design: ALTA (exemplo trabalhado concreto de VALUE OBJECT com função pura); clean-architecture-expert: MÉDIA (funções puras no núcleo, testabilidade); architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design/references (exemplo trabalhado, tático: VO + função sem efeito colateral). Paráfrase do exemplo, não copiar código.
+- **Assertions (PDF p.230-233)**
+  - Relevância: domain-driven-design: ALTA (invariantes de AGREGADO como asserções; testes como forma de expressá-las; exemplo em que a dificuldade de enunciar pós-condição revela conceito faltante); clean-architecture-expert: MÉDIA (invariantes no domínio, testes de caracterização); architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design/references (agregados/invariantes + exemplo trabalhado).
+- **Conceptual Contours (PDF p.234-238)**
+  - Relevância: domain-driven-design: ALTA (critério para granularidade de agregados/objetos, sinal de "bom ajuste"); clean-architecture-expert: MÉDIA (coesão por conceito, não por camada técnica); architecture-hard-parts-expert: BAIXA (conceito paralelo a granularidade, mas aqui é de objetos; qualquer ligação a serviços seria inferência [fora do livro]).
+  - Decisão sugerida: usar em domain-driven-design/references (modelagem tática, granularidade) e, de leve, em exemplo trabalhado.
+- **Standalone Classes (PDF p.239-240)**
+  - Relevância: domain-driven-design: ALTA (VO como classe autônoma, carga cognitiva); clean-architecture-expert: MÉDIA (acoplamento mínimo do núcleo; conceito afim, sem citar Dependency Rule); architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design/references (tático) e citar como evidência em clean-architecture-expert (acoplamento conceitual) com cuidado de neutralidade.
+- **Closure of Operations (PDF p.241-242)**
+  - Relevância: domain-driven-design: MÉDIA-ALTA (catálogo de padrões de design supple: precisa estar na skill); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design/references (tático, VO).
+- **Declarative Design e Domain-Specific Languages (PDF p.244-246)**
+  - Relevância: domain-driven-design: BAIXA-MÉDIA (aviso útil sobre MDD tooling/geração de código); clean-architecture-expert: BAIXA (mencionar persistência/ORM como automação "estreita" aceitável); architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar apenas em nota breve em domain-driven-design/references (limites do design declarativo); descartar o restante.
+- **Extending Specifications in a Declarative Style (PDF p.246-253)**
+  - Relevância: domain-driven-design: ALTA (Specification composta com exemplo, trade-offs de implementação, YAGNI); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design/references (padrões táticos; exemplo trabalhado: Specification AND/OR/NOT).
+- **Angles of Attack e Shares Math (PDF p.254-262)**
+  - Relevância: domain-driven-design: ALTA (melhor exemplo trabalhado do bloco: passos de refatoração com antes/depois, ligação entre VO, agregado e CORE DOMAIN); clean-architecture-expert: MÉDIA (separar cálculo puro de aplicação de efeitos); architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design/references como exemplo trabalhado principal (descrever em passos, em paráfrase, sem colar código).
+- **Cap. 11: Applying Analysis Patterns (PDF p.263-274)**
+  - Relevância: domain-driven-design: ALTA (exemplo trabalhado completo com diálogo dev/especialista, linguagem ubíqua, e passagem de lógica "escondida em batch/script" para domínio; também DDD com sistema legado via Posting Service/FACADE); clean-architecture-expert: MÉDIA (script fino sobre camada de domínio; SERVICE/FACADE como fachada ao legado); architecture-hard-parts-expert: BAIXA (compromissos calculados entre modelo e infraestrutura).
+  - Decisão sugerida: usar em domain-driven-design/references (exemplo trabalhado + DDD com legado em nota: FACADE/SERVICE sobre API legada); citar em clean-architecture-expert apenas o ponto "batch fino sobre domínio".
+- **Cap. 12: Relating Design Patterns to the Model. Strategy, Composite, Flyweight (PDF p.275-285)**
+  - Relevância: domain-driven-design: ALTA (Strategy/Composite com exemplos de domínio; critério "padrão técnico vs. padrão de domínio"); clean-architecture-expert: MÉDIA (Strategy como regra explícita no núcleo); architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design/references (exemplos trabalhados: política de rota, composite de rotas).
+- **Cap. 13: Refactoring Toward Deeper Insight (PDF p.286-292)**
+  - Relevância: domain-driven-design: ALTA (processo: quando e como refatorar o modelo, mini-sessões de exploração; critérios de gatilho); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: BAIXA (decidir sob incerteza, sem análise formal de custo).
+  - Decisão sugerida: usar em domain-driven-design/references (processo de refinamento do modelo / DDD com código existente). Pode ser tópico de "gatilhos de refatoração para modelo mais profundo".
+- **Parte IV: Strategic Design, introdução (PDF p.293-294)**
+  - Relevância: domain-driven-design: MÉDIA (enquadramento do que a skill deve cobrir no design estratégico; ordem de importância); clean-architecture-expert: NENHUMA; architecture-hard-parts-expert: MÉDIA-BAIXA (tensão entre modelo único gigante e subsistemas com interfaces ad hoc, útil como motivação).
+  - Decisão sugerida: usar em domain-driven-design/references (visão geral estratégica); detalhes de destilação virão de outros blocos.
+- **Cap. 14: Maintaining Model Integrity, abertura (PDF p.295-296)**
+  - Relevância: domain-driven-design: ALTA (narrativa e justificativa de por que contexts; riscos do modelo único; conexão com times); clean-architecture-expert: NENHUMA; architecture-hard-parts-expert: MÉDIA (argumentos de custo de coordenação, política organizacional e compromisso consciente de divergência, em paralelo ao tema de granularidade e acoplamento organizacional [fora do livro: sem citar serviços]).
+  - Decisão sugerida: usar em domain-driven-design/references (context mapping em profundidade: motivação/riscos); possível citação indireta em architecture-hard-parts-expert apenas como análogo organizacional.
+- **Bounded Context (PDF p.298-300) [continua no próximo bloco]**
+  - Relevância: domain-driven-design: ALTA (BOUNDED CONTEXT com critérios de delimitação, exemplo trabalhado de delimitar com legado e equipes, diferença de MODULE, ACL como motivação [fora do livro neste bloco: ACL é de outro trecho]); clean-architecture-expert: BAIXA (módulos vs. contextos, só como esclarecimento); architecture-hard-parts-expert: MÉDIA (fronteira alinhada a time e a esquema de dados, custo/benefício de compartilhar).
+  - Decisão sugerida: usar em domain-driven-design/references (context mapping em profundidade e DDD com legado: o exemplo Booking como caso trabalhado).
+
+## Bloco 05_p301-375 (lido: PDF p.301-375)
+
+- **Recognizing Splinters Within a BOUNDED CONTEXT (PDF p.301) [continua do bloco anterior]**
+  - Relevância para os artefatos candidatos: domain-driven-design: ALTA, sinais de bounded context vazando e dois riscos nomeados (duplicação e falso cognato) servem como checklist de revisão de modelo; clean-architecture-expert: BAIXA; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (reference de context mapping / revisão de integridade do modelo).
+- **Continuous Integration (PDF p.302-303)**
+  - Relevância: domain-driven-design: MÉDIA, define a disciplina que mantém um contexto íntegro (útil em seção de integridade do modelo); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (referência de context mapping, relações entre contextos).
+- **Context Map (PDF p.304-311)**
+  - Relevância: domain-driven-design: ALTA, exemplo trabalhado completo (tradução em duas direções, ambiguidade, testes de fronteira, regra de nomear contextos); clean-architecture-expert: MÉDIA, o tradutor e o service-interface ilustram limite entre contextos/portas; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (reference de context mapping em profundidade + exemplo trabalhado Booking/Network Traversal); parte dos testes de fronteira também em reference de camada anticorrupção.
+- **Relationships Between BOUNDED CONTEXTS: introdução (PDF p.312)**
+  - Relevância: domain-driven-design: ALTA, critério de escolha por três variáveis; clean-architecture-expert: BAIXA; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (context mapping em profundidade: tabela "quando usar cada relação").
+- **Shared Kernel (PDF p.313-314)**
+  - Relevância: domain-driven-design: ALTA, definição operacional completa; clean-architecture-expert: BAIXA; architecture-hard-parts-expert: MÉDIA, trade-off de acoplamento de código/dados compartilhados entre times (como alternativa a duplicação).
+  - Decisão sugerida: usar em domain-driven-design (context mapping); mencionar em architecture-hard-parts-expert só se houver seção de código/dados compartilhados.
+- **Customer/Supplier Development Teams (PDF p.315-318)**
+  - Relevância: domain-driven-design: ALTA, relação com condições de sucesso e anti-padrão "primo pobre"; clean-architecture-expert: BAIXA; architecture-hard-parts-expert: MÉDIA, testes de aceitação do consumidor rodando no produtor como mecanismo de contrato.
+  - Decisão sugerida: usar em domain-driven-design (context mapping em profundidade).
+- **Conformist (PDF p.319-321)**
+  - Relevância: domain-driven-design: ALTA, a árvore de decisão de três caminhos e a defesa do Conformist (que listas curtas costumam omitir); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: MÉDIA, trade-off seguir vs. isolar com custo explícito.
+  - Decisão sugerida: usar em domain-driven-design (context mapping em profundidade).
+- **Anticorruption Layer (PDF p.322-326)**
+  - Relevância: domain-driven-design: ALTA, é a melhor fonte para uma reference de camada anticorrupção (estrutura Services/Adapters/Translators/Facade, onde colocar a comunicação, bidirecional, quando dispensar a facade, funções extras como auditoria); clean-architecture-expert: ALTA, tradução de modelo na fronteira e proteção do domínio contra dependência externa (portas/adaptadores) alinha com Dependency Rule; architecture-hard-parts-expert: MÉDIA, custo-benefício do isolamento (Grande Muralha) e migração gradual do legado.
+  - Decisão sugerida: usar em domain-driven-design (nova reference anticorruption-layer.md) e em clean-architecture-expert (referência cruzada sobre limites e tradução); trade-off em architecture-hard-parts-expert opcional.
+- **Separate Ways (PDF p.327-328)**
+  - Relevância: domain-driven-design: ALTA, contrapeso a over-integração, com exemplo; clean-architecture-expert: NENHUMA; architecture-hard-parts-expert: MÉDIA, argumento de custo de integração e do preço de duplicar.
+  - Decisão sugerida: usar em domain-driven-design (context mapping em profundidade).
+- **Open Host Service (PDF p.329)**
+  - Relevância: domain-driven-design: ALTA, critério de quando justificar (muitos integradores, services coesos) e custo (acoplamento ao dialeto do host); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: MÉDIA, trade-off protocolo comum vs. tradutores sob medida.
+  - Decisão sugerida: usar em domain-driven-design (context mapping em profundidade).
+- **Published Language (PDF p.330-332)**
+  - Relevância: domain-driven-design: ALTA, justificativa para linguagem de intercâmbio estável separada do modelo interno e checklist de passos (em Transformations); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: MÉDIA, contratos de dados/protocolos compartilhados (acoplamento de contrato).
+  - Decisão sugerida: usar em domain-driven-design (context mapping em profundidade).
+- **Unifying an Elephant (PDF p.333-336)**
+  - Relevância: domain-driven-design: MÉDIA, bom exemplo didático do continuum de integração e de fusão de modelos (para exemplo trabalhado); clean-architecture-expert: NENHUMA; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (exemplo resumido em 3-4 linhas na reference de context mapping); não copiar o poema (direitos autorais e relevância).
+- **Choosing Your Model Context Strategy (PDF p.337-342)**
+  - Relevância: domain-driven-design: ALTA, as listas de forças a favor de contextos maiores/menores, a árvore de escolha por tipo de sistema e o roteiro de "projeto já em andamento" são o mais acionável para context mapping e DDD com legado; clean-architecture-expert: BAIXA; architecture-hard-parts-expert: ALTA, é análise de trade-off de granularidade e acoplamento entre times/deploy (decomposição, deploy coordenado, versões coexistindo).
+  - Decisão sugerida: usar em domain-driven-design (reference context-mapping e reference ddd-com-legado); usar trade-offs de granularidade/deploy em architecture-hard-parts-expert (granularidade de serviços e relação time-contexto, Lei de Conway implícita, mas Conway não é nomeada no texto).
+- **Transformations (PDF p.343-347)**
+  - Relevância: domain-driven-design: ALTA, os três roteiros passo a passo são o material de "DDD com legado" e de evolução de context map; architecture-hard-parts-expert: ALTA, descomissionamento incremental, custo de fusão de contextos/serviços e estabilidade de contratos; clean-architecture-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (nova reference ddd-com-legado.md com os três roteiros e a ACL encolhendo/inchando); usar em architecture-hard-parts-expert (migração/descomissionamento incremental; fundir vs. separar).
+- **Chapter 15 Distillation: abertura (PDF p.348-349)**
+  - Relevância: domain-driven-design: ALTA, a lista de 5 benefícios justifica a destilação; clean-architecture-expert: NENHUMA; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (reference de destilação do domínio).
+- **Core Domain (PDF p.350-353)**
+  - Relevância: domain-driven-design: ALTA, definição e quatro implicações práticas (talento, recrutamento, comprar/construir, priorização de refatoração); clean-architecture-expert: BAIXA; architecture-hard-parts-expert: MÉDIA, argumento build vs buy baseado em valor diferenciador e risco de investir no genérico.
+  - Decisão sugerida: usar em domain-driven-design (reference destilacao-do-dominio.md); trecho build-vs-buy opcionalmente em architecture-hard-parts-expert.
+- **An Escalation of Distillations (PDF p.354)**
+  - Relevância: domain-driven-design: ALTA, escala de investimento (de baixo para alto custo) é um roteiro prático; clean-architecture-expert: NENHUMA; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (destilação do domínio, tabela por nível de investimento).
+- **Generic Subdomains (PDF p.355-360)**
+  - Relevância: domain-driven-design: ALTA, as quatro opções de aquisição com vantagens/desvantagens e o caso dos dois fusos são de grande valor didático; clean-architecture-expert: BAIXA; architecture-hard-parts-expert: MÉDIA, build vs buy/outsource como trade-off com prós e contras explícitos e risco de começar pelo genérico.
+  - Decisão sugerida: usar em domain-driven-design (destilação do domínio: tabela das 4 opções e exemplo dos fusos); build-vs-buy opcional em architecture-hard-parts-expert.
+- **Domain Vision Statement (PDF p.362-363)**
+  - Relevância: domain-driven-design: ALTA, exemplos contrastando "faz parte" vs "importante mas não faz parte" são ótimos para exemplo trabalhado; clean-architecture-expert: NENHUMA; architecture-hard-parts-expert: NENHUMA.
+  - Decisão sugerida: usar em domain-driven-design (destilação do domínio, com exemplo curto de vision statement).
+- **Highlighted Core (PDF p.365-367)**
+  - Relevância: domain-driven-design: ALTA, técnica pronta (distillation document + core flagging + uso como gatilho de consulta); clean-architecture-expert: NENHUMA; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (destilação do domínio).
+- **Cohesive Mechanisms (PDF p.369-371)**
+  - Relevância: domain-driven-design: ALTA, diferença Generic Subdomain x Cohesive Mechanism e o exemplo "volta ao início" com aprendizado de pragmatismo; clean-architecture-expert: MÉDIA, separação "o quê" vs "como" e isolamento de algoritmo em módulo testável; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (destilação do domínio, com o exemplo do organograma/grafo); referência cruzada opcional em clean-architecture-expert.
+- **Segregated Core (PDF p.373-375) [continua no próximo bloco (a Figura 15.3 e o restante do exemplo seguem após a p.375)]**
+  - Relevância: domain-driven-design: ALTA, receita de 5 passos + custos + quando aplicar + exemplo que usa o vision statement para escolher o core; clean-architecture-expert: MÉDIA, módulo de core com dependências explícitas e poucas se alinha à separação de núcleo e detalhes; architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (destilação do domínio, nível "Segregated Core" com receita e exemplo); concluir o exemplo com o próximo bloco.
+
+## Bloco 06_p376-446 (lido: PDF p.376-446)
+
+- **Cap. 15 (final): exemplo do SEGREGATED CORE no sistema de carga, ABSTRACT CORE, Deep Models Distill, Choosing Refactoring Targets (PDF p.376-382) [continua do bloco anterior]**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em domain-driven-design/references (destilação do domínio: exemplo trabalhado do SEGREGATED CORE com decisões e justificativas; seção ABSTRACT CORE com a advertência "não mecânico"; seção "por onde refatorar primeiro"). Para clean-architecture-expert, usar só como nota de analogia, claramente rotulada.
+- **Cap. 16: Large-Scale Structure, introdução e Evolving Order (PDF p.383-387)**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em domain-driven-design/references (large-scale structure: quando usar, evolução, opcionalidade, sinal de descarte) e citar em architecture-hard-parts-expert como argumento de governança (equipe de arquitetura, ver Cap.17).
+- **System Metaphor (PDF p.388-389)**
+  - Relevância: domain-driven-design: MÉDIA (item de catálogo de large-scale structures, uma linha). clean-architecture-expert: NENHUMA. architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design/references (catálogo de estruturas de grande escala, breve, com os riscos); não expandir.
+- **Responsibility Layers (PDF p.390-401)**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em domain-driven-design/references (arquivo de large-scale structure com o exemplo de carga completo e catálogo Potential/Operation/Decision Support/Policy/Commitment com perguntas-guia "O que pode ser feito? O que está sendo feito? Que ação tomar? Quais regras? O que prometemos?").
+- **Knowledge Level (PDF p.402-408)**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em domain-driven-design/references (padrão + exemplo Payroll/Pension + avisos de custo); incluir sinais de reconhecimento (acesso restrito, relação tipo-instância) e o conselho de uso parcimonioso.
+- **Pluggable Component Framework (PDF p.409-412)**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em domain-driven-design/references (large-scale structure, com os custos) e como exemplo de trade-off em architecture-hard-parts-expert.
+- **How Restrictive Should a Structure Be? (PDF p.413)**
+  - Relevância: domain-driven-design: MÉDIA (eventos para respeitar direção de dependência entre camadas). clean-architecture-expert: MÉDIA (inversão/sinalização para cima sem dependência). architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design/references (large-scale structure, subseção "quão restritivo").
+- **Refactoring Toward a Fitting Structure (PDF p.414-415)**
+  - Relevância: domain-driven-design: MÉDIA/ALTA (evolução da estrutura, DDD com legado/projeto em andamento). clean-architecture-expert: BAIXA/MÉDIA. architecture-hard-parts-expert: MÉDIA (evolução incremental e governança, risco de decaimento sem fitness checks [fora do livro: o livro não menciona verificação automática]).
+  - Decisão sugerida: usar em domain-driven-design/references (evolução da estrutura; riscos de decaimento).
+- **Cap. 17: Bringing the Strategy Together (PDF p.416-427)**
+  - Relevância para os artefatos candidatos:
+  - Decisão sugerida: usar em domain-driven-design/references (assessment first; como a estrutura se combina com Context Map e com legado; DDD com legado) e em architecture-hard-parts-expert (governança arquitetural: seis essenciais, estilos de liderança, master plan).
+- **Conclusão, Epilogues, Looking Forward (PDF p.429-434)**
+  - Relevância: domain-driven-design: MÉDIA (sinais de falha/sucesso, anti-padrão: fechar o loop implementação-modelo; handoff com testes e documento de destilação). clean-architecture-expert: BAIXA. architecture-hard-parts-expert: BAIXA/MÉDIA (o caso do transporte como estudo de falha de governança/iteração).
+  - Decisão sugerida: usar em domain-driven-design/references (anti-padrões/sinais de saúde, 3-5 linhas) como casos curtos; descartar o restante (narrativa).
+- **Apêndice "The Use of Patterns in This Book", Glossário, Referências, Créditos (PDF p.435-446)**
+  - Relevância: domain-driven-design: MÉDIA (glossário: servir de base de definições curtas e fiéis; "unification"; "strategic design"). clean-architecture-expert / architecture-hard-parts-expert: BAIXA.
+  - Decisão sugerida: usar em domain-driven-design (glossário no references, com definições em paráfrase própria); descartar referências bibliográficas/créditos (sem conteúdo técnico) e o texto de analogia Peugeot (exceto a ideia "linguagem de padrões = vocabulário econômico").

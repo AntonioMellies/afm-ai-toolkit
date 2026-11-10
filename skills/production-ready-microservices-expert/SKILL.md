@@ -3,7 +3,7 @@ name: production-ready-microservices-expert
 description: Atua como Arquiteto e Engenheiro de Plataforma especialista em microsserviços em produção. Projeta sistemas observáveis, resilientes, escaláveis e automatizados — tratando operação como funcionalidade tão importante quanto o código. Use quando avaliar se um serviço está pronto para produção, projetar observabilidade, alertas, health checks, resiliência, rollback, pipelines de deploy ou diagnosticar gargalos operacionais.
 metadata:
   author: Antonio Mellies
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Production-Ready Microservices Expert
@@ -63,12 +63,13 @@ Todo serviço deve fornecer as três dimensões:
   "service": "checkout",
   "traceId": "abc-123",
   "orderId": "456",
-  "customerId": "789",
   "event": "order.approved",
   "timestamp": "2024-01-15T10:30:00Z"
 }
 ```
 Nunca logs em texto livre como `"Pedido aprovado"`.
+
+**Higiene de logs:** não registre dados pessoais identificáveis, senhas, chaves de acesso nem tokens, exceto se estiverem criptografados. Use identificadores opacos (`orderId`, `traceId`) em vez de dados do cliente.
 
 **Métricas:** throughput, latência (p50/p95/p99), taxa de erro, utilização de recursos, disponibilidade.
 
@@ -82,11 +83,13 @@ Todo microsserviço deve expor:
 - **Readiness** (`/health/ready`): o serviço consegue receber tráfego?
 - **Startup** (`/health/startup`): a aplicação concluiu inicialização?
 
+Convenção desta skill: a divisão em três endpoints. O livro de referência descreve um único `/health` com resposta útil e precisa, em canal separado.
+
 ## Resiliência
 
 Assuma que falhas acontecerão. Nunca assuma "a rede é confiável."
 
-Sempre implemente: timeout, retry com backoff exponencial, circuit breaker, fallback, bulkhead.
+Sempre implemente: timeout, retry com backoff exponencial, circuit breaker, fallback, bulkhead. O livro de referência sustenta circuit breaker e fallback; os demais são convenção desta skill (veja `references/fontes.md`).
 
 ## Comunicação
 
@@ -126,18 +129,7 @@ Cada microsserviço deve ter: equipe responsável, documentação, dashboard, al
 
 ## Checklist de Produção
 
-Um microsserviço só é considerado pronto quando possui:
-
-- [ ] Testes automatizados
-- [ ] Logs estruturados com traceId
-- [ ] Métricas expostas (throughput, latência, erros)
-- [ ] Tracing distribuído
-- [ ] Health checks (liveness, readiness, startup)
-- [ ] Alertas configurados
-- [ ] Dashboard operacional
-- [ ] Estratégia de rollback
-- [ ] Automação de deploy (pipeline CI/CD)
-- [ ] Runbooks / documentação operacional
+Um microsserviço só é considerado pronto quando cumpre o checklist de [references/production-checklist.md](references/production-checklist.md), que é a única versão do checklist (observabilidade, health checks, resiliência, deploy e rollback, monitoramento e alertas, testes e ownership). Cada item precisa de responsável e evidência.
 
 ## Referências
 
@@ -145,6 +137,11 @@ Material de apoio carregado sob demanda — consulte apenas quando a tarefa exig
 
 - [references/observability-setup.md](references/observability-setup.md) — implementação de logs, métricas e tracing
 - [references/production-checklist.md](references/production-checklist.md) — checklist de prontidão para produção
+- [references/planejamento-de-capacidade.md](references/planejamento-de-capacidade.md) — escalabilidade, gargalos, quantas instâncias e previsão de tráfego
+- [references/teste-de-caos-e-resiliencia.md](references/teste-de-caos-e-resiliencia.md) — pontos únicos de falha, testes de código, carga e caos, reparo automatizado
+- [references/resposta-a-incidentes.md](references/resposta-a-incidentes.md) — estágios de resposta, postmortem, runbooks e plantão
+- [references/documentacao-e-descontinuacao.md](references/documentacao-e-descontinuacao.md) — documentação, entendimento organizacional, descontinuação e não versionar
+- [references/fontes.md](references/fontes.md) — rastreabilidade regra a página e divergências entre a skill e o livro
 
 ## Anti-Padrões
 

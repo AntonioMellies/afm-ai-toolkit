@@ -6,7 +6,7 @@ Use este checklist antes de promover qualquer serviço para produção. Cada ite
 
 ## Observabilidade
 
-- [ ] **Logs estruturados** — todos os logs emitem JSON com `service`, `traceId`, `timestamp` e contexto de negócio
+- [ ] **Logs estruturados** — todos os logs emitem JSON com `service`, `traceId`, `timestamp` e contexto de negócio, sem dados pessoais, senhas ou chaves
 - [ ] **Métricas expostas** — endpoint `/metrics` (Prometheus) com throughput, latência p50/p95/p99 e taxa de erros
 - [ ] **Tracing distribuído** — todas as requisições carregam `traceId` propagado para dependências downstream
 - [ ] **Correlação de logs** — logs vinculados ao `traceId` para reconstrução de fluxo em incidentes
@@ -30,13 +30,13 @@ Use este checklist antes de promover qualquer serviço para produção. Cada ite
 - [ ] **Pipeline CI/CD** automatizado (build → test → deploy)
 - [ ] **Rolling update** configurado (sem downtime no deploy)
 - [ ] **Rollback automatizado** em caso de falha no health check pós-deploy
-- [ ] **Feature flags** ou versionamento de API para mudanças de contrato
+- [ ] **Mudanças de contrato coordenadas** com os consumidores (feature flags ou migração gradual); evite atribuir versões a microsserviços e endpoints
 
 ## Monitoramento e Alertas
 
 - [ ] **Dashboard operacional** com métricas de negócio e infraestrutura
 - [ ] **Alertas configurados** para: taxa de erro > threshold, latência p95 > SLA, lag de consumer, uso de recursos
-- [ ] **Runbooks** documentados para os alertas mais comuns
+- [ ] **Runbooks** documentados para cada alerta (o livro pede um roteiro por alerta)
 
 ## Testes
 

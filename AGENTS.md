@@ -32,6 +32,10 @@ templates/
   skill/                           ← ponto de partida para novas skills (não é skill)
 references/
   books/                           ← PDFs de referência, padrão: Título - Autor.pdf
+  leitura/                         ← registro de leitura dos livros e ferramentas de verificação
+agents/                            ← subagents somente leitura (Claude Code)
+hooks/                             ← hooks.json e scripts Node (Claude Code)
+evals/                             ← casos de avaliação das skills (claude plugin eval)
 ```
 
 `templates/` fica fora de `skills/` de propósito: tudo que está em `skills/` é descoberto como skill pelos instaladores e plugins.
@@ -42,20 +46,31 @@ references/
 skills/architecture-hard-parts-expert/             ← Trade-offs, ADRs, sistemas distribuídos
 skills/clean-architecture-expert/                  ← Clean Arch, DDD, Hexagonal
 skills/clean-code-expert/                          ← Clean Code, legibilidade
+skills/refactoring-expert/                         ← Smells e refatoração em passos pequenos, padrões GoF
+skills/testing-tdd-expert/                         ← Testes, TDD, verificação por execução
+skills/systematic-debugging/                       ← Depuração sistemática, causa raiz
+skills/git-workflow-expert/                        ← Commits, PRs, branches, releases
+skills/security-backend-expert/                    ← Segurança de backend (OWASP)
+skills/frontend-implementation/                    ← React e Next.js para quem não é especialista em frontend
 skills/designer-system-material-3/                 ← Material Design 3, Design Tokens
 skills/designer-system-material-3-enterprise-ux/   ← M3 para SaaS B2B, CRM, ERP
 skills/domain-driven-design/                       ← DDD estratégico e tático
-skills/product-discovery-assistant/                ← Product Discovery
+skills/database-and-migrations-expert/             ← Banco de dados em produção, migrações
+skills/product-discovery-assistant/                ← Product Discovery, árvore de oportunidades
+skills/hypothesis-and-experiments/                 ← Hipóteses, experimentos, evidência
+skills/prd-writer/                                 ← Especificação de produto, avaliação de oportunidade
+skills/product-metrics/                            ← Métricas de produto (Lean Analytics)
+skills/market-competitive-analysis/                ← Estratégia de mercado, mercado-alvo, preço
 skills/production-ready-microservices-expert/      ← Operação em produção
 ```
 
 Skills de grupo (orquestram as skills acima por afinidade, veja [Skills de grupo](#skills-de-grupo)):
 
 ```
-skills/backend-engineering/      ← DDD tático, Clean Architecture, Clean Code, produção
+skills/backend-engineering/      ← DDD, Clean Architecture, Clean Code, refatoração, testes, depuração, Git, segurança, banco de dados, produção
 skills/software-architecture/    ← DDD estratégico, Hard Parts, Clean Architecture, produção
 skills/frontend-design-system/   ← Material Design 3, M3 Enterprise UX, Clean Code
-skills/product-strategy/         ← Product Discovery, DDD (linguagem), M3 Enterprise UX
+skills/product-strategy/         ← Product Discovery, hipóteses, métricas, mercado, DDD (linguagem), M3 Enterprise UX
 ```
 
 ## Formato obrigatório do SKILL.md
@@ -131,6 +146,9 @@ Skills de grupo coordenam skills especializadas de uma mesma afinidade: diagnost
 | `.claude-plugin/plugin.json` | Claude Code | Manifest de plugin exigido pelo Claude Code | Ao lançar uma versão |
 | `.claude-plugin/marketplace.json` | Claude Code | Habilita `/plugin marketplace add` | Ao lançar uma versão |
 | `.agents/plugins/marketplace.json` | Codex | Habilita `codex plugin marketplace add` | Raramente (só metadados) |
+| `agents/*.md` | Claude Code | Subagents são um formato do Claude Code; descobertos pelo plugin na raiz | Ao criar ou alterar um subagent |
+| `hooks/hooks.json` e `hooks/*.mjs` | Claude Code | Hooks só existem no Claude Code; scripts Node porque `jq` não é universal | Ao alterar um hook (rodar `node --test hooks/tests/hooks.test.mjs`) |
+| `evals/` | Claude Code (`claude plugin eval`) | Casos de avaliação com e sem o plugin; ficam fora de `skills/` para não serem instalados | Ao criar ou alterar uma skill |
 | `scripts/install.*` | Todas | Caminhos de instalação variam por ferramenta | Quando uma ferramenta mudar de caminho |
 
 **O `version` precisa ser idêntico** em `plugin.json`, `.claude-plugin/plugin.json` e `.claude-plugin/marketplace.json`. Ao adicionar ou alterar skills, incremente a versão nos três arquivos.
@@ -143,9 +161,10 @@ Skills de grupo coordenam skills especializadas de uma mesma afinidade: diagnost
 4. Conferir o limite: `wc -l skills/<nome>/SKILL.md` ≤ 500.
 5. Validar: `agentskills validate skills/<nome>` (CLI da lib de referência; instalação: `pip install skills-ref`).
 6. Adicionar a skill à tabela do `README.md` e à lista "Skills disponíveis" acima.
-7. Se houver livro de referência, adicionar o PDF em `references/books/` com o padrão `Título - Autor.pdf`.
+7. Se houver livro de referência, adicionar o PDF em `references/books/` com o padrão `Título - Autor.pdf`, **ler o conteúdo** (texto extraído do próprio PDF, nunca resumos prontos nem memória), registrar a leitura em `references/leitura/` e criar `references/fontes.md` na skill com capítulo e páginas por regra. Regra sem base no livro entra marcada como "convenção desta skill".
 8. Incrementar `version` nos manifests de plugin.
 9. Se a nova skill tiver afinidade com um grupo existente, adicioná-la ao `metadata.skills` e ao mapa de skills desse grupo.
+10. Criar pelo menos 3 casos em `evals/<skill>-<cenário>/` (prompt, rubrica `llm` com PASS/FAIL concretos e `tool_used` da skill) e comparar com o baseline sem a skill; skill que não supera o baseline vira `references/`.
 
 ## Validação antes de commitar
 

@@ -18,13 +18,24 @@ Biblioteca de **skills para agentes de IA**, independente de ferramenta. Todas a
 | Skill | Pasta | Quando usar | Referência |
 |---|---|---|---|
 | Clean Architecture Expert | `skills/clean-architecture-expert/` | Projetar camadas, modelar casos de uso, avaliar a Dependency Rule | *Arquitetura Limpa*, Robert C. Martin |
-| Clean Code Expert | `skills/clean-code-expert/` | Revisar código, refatorar nomes e funções, definir padrões de implementação | *Código Limpo*, Robert C. Martin |
+| Clean Code Expert | `skills/clean-code-expert/` | Revisar código com as heurísticas do livro: nomes, funções, comentários, formatação, objetos e erros, classes | *Código Limpo*, Robert C. Martin |
 | Architecture Hard Parts Expert | `skills/architecture-hard-parts-expert/` | Decidir entre alternativas arquiteturais, documentar ADRs, analisar trade-offs | *Software Architecture: The Hard Parts*, Ford, Richards et al. |
 | Production-Ready Microservices Expert | `skills/production-ready-microservices-expert/` | Avaliar prontidão para produção, projetar observabilidade, resiliência e deploy | *Microsserviços Prontos para a Produção*, Susan J. Fowler |
 | Domain-Driven Design | `skills/domain-driven-design/` | Descobrir e modelar domínios, Bounded Contexts, Event Storming, Agregados | *Domain-Driven Design*, Eric Evans |
+| Refactoring Expert | `skills/refactoring-expert/` | Refatorar código legado em passos pequenos, identificar smells, padrões como destino da refatoração | *Refatoração*, Martin Fowler; *Padrões de Projetos*, Gamma et al. |
+| Testing & TDD Expert | `skills/testing-tdd-expert/` | Escrever e revisar testes, TDD, testes frágeis, verificação por execução | *Código Limpo*, Robert C. Martin; *Refatoração*, Martin Fowler |
+| Systematic Debugging | `skills/systematic-debugging/` | Bugs, falhas intermitentes, regressões: reproduzir, isolar, hipótese, causa raiz | *Como ser um Programador Melhor*, Pete Goodliffe |
+| Git Workflow Expert | `skills/git-workflow-expert/` | Commits atômicos, mensagens, PR, branches, o que versionar, releases | *Como ser um Programador Melhor*, Pete Goodliffe |
+| Security Backend Expert | `skills/security-backend-expert/` | Checklist de segurança de backend: acesso, autenticação, entrada, segredos, logs | OWASP Top 10, ASVS e Cheat Sheet Series |
+| Frontend Implementation | `skills/frontend-implementation/` | Implementar telas em React e Next.js (App Router), formulários, acessibilidade e testes de UI | Documentação oficial de React, Next.js, Testing Library e WCAG |
 | Material Design System Architect | `skills/designer-system-material-3/` | Projetar, auditar e gerar interfaces M3, tokens, componentes e Design Systems | [Material Design 3](https://m3.material.io), Google |
 | Material Enterprise SaaS Architect | `skills/designer-system-material-3-enterprise-ux/` | Projetar SaaS B2B, CRM, ERP e Backoffice com M3, produtividade e alta densidade | [Material Design 3](https://m3.material.io), Google |
-| Product Discovery Assistant | `skills/product-discovery-assistant/` | Conduzir discovery do zero ou achar oportunidades e melhorias em um projeto existente | [Product Manager Skills](https://github.com/deanpeters/Product-Manager-Skills), Dean Peters |
+| Database & Migrations Expert | `skills/database-and-migrations-expert/` | Evoluir o esquema de um banco em produção: período de transição, scripts de migração, ordem de deploy | *Refactoring Databases*, Scott W. Ambler e Pramod J. Sadalage |
+| Product Discovery Assistant | `skills/product-discovery-assistant/` | Conduzir discovery do zero ou achar oportunidades e melhorias em um projeto existente: árvore de oportunidades, entrevistas, Value Proposition Canvas | *Continuous Discovery Habits*, Teresa Torres; *Inspired*, Marty Cagan; *Value Proposition Design*, Osterwalder et al.; [Product Manager Skills](https://github.com/deanpeters/Product-Manager-Skills), Dean Peters |
+| Hypothesis & Experiments | `skills/hypothesis-and-experiments/` | Hipótese testável, experimento, critério de sucesso definido antes, força da evidência, conversas com clientes | *Testing Business Ideas*, Bland e Osterwalder; *The Right It*, Alberto Savoia; *The Mom Test*, Rob Fitzpatrick; *Inspired*, Marty Cagan |
+| PRD Writer | `skills/prd-writer/` | Especificação de produto ou funcionalidade sem os defeitos do PRD tradicional: avaliação de oportunidade, protótipo como especificação, story map, roadmap por resultado | *Inspired*, Marty Cagan |
+| Product Metrics | `skills/product-metrics/` | Métrica certa para o estágio e o modelo de negócio, churn, CAC, CLV, metas antes dos dados | *Lean Analytics*, Alistair Croll e Benjamin Yoskovitz |
+| Market & Competitive Analysis | `skills/market-competitive-analysis/` | Escolhas de estratégia, mercado-alvo e abismo, proposta de valor, precificação | *Playing to Win*, Lafley e Martin; *Crossing the Chasm*, Geoffrey Moore; *Monetizing Innovation*, Ramanujam e Tacke |
 
 ### Skills de grupo (por afinidade)
 
@@ -32,10 +43,10 @@ Pontos de entrada que coordenam as skills acima. Use quando a tarefa atravessa v
 
 | Skill de grupo | Pasta | Quando usar | Skills incluídas |
 |---|---|---|---|
-| Backend Engineering | `skills/backend-engineering/` | Feature de backend de ponta a ponta, revisão de serviço, refatoração de legado | `domain-driven-design`, `clean-architecture-expert`, `clean-code-expert`, `production-ready-microservices-expert` |
+| Backend Engineering | `skills/backend-engineering/` | Feature de backend de ponta a ponta, revisão de serviço, refatoração de legado | `domain-driven-design`, `clean-architecture-expert`, `clean-code-expert`, `refactoring-expert`, `testing-tdd-expert`, `systematic-debugging`, `git-workflow-expert`, `security-backend-expert`, `database-and-migrations-expert`, `production-ready-microservices-expert` |
 | Software Architecture | `skills/software-architecture/` | Decompor monólito, desenhar sistema distribuído, revisar ou evoluir uma arquitetura | `domain-driven-design`, `architecture-hard-parts-expert`, `clean-architecture-expert`, `production-ready-microservices-expert` |
 | Frontend & Design System | `skills/frontend-design-system/` | Design System e telas, tela do token ao código, revisão de frontend, telas enterprise | `designer-system-material-3`, `designer-system-material-3-enterprise-ux`, `clean-code-expert` |
-| Product Strategy | `skills/product-strategy/` | Da ideia ao MVP, evolução de produto, validação com protótipo, PRD com domínio e fluxos | `product-discovery-assistant`, `domain-driven-design`, `designer-system-material-3-enterprise-ux` |
+| Product Strategy | `skills/product-strategy/` | Da ideia ao MVP, evolução de produto, validação com protótipo, escolha de mercado e métrica, PRD com domínio e fluxos | `product-discovery-assistant`, `hypothesis-and-experiments`, `prd-writer`, `product-metrics`, `market-competitive-analysis`, `domain-driven-design`, `designer-system-material-3-enterprise-ux` |
 
 Instale o grupo **junto com as skills incluídas**. Os scripts do repositório e os plugins já fazem isso; no `npx skills`, repita `--skill` para cada uma (veja [Como instalar](#como-instalar)).
 
@@ -222,15 +233,52 @@ Você também pode citar a skill no prompt: *"use a skill clean-architecture-exp
 
 ---
 
+## Hooks e subagents (somente plugin do Claude Code)
+
+Além das skills, o plugin do Claude Code inclui guardrails e revisores. As demais ferramentas recebem só as skills, porque hooks e subagents são formatos específicos do Claude Code e os instaladores do repositório copiam apenas `skills/`.
+
+| Artefato | Evento | O que faz |
+|---|---|---|
+| `protect-files` | PreToolUse (Edit, Write) | Bloqueia edição de `.env`, chaves, lockfiles, configs de lint/formatação e migrations já existentes na branch principal |
+| `block-destructive-bash` | PreToolUse (Bash) | Bloqueia `rm -rf` em raiz/home, `git push --force`, `git reset --hard`, `DROP TABLE` em cliente de banco, `kubectl`/`terraform` em produção. É guarda contra acidente, não fronteira de segurança |
+| `format-on-edit` | PostToolUse (Edit, Write) | Formata por extensão (Prettier com config no projeto, gofmt, ruff/black com config), só se a ferramenta existir |
+| `verify-before-stop` | Stop | Roda o comando de teste declarado em `.afm-hooks.json` quando há alterações não commitadas; nunca em loop |
+| `code-reviewer`, `security-auditor`, `test-engineer` | subagents | Revisão somente leitura (Read, Grep, Glob) com achados por severidade e evidência `arquivo:linha` |
+
+Desligar: `AFM_HOOKS_DISABLE=1` ou `.afm-hooks.json` na raiz do projeto, por exemplo:
+
+```json
+{
+  "disabledHooks": ["format-on-edit"],
+  "protectFiles": { "allow": [".eslintrc.json"] },
+  "verify": { "command": "npm test", "timeoutSeconds": 120 }
+}
+```
+
+Os hooks são scripts Node (`hooks/*.mjs`), com testes em `hooks/tests/` (`node --test hooks/tests/hooks.test.mjs`).
+
+---
+
+## Rastreabilidade e avaliação
+
+- `references/leitura/` registra a leitura de cada livro em `references/books/` (inclusive o *Código Limpo*, lido por OCR), o método e os limites. As skills baseadas em livro trazem `references/fontes.md` com capítulo e páginas por regra, e marcam como "convenção desta skill" o que não tem base no livro.
+- `evals/` tem casos de avaliação (prompt e critérios de aprovação) no formato de `claude plugin eval`, para comparar o resultado com e sem o plugin.
+
+---
+
 ## Estrutura do repositório
 
 ```
+agents/                   ← subagents somente leitura (plugin do Claude Code)
+hooks/                    ← hooks (Node) e hooks.json (plugin do Claude Code)
+evals/                    ← casos de avaliação das skills (não são instalados como skills)
 skills/
   <nome-da-skill>/
     SKILL.md              ← instruções da skill (padrão Agent Skills)
     references/           ← material de apoio carregado sob demanda
 templates/skill/          ← ponto de partida para novas skills
 references/books/         ← livros de referência (PDF)
+references/leitura/       ← registro de leitura dos livros e ferramentas de verificação
 scripts/                  ← instaladores (install.sh, install.ps1)
 plugin.json               ← plugin portátil (Agent Plugins)
 .claude-plugin/           ← plugin e marketplace do Claude Code

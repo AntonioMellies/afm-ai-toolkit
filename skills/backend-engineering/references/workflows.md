@@ -8,8 +8,11 @@ Cada fluxo lista as etapas, a skill responsável, o que a etapa recebe e o que e
 |---|---|---|---|
 | 1 | `domain-driven-design` | Pedido de negócio, termos usados pelos especialistas | Termos da Linguagem Ubíqua, Agregado afetado, invariantes, Eventos de Domínio |
 | 2 | `clean-architecture-expert` | Modelo da etapa 1 | Caso de Uso (ator, objetivo, entrada, saída, regras), camadas, portas necessárias |
-| 3 | `clean-code-expert` | Caso de Uso e estrutura da etapa 2 | Implementação legível, testes given/when/then, tratamento de erros |
-| 4 | `production-ready-microservices-expert` | Código e integrações da etapa 3 | Logs, métricas, tracing, health checks, resiliência e estratégia de rollback da feature |
+| 3 | `testing-tdd-expert` + `clean-code-expert` | Caso de Uso e estrutura da etapa 2 | Testes escritos e vistos falhando, implementação legível, tratamento de erros |
+| 4 | `database-and-migrations-expert` (se a feature muda o esquema) | Modelo e código da etapa 3 | Estratégia de transição, scripts de migração pequenos e versionados, ordem de deploy e back out |
+| 5 | `security-backend-expert` | Código e integrações da etapa 3 | Achados de segurança por categoria (entrada, acesso, segredos) |
+| 6 | `production-ready-microservices-expert` | Código e integrações da etapa 3 | Logs, métricas, tracing, health checks, resiliência e estratégia de rollback da feature |
+| 7 | `git-workflow-expert` | Mudança concluída | Commits atômicos e descrição de PR |
 
 ## Revisão de serviço
 
@@ -26,8 +29,24 @@ Consolide as quatro saídas em uma lista única ordenada por impacto (risco em p
 
 1. `domain-driven-design` — extrair a Linguagem Ubíqua do código e das pessoas; identificar conceitos ocultos e regras espalhadas.
 2. `clean-architecture-expert` — definir a estrutura-alvo e isolar o domínio atrás de portas, em passos pequenos e reversíveis.
-3. `clean-code-expert` — aplicar a Boy Scout Rule em cada passo: renomear, extrair funções, remover código morto, cobrir com testes antes de mover.
-4. `production-ready-microservices-expert` (opcional) — garantir que métricas e logs permitam comparar o comportamento antes e depois.
+3. `testing-tdd-expert` — montar a rede de testes (testes de caracterização) antes de mover qualquer coisa.
+4. `refactoring-expert` — identificar os smells e aplicar as refatorações em passos pequenos, rodando os testes a cada passo.
+5. `clean-code-expert` — aplicar a Boy Scout Rule em cada passo: renomear, remover código morto.
+6. `production-ready-microservices-expert` (opcional) — garantir que métricas e logs permitam comparar o comportamento antes e depois.
+
+## Mudança de esquema em produção
+
+1. `database-and-migrations-expert` — gate (faz sentido, é necessário agora, vale o esforço), estratégia de transição, checagem de impacto em views, procedures e aplicações, ordem de deploy e back out.
+2. `testing-tdd-expert` — testes de regressão que rodam antes e depois de cada passo.
+3. `production-ready-microservices-expert` — plano de rollback e observabilidade durante a transição.
+4. `git-workflow-expert` — commits pequenos, um por passo da migração.
+
+## Bug até a correção
+
+1. `systematic-debugging` — reproduzir, isolar, formular e testar hipóteses; identificar a causa raiz.
+2. `testing-tdd-expert` — transformar a reprodução em teste que falha e fica na suíte como teste de regressão.
+3. `systematic-debugging` — corrigir a causa raiz e verificar com a suíte inteira.
+4. `git-workflow-expert` — commit atômico da correção, com mensagem que explica o motivo.
 
 ## Serviço novo para produção
 

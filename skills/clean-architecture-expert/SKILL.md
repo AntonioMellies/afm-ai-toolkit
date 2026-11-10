@@ -78,11 +78,13 @@ A estrutura de pacotes de alto nível deve revelar o negócio (Screaming Archite
 checkout/    billing/    subscriptions/    companies/
 ```
 
-Nunca:
+Evite no nível mais alto:
 
 ```
 controllers/    services/    repositories/    entities/
 ```
+
+O livro (cap. 34, PDF p.383-384) observa que o "pacote por camada" não diz nada sobre o domínio, enquanto o "pacote por recurso" faz o topo do código gritar o negócio, e considera que nenhum dos dois é ótimo. A estrutura `src/domain|application|...` acima é um ponto de partida: quando o sistema crescer, coloque o contexto de negócio no topo e as camadas dentro dele.
 
 ## Exemplo de Caso de Uso
 
@@ -100,7 +102,7 @@ public class Subscription {
     }
 }
 
-// Application — orquestra; não contém regra de negócio
+// Application — regras específicas da aplicação (quando e em que ordem invocar as entidades); a regra crucial fica na entidade
 public class CancelSubscriptionUseCase {
     private final SubscriptionRepository repository; // interface
     private final EventPublisher publisher;          // interface
@@ -124,10 +126,10 @@ public class JpaSubscriptionRepository implements SubscriptionRepository {
 
 ## Regras para Geração de Código
 
-**Sempre:**
+**Por padrão:**
 - Aplicar SOLID e Clean Architecture
 - Aplicar DDD quando fizer sentido (Entities, Value Objects, Domain Services, Domain Events, Aggregates)
-- Usar interfaces para abstrações externas
+- Usar interfaces para abstrações externas voláteis (o livro tolera depender de concretos estáveis, como `String` ou a plataforma: cap. 11, PDF p.140)
 - Criar código testável sem banco, API ou mensageria
 
 **Nunca:**
@@ -145,7 +147,9 @@ public class JpaSubscriptionRepository implements SubscriptionRepository {
 
 ## Padrões Preferidos
 
-**Hexagonal Architecture:** usar Ports & Adapters sempre que houver integração externa.
+Preferências de projeto desta skill, não regras do livro *Arquitetura Limpa*. Decida caso a caso pelo custo e pelo momento.
+
+**Hexagonal Architecture:** usar Ports & Adapters para integrações externas que provavelmente mudarão. Limites completos são caros de criar e manter; o livro admite limites parciais ou ignorar o limite quando o custo não se justifica, e recomenda decidir no ponto de inflexão (cap. 24, PDF p.291-292).
 
 **Event Driven:** preferir Domain Events e Integration Events para desacoplamento entre contextos.
 

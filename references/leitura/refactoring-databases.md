@@ -1,0 +1,342 @@
+# Registro de leitura (rascunho): refactoring-databases
+
+Gerado por script a partir das notas dos leitores. Cada item: capítulo/seção, páginas (PDF), relevância avaliada e decisão sugerida. Revisão humana por amostragem pendente.
+
+Seções registradas: 105
+
+
+## Bloco 01_s001-030 (lido: ?; p.=PDF, s.=seção do ebook)
+
+- **Front matter (copyright, dedicatória, elogios, série, autores, forewords, agradecimentos) (s.1-4, s.9)**
+  - Relevância: database-and-migrations-expert: BAIXA, contexto. Decisão: descartar (exceto citar a ideia de "migração contínua de dados").
+  - Decisão sugerida: (não registrada)
+- **Sumário completo (s.1)**
+  - Relevância: database-and-migrations-expert: ALTA (como índice/taxonomia das categorias: estrutural, qualidade de dados, integridade referencial, arquitetural, método, transformação). Decisão: usar em references/ de catálogo com as 6 categorias; definições virão dos blocos seguintes.
+  - Decisão sugerida: (não registrada)
+- **Preface (PDF/impr. xxi-xxvii) (s.4-9)**
+  - Relevância: database-and-migrations-expert: MÉDIA (justificativa e contexto; a observação de que Oracle-específico existe ajuda a marcar o que é produto-específico). Decisão: usar só a distinção single x multi-application e a lista de vantagens/riscos no resumo.
+  - Decisão sugerida: (não registrada)
+- **Capítulo 1: Evolutionary Database Development (impr. 1-12) (s.10-25)**
+  - Relevância: database-and-migrations-expert: ALTA (lista exata de artefatos sob controle de configuração, 4 passos de TFD, sandboxes e fluxo de promoção, definição de refatoração de banco). Decisão: usar em references/ (versionamento e testes de banco) e no resumo da skill (definição).
+  - Decisão sugerida: (não registrada)
+- **Capítulo 2: Database Refactoring (impr. 13-20+) (s.26-30) [continua no próximo bloco, parado em 2.2.3 Maintaining Semantics]**
+  - Relevância: database-and-migrations-expert: ALTA (modelo expand-contract avant la lettre: nova coluna, migração de dados, sincronização por trigger, remoção após transition period; fluxo TDD do exemplo; distinção single x multi-application; definição de informational semantics).
+  - Decisão sugerida: (não registrada)
+
+## Bloco 02_s031-096 (lido: ?; p.=PDF, s.=seção do ebook)
+
+- **Cap. 1-2: fecho de "Database Refactoring" — semântica informacional/comportamental e refatoração vs. transformação (s.31, impr. 21-22) [continua do bloco anterior]**
+  - Relevância: database-and-migrations-expert: ALTA. Define o que conta como refatoração vs. migração que muda semântica, e o risco de "adicionar coluna" em sistemas com acesso posicional.
+  - Decisão sugerida: usar em database-and-migrations-expert (definição e distinção refatoração/transformação).
+- **2.2-2.3 Por que não acertar tudo antes; Categorias de refatorações de banco (s.32-33, impr. 22-24)**
+  - Relevância: database-and-migrations-expert: ALTA. Taxonomia de seis categorias para classificar mudanças de schema e escolher cuidados.
+  - Decisão sugerida: usar em database-and-migrations-expert (references/categorias).
+- **2.4 Database Smells (s.34-35, impr. 23-25)**
+  - Relevância: database-and-migrations-expert: ALTA. Lista de smells de schema para revisão de modelagem.
+  - Decisão sugerida: usar em database-and-migrations-expert (checklist de smells).
+- **2.5-2.6 Onde a refatoração de banco se encaixa; Como facilitar a refatoração (s.35-38, impr. 25-28)**
+  - Relevância: database-and-migrations-expert: ALTA. Mapa de acopladores externos (apps desconhecidas, ETL, ORM, testes) para análise de impacto antes de mudar o schema.
+  - Decisão sugerida: usar em database-and-migrations-expert (análise de impacto e encapsulamento).
+- **Visão geral do processo (s.39-43, impr. 29-32)**
+  - Relevância: database-and-migrations-expert: ALTA. Passos canônicos de uma refatoração de banco.
+  - Decisão sugerida: usar em database-and-migrations-expert (workflow dos 10 passos).
+- **3.1 Verify That a Database Refactoring Is Appropriate (s.45, impr. 32-33)**
+  - Relevância: database-and-migrations-expert: ALTA. Gate de decisão antes de refatorar (faz sentido / agora / vale a pena).
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **3.2 Choose the Most Appropriate Database Refactoring (s.46, s.48, impr. 33-35)**
+  - Relevância: database-and-migrations-expert: ALTA. Um problema aparente de "adicionar coluna" pode ser uma refatoração distinta; checar fonte oficial de dados.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **3.3 Deprecate the Original Database Schema / Transition Period (s.48-49, impr. 34-36)**
+  - Relevância: database-and-migrations-expert: ALTA. Define expand/contract no vocabulário do livro: coexistência, triggers de sincronização, data de remoção, remoção posterior.
+  - Decisão sugerida: usar em database-and-migrations-expert (transition period, scaffolding, data de remoção marcada no próprio objeto).
+- **3.4 Test Before, During, and After (s.49, s.51, s.53, impr. 37-40)**
+  - Relevância: database-and-migrations-expert: ALTA. Lista concreta do que testar em schema e migração.
+  - Decisão sugerida: usar em database-and-migrations-expert (testes de banco). Ferramentas citadas são datadas; traduzir para pgTAP/outros seria [fora do livro].
+- **3.5 Modify the Database Schema (s.53-62, impr. 40-43)**
+  - Relevância: database-and-migrations-expert: ALTA. Scripts pequenos, numerados, em ordem, com marcação de remoção; script de remoção separado e posterior.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **3.6 Migrate the Source Data (s.63, impr. 43-44)**
+  - Relevância: database-and-migrations-expert: ALTA. Script de dados pareado com script de schema.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **3.7 Refactor External Access Program(s) (s.65, impr. 44-45)**
+  - Relevância: database-and-migrations-expert: ALTA. Cuidados com sistemas externos: responsabilidade, custo, e as duas únicas saídas quando não há como atualizá-los.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **3.8-3.9 Run Your Regression Tests; Version Control Your Work (s.66-68, impr. 45-46)**
+  - Relevância: database-and-migrations-expert: ALTA (lista de artefatos versionados).
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **3.10 Announce the Refactoring (s.68-69, impr. 46-47)**
+  - Relevância: database-and-migrations-expert: MÉDIA (release notes por refatoração; comunicação).
+  - Decisão sugerida: usar em database-and-migrations-expert (resumido).
+- **Introdução e 4.1 Deploying Between Sandboxes (s.70-72, impr. 49-51)**
+  - Relevância: database-and-migrations-expert: ALTA. Cadeia de ambientes, portões e razões de segurança.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **4.2 Applying Bundles of Database Refactorings (s.73, s.75-76, impr. 51-53)**
+  - Relevância: database-and-migrations-expert: ALTA. Versionamento por número, aplicação a partir da versão atual do ambiente, bundle por release.
+  - Decisão sugerida: usar em database-and-migrations-expert. Comentário: o ponto de partida "758" para produção na versão 758 parece inconsistente com os outros exemplos (versão+1); registrar a ambiguidade.
+- **4.3 Scheduling Deployment Windows (s.76-79, impr. 53-55)**
+  - Relevância: database-and-migrations-expert: MÉDIA.
+  - Decisão sugerida: usar em database-and-migrations-expert (resumido).
+- **4.4 Deploying Your System (s.79-82, impr. 54-56)**
+  - Relevância: database-and-migrations-expert: ALTA. Sequência de deploy com backup, regressão antes e depois e critério de back out.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **4.5-4.6 Removing Deprecated Schema; What You Have Learned (s.82-83, impr. 56-57)**
+  - Relevância: database-and-migrations-expert: ALTA. Fase "contract" com data, batch de remoções e teste prévio em QA.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **Lista de lições do cap. 5 (s.84, impr. 59)**
+  - Relevância: (não registrada)
+  - Decisão sugerida: (não registrada)
+- **5.1 Smaller Changes Are Easier to Apply (s.86, impr. 60)**
+  - Relevância: ALTA (já dito no 3.2).
+  - Decisão sugerida: (não registrada)
+- **5.2 Uniquely Identify Individual Refactorings (s.86-89, impr. 60-62)**
+  - Relevância: database-and-migrations-expert: ALTA. Critério de escolha de esquema de versionamento e risco de colisão multi-equipe.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **5.3 Implement a Large Change by Many Small Ones (s.89, impr. 62)**
+  - Relevância: database-and-migrations-expert: ALTA. Decomposição concreta de uma refatoração grande em passos.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **5.4 Have a Database Configuration Table (s.90-93, impr. 63-64)**
+  - Relevância: database-and-migrations-expert: ALTA. Tabela de versão do schema atualizada a cada script.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **5.5 Prefer Triggers over Views or Batch Synchronization (s.93-95, impr. 64-65)**
+  - Relevância: database-and-migrations-expert: ALTA. Comparação de mecanismos de sincronização na fase de transição.
+  - Decisão sugerida: usar em database-and-migrations-expert. A sintaxe de trigger do livro é Oracle; equivalentes em PostgreSQL/MySQL são `[fora do livro]`.
+- **5.6 Choose a Sufficient Transition Period (s.96, impr. 65)**
+  - Relevância: database-and-migrations-expert: ALTA.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **5.7 Simplify Your Database CCB Strategy (s.96, impr. 65)**
+  - Relevância: database-and-migrations-expert: BAIXA (governança organizacional).
+  - Decisão sugerida: usar apenas em nota breve ou descartar.
+- **5.8 Simplify Negotiations with Other Teams (s.96, impr. 65-66) [continua no próximo bloco]**
+  - Relevância: BAIXA por ora.
+  - Decisão sugerida: (não registrada)
+
+## Bloco 03_s097-191 (lido: ?; p.=PDF, s.=seção do ebook)
+
+- **Capítulo 5 (final): Database Refactoring Strategies, itens 5.8 (fim) a 5.14 (s.98-101; impr. 66-68 e seguintes) [continua do bloco anterior]**
+  - Relevância: database-and-migrations-expert: ALTA (apoio: encapsular acesso, ambiente reproduzível, scripts sob controle de versão no mesmo repositório da aplicação, instalação = DDL inicial + scripts de mudança + regressão).
+  - Decisão sugerida: usar em database-and-migrations-expert (seções de práticas de apoio e versionamento/deployment).
+- **Capítulo 6: Structural Refactorings, introdução e lista (s.102; impr. 69)**
+  - Relevância: database-and-migrations-expert: ALTA (catálogo de refatorações estruturais, categoria "Structural").
+  - Decisão sugerida: (não registrada)
+- **Capítulo 6: Common Issues When Implementing Structural Refactorings (s.103-110; impr. 70-72)**
+  - Relevância: database-and-migrations-expert: ALTA (checklist pós-refatoração: views/triggers/procedures/tabelas dependentes, transição com data de remoção única, trigger sem ciclo).
+  - Decisão sugerida: (não registrada)
+- **Drop Column (s.111-116; impr. 73-76)**
+  - Relevância: database-and-migrations-expert: ALTA (padrão de remoção segura: marcar com data, preservar dados, SET UNUSED/mascarar via view, ajustar código cliente, SELECT *).
+  - Decisão sugerida: (não registrada)
+- **Drop Table (s.117-118; impr. 77-78)**
+  - Relevância: database-and-migrations-expert: ALTA (drop em duas fases: renomear/deprecar, arquivar, depois dropar).
+  - Decisão sugerida: (não registrada)
+- **Drop View (s.119-120; impr. 79-80)**
+  - Relevância: database-and-migrations-expert: MÉDIA (view usada como controle de acesso exige substituir a segurança antes de dropar).
+  - Decisão sugerida: (não registrada)
+- **Introduce Calculated Column (s.121-131; impr. 81-84)**
+  - Relevância: database-and-migrations-expert: MÉDIA (desnormalização controlada; escolha de sincronização; backfill único).
+  - Decisão sugerida: (não registrada)
+- **Introduce Surrogate Key (s.132-140; impr. 85-92)**
+  - Relevância: database-and-migrations-expert: ALTA (refatoração de chave; sequência de passos com trigger de preenchimento de FK; manter chave natural como alternate key único; propagação para filhas).
+  - Decisão sugerida: (não registrada)
+- **Merge Columns (s.141-144; impr. 93-96)**
+  - Relevância: database-and-migrations-expert: MÉDIA (exemplo de expand/contract com trigger bidirecional; risco de perda de precisão).
+  - Decisão sugerida: (não registrada)
+- **Merge Tables (s.145-160; impr. 96-102)**
+  - Relevância: database-and-migrations-expert: ALTA (padrão de trigger bidirecional entre tabelas durante transição, risco de colunas novas ficarem nulas/inválidas, usar Introduce Default Value).
+  - Decisão sugerida: (não registrada)
+- **Move Column (s.161-172; impr. 103-108)**
+  - Relevância: database-and-migrations-expert: ALTA (regras de inserção/deleção antes do trigger; trigger de sincronização nos dois lados; impacto em joins).
+  - Decisão sugerida: (não registrada)
+- **Rename Column (s.173-180; impr. 109-112)**
+  - Relevância: database-and-migrations-expert: ALTA (renomeação sem downtime: adicionar coluna, sincronizar, migrar código, só então dropar; renomear colunas relacionadas).
+  - Decisão sugerida: (não registrada)
+- **Rename Table (s.181-190; impr. 113-116)**
+  - Relevância: database-and-migrations-expert: ALTA (duas estratégias de rename com condição de aplicabilidade; view de compatibilidade).
+  - Decisão sugerida: (não registrada)
+- **Rename View (início) (s.191; impr. 117-118) [continua no próximo bloco]**
+  - Relevância: database-and-migrations-expert: MÉDIA.
+  - Decisão sugerida: (não registrada)
+
+## Bloco 04_s192-292 (lido: ?; p.=PDF, s.=seção do ebook)
+
+- **Rename View (final) (impr. 118-120, s.192-196) [continua do bloco anterior]**
+  - Relevância: database-and-migrations-expert: MÉDIA, padrão "view antiga vira alias da nova" durante o transition period.
+  - Decisão sugerida: usar em referência de renomeação (view/tabela/coluna) como exemplo de alias na transição.
+- **Replace LOB With Table (impr. 121-126, s.197-208)**
+  - Relevância: database-and-migrations-expert: ALTA, exemplo completo de expand-contract com triggers bidirecionais, regra de "NULL/vazio não gera linha" e opção de biblioteca de tradução no banco.
+  - Decisão sugerida: usar em catálogo de refatorações estruturais.
+- **Replace Column (impr. 126-130, s.209-215)**
+  - Relevância: database-and-migrations-expert: ALTA, é a refatoração básica de expand-contract para mudar tipo de coluna.
+  - Decisão sugerida: usar em referência do padrão expand-contract e nos riscos de conversão de tipo.
+- **Replace One-To-Many With Associative Table (impr. 131-134, s.216-226)**
+  - Relevância: database-and-migrations-expert: MÉDIA, ilustra critério "não fazer overbuilding" e migração de relacionamentos; ALTA como exemplo de trade-off.
+  - Decisão sugerida: usar em catálogo estrutural com o alerta de overbuilding.
+- **Replace Surrogate Key With Natural Key (impr. 135-139, s.227-234)**
+  - Relevância: database-and-migrations-expert: ALTA, mostra que trocar PK é a operação mais acoplada (FKs, índices, triggers de RI) e que se faz tabela por tabela.
+  - Decisão sugerida: usar em referência de chaves e de refatorações de alto acoplamento.
+- **Split Column (impr. 140-144, s.235-242)**
+  - Relevância: database-and-migrations-expert: ALTA, split com sincronização e backfill único.
+  - Decisão sugerida: usar em catálogo estrutural.
+- **Split Table (impr. 145-149, s.243-254)**
+  - Relevância: database-and-migrations-expert: ALTA, caso de triggers bidirecionais e o aviso sobre ciclos.
+  - Decisão sugerida: usar em referência de triggers de sincronização (regra anti-ciclo).
+- **Chapter 7: Data Quality Refactorings, introdução (impr. 151-152, s.255-257)**
+  - Relevância: database-and-migrations-expert: ALTA, checklist de impacto (constraints, views, procedures) e trade-off de backfill em bloco versus em lotes.
+  - Decisão sugerida: usar em referência de data migration e backfill.
+- **Add Lookup Table (impr. 153-156, s.258-264)**
+  - Relevância: database-and-migrations-expert: ALTA, limpeza e validação dos dados antes de adicionar FK; vale como "não criar a constraint antes de limpar".
+  - Decisão sugerida: usar em catálogo de refatorações de qualidade de dados.
+- **Apply Standard Codes (impr. 157-161, s.265-269)**
+  - Relevância: database-and-migrations-expert: MÉDIA, lembra de procurar valores codificados em procedures, validação, enums e testes; contraste com expand-contract.
+  - Decisão sugerida: usar em checklist de impacto de mudança de valores.
+- **Apply Standard Type (impr. 162-168, s.270-284)**
+  - Relevância: database-and-migrations-expert: ALTA, mudança de tipo via coluna nova + trigger + backfill + remoção; aviso de que o novo tipo precisa suportar todos os dados.
+  - Decisão sugerida: usar em referência de mudança de tipo de coluna.
+- **Consolidate Key Strategy (impr. 168-172, s.285-290)**
+  - Relevância: database-and-migrations-expert: ALTA, mudança de chave com propagação nas FKs; "manter unicidade na chave alternativa depreciada".
+  - Decisão sugerida: usar em referência de chaves.
+- **Drop Column Constraint (início) (impr. 172-, s.291-292) [continua no próximo bloco]**
+  - Relevância: database-and-migrations-expert: MÉDIA, só o início.
+  - Decisão sugerida: ler complemento no próximo bloco antes de usar.
+
+## Bloco 05_s293-398 (lido: ?; p.=PDF, s.=seção do ebook)
+
+- **Drop Column Constraint (fim) (PDF/EPUB s.293, impr. 173) [continua do bloco anterior]**
+  - Relevância: database-and-migrations-expert: MÉDIA, exemplo de refatoração de passo único sem dados a migrar.
+  - Decisão sugerida: usar em database-and-migrations-expert/references (catálogo de refatorações de qualidade de dados).
+- **Drop Default Value (impr. 174-176; s.295-298)**
+  - Relevância: database-and-migrations-expert: ALTA (parcial), ordem: primeiro atualizar apps, depois remover default.
+  - Decisão sugerida: usar em database-and-migrations-expert/references (catálogo + passos de transição).
+- **Drop Non-Nullable (impr. 177-179; s.298-300)**
+  - Relevância: database-and-migrations-expert: ALTA, uso explícito como passo temporário de expand/contract (relaxar NOT NULL e depois reverter).
+  - Decisão sugerida: usar em database-and-migrations-expert/references.
+- **Introduce Column Constraint (impr. 180-182; s.302-305)**
+  - Relevância: database-and-migrations-expert: ALTA, regra "limpar dados antes de apertar constraint" e "reportar violações em lote antes".
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **Introduce Common Format (impr. 183-185; s.306-309)**
+  - Relevância: database-and-migrations-expert: MÉDIA, migração de dados em passos pequenos; lembrete de atualizar dados de teste.
+  - Decisão sugerida: usar em database-and-migrations-expert/references.
+- **Introduce Default Value (impr. 186-188; s.311-314)**
+  - Relevância: database-and-migrations-expert: ALTA, par com Make Column Non-Nullable (ordem: default, backfill, NOT NULL).
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **Make Column Non-Nullable (impr. 189-191; s.314-319)**
+  - Relevância: database-and-migrations-expert: ALTA, sequência concreta (default, limpar nulos, NOT NULL, depois remover default).
+  - Decisão sugerida: usar em database-and-migrations-expert (exemplo expand/contract).
+- **Move Data (impr. 192-195; s.321-326)**
+  - Relevância: database-and-migrations-expert: ALTA, é o passo de "migrar dados" dentro de renomear/split/merge e do transition period.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **Replace Type Code With Property Flags (impr. 196-201; s.328-339)**
+  - Relevância: database-and-migrations-expert: ALTA, exemplo completo de transição com trigger de sincronização e data de remoção.
+  - Decisão sugerida: usar em database-and-migrations-expert (exemplo de transition period com trigger).
+- **Cap. 8, abertura: Referential Integrity Refactorings (impr. 203; s.340)**
+  - Relevância: database-and-migrations-expert: MÉDIA, taxonomia/categoria.
+  - Decisão sugerida: usar em database-and-migrations-expert/references (categorias).
+- **Add Foreign Key Constraint (impr. 204-208; s.342-351)**
+  - Relevância: database-and-migrations-expert: ALTA, sequência segura (sanear dados antes, nomear constraint, indexar, tratar exceções).
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **Add Trigger For Calculated Column (impr. 209-212; s.352-364)**
+  - Relevância: database-and-migrations-expert: MÉDIA, trade-offs de lógica em trigger; cuidado com carga inicial.
+  - Decisão sugerida: usar em database-and-migrations-expert/references (lógica no banco).
+- **Drop Foreign Key Constraint (impr. 213-214; s.365-367)**
+  - Relevância: database-and-migrations-expert: MÉDIA, trade-off explícito e documentação da constraint desativada.
+  - Decisão sugerida: usar em database-and-migrations-expert/references.
+- **Introduce Cascading Delete (impr. 215-218; s.368-380)**
+  - Relevância: database-and-migrations-expert: ALTA (parcial), riscos de mass deletion e mudança de comportamento oculta para outras aplicações.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **Introduce Hard Delete (impr. 219-221; s.381-384)**
+  - Relevância: database-and-migrations-expert: ALTA (parcial), regra "arquivar antes de apagar para poder reverter".
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **Introduce Soft Delete (impr. 222-224; s.386-398) [TRUNCADA no fim do bloco]**
+  - Relevância: database-and-migrations-expert: ALTA (parcial), passos e trade-offs de soft delete; fecha a seção no próximo bloco.
+  - Decisão sugerida: usar em database-and-migrations-expert; completar com o bloco seguinte.
+
+## Bloco 06_s399-492 (lido: ?; p.=PDF, s.=seção do ebook)
+
+- **Introduce Soft Delete, trecho final (cap. 8) (s.399-401; impr. 225-227) [continua do bloco anterior]**
+  - Relevância: database-and-migrations-expert: MÉDIA, mostra que soft delete exige alterar toda leitura e todo delete, com view/read method como mitigação.
+  - Decisão sugerida: usar em database-and-migrations-expert (references de refatorações de integridade referencial, nota curta; consolidar com o bloco anterior).
+- **Introduce Trigger For History (cap. 8) (s.402-414; impr. 227-230)**
+  - Relevância: database-and-migrations-expert: MÉDIA, caso concreto de refatoração que move lógica da aplicação para o banco, com passos para dados e apps.
+  - Decisão sugerida: usar em database-and-migrations-expert (catálogo, linha curta).
+- **Cap. 9, abertura: Architectural Refactorings (s.415; impr. 231)**
+  - Relevância: database-and-migrations-expert: ALTA, taxonomia de categorias (arquitetural) para o catálogo.
+  - Decisão sugerida: usar em database-and-migrations-expert (references/catalogo-refatoracoes).
+- **Add CRUD Methods (s.416-422; impr. 232-235)**
+  - Relevância: database-and-migrations-expert: MÉDIA, camada de encapsulamento que facilita refatorar esquema depois; trade-offs claros.
+  - Decisão sugerida: usar em database-and-migrations-expert (catálogo e seção "isolar acesso antes de refatorar").
+- **Add Mirror Table (s.423-435; impr. 236-240)**
+  - Relevância: database-and-migrations-expert: BAIXA/MÉDIA, relevante só para cenários multi-banco e cuidados com sistemas externos.
+  - Decisão sugerida: usar em database-and-migrations-expert (catálogo, linha curta, foco em stale data e preferir replicação nativa).
+- **Add Read Method (s.436-440; impr. 240-242)**
+  - Relevância: database-and-migrations-expert: MÉDIA, testes de procedures e encapsulamento de leitura antes de mudar semântica de exclusão.
+  - Decisão sugerida: usar em database-and-migrations-expert (testes de banco, catálogo).
+- **Encapsulate Table With View (s.441-442; impr. 243-244)**
+  - Relevância: database-and-migrations-expert: ALTA, técnica de passo preparatório antes de renomear/remover colunas, compatível com expand-contract.
+  - Decisão sugerida: usar em database-and-migrations-expert (receita "fachada por view antes de refatorar").
+- **Introduce Calculation Method (s.443-446; impr. 245-248)**
+  - Relevância: database-and-migrations-expert: BAIXA, mais sobre lógica no banco que sobre migração; o alerta de divergência entre implementações é útil.
+  - Decisão sugerida: usar em database-and-migrations-expert (catálogo, linha curta).
+- **Introduce Index (s.447-453; impr. 249-251)**
+  - Relevância: database-and-migrations-expert: MÉDIA, a regra "verificar duplicatas antes de índice único" e "apps devem tratar exceções de violação" é concreta.
+  - Decisão sugerida: usar em database-and-migrations-expert (checklist de índice único).
+- **Introduce Read-Only Table (s.453-469; impr. 251-257)**
+  - Relevância: database-and-migrations-expert: MÉDIA, trade-off de desnormalização/derivação e estratégias de sincronização, útil para "tabelas derivadas".
+  - Decisão sugerida: usar em database-and-migrations-expert (catálogo e nota sobre dado obsoleto).
+- **Migrate Method From Database (s.470-473; impr. 257-260)**
+  - Relevância: database-and-migrations-expert: MÉDIA, exemplo de transition period aplicado a métodos (marcar, esperar, remover).
+  - Decisão sugerida: usar em database-and-migrations-expert (catálogo; padrão de transição).
+- **Migrate Method To Database (s.474-477; impr. 261-265)**
+  - Relevância: database-and-migrations-expert: BAIXA/MÉDIA, a lição sobre implementações divergentes vale para unificar lógica.
+  - Decisão sugerida: usar em database-and-migrations-expert (catálogo, linha curta).
+- **Replace Method(s) With View (s.477-480; impr. 265-268)**
+  - Relevância: database-and-migrations-expert: MÉDIA, exemplo do ciclo "criar novo, marcar com data de remoção, remover após transição", e atenção a mudança de códigos de erro.
+  - Decisão sugerida: usar em database-and-migrations-expert (catálogo; exemplo de deprecação com data).
+- **Replace View With Method(s) (s.481-485; impr. 269-271)**
+  - Relevância: database-and-migrations-expert: BAIXA, simétrica à anterior.
+  - Decisão sugerida: usar em database-and-migrations-expert (junto com Replace Method(s) With View, em uma linha).
+- **Use Official Data Source (s.486-490; impr. 271-276)**
+  - Relevância: database-and-migrations-expert: MÉDIA, cuidados com sistemas externos e fonte única da verdade; alerta de que a conversão bidirecional raramente funciona.
+  - Decisão sugerida: usar em database-and-migrations-expert (cuidados com sistemas externos, catálogo).
+- **Cap. 10, Method Refactorings, abertura e Interface Changing (s.491-492; impr. 277-279) [continua no próximo bloco]**
+  - Relevância: database-and-migrations-expert: ALTA, regra de que mudança de interface precisa de período de transição com versão antiga delegando à nova; adicionar parâmetro no fim.
+  - Decisão sugerida: usar em database-and-migrations-expert (transition period para procedures).
+
+## Bloco 07_s493-592 (lido: ?; p.=PDF, s.=seção do ebook)
+
+- **Cap. 10 Method Refactorings, 10.1 Interface Changing Refactorings (fim: Parameterize Method, Remove Parameter, Rename Method, Reorder Parameters, Replace Parameter with Explicit Methods) (s.493-496, impr. 279-282) [continua do bloco anterior]**
+  - Relevância: database-and-migrations-expert: MÉDIA, mostra o padrão transição com data de remoção aplicado a rotinas e o caso em que não há transição segura (Reorder Parameters com tipos iguais).
+  - Decisão sugerida: usar em database-and-migrations-expert (referência de refatoração de interface de stored procedures; regra: parâmetros de mesmo tipo reordenados exigem testes e/ou novo nome em vez de reordenar).
+- **Cap. 10, 10.2 Internal Refactorings (s.497-551, impr. 283-293)**
+  - Relevância: database-and-migrations-expert: BAIXA a MÉDIA, apenas princípio "refatorar rotinas de banco com as mesmas técnicas de código, sem transição porque a interface não muda" e Replace Literal with Table Lookup (constantes de negócio em tabela, cacheável). Os demais são refatoração de código genérica, mais adequados a clean-code-expert/refactoring-expert.
+  - Decisão sugerida: usar em database-and-migrations-expert apenas uma linha de referência (rotinas de banco aceitam refatorações internas de código; Replace Literal with Table Lookup); o resto descartar (já coberto por skills de código).
+- **Cap. 11 Transformations, introdução (s.552, impr. 295)**
+  - Relevância: database-and-migrations-expert: MÉDIA, separa mudanças que preservam semântica (refatoração) das que adicionam semântica (transformações), útil para classificar scripts de migração.
+  - Decisão sugerida: usar em database-and-migrations-expert (categorias de mudança).
+- **Insert Data (s.553-558, impr. 297-300)**
+  - Relevância: database-and-migrations-expert: MÉDIA, dados de referência em migração precisam de revisão dos consumidores (queries com NOT IN, enums no código).
+  - Decisão sugerida: usar em database-and-migrations-expert (seed/lookup data: checar consumidores que listam IDs ou enumeram valores).
+- **Introduce New Column (s.559-561, impr. 301-303)**
+  - Relevância: database-and-migrations-expert: MÉDIA, padrão expand: coluna nova anulável, backfill, depois restrições (NOT NULL/default/FK) em passos separados.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **Introduce New Table (s.562-564, impr. 304-305)**
+  - Relevância: database-and-migrations-expert: MÉDIA, critério "antes de criar tabela, verificar se existe equivalente"; uso de tabela de backup ao apagar/mesclar.
+  - Decisão sugerida: usar em database-and-migrations-expert.
+- **Introduce View (s.565-573, impr. 306-309)**
+  - Relevância: database-and-migrations-expert: MÉDIA, view como camada de encapsulamento que viabiliza renomear tabela/coluna sem quebrar clientes externos.
+  - Decisão sugerida: usar em database-and-migrations-expert (encapsulamento por view como técnica de transição).
+- **Update Data (s.574-581, impr. 310-313)**
+  - Relevância: database-and-migrations-expert: ALTA para a regra de que dado de referência usado como chave de negócio (por nome) é acoplamento escondido em views/código; checklist de 5 perguntas antes de migrar dados.
+  - Decisão sugerida: usar em database-and-migrations-expert (checklist de data migration: origem, aprovação, linhas, colunas, dependências; usar ETL para grande volume).
+- **Apêndice: The UML Data Modeling Notation (s.581-585, impr. 315-319)**
+  - Relevância: database-and-migrations-expert: NENHUMA (notação de diagrama); apenas ajuda a ler as figuras do livro.
+  - Decisão sugerida: descartar.
+- **Glossário (s.585-589, impr. 321-325)**
+  - Relevância: database-and-migrations-expert: ALTA para vocabulário exato (refatoração vs transformação, transition period, single vs multi-application database, categorias).
+  - Decisão sugerida: usar em database-and-migrations-expert (glossário e categorias).
+- **Referências e leitura recomendada (s.589-591, impr. 327-329)**
+  - Relevância: NENHUMA. Decisão: descartar.
+  - Decisão sugerida: (não registrada)
+- **Lista de Refactorings and Transformations (s.591, índice de back matter; páginas impressas não visíveis no rodapé)**
+  - Relevância: database-and-migrations-expert: ALTA como índice do catálogo do livro (nomes e categorias) para a skill citar por nome.
+  - Decisão sugerida: usar em database-and-migrations-expert (índice de nomes de refatorações). Descartar as figuras repetidas de notação UML que se repetem na seção 591 (artefato de extração).
+- **Índice do documento (Document Outline) (s.592)**
+  - Relevância: database-and-migrations-expert: MÉDIA, mapa para localizar regras (títulos das estratégias e passos do processo) nas notas de outros blocos. Decisão: usar só como mapa.
+  - Decisão sugerida: (não registrada)

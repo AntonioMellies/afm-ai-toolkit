@@ -1,11 +1,11 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "afm-ai-toolkit",
-  "version": "1.1.0",
-  "description": "Biblioteca de skills agnóstica de ferramenta: Clean Architecture, Clean Code, Architecture Hard Parts, DDD, microsserviços em produção, Material Design 3 e Product Discovery, com skills de grupo por afinidade (backend, arquitetura, frontend e produto).",
+  "version": "1.4.0",
+  "description": "Biblioteca de skills agnóstica de ferramenta: Clean Architecture, Clean Code, refatoração, testes e TDD, depuração, Git, segurança de backend, banco de dados e migrações, Architecture Hard Parts, DDD, microsserviços em produção, React/Next.js, Material Design 3, Product Discovery, hipóteses e experimentos, especificação de produto, métricas de produto e análise de mercado, com skills de grupo por afinidade. No Claude Code, inclui também hooks de proteção e subagents de revisão.",
   "author": {
     "name": "Antonio Mellies"
   },
   "repository": "https://github.com/AntonioMellies/afm-ai-toolkit",
-  "keywords": ["skills", "architecture", "clean-code", "ddd", "material-design", "product-discovery"]
+  "keywords": ["skills", "architecture", "clean-code", "ddd", "material-design", "product-discovery", "refactoring", "tdd", "debugging", "security", "react"]
 }
