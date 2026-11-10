@@ -1,10 +1,10 @@
 ---
 name: backend-engineering
-description: Atua como Tech Lead de Backend que orquestra as skills de Domain-Driven Design, Clean Architecture, Clean Code, refatoração, testes, depuração, Git, segurança e microsserviços em produção. Diagnostica o pedido, escolhe a skill especializada certa e encadeia várias quando a tarefa atravessa domínio, camadas, código, testes e operação. Use quando a tarefa de backend envolver mais de uma dessas disciplinas, como implementar uma feature de ponta a ponta, revisar um serviço inteiro, investigar um bug até a correção ou refatorar um módulo legado, ou quando não estiver claro qual skill especializada de backend usar.
+description: Atua como Tech Lead de Backend que orquestra as skills de Domain-Driven Design, Clean Architecture, Clean Code, refatoração, testes, depuração, Git, segurança, banco de dados e migrações e microsserviços em produção. Diagnostica o pedido, escolhe a skill especializada certa e encadeia várias quando a tarefa atravessa domínio, camadas, código, testes e operação. Use quando a tarefa de backend envolver mais de uma dessas disciplinas, como implementar uma feature de ponta a ponta, revisar um serviço inteiro, investigar um bug até a correção ou refatorar um módulo legado, ou quando não estiver claro qual skill especializada de backend usar.
 metadata:
   author: Antonio Mellies
-  version: "2.0"
-  skills: "domain-driven-design clean-architecture-expert clean-code-expert refactoring-expert testing-tdd-expert systematic-debugging git-workflow-expert security-backend-expert production-ready-microservices-expert"
+  version: "2.1"
+  skills: "domain-driven-design clean-architecture-expert clean-code-expert refactoring-expert testing-tdd-expert systematic-debugging git-workflow-expert security-backend-expert database-and-migrations-expert production-ready-microservices-expert"
 ---
 
 # Backend Engineering
@@ -44,6 +44,7 @@ Decisões fluem de fora para dentro do código: **domínio → estrutura → có
 | `systematic-debugging` | Bug, falha intermitente, regressão, stack trace, "não reproduz" | Reprodução, hipótese testada, teste que falha, correção da causa raiz |
 | `git-workflow-expert` | Commits, mensagem de commit, PR, branch, histórico, release | Plano de commits e descrição de PR |
 | `security-backend-expert` | Autenticação, autorização, entrada de dados, segredos, injeção, logs | Checklist por categoria e achados com severidade |
+| `database-and-migrations-expert` | Mudança de esquema em produção, migração, coluna ou tabela a renomear, dividir ou remover, constraint nova, dados a migrar | Estratégia de transição, ordem de deploy e back out, scripts de migração pequenos e versionados |
 | `production-ready-microservices-expert` | Observabilidade, health checks, resiliência, deploy, rollback, escalabilidade | Checklist de produção, plano de operação |
 
 Para ativar uma skill, cite-a pelo nome (ex.: "ative a skill `clean-code-expert`") e siga as instruções dela na etapa correspondente.
@@ -60,6 +61,7 @@ Sinais no pedido → skill responsável:
 - "bug", "erro", "stack trace", "intermitente", "regressão", "não reproduz" → `systematic-debugging`
 - "commit", "PR", "branch", "merge", "histórico" → `git-workflow-expert`
 - "autenticação", "autorização", "injeção", "segredo", "senha", "vulnerabilidade" → `security-backend-expert`
+- "migration", "esquema", "coluna", "tabela", "DDL", "banco de dados em produção", "expand/contract" → `database-and-migrations-expert`
 - "produção", "logs", "métricas", "tracing", "alerta", "health check", "deploy", "rollback" → `production-ready-microservices-expert`
 
 Se o pedido cabe inteiro em uma skill, delegue diretamente e não force um fluxo combinado.
@@ -68,9 +70,10 @@ Se o pedido cabe inteiro em uma skill, delegue diretamente e não force um fluxo
 
 Resumo dos fluxos; passos, entregáveis e handoffs em [references/workflows.md](references/workflows.md).
 
-- **Nova feature**: `domain-driven-design` (modelo tático) → `clean-architecture-expert` (caso de uso e camadas) → `testing-tdd-expert` + `clean-code-expert` (implementação guiada por testes) → `security-backend-expert` (entradas, acesso e segredos) → `production-ready-microservices-expert` (operação) → `git-workflow-expert` (commits e PR)
+- **Nova feature**: `domain-driven-design` (modelo tático) → `clean-architecture-expert` (caso de uso e camadas) → `testing-tdd-expert` + `clean-code-expert` (implementação guiada por testes) → `database-and-migrations-expert` (se a feature muda o esquema) → `security-backend-expert` (entradas, acesso e segredos) → `production-ready-microservices-expert` (operação) → `git-workflow-expert` (commits e PR)
 - **Revisão de serviço**: `production-ready-microservices-expert` (riscos operacionais) → `clean-architecture-expert` (Dependency Rule) → `domain-driven-design` (Modo de Revisão do modelo) → `security-backend-expert` (superfícies de ataque) → `clean-code-expert` (código) → `testing-tdd-expert` (lacunas de teste)
 - **Refatoração de legado**: `domain-driven-design` (redescobrir a linguagem) → `clean-architecture-expert` (isolar o domínio) → `testing-tdd-expert` (rede de testes) → `refactoring-expert` (passos pequenos) → `clean-code-expert` (Boy Scout Rule)
+- **Mudança de esquema em produção**: `database-and-migrations-expert` (estratégia de transição e ordem de deploy) → `testing-tdd-expert` (testes de regressão do banco e da aplicação) → `production-ready-microservices-expert` (rollback e observabilidade) → `git-workflow-expert`
 - **Bug até a correção**: `systematic-debugging` (reproduzir, isolar, hipótese, teste que falha) → `testing-tdd-expert` (teste de regressão) → `git-workflow-expert` (commit da correção)
 - **Serviço novo para produção**: `production-ready-microservices-expert` (projetar a operação primeiro) → `clean-architecture-expert` → `clean-code-expert`
 

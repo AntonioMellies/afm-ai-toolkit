@@ -1,10 +1,10 @@
 ---
 name: product-strategy
-description: Atua como Líder de Produto que orquestra as skills de Product Discovery, Domain-Driven Design e Material Design 3 Enterprise UX. Conduz o caminho do problema validado à linguagem do domínio e aos fluxos de tela, mantendo evidências, modelo de negócio e experiência alinhados. Use quando a tarefa de produto envolver mais de uma dessas disciplinas, como sair de uma ideia para um MVP especificado, transformar oportunidades em domínio e fluxos, evoluir um produto existente ou preparar um PRD com modelo e telas, ou quando não estiver claro qual skill de produto usar.
+description: Atua como Líder de Produto que orquestra as skills de Product Discovery, hipóteses e experimentos, métricas de produto, análise de mercado e concorrência, Domain-Driven Design e Material Design 3 Enterprise UX. Conduz o caminho do problema validado à linguagem do domínio e aos fluxos de tela, mantendo evidências, modelo de negócio e experiência alinhados. Use quando a tarefa de produto envolver mais de uma dessas disciplinas, como sair de uma ideia para um MVP especificado, transformar oportunidades em domínio e fluxos, validar hipóteses, escolher métricas e mercado-alvo, evoluir um produto existente ou preparar um PRD com modelo e telas, ou quando não estiver claro qual skill de produto usar.
 metadata:
   author: Antonio Mellies
-  version: "1.0"
-  skills: "product-discovery-assistant domain-driven-design designer-system-material-3-enterprise-ux"
+  version: "2.0"
+  skills: "product-discovery-assistant hypothesis-and-experiments product-metrics market-competitive-analysis domain-driven-design designer-system-material-3-enterprise-ux"
 ---
 
 # Product Strategy
@@ -36,7 +36,10 @@ O caminho é **problema → linguagem → fluxo**. Nada vira tela sem um problem
 
 | Skill | Delegue quando | Entrega |
 |---|---|---|
-| `product-discovery-assistant` | Problema, público, evidências, hipóteses, entrevistas, priorização, PRD | Matriz CSD, Opportunity Solution Tree, RICE, Positioning Statement, roteiro de entrevistas |
+| `product-discovery-assistant` | Problema, público, resultado desejado, árvore de oportunidades, escolha da oportunidade-alvo, entrevistas de descoberta e síntese, Value Proposition Canvas, PRD | Matriz CSD, Opportunity Solution Tree, interview snapshots, Positioning Statement, roteiro de entrevistas |
+| `hypothesis-and-experiments` | Hipótese, suposições, experimento, critério de sucesso, força da evidência, conversa com cliente no estilo Mom Test | Hipótese testável, plano de experimento com critério definido antes, leitura da evidência, decisão seguir/ajustar/parar |
+| `product-metrics` | Métrica principal, KPIs, dashboard, churn, CAC, CLV, coortes, metas | Métrica certa para o estágio e o modelo, definição e meta antes de medir |
+| `market-competitive-analysis` | Estratégia de mercado, onde jogar e como vencer, mercado-alvo, concorrência, proposta de valor, preço | Cascata de escolhas, mercado-alvo e whole product, Strategy Canvas, critérios de precificação |
 | `domain-driven-design` | Termos do negócio, processos, regras, atores, Event Storming, limites do produto | Linguagem Ubíqua, processos e eventos, subdomínios e Core Domain |
 | `designer-system-material-3-enterprise-ux` | Fluxos e telas de produtos corporativos, protótipos para validar hipóteses, CRUD, dashboards | Especificação de telas e fluxos, wireframes, métricas de UX |
 
@@ -46,7 +49,10 @@ Para ativar uma skill, cite-a pelo nome (ex.: "ative a skill `product-discovery-
 
 Sinais no pedido → skill responsável:
 
-- "ideia", "problema", "usuário", "hipótese", "entrevista", "priorizar backlog", "RICE", "PRD", "MVP" → `product-discovery-assistant`
+- "ideia", "problema", "usuário", "oportunidade", "árvore de oportunidades", "entrevista de descoberta", "PRD", "MVP" → `product-discovery-assistant`
+- "hipótese", "suposição", "experimento", "teste", "critério de sucesso", "validar", "Mom Test", "evidência" → `hypothesis-and-experiments`
+- "métrica", "KPI", "OMTM", "churn", "CAC", "CLV", "coorte", "dashboard" → `product-metrics`
+- "mercado", "concorrência", "posicionamento", "mercado-alvo", "estratégia", "onde jogar", "preço", "precificação" → `market-competitive-analysis`
 - "como o negócio funciona", "termos", "glossário", "processo", "regras", "event storming", "core domain" → `domain-driven-design`
 - "tela", "fluxo", "protótipo", "wireframe", "dashboard", "backoffice", "CRUD" → `designer-system-material-3-enterprise-ux`
 
@@ -58,8 +64,9 @@ Resumo dos fluxos; passos, entregáveis e handoffs em [references/workflows.md](
 
 - **Da ideia ao MVP**: `product-discovery-assistant` (Modo Discovery do Zero) → `domain-driven-design` (linguagem e processos) → `designer-system-material-3-enterprise-ux` (fluxos e telas do MVP)
 - **Evolução de produto existente**: `product-discovery-assistant` (Modo Análise) → `domain-driven-design` (impacto no modelo) → `designer-system-material-3-enterprise-ux` (Review Mode das telas afetadas)
-- **Validação de hipótese com protótipo**: `product-discovery-assistant` (hipótese e POL Probe) → `designer-system-material-3-enterprise-ux` (protótipo mínimo) → `product-discovery-assistant` (roteiro de teste)
-- **PRD completo**: `product-discovery-assistant` (problema, métricas, priorização) → `domain-driven-design` (glossário e regras) → `designer-system-material-3-enterprise-ux` (fluxos principais)
+- **Validação de hipótese com protótipo**: `hypothesis-and-experiments` (hipótese, critério de sucesso e experimento) → `designer-system-material-3-enterprise-ux` (protótipo mínimo) → `hypothesis-and-experiments` (leitura da evidência e decisão)
+- **Escolha de mercado e métrica**: `market-competitive-analysis` (mercado-alvo e como vencer) → `hypothesis-and-experiments` (testar as escolhas arriscadas) → `product-metrics` (métrica e meta do estágio)
+- **PRD completo**: `product-discovery-assistant` (problema, oportunidade-alvo, evidências) → `product-metrics` (métrica de sucesso) → `domain-driven-design` (glossário e regras) → `designer-system-material-3-enterprise-ux` (fluxos principais)
 
 ## Conflitos entre Skills
 
@@ -67,9 +74,10 @@ Quando as recomendações divergirem:
 
 1. **Evidência vence opinião**: se não há evidência do problema, volte ao discovery antes de modelar ou desenhar (`product-discovery-assistant`).
 2. **Linguagem do domínio vence rótulos de interface**: telas usam os termos da Linguagem Ubíqua, não jargão técnico ou genérico (`domain-driven-design`).
-3. **Outcome vence output**: um fluxo só entra no escopo se servir a uma oportunidade priorizada com métrica de sucesso.
-4. **Produtividade do usuário recorrente orienta a tela**: em produto corporativo, densidade e eficiência prevalecem sobre estética (`designer-system-material-3-enterprise-ux`).
-5. Pedido que avança para Design System, tokens ou implementação → recomende a skill de grupo `frontend-design-system`; para arquitetura do produto → `software-architecture`.
+3. **Evidência de comportamento vence opinião**: elogio, "eu compraria" e simulação de cliente por IA não validam hipótese (`hypothesis-and-experiments`).
+4. **Outcome vence output**: um fluxo só entra no escopo se servir a uma oportunidade priorizada com métrica de sucesso.
+5. **Produtividade do usuário recorrente orienta a tela**: em produto corporativo, densidade e eficiência prevalecem sobre estética (`designer-system-material-3-enterprise-ux`).
+6. Pedido que avança para Design System, tokens ou implementação → recomende a skill de grupo `frontend-design-system`; para arquitetura do produto → `software-architecture`.
 
 Explicite o conflito e a escolha feita; nunca o resolva em silêncio.
 

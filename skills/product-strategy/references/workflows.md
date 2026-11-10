@@ -14,21 +14,30 @@ Volte à etapa 1 se a etapa 2 revelar suposições não validadas sobre o proces
 
 ## Evolução de produto existente
 
-1. `product-discovery-assistant` — Modo Análise: Mapa de Capacidades, Matriz CSD, Opportunity Solution Tree e RICE.
+1. `product-discovery-assistant` — Modo Análise: Mapa de Capacidades, Matriz CSD, Opportunity Solution Tree (Torres) e comparação das oportunidades irmãs; RICE só para itens de entrega, como convenção da skill.
 2. `domain-driven-design` — para as oportunidades do topo: quais conceitos, regras e contextos mudam; termos novos ou conflitantes.
 3. `designer-system-material-3-enterprise-ux` — Review Mode das telas afetadas e especificação das mudanças de fluxo.
 
 ## Validação de hipótese com protótipo
 
-1. `product-discovery-assistant` — formular a hipótese (problema → hipótese → métrica de sucesso) e escolher o POL Probe.
+1. `hypothesis-and-experiments` — formular a hipótese, mapear suposições, escolher o experimento e fixar o critério de sucesso antes de rodar.
 2. `designer-system-material-3-enterprise-ux` — protótipo mínimo suficiente para o teste (wireframe ou fluxo), usando os termos do domínio.
-3. `product-discovery-assistant` — roteiro de teste no estilo Mom Test e critério de decisão (seguir, ajustar, abandonar).
+3. `hypothesis-and-experiments` — ler a força da evidência e decidir (seguir, ajustar, parar). Entrevistas seguem as regras do Mom Test.
+
+## Escolha de mercado e métrica
+
+1. `market-competitive-analysis` — aspiração, onde jogar, como vencer; mercado-alvo e whole product quando o produto é novo.
+2. `hypothesis-and-experiments` — o que teria que ser verdade para a escolha funcionar; testar primeiro a condição menos provável.
+3. `product-metrics` — métrica principal do estágio e meta definida antes de olhar os dados.
 
 ## PRD completo
 
 | Seção do PRD | Skill |
 |---|---|
-| Problema, público, evidências, métricas de sucesso, priorização | `product-discovery-assistant` |
+| Problema, público, resultado desejado, oportunidade-alvo, evidências | `product-discovery-assistant` |
+| Métrica de sucesso e meta | `product-metrics` |
+| Hipóteses em aberto e critério de teste | `hypothesis-and-experiments` |
+| Mercado-alvo e posicionamento | `market-competitive-analysis` |
 | Glossário, regras de negócio, processos e eventos | `domain-driven-design` |
 | Fluxos principais, telas, estados e critérios de UX | `designer-system-material-3-enterprise-ux` |
 | Questões em aberto e próximas validações | Consolidação das três |
