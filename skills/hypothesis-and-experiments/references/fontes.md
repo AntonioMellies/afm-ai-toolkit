@@ -9,8 +9,9 @@ Livros e como citar:
 - **MT**: *The Mom Test* (Rob Fitzpatrick). PDF; páginas = "PDF PAGINA N".
 - **CDH**: *Continuous Discovery Habits* (Teresa Torres), caps. 9 e 10.
 - **VPD**: *Value Proposition Design* (Osterwalder, Pigneur et al.), Parte 3, p.421-504.
+- **INS**: *Inspired* (Marty Cagan, 2ª ed.). PDF; páginas = "PDF PAGINA N" (a numeração impressa é PDF menos 20). Foram lidos no texto os caps. 33, 41, 45-54, 56 e 58 e as caixas e partes citadas abaixo; o que o livro diz "segundo o autor" é prática dele, sem base empírica independente neste material.
 
-Todos os limiares numéricos (40%, 15%, 5%, 3%, 80%, 6%, 2% e os demais) são alvos ou exemplos dos autores, sem base empírica independente neste material. A skill sempre os apresenta como "o livro propõe".
+Todos os limiares numéricos (40%, 15%, 5%, 3%, 80%, 6%, 2%, 1%, 99/1, seis clientes de referência e os demais) são alvos ou exemplos dos autores, sem base empírica independente neste material. A skill sempre os apresenta como "o livro propõe".
 
 ## Fluxo, hipótese e priorização
 
@@ -185,6 +186,89 @@ Todos os limiares numéricos (40%, 15%, 5%, 3%, 80%, 6%, 2% e os demais) são al
 | Interesse inicial inflado pela novidade; o exemplo Fold4U mostra 78% no início e 62% depois (ilustrativo) | TRI | Cap. 5, Example: Fold4U | s.12 | |
 | Distance, Hours e Dollars to Data para ordenar experimentos | TRI | Cap. 7 e cap. 8 | s.15, s.16 | |
 
+## Testes de produto (Cagan, *Inspired*)
+
+| Regra/ponto da skill | Livro | Capítulo/seção | Páginas | Citação curta |
+|---|---|---|---|---|
+| Os quatro riscos (valor, usabilidade, viabilidade técnica, viabilidade de negócio) e a exigência de evidência além da opinião do PM | INS | Cap. 33 | p.185 | "it’s not enough that it’s just the product manager’s opinion on these questions. We need to collect evidence." |
+| Sem ordem prescrita para responder aos quatro riscos | INS | Visão geral de Discovery Testing | p.261 | "There is no prescribed order to answering these questions." |
+| Valor primeiro, pois sem valor o resto importa pouco; em muita coisa os quatro riscos são baixos e o time segue para a entrega | INS | Visão geral de Discovery Testing | p.261 | "if the value isn’t there, not much else matters" |
+| Usabilidade e valor com os mesmos usuários ao mesmo tempo; depois viabilidade técnica; viabilidade de negócio por último, para não agitar a organização antes da confiança e para mostrar evidência ao stakeholder | INS | Visão geral de Discovery Testing | p.261-262 | "we don’t want to stir up the organization unless we’re confident it’s worthwhile" |
+| Muitas ideias não funcionam e o motivo mais comum é valor | INS | Cap. 33, princípio 5 | p.187 | "many, if not most, of our ideas won’t work out" |
+| Viabilidade técnica na descoberta, com engenheiros antes da decisão de construir | INS | Cap. 33, princípio 8 | p.188 | "If the first time your developers see an idea is at sprint planning, you have failed." |
+| Viabilidade de negócio cobre finanças, marketing, vendas, jurídico, desenvolvimento de negócios e executivos | INS | Cap. 33, princípio 9 | p.188 | "Business viability includes financial considerations, marketing (both brand and go-to-market considerations), sales, legal, business development, and senior executives." |
+| Iteração de descoberta = testar ao menos uma ideia ou abordagem; 10 a 20 por semana (expectativa do autor) | INS | Cap. 33, caixa Discovery Iterations | p.190 | "teams competent in modern discovery techniques can generally test on the order of 10–20 iterations per week." |
+| Iteração de descoberta custa uma ordem de grandeza menos que a de entrega (regra prática) | INS | Cap. 33, caixa Discovery Iterations | p.190 | "an iteration in discovery should be at least an order of magnitude less time and effort than an iteration in delivery" |
+| Todo protótipo custa ao menos uma ordem de grandeza menos que o produto | INS | Cap. 45 | p.247 | "All forms of prototype should require at least an order of magnitude less time and effort as the eventual product." |
+| Fidelidade escolhida pelo propósito; baixa é mais rápida e barata | INS | Cap. 45, princípio 4 | p.248 | "so we only do higher fidelity when we need to" |
+| Quatro classes de protótipo (viabilidade, usuário, dados reais, híbrido); descoberta é o jeito mais rápido e barato de testar | INS | Visão geral de Discovery Prototyping | p.243-245 | "Remember that product discovery is all about coming up with the fastest, cheapest way to test out our ideas." |
+| Protótipo de viabilidade: suficiente para mitigar o risco, descartável, sem interface nem tratamento de erros | INS | Cap. 46 | p.250 | "write just enough code to mitigate the feasibility risk" |
+| Protótipo de viabilidade: um ou dois dias, estimativa dos engenheiros, decisão do PM; é descoberta, não entrega | INS | Cap. 46 | p.250 | "it is considered discovery work and not delivery work" |
+| Protótipo de usuário é fachada (nada por trás); baixa fidelidade mostra só informação e fluxo; alta fidelidade usa dados realistas, não vivos | INS | Cap. 47 | p.253-254 | |
+| Protótipo de usuário não prova que o produto venderá | INS | Cap. 47 | p.254 | "The big limitation of a user prototype is that it’s not good for proving anything" |
+| Aprovação verbal de 10 ou 15 pessoas sobre protótipo de alta fidelidade não valida o produto | INS | Cap. 47 | p.254 | "People say all kinds of things and then go do something different." |
+| Erro comum de iniciante: mostrar o protótipo a 10 ou 15 pessoas que dizem amar e achar que validou | INS | Cap. 47 | p.254 | "put it in front of 10 or 15 people who all say how much they love it" |
+| Protótipo com dados reais: 5% a 10% da produtização, feito por engenheiros, não é produto entregável | INS | Cap. 48 | p.256 | "somewhere between 5 and 10 percent of the eventual delivery productization work" |
+| O PM não decide que o protótipo com dados reais está bom o bastante; instrumentação só dos casos testados; dias a uma semana | INS | Cap. 48 | p.255-256 | "It is definitely not okay for the product manager to tell the engineers" |
+| Usuários reais fazem trabalho real e geram dados comparáveis ao produto atual ou às expectativas | INS | Cap. 48 | p.257 | "we can compare to our current product—or to our expectations—to see if this new approach performs better" |
+| Wizard of Oz: pessoa fazendo à mão por trás de interface realista; nunca com tráfego significativo | INS | Cap. 49 | p.259 | "an actual person behind the scenes performing manually what would ultimately be handled by automation" |
+| Wizard of Oz: aprendizado sobretudo qualitativo | INS | Cap. 49 | p.260 | "Admittedly, it’s mainly qualitative learning" |
+| Usabilidade na descoberta com protótipo, não no fim | INS | Cap. 50 | p.263 | "we do usability testing in discovery—using prototypes, before we build the product" |
+| Usabilidade em geral com protótipo de alta fidelidade; tarefas principais definidas antes | INS | Cap. 50, Preparing the Test | p.265 | "We usually do usability testing with a high-fidelity user prototype." |
+| PM e designer em todo teste; um conduz e outro anota | INS | Cap. 50, Preparing the Test | p.265 | "the product manager and designer must be there for each and every test" |
+| Dizer que só o protótipo passa ou falha; ver se entende a página inicial; modo de uso e não de crítica; silêncio | INS | Cap. 50, Testing Your Prototype | p.267 | "She can’t pass or fail—only the prototype can pass or fail." |
+| Observar o que fazem mais do que o que dizem | INS | Cap. 50 | p.267 | "So, watch what they do more than what they say." |
+| Três casos por tarefa (sem problema, com dificuldade, desistiu); só registrar desistência quando largaria o produto por concorrente | INS | Cap. 50 | p.267-268 | |
+| Repetir o que vê ("papagaio"), devolver perguntas, evitar juízos de valor; sem narração contínua | INS | Cap. 50 | p.268 | |
+| Corrigir o protótipo na hora; não manter o teste idêntico para todos | INS | Cap. 50, Summarizing the Learning | p.269 | "There’s no law that says you have to keep the test identical for all of your test subjects." |
+| Teste qualitativo é para aprender rápido, não provar; resumo curto por e-mail em vez de relatório longo | INS | Cap. 50, Summarizing the Learning | p.269 | "We’re not trying to prove anything here; we’re just trying to learn quickly." |
+| Teste qualitativo é para aprender rápido, não provar | INS | Cap. 53 | p.279 | "As a reminder, qualitative testing is not about proving anything." |
+| Cadência de dois a três testes qualitativos de valor por semana | INS | Cap. 53 | p.280 | "at least two or three qualitative value tests every single week" |
+| Entrevista curta, depois usabilidade, depois valor, um logo após o outro | INS | Cap. 53, Interview First e Usability Test | p.280 | "This is why a value test is always preceded by a usability test." |
+| Sem a usabilidade antes, o teste de valor vira conversa hipotética | INS | Cap. 53 | p.280 | "the value test becomes more like a focus group where people talk hypothetically about your product" |
+| Testes de valor desenhados para a pessoa não ser só gentil; protótipo de alta fidelidade para valor | INS | Cap. 53, Specific Value Tests | p.281 | "all of our tests for value are designed to make sure the person is not just being nice to you" |
+| Dinheiro: o usuário puxar o cartão sem coletar os dados | INS | Cap. 53, Using Money | p.281 | "We’re looking for the user to pull out his or her credit card right then and there and ask to buy the product" |
+| Dinheiro em produto B2B caro: carta de intenção não vinculante | INS | Cap. 53, Using Money | p.281 | "non-binding letter of intent to buy" |
+| Reputação: probabilidade de recomendar numa escala (por exemplo, 0 a 10), compartilhar, e-mail de chefe ou amigos sem salvar | INS | Cap. 53, Using Reputation | p.281-282 | "typically on a scale of 0–10" |
+| Tempo: reservar tempo significativo (sobretudo B2B) | INS | Cap. 53, Using Time | p.282 | |
+| Acesso: pedir credenciais do produto atual, sem querer a credencial de fato | INS | Cap. 53, Using Access | p.282 | "provide the login credentials for whatever product they would be switching from" |
+| Arquivar a ideia por falta de interesse ou usabilidade evita custo de construção e de oportunidade | INS | Cap. 53, Iterating the Prototype | p.282-283 | |
+| PM em todo teste qualitativo de valor; não delegar nem contratar empresa | INS | Cap. 53 | p.283 | "you need to make sure you are at every single qualitative value test" |
+| Entrevistas: duas a três horas por semana, cadência fixa | INS | Cap. 41 | p.232 | "A bare minimum would be two to three hours of customer interviews per week, every week." |
+| Entrevistas: PM, designer e engenheiro; em geral o designer conduz e o PM anota | INS | Cap. 41 | p.233 | |
+| Poder usar não é escolher usar | INS | Cap. 51 | p.271 | "just because someone can use our product doesn’t mean they will choose to use our product" |
+| O cliente precisa perceber o produto como substancialmente melhor para migrar | INS | Cap. 51 | p.271 | "The customer must perceive your product to be substantially better" |
+| Fake door: botão no lugar real, sem sinal de teste antes do clique, página explicando o estudo e pedindo voluntários | INS | Cap. 52 | p.274 | "the users not have any visible indication that this is a test until after they click that button" |
+| Fake door: comparar o clique com a expectativa ou com outras funcionalidades e conversar depois | INS | Cap. 52 | p.274 | "compare the click-through rate on this button with our expectations or with other features" |
+| Landing page de demanda: descrever a oferta como se fosse lançamento; no chamado para ação, explicar o estudo | INS | Cap. 52 | p.274 | |
+| Mostrar a todos (startup) ou a pequena parte dos usuários ou região (empresa grande); ganho = evidência e lista de voluntários | INS | Cap. 52 | p.275 | |
+| Na prática, demanda costuma não ser o problema; o difícil é a pessoa se empolgar o bastante para trocar | INS | Cap. 52 | p.275 | "In practice, the demand is usually not the problem." |
+| Empresa avessa a risco: A/B com 1% ou menos exposto | INS | Cap. 52, caixa Risk-Averse Companies | p.277 | "Most of the time an A/B test with 1 percent or less of the customers exposed is fine for this." |
+| Mais conservador: somente por convite ou clientes do programa sob NDA; implantação gradual e avaliação do impacto | INS | Cap. 52, caixa Risk-Averse Companies | p.277 | |
+| Quantitativo busca evidência; ora significância estatística, ora evidência útil mais fraca | INS | Cap. 54 | p.285 | "we’ll set the bar lower and just collect actual usage data that we consider useful evidence" |
+| A técnica quantitativa depende de tráfego, tempo e tolerância a risco | INS | Cap. 54 | p.285 | "the technique we select depends on the amount of traffic we have, the amount of time we have, and our tolerance for risk" |
+| A/B é o padrão-ouro porque o usuário não sabe a versão | INS | Cap. 54, A/B Testing | p.286 | "The gold standard for this type of testing is an A/B test." |
+| A/B de descoberta: produto atual a 99% e protótipo a 1% ou menos, monitorado de perto; diferente do A/B de otimização (50:50) | INS | Cap. 54, A/B Testing | p.286 | "the live-data prototype showing to only 1 percent of our users or less" |
+| Teste somente por convite: adesão voluntária, menos preditivo; resultado negativo exige teste qualitativo para saber o porquê | INS | Cap. 54, Invite-Only Testing | p.286-287 | "all we know for sure is that they’re not using it" |
+| Programa de clientes de descoberta como técnica principal de uso real em B2B | INS | Cap. 54 | p.287 | "I typically use this as my primary technique for collecting actual usage data" |
+| A/B prova quais ideias funcionam, sobretudo em risco alto, custo de implantação alto ou mudança de comportamento | INS | Cap. 54, The Role of Analytics | p.289 | "This lets us prove which of our ideas work." |
+| Instrumentar ao menos o uso básico de toda funcionalidade | INS | Cap. 54, The Role of Analytics | p.288 | "if you’re going to put a feature in, you need to put in at least the basic usage analytics for that feature" |
+| Analítica mostra o que acontece, não o porquê; qualitativo explica | INS | Cap. 54 | p.290 | "the data will shine a light on what is happening, but it won’t explain why" |
+| Sem instrumentação não lançaria; saber logo se funciona e se há consequências não intencionadas | INS | Cap. 54, Flying Blind | p.292 | "without that instrumentation, I wouldn’t bother to roll out the feature" |
+| Anonimizar e agregar os dados; perguntar o que precisa saber, instrumentar, gerar relatórios | INS | Cap. 54, Flying Blind | p.291-292 | "We should all be anonymizing and aggregating the data" |
+| Sinais de ajuste ao mercado e dificuldade de definir o limiar | INS | Cap. 39, caixa Defining Product/Market Fit | p.223 | "But the threshold for any of these can be tough to define." |
+| Teste de Sean Ellis na versão do autor: população filtrada, quatro respostas, regra prática de mais de 40% | INS | Cap. 39, caixa Defining Product/Market Fit | p.224 | "The general rule of thumb is that if more than 40 percent of the users" |
+| O autor aponta muitas ressalvas e prefere o teste para consumo | INS | Cap. 39, caixa Defining Product/Market Fit | p.224 | "there are lots of caveats here, depending on the type of product and the size of the sample" |
+| B2B: seis clientes de referência em um mercado-alvo específico = ajuste ao mercado nesse mercado | INS | Cap. 39, caixa Defining Product/Market Fit | p.224 | "we will typically declare product/market fit for that market" |
+| O ajuste ao mercado não encerra o trabalho no produto | INS | Cap. 39, caixa Defining Product/Market Fit | p.224 | "Remember product/market fit does not mean that you are done with working on that product." |
+| Três modos de mostrar o protótipo (teste com usuário, demo, walkthrough) | INS | Cap. 56, caixa User Test versus Product Demo versus Walkthrough | p.301 | "we let the user drive" |
+| Walkthrough: não vender, não testar, não esconder | INS | Cap. 56, caixa User Test versus Product Demo versus Walkthrough | p.302 | "You are not trying to sell them anything, you’re not trying to test on them" |
+| Erro de iniciante: demo durante teste com usuário e depois perguntar o que achou | INS | Cap. 56, caixa User Test versus Product Demo versus Walkthrough | p.302 | "a product demo during a user test, and then ask the user what they think" |
+| Testar viabilidade de negócio = stakeholders afetados revisam a proposta e têm suas preocupações tratadas | INS | Cap. 56 | p.301 | "it’s important that they have a chance to review the proposal and ensure their concerns have been addressed" |
+| Discovery sprint: bloco de uma semana para problema ou risco grande | INS | Cap. 58 | p.307 | "a one-week time box of product discovery work, designed to tackle a substantial problem or risk" |
+| A semana sempre termina validando a solução com usuários reais; estrutura de cinco dias do livro *Sprint*, resumida | INS | Cap. 58 | p.308 | "You’ll always end your week by validating your potential solution with real users and customers." |
+| Funcionalidade entregue sem o resultado esperado = resultado não bem-sucedido, com o aprendizado apontado | INS | Cap. 60 | p.314 | "the result was not successful" |
+
 ## Convenções desta skill (sem base de livro)
 
 | Regra/ponto da skill | Livro | Capítulo/seção | Páginas | Citação curta |
@@ -193,6 +277,7 @@ Todos os limiares numéricos (40%, 15%, 5%, 3%, 80%, 6%, 2% e os demais) são al
 | Pergunta de decisão (*o que eu faria diferente com cada resultado?*) antes de rodar o experimento. Apoio parcial nos livros: MT p.42 (teste de importância da pergunta) e TBI p.79 (ramos da decisão); o formato da pergunta em si é convenção desta skill | convenção desta skill | Passo 4 do fluxo | sem página | |
 | Escolher UMA escala de evidência por análise e dizer qual é; não somar pontos de escalas diferentes | convenção desta skill | Seção de força da evidência | sem página | |
 | Gabarito de resposta em duas linhas e cartão de teste unificado (hipótese, decisão, experimento, métrica, critério absoluto, público, prazo) | convenção desta skill | SKILL.md | sem página | |
+| O protótipo de usuário não substitui o pretotipo de Savoia; "compra" sem cobrança e credenciais simuladas de Cagan não pontuam no *caliper*; revelar a simulação ao final e permitir recusa | convenção desta skill | `testes-de-produto-cagan.md` e `forca-da-evidencia.md` | sem página | |
 
 ## O que ficou de fora por falta de base no texto lido
 
@@ -201,3 +286,4 @@ Todos os limiares numéricos (40%, 15%, 5%, 3%, 80%, 6%, 2% e os demais) são al
 - Ordem exata das sequências de experimentos por tipo de negócio do TBI (setas em diagramas).
 - Conteúdo do Learning Card do TBI (p.67) e do Learning Card do VPD além do texto de p.487-488.
 - Pontuação numérica de importância no Assumptions Map e regra de desempate entre hipóteses do mesmo quadrante.
+- De *Inspired*: tamanho de amostra de qualquer teste, taxa-alvo de fake door, duração e critério estatístico dos testes quantitativos e quantas pessoas devem "puxar o cartão" (o texto lido não os traz). Concierge test (cap. 42), técnicas de ideação, viabilidade técnica em detalhe (cap. 55), hardware, as sete famílias de métrica e o uso da analítica para medir progresso ficaram para as skills `product-discovery-assistant` e `product-metrics`.

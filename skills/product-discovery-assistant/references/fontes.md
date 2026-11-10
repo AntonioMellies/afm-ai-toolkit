@@ -4,6 +4,7 @@ Rastreabilidade das regras atribuídas a livros em `SKILL.md` e nos arquivos de 
 
 * **Torres:** Teresa Torres, *Continuous Discovery Habits* (Product Talk, 2021).
 * **Osterwalder:** Alexander Osterwalder, Yves Pigneur, Greg Bernarda, Alan Smith, *Value Proposition Design* (Wiley, 2014). Livro muito visual: canvases, pôsteres e figuras **não foram lidos**; só o texto extraído.
+* **Cagan:** Marty Cagan, *Inspired: How to Create Tech Products Customers Love* (2ª ed., Wiley, 2018). Lido no PDF em inglês; numeração impressa = página do PDF menos 20. O PDF intercala citações destacadas na margem ("pull quotes") com o corpo do texto; as citações abaixo foram tiradas do corpo.
 * **Páginas** são as do marcador "PDF PAGINA N" do arquivo conferido, não a numeração impressa.
 * **Citações** são literais em inglês, com até 25 palavras. A explicação em português fica fora das aspas.
 * Limiares numéricos dos autores (15 a 20 ideias, três votos, dez minutos por mapa de suposições, uma ou duas horas de decisão) são propostas dos autores, sem base empírica independente: a skill os apresenta como "o livro propõe".
@@ -125,6 +126,103 @@ Rastreabilidade das regras atribuídas a livros em `SKILL.md` e nos arquivos de 
 | Examinar outliers (bellwether, desvio positivo) | Osterwalder | Identify Patterns | 285 | "Sometimes the best discoveries lie at the edges." |
 | Role-play da voz do cliente é teste interno antes do mercado | Osterwalder | Simulate the Voice of the Customer | 304 | "Stress-test your value proposition in the meeting room" |
 
+## Cagan: riscos, discovery e backlog validado
+
+| Regra ou ponto da skill | Livro | Capítulo ou seção | Páginas | Citação curta |
+|---|---|---|---|---|
+| Os quatro riscos (valor, usabilidade, viabilidade técnica, viabilidade de negócio) devem ser tratados antes de decidir construir | Cagan | Cap. 7 | 44 | "Risks are tackled up front, rather than at the end." |
+| Pergunta de valor | Cagan | Cap. 33 | 185 | "Will the customer buy this, or choose to use it?" |
+| Pergunta de viabilidade de negócio | Cagan | Cap. 33 | 185 | "Does this solution work for our business?" |
+| Não basta a opinião do PM sobre os riscos; é preciso evidência | Cagan | Cap. 33 | 185 | "it's not enough that it's just the product manager's opinion on these questions. We need to collect evidence." |
+| Cliente e executivo não dizem o que construir; cabe ao time garantir que a solução resolva o problema de fundo | Cagan | Cap. 33, princípio 1 | 186 | "it's our job to make sure the solution we deliver solves the underlying problem." |
+| Valor é o risco principal; sem valor central, usabilidade e desempenho não salvam | Cagan | Cap. 33, princípio 2 | 186 | "but without the core value, we really have nothing." |
+| Valor é o maior risco da maioria dos esforços; resolvê-lo antes dos demais | Cagan | Cap. 37, The Biggest Risk | 210 | "Get that risk resolved first and then you can focus on the other risks." |
+| Riscos de preço, canais e custos são reais, mas quase acadêmicos no início | Cagan | Cap. 37 | 209 | "while these are real risks, they are largely academic at this stage" |
+| Paridade de funcionalidades não basta para o cliente trocar | Cagan | Cap. 37 | 210 | "it must be demonstrably and substantially better." |
+| Times gastam tempo demais no canvas e adiam a descoberta da solução | Cagan | Cap. 37 | 208 | "many startup teams still spend too much time on the canvas" |
+| Viés do time por riscos confortáveis (tecnologia, usabilidade), em geral os mais fáceis | Cagan | Framing Techniques, visão geral | 196 | "they are generally the easier risks to tackle" |
+| Riscos de negócio por área (financeiro, desenvolvimento de negócios, marketing, vendas, jurídico, ético) | Cagan | Framing Techniques | 196 | "is this solution something our sales staff is equipped to sell?" |
+| Sem risco significativo, o time pode ir à entrega e aceitar errar de vez em quando | Cagan | Framing Techniques | 196 | "fully realizing there's a chance the team will occasionally be proved wrong." |
+| Validar onde há risco significativo ou divergência | Cagan | Framing Techniques | 197 | "situations in which we know there's a significant risk, or where members of the team disagree." |
+| Ética como risco adicional; buscar alternativas quando o risco for significativo | Cagan | Cap. 33, caixa Ethics | 189 | "When a significant ethical risk is identified, see if you can't find alternative solutions" |
+| Quem valida cada risco: clientes (valor e usabilidade), engenheiros (viabilidade técnica), stakeholders (negócio) | Cagan | Cap. 23 | 139 | "validate that solution with customers to ensure it has the necessary value and usability, with engineers to ensure its feasibility" |
+| Testes de viabilidade técnica são para os engenheiros | Cagan | Cap. 34 | 193 | "These techniques are designed for the engineers to address areas where they identify concerns." |
+| Viabilidade técnica validada em discovery, não no planejamento da sprint | Cagan | Cap. 33, princípio 8 | 188 | "If the first time your developers see an idea is at sprint planning, you have failed." |
+| Testar viabilidade de negócio é garantir que a solução funciona dentro das restrições de cada área | Cagan | Cap. 56 | 301 | "making sure that the product solution that your team is proposing will work within the constraints of each of these areas" |
+| Mostrar protótipos a marketing e vendas antes de construir quando a ideia os afeta | Cagan | Cap. 56 | 298 | "show them prototypes of what you are proposing before you consider building anything." |
+| O PM deve entender cada restrição relevante e agir para trabalhar dentro dela | Cagan | Cap. 56 | 298 | "It is your job to ensure that you understand each of the relevant constraints, and take positive action to work within them." |
+| Três formas de mostrar o protótipo (teste com usuário, demo, walkthrough) | Cagan | Cap. 56 | 301 | "three very different techniques for showing the prototype" |
+| Walkthrough com stakeholder não é venda nem teste nem esconder algo | Cagan | Cap. 56 | 302 | "you're not trying to test on them, and you're definitely not trying to hide anything from them." |
+| Discovery e delivery são contínuos e paralelos | Cagan | Cap. 8, Continuous Discovery and Delivery | 46 | "Discovery and delivery are our two main activities on a cross-functional product team, and they are both typically ongoing and in parallel." |
+| A saída de discovery é um backlog de produto validado | Cagan | Cap. 8, Product Discovery | 47 | "The output of product discovery is a validated product backlog." |
+| Requisitos servem para dizer a designers e engenheiros o que construir; no modelo criticado vêm antes de validar | Cagan | Cap. 6 | 36 | "Their purpose is to communicate with the designers and engineers what needs to be built." |
+| No modelo requisitos primeiro, o risco fica no fim e a validação com o cliente chega tarde | Cagan | Cap. 6, problema 9 | 40 | "all the risk is at the end, which means that customer validation happens way too late." |
+| Receita e custo de uma ideia não são conhecíveis antes da solução | Cagan | Cap. 6, problema 2 | 38 | "we have no clue about either of these. In fact, we can't know." |
+| Pelo menos metade das ideias não funciona; as boas pedem várias iterações (*time to money*) | Cagan | Cap. 6, duas verdades inconvenientes | 39, 131-132 | "The first truth is that at least half of our ideas are just not going to work." |
+| O MVP deve ser protótipo e não produto | Cagan | Cap. 8, Minimum Viable Product | 50 | "The MVP should be a prototype, not a product." |
+| Iteração de discovery: o livro propõe de 10 a 20 por semana e ao menos uma ordem de grandeza mais barata que uma de entrega | Cagan | Cap. 33, caixa Discovery Iterations | 190 | "teams competent in modern discovery techniques can generally test on the order of 10–20 iterations per week." |
+| Product/market fit: o menor produto real que atende às necessidades de um mercado específico | Cagan | Cap. 8 | 48 | "the smallest possible actual product that meets the needs of a specific market of customers" |
+
+## Cagan: enquadramento, sprint e programa de clientes
+
+| Regra ou ponto da skill | Livro | Capítulo ou seção | Páginas | Citação curta |
+|---|---|---|---|---|
+| Técnica de enquadramento por tamanho: opportunity assessment, customer letter, startup canvas | Cagan | Framing Techniques | 197 | "An opportunity assessment is designed for the vast majority of product work" |
+| Pessoas pensam em soluções; as soluções iniciais costumam não resolver o problema | Cagan | Framing Techniques, Problems versus Solutions | 198 | "more often than not, our initial solutions don't solve the problem" |
+| Opportunity assessment: quatro perguntas (objetivo, resultados-chave, problema do cliente, mercado-alvo) | Cagan | Cap. 35 | 199 | "What business objective is this work intended to address?" |
+| Definir a medida de sucesso desde o início | Cagan | Cap. 35 | 200 | "We want to know at the outset what the measure of success is." |
+| Tentar agradar a todos termina em não agradar a ninguém | Cagan | Cap. 35 | 200 | "So much product work fails because it tries to please everyone and ends up pleasing no one." |
+| As quatro perguntas são o mínimo e todo o time deve saber as respostas antes de começar | Cagan | Cap. 35 | 201 | "every member of your product team knows and understands the answers to these four questions" |
+| Customer letter não valida demanda com clientes reais | Cagan | Cap. 36 | 204 | "It's only validating demand or value with your colleagues rather than with real customers" |
+| Startup canvas para produto novo, não para melhorar produto existente | Cagan | Cap. 37 | 207 | "you're not being asked to improve an existing product, you're being asked to invent an entirely new product." |
+| Story map: stories do mapa vão para o backlog ao fim de discovery | Cagan | Cap. 38 | 214 | "the stories from the map move right into the product backlog." |
+| Discovery sprint: janela de uma semana para um problema ou risco substancial | Cagan | Cap. 58 | 307 | "a one-week time box of product discovery work, designed to tackle a substantial problem or risk your product team is facing" |
+| A discovery sprint termina validando com usuários e clientes reais | Cagan | Cap. 58 | 308 | "You'll always end your week by validating your potential solution with real users and customers." |
+| Quando recomendar a discovery sprint | Cagan | Cap. 58 | 309 | "when the team has something big and critically important and/or difficult to tackle" |
+| Customer discovery program não se aplica a feature ou projeto pequeno | Cagan | Cap. 39 | 217 | "you would not do this program for small efforts like features or minor projects." |
+| O programa é o melhor indicador antecedente de sucesso, segundo o autor | Cagan | Cap. 39 | 217 | "I consider it the single best leading indicator of future product success." |
+| Seis clientes de referência, para dar confiança e não significância estatística | Cagan | Cap. 39 | 218 | "the key number is six reference customers. This is not meant to be statistically significant" |
+| Não lançar antes das seis referências do mercado-alvo | Cagan | Cap. 39 | 218 | "to not launch a product in the marketplace until after they have those six reference customers." |
+| Recrutar de seis a oito para chegar a seis | Cagan | Cap. 39 | 219 | "we'll typically recruit between six and eight in case one or two turn out to be not a match or unavailable." |
+| Recrutar quem sente a dor e está quase desesperado por solução | Cagan | Cap. 39 | 219 | "We are looking for prospective customers that truly feel the pain and are near desperate for the solution we want to build." |
+| Buscar uma única solução que sirva aos seis, não somar os pedidos | Cagan | Cap. 39 | 220 | "Your job is to dive deep with each of the six customers and identify a single solution that works well for all six customers." |
+| No máximo oito participantes no programa | Cagan | Cap. 39 | 220 | "be the right set, and no more than eight." |
+| Teste de realidade da demanda: dificuldade de recrutar quatro ou cinco clientes | Cagan | Cap. 39 | 221 | "you're chasing a problem that isn't that important" |
+| Consumo: de 10 a 50 consumidores | Cagan | Cap. 39, Consumer Products | 222 | "a somewhat larger number of consumers (on the order of 10–50)" |
+| O programa não descobre o produto necessário; dá acesso ao mercado-alvo | Cagan | Cap. 39, Summary | 223 | "this technique is not designed to discover the necessary product" |
+| Teste de Sean Ellis (mais de 40% muito desapontados) como indício de product/market fit | Cagan | Cap. 39, Defining Product/Market Fit | 224 | "there's a good chance you're at product/market fit" |
+| B2B: seis referências num mercado-alvo bastam para declarar o fit daquele mercado | Cagan | Cap. 39 | 224 | "we will typically declare product/market fit for that market" |
+
+## Cagan: visão, estratégia, resultados e papéis
+
+| Regra ou ponto da skill | Livro | Capítulo ou seção | Páginas | Citação curta |
+|---|---|---|---|---|
+| A visão não é uma especificação; é peça persuasiva | Cagan | Cap. 24 | 143 | "the vision is not in any sense a spec." |
+| Estratégia de produto como sequência de produtos ou releases rumo à visão | Cagan | Cap. 24 | 144 | "The product strategy is our sequence of products or releases we plan to deliver on the path to realizing the product vision." |
+| Foco em um único mercado-alvo por vez | Cagan | Cap. 24 | 145 | "you decided to focus your product work on a single target market at a time" |
+| TTM como estimativa muito grosseira; TAM e GTM como as outras duas entradas para priorizar mercados | Cagan | Cap. 24, Prioritizing Markets | 147 | "a (very rough) estimation of how long it will take, referred to as time to market (TTM)." |
+| Apaixonar-se pelo problema, não pela solução | Cagan | Cap. 25, princípio 2 | 149-150 | "Fall in love with the problem, not with the solution." |
+| Vision pivot é sinal de organização fraca; discovery pivot é legítimo | Cagan | Cap. 25, princípio 8 | 150 | "This is usually called a vision pivot, but mostly it's a sign of a weak product organization." |
+| Resultados-chave medem resultado de negócio, não saída ou tarefa | Cagan | Cap. 28 | 159 | "Key results should be a measure of business results, not output or tasks." |
+| De um a três objetivos, com de um a três resultados-chave cada | Cagan | Cap. 28 | 160 | "one to three objectives, with one to three key results each is typical" |
+| O time propõe os resultados-chave dos objetivos que recebe | Cagan | Cap. 28 | 161 | "responsible for proposing the key results for each objective they've been assigned." |
+| O PM responde por o que o time vai construir | Cagan | Cap. 10 | 63 | "the product manager is responsible for what the product team will build." |
+| Engenheiros e designers querem evidência de que o pedido vale a pena | Cagan | Cap. 10 | 63 | "the engineers and designers want to see some evidence that what you're asking to build is truly worth building." |
+| A análise de dados não é delegável a um analista | Cagan | Cap. 10 | 64 | "the analysis of the data and understanding you get of your customer is not something you can delegate." |
+| Quatro conhecimentos do PM: cliente, dados, negócio e stakeholders, mercado | Cagan | Cap. 10 | 66 | "deep knowledge (1) of your customer, (2) of the data, (3) of your business and its stakeholders" |
+| Modo de falha: escalar toda decisão ao CEO | Cagan | Cap. 10 | 61 | "The product manager can escalate every issue and decision up to the CEO." |
+| PM e product owner devem ser a mesma pessoa em empresa de produto; PO é subconjunto | Cagan | Cap. 10, Product Manager versus Product Owner | 70 | "product owner responsibilities are a small subset of product management responsibilities" |
+| Designer testa com usuários toda semana | Cagan | Cap. 11 | 75 | "they build testing into their weekly cadence" |
+| Teste com usuário avalia valor, não só usabilidade | Cagan | Cap. 11 | 75 | "User testing is broader than usability testing." |
+| PM que passa só user stories de alto nível empurra o design para os engenheiros | Cagan | Cap. 11 | 76 | "provide very high-level user stories to the engineers." |
+| Incluir o designer desde a concepção de cada ideia | Cagan | Cap. 11 | 78 | "Include your designer from the very inception of every idea." |
+| PM conversa direto com os engenheiros todo dia útil | Cagan | Cap. 12 | 80 | "you need to engage directly with your engineers every workday." |
+| Dar latitude aos engenheiros sobre o como | Cagan | Cap. 12 | 81 | "You want to give your engineers as much latitude as possible in coming up with the best solution." |
+| O líder técnico tem responsabilidade explícita de ajudar a achar a solução | Cagan | Cap. 12 | 81-82 | "the tech lead also has an explicit responsibility to help the product manager and product designer discover a strong solution." |
+| Entrevistas: mínimo de duas a três horas por semana, toda semana | Cagan | Cap. 41 | 232 | "A bare minimum would be two to three hours of customer interviews per week, every week." |
+| Entrevistas: não buscar provar nada | Cagan | Cap. 41 | 232 | "You are not trying to prove anything during these interviews, one way or the other." |
+| Após as perguntas-chave, aproveitar a entrevista para testar ideias | Cagan | Cap. 41 | 233 | "We do that after we've learned the answers to these key questions" |
+
 ## Convenções desta skill (sem base nos livros lidos)
 
 * **Matriz CSD** (Certezas, Suposições, Dúvidas) e o uso dela antes de entrevistas.
@@ -133,13 +231,16 @@ Rastreabilidade das regras atribuídas a livros em `SKILL.md` e nos arquivos de 
 * **Positioning Statement** no modelo atribuído a Geoffrey Moore: atribuição **não conferida** nos livros lidos.
 * **Double Diamond**, **POL Probes** (nome e conjunto de técnicas) e **grid Poder × Interesse** de stakeholders: não lidos nos livros desta rodada.
 * As **cinco perguntas** do Modo Discovery do Zero e o roteiro de entrevista de 45 a 60 minutos.
-* **Proibição de simular o cliente:** regra desta skill, coerente com a ênfase dos dois livros em comportamento real, mas não enunciada neles com essas palavras. O livro de Osterwalder descreve um role-play interno (p.304-305), que não é evidência de clientes.
+* **Proibição de simular o cliente:** regra desta skill, coerente com a ênfase dos livros em comportamento real, mas não enunciada neles com essas palavras. O livro de Osterwalder descreve um role-play interno (p.304-305), que não é evidência de clientes.
 * Registrar o número de entrevistas que sustentam cada oportunidade na árvore.
+* Pedir que o usuário **registre quem avaliou cada risco e por quê** antes de dispensar a validação (Cagan aceita ir à entrega sem risco significativo, p.196-197): é postura mais estrita desta skill.
+* **Diagnóstico pelos quatro riscos antes de qualquer solução**, em ambos os modos: o livro defende tratar os riscos antes de construir; a obrigação de fazê-lo em todo pedido é desta skill.
+* Lista de pendências de especificação quando a skill `prd-writer` não está instalada (objetivo, problema, mercado-alvo, estado de evidência dos riscos).
 * **Mom Test:** citado por Osterwalder (p.268) como referência; as regras dele não são reproduzidas aqui e ficam com a skill `hypothesis-and-experiments`.
 
 ## Pontos não verificados
 
 * Perguntas-guia de jobs, pains e gains do customer profile (início de *Value Proposition Design*): fora do trecho lido.
 * Papéis de stakeholders B2B, earlyvangelists, perfil por contexto, as dez características e as dez perguntas de avaliação de uma proposta: constam do livro, mas não foram verificados em detalhe no texto.
-* *Inspired* (Cagan): o livro não estava disponível; nada dele foi usado.
+* *Inspired* (Cagan): foram lidos os capítulos 6 a 12, 24 e 25, 28, 33 a 39, 41, 56 e 58, mais as p.131-132 e 139 (capítulos 22 e 23, roadmaps). Liderança, equipes em escala, cultura e as demais técnicas de ideação, protótipo e teste não entraram na skill. As figuras (p.36 e p.47) não foram lidas.
 * Citações do livro de Osterwalder atravessam quebras de linha e, às vezes, perdem ligaduras na extração; a conferência automática compara o texto normalizado.

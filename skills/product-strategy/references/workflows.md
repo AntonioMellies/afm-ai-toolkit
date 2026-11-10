@@ -35,6 +35,7 @@ Volte à etapa 1 se a etapa 2 revelar suposições não validadas sobre o proces
 | Seção do PRD | Skill |
 |---|---|
 | Problema, público, resultado desejado, oportunidade-alvo, evidências | `product-discovery-assistant` |
+| Avaliação de oportunidade, especificação baseada em protótipo, roadmap por resultado | `prd-writer` |
 | Métrica de sucesso e meta | `product-metrics` |
 | Hipóteses em aberto e critério de teste | `hypothesis-and-experiments` |
 | Mercado-alvo e posicionamento | `market-competitive-analysis` |
