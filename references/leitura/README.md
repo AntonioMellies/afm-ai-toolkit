@@ -1,6 +1,6 @@
 # Registro de leitura das fontes (Passo 0)
 
-Evidência de que o conteúdo dos livros de `references/books/` foi lido no arquivo original, capítulo a capítulo, antes de qualquer artefato ser criado a partir deles. **Estado: rascunho, revisão humana por amostragem pendente.** Segunda rodada (2026-11-10): 10 livros de produto, estratégia, métricas, precificação e banco de dados; ver "Rodada 2" abaixo.
+Evidência de que o conteúdo dos livros de `references/books/` foi lido no arquivo original, capítulo a capítulo, antes de qualquer artefato ser criado a partir deles. **Estado: rascunho, revisão humana por amostragem pendente.** Segunda rodada (2026-11-10): 11 livros de produto, estratégia, métricas, precificação e banco de dados; ver "Rodada 2" abaixo.
 
 ## Como foi feito
 
@@ -25,7 +25,7 @@ Páginas citadas são as do PDF (`PDF p.N`). A extração não traz a numeraçã
 | Susan Fowler, *Microsserviços Prontos para a Produção* | português | 3 de 3 | [susan-fowler.md](susan-fowler.md) | `notas/susan-fowler__*.md` |
 | Martin, *Código Limpo* | português (PDF escaneado, lido por OCR) | 5 de 5 | [codigo-limpo.md](codigo-limpo.md) | `notas/codigo-limpo__*.md` |
 
-## Rodada 2: produto, estratégia, métricas, precificação e banco de dados
+## Rodada 2: produto, estratégia, métricas, precificação e banco de dados (11 livros)
 
 Livros em inglês, em PDF (cite `p.N`) ou EPUB/AZW3 convertido em seções (cite `s.N` + capítulo). Citações entre aspas são literais em inglês, até 25 palavras.
 
@@ -41,8 +41,9 @@ Livros em inglês, em PDF (cite `p.N`) ou EPUB/AZW3 convertido em seções (cite
 | Ramanujam e Tacke, *Monetizing Innovation* | EPUB | 4 de 4 | [monetizing-innovation.md](monetizing-innovation.md) |
 | Osterwalder et al., *Value Proposition Design* | PDF (muito visual, 107 páginas por OCR em inglês) | 8 de 8 | [value-proposition-design.md](value-proposition-design.md) |
 | Ambler e Sadalage, *Refactoring Databases* | EPUB | 7 de 7 | [refactoring-databases.md](refactoring-databases.md) |
+| Cagan, *Inspired* (2ª ed.) | PDF | 5 de 5 | [inspired-cagan.md](inspired-cagan.md) |
 
-**Não lido:** *Inspired*, de Cagan. O arquivo recebido tem 2 páginas de propaganda de site de download e não contém o livro; ficou fora do git. Sem ele, não há `prd-writer` nem regra atribuída a Cagan.
+**Inspired** (Cagan, 2ª ed., 370 páginas): o primeiro arquivo recebido tinha 2 páginas de propaganda e foi substituído pelo livro. Lido em 5 blocos (2026-11-10), registro em [inspired-cagan.md](inspired-cagan.md). Os capítulos de organização, liderança e cultura de times foram avaliados e, em geral, descartados por falta de critério acionável.
 
 **Limites de cobertura.** *Testing Business Ideas* e *Value Proposition Design* são livros de canvases, ícones e figuras: a extração traz só o texto. As escalas de custo, tempo e força da evidência dos cartões de experimento, os canvases e os diagramas **não foram lidos**. Em *Testing Business Ideas* as tabelas em colunas saem intercaladas no modo `-layout`; por isso a verificação de citações também consulta uma extração sem layout (`chunks_raw`). Em *Refactoring Databases* (2006, exemplos em Oracle/PL/SQL) o código aparece fragmentado em seções minúsculas e não foi usado.
 
@@ -53,7 +54,7 @@ Livros em inglês, em PDF (cite `p.N`) ou EPUB/AZW3 convertido em seções (cite
 | Evans, Fowler, GoF, Goodliffe | 356 | 329 (92%) |
 | Hard Parts, Arquitetura Limpa, Susan Fowler | 198 | 167 (84%) |
 | Código Limpo (OCR) | 65 | 60 (92%) |
-| Rodada 2 (10 livros, inglês) | 947 | 850 literais (90%); 61 só presentes na página citada, sobretudo *Testing Business Ideas* (colunas intercaladas); 36 não achadas |
+| Rodada 2 (11 livros, inglês) | 1093 | 991 literais (91%); 64 só presentes na página citada, sobretudo *Testing Business Ideas* (colunas intercaladas); 38 não achadas |
 
 As ausentes têm três causas conhecidas: (a) o PDF perde ligaduras `fi`/`fl` (`modi cações`) e o leitor corrigiu o texto; (b) paráfrases entre aspas, sobretudo em português sobre texto em inglês; (c) quebras de linha e aspas curvas. As causas (a) foram confirmadas em amostra. **Nenhuma citação ausente pode sustentar regra de skill sem conferência manual no PDF. Citação que só aparece "na página" (todas as palavras presentes, mas não em sequência) vale como indício, não como prova literal; o verificador `check_quotes.py` as conta à parte.** O Hard Parts tem a pior taxa (41 de 59).
 
