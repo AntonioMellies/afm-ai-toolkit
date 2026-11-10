@@ -1,6 +1,6 @@
 # Registro de leitura das fontes (Passo 0)
 
-Evidência de que o conteúdo dos livros de `references/books/` foi lido no arquivo original, capítulo a capítulo, antes de qualquer artefato ser criado a partir deles. **Estado: rascunho, revisão humana por amostragem pendente.**
+Evidência de que o conteúdo dos livros de `references/books/` foi lido no arquivo original, capítulo a capítulo, antes de qualquer artefato ser criado a partir deles. **Estado: rascunho, revisão humana por amostragem pendente.** Segunda rodada (2026-11-10): 10 livros de produto, estratégia, métricas, precificação e banco de dados; ver "Rodada 2" abaixo.
 
 ## Como foi feito
 
@@ -25,6 +25,27 @@ Páginas citadas são as do PDF (`PDF p.N`). A extração não traz a numeraçã
 | Susan Fowler, *Microsserviços Prontos para a Produção* | português | 3 de 3 | [susan-fowler.md](susan-fowler.md) | `notas/susan-fowler__*.md` |
 | Martin, *Código Limpo* | português (PDF escaneado, lido por OCR) | 5 de 5 | [codigo-limpo.md](codigo-limpo.md) | `notas/codigo-limpo__*.md` |
 
+## Rodada 2: produto, estratégia, métricas, precificação e banco de dados
+
+Livros em inglês, em PDF (cite `p.N`) ou EPUB/AZW3 convertido em seções (cite `s.N` + capítulo). Citações entre aspas são literais em inglês, até 25 palavras.
+
+| Livro | Formato | Blocos lidos | Registro |
+|---|---|---|---|
+| Torres, *Continuous Discovery Habits* | PDF | 2 de 2 | [torres-cdh.md](torres-cdh.md) |
+| Fitzpatrick, *The Mom Test* | PDF | 2 de 2 | [mom-test.md](mom-test.md) |
+| Bland e Osterwalder, *Testing Business Ideas* | PDF (muito visual) | 5 de 5 | [testing-business-ideas.md](testing-business-ideas.md) |
+| Savoia, *The Right It* | AZW3 → EPUB | 3 de 3 | [the-right-it.md](the-right-it.md) |
+| Croll e Yoskovitz, *Lean Analytics* | PDF | 5 de 5 | [lean-analytics.md](lean-analytics.md) |
+| Lafley e Martin, *Playing to Win* | PDF | 3 de 3 | [playing-to-win.md](playing-to-win.md) |
+| Moore, *Crossing the Chasm* (3ª ed.) | EPUB | 4 de 4 (um bloco é só propaganda) | [crossing-the-chasm.md](crossing-the-chasm.md) |
+| Ramanujam e Tacke, *Monetizing Innovation* | EPUB | 4 de 4 | [monetizing-innovation.md](monetizing-innovation.md) |
+| Osterwalder et al., *Value Proposition Design* | PDF (muito visual, 107 páginas por OCR em inglês) | 8 de 8 | [value-proposition-design.md](value-proposition-design.md) |
+| Ambler e Sadalage, *Refactoring Databases* | EPUB | 7 de 7 | [refactoring-databases.md](refactoring-databases.md) |
+
+**Não lido:** *Inspired*, de Cagan. O arquivo recebido tem 2 páginas de propaganda de site de download e não contém o livro; ficou fora do git. Sem ele, não há `prd-writer` nem regra atribuída a Cagan.
+
+**Limites de cobertura.** *Testing Business Ideas* e *Value Proposition Design* são livros de canvases, ícones e figuras: a extração traz só o texto. As escalas de custo, tempo e força da evidência dos cartões de experimento, os canvases e os diagramas **não foram lidos**. Em *Testing Business Ideas* as tabelas em colunas saem intercaladas no modo `-layout`; por isso a verificação de citações também consulta uma extração sem layout (`chunks_raw`). Em *Refactoring Databases* (2006, exemplos em Oracle/PL/SQL) o código aparece fragmentado em seções minúsculas e não foi usado.
+
 ## Verificação das citações
 
 | Conjunto | Citações no formato `"…" [p.N]` | Achadas literalmente no bloco |
@@ -32,8 +53,9 @@ Páginas citadas são as do PDF (`PDF p.N`). A extração não traz a numeraçã
 | Evans, Fowler, GoF, Goodliffe | 356 | 329 (92%) |
 | Hard Parts, Arquitetura Limpa, Susan Fowler | 198 | 167 (84%) |
 | Código Limpo (OCR) | 65 | 60 (92%) |
+| Rodada 2 (10 livros, inglês) | 947 | 850 literais (90%); 61 só presentes na página citada, sobretudo *Testing Business Ideas* (colunas intercaladas); 36 não achadas |
 
-As ausentes têm três causas conhecidas: (a) o PDF perde ligaduras `fi`/`fl` (`modi cações`) e o leitor corrigiu o texto; (b) paráfrases entre aspas, sobretudo em português sobre texto em inglês; (c) quebras de linha e aspas curvas. As causas (a) foram confirmadas em amostra. **Nenhuma citação ausente pode sustentar regra de skill sem conferência manual no PDF.** O Hard Parts tem a pior taxa (41 de 59).
+As ausentes têm três causas conhecidas: (a) o PDF perde ligaduras `fi`/`fl` (`modi cações`) e o leitor corrigiu o texto; (b) paráfrases entre aspas, sobretudo em português sobre texto em inglês; (c) quebras de linha e aspas curvas. As causas (a) foram confirmadas em amostra. **Nenhuma citação ausente pode sustentar regra de skill sem conferência manual no PDF. Citação que só aparece "na página" (todas as palavras presentes, mas não em sequência) vale como indício, não como prova literal; o verificador `check_quotes.py` as conta à parte.** O Hard Parts tem a pior taxa (41 de 59).
 
 ## OCR do Código Limpo
 

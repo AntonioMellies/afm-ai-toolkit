@@ -19,7 +19,7 @@ for book, files in books.items():
         text = open(os.path.join(notes, fn), encoding="utf-8").read()
         cov = re.search(r"Primeira página lida:\s*(\d+).*?Última página lida:\s*(\d+)", text, re.S)
         rng = f"{cov.group(1)}-{cov.group(2)}" if cov else "?"
-        lines.append(f"\n## Bloco {fn[:-3].split('__')[1]} (lido: PDF p.{rng})\n")
+        lines.append(f"\n## Bloco {fn[:-3].split('__')[1]} (lido: {rng}; p.=PDF, s.=seção do ebook)\n")
         # divide por secoes '### '
         parts = re.split(r"\n(?=### )", text)
         for part in parts:

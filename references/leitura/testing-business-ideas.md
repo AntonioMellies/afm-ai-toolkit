@@ -1,0 +1,222 @@
+# Registro de leitura (rascunho): testing-business-ideas
+
+Gerado por script a partir das notas dos leitores. Cada item: capítulo/seção, páginas (PDF), relevância avaliada e decisão sugerida. Revisão humana por amostragem pendente.
+
+Seções registradas: 67
+
+
+## Bloco 01_p001-073 (lido: 1-73; p.=PDF, s.=seção do ebook)
+
+- **Abertura, público e mapa do livro (PDF p.1-15, impr. I-XIII)**
+  - Relevância: hypothesis-and-experiments: MÉDIA, define a taxonomia de risco (desejabilidade/feasibility/viability) e a divisão Discovery vs Validation. product-discovery-assistant: MÉDIA, enquadramento geral.
+  - Decisão sugerida: usar em hypothesis-and-experiments (taxonomia de risco, fases Discovery/Validation).
+- **1.1 Design the Team (PDF p.16-29, impr. 1-13)**
+  - Relevância: hypothesis-and-experiments: BAIXA, contexto de organização; só o comportamento "Experiment Driven" e "Question Assumptions" importam. product-discovery-assistant: BAIXA a MÉDIA, time multifuncional e acesso a clientes.
+  - Decisão sugerida: descartar em grande parte; talvez uma linha sobre time dedicado/multifuncional e KPIs para decisão pivotar/perseverar/matar.
+- **1.2 Shape the Idea (PDF p.30-41, impr. 14-25)**
+  - Relevância: hypothesis-and-experiments: MÉDIA, os canvases são a base de onde as hipóteses saem. product-discovery-assistant: BAIXA, material conhecido.
+  - Decisão sugerida: usar apenas como referência de onde extrair hipóteses (blocos do BMC e do VPC).
+- **2.1 Hypothesize (PDF p.42-55, impr. 26-39)**
+  - Relevância: hypothesis-and-experiments: ALTA, formato "We believe", critérios testável/preciso/discreto, hipótese anti-viés, Assumptions Map e ordem dos tipos. product-discovery-assistant: ALTA, validação de hipóteses e priorização por evidência x importância.
+  - Decisão sugerida: usar em hypothesis-and-experiments (hipóteses e mapeamento de suposições) e em product-discovery-assistant (priorização de hipóteses).
+- **2.2 Experiment (PDF p.56-64, impr. 40-48)**
+  - Relevância: hypothesis-and-experiments: ALTA, estrutura do Test Card (hipótese, experimento, métrica, critério), critérios de bom experimento, vários experimentos por hipótese. product-discovery-assistant: ALTA, formato para validar hipóteses com critério de sucesso definido antes.
+  - Decisão sugerida: usar em hypothesis-and-experiments (modelo de Test Card e exemplos) e em product-discovery-assistant.
+- **2.3 Learn (PDF p.64-73, impr. 48-57)**
+  - Relevância: hypothesis-and-experiments: ALTA, escala de força de evidência, escala de confiança, regra de múltiplos experimentos com força crescente. product-discovery-assistant: ALTA, distinguir opinião de fato e dizer de fazer.
+  - Decisão sugerida: usar em hypothesis-and-experiments (evidência e confiança); usar em product-discovery-assistant (qualidade de evidência em entrevistas).
+
+## Bloco 02_p074-146 (lido: 74-146; p.=PDF, s.=seção do ebook)
+
+- **Decide: persevere, pivot, kill (PDF p.74-79; impr. 58-63)**
+  - Relevância: hypothesis-and-experiments: ALTA (vocabulário e ramificação pós-experimento: evidência clara vs. unclear, mesma hipótese com maior fidelidade vs. próxima hipótese). product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (regra "decidir após cada experimento" com 3 saídas + "unclear -> continuar testando").
+- **Manage: cerimônias de experimento (PDF p.82-97; impr. 66-81)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (cadência e agenda semanal "escolha ao menos 1 hipótese, priorize, taske" é útil; resto é processo de equipe). product-discovery-assistant: MÉDIA (revisão mensal pivotar/perseverar/matar e padrão de retro).
+  - Decisão sugerida: usar em hypothesis-and-experiments (reference curta "cadência de experimentação"); descartar detalhes de time-boxes por tipo de equipe, exceto resumo.
+- **Princípios de flow, ética e diretrizes de experimento (PDF p.98-103; impr. 82-87)**
+  - Relevância: hypothesis-and-experiments: ALTA para os 7 campos de guidelines e para a regra "limitar WIP, 1 experimento por vez em cada etapa"; MÉDIA para o quadro Kanban. product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (guardrails éticos e checklist das diretrizes de experimento; regra de WIP e "learn" em vez de "validate").
+- **Select an Experiment: como escolher (PDF p.108-113; impr. 92-97)**
+  - Relevância: hypothesis-and-experiments: ALTA (3 perguntas + 4 regras + faixas de custo/tempo + anatomia do cartão são o núcleo de "escolha e ordem de experimentos"). product-discovery-assistant: ALTA (barato-e-rápido primeiro; várias fontes para a mesma hipótese).
+  - Decisão sugerida: usar em hypothesis-and-experiments (SKILL: 3 perguntas e 4 regras; reference: faixas de custo/tempo, anatomia do cartão, tabela Discovery vs Validation).
+- **Sequências de experimentos por tipo de negócio (PDF p.114-115; impr. 98-99)**
+  - Relevância: hypothesis-and-experiments: ALTA (ordem/sequência de experimentos; mas a ordem exata dos diagramas não pôde ser lida; usar como sugestão "entrevista -> sinal de demanda -> protótipo -> entrega manual -> presale/MVP"). product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (reference de sequências, marcada "membros sem ordem confirmada"); não afirmar a ordem exata.
+- **Customer Interview (PDF p.122-129; impr. 106-113)**
+  - Relevância: hypothesis-and-experiments: ALTA (script, ranking 80%, papéis, 15-20 entrevistas, evidência fraca por ser "o que dizem"). product-discovery-assistant: ALTA (roteiro de entrevista, erros a evitar, debrief e affinity sort).
+  - Decisão sugerida: usar em product-discovery-assistant (roteiro/checklist de entrevista) e em hypothesis-and-experiments (cartão do experimento: força fraca, critério 80%).
+- **Partner & Supplier Interviews (PDF p.130; impr. 114)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (hipóteses de feasibility de parceiros). product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo, 1 linha).
+- **Expert Stakeholder Interviews (PDF p.131; impr. 115)**
+  - Relevância: hypothesis-and-experiments: BAIXA/MÉDIA (viabilidade interna, contexto corporativo). Decisão sugerida: usar em catálogo, 1 linha.
+  - Decisão sugerida: (não registrada)
+- **A Day in the Life (PDF p.132-137; impr. 116-121)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (passos e força fraca). product-discovery-assistant: ALTA (observar antes de perguntar; "say/do gap").
+  - Decisão sugerida: usar em product-discovery-assistant (observação como complemento da entrevista) e em catálogo.
+- **Discovery Survey (PDF p.138-141; impr. 122-125)**
+  - Relevância: hypothesis-and-experiments: MÉDIA. product-discovery-assistant: ALTA (perguntas abertas e dot voting de temas).
+  - Decisão sugerida: usar em product-discovery-assistant e catálogo.
+- **Search Trend Analysis (PDF p.142-145; impr. 126-129)**
+  - Relevância: hypothesis-and-experiments: ALTA (experimento de baixo custo e rápido para desirability de problema; limite explícito para nicho/B2B/offline). product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em catálogo de hypothesis-and-experiments com a ressalva "não serve para nicho/B2B/offline".
+- **Web Traffic Analysis (PDF p.146; impr. 130) [continua no próximo bloco]**
+  - Relevância: (não registrada)
+  - Decisão sugerida: ler no bloco seguinte.
+
+## Bloco 03_p147-219 (lido: 147-219; p.=PDF, s.=seção do ebook)
+
+- **Web Traffic Analysis (Discovery / Data Analysis) (PDF p.147-149, impr. 131-133) [continua do bloco anterior; a capa estava em p.146]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, catálogo de experimento de dados (nome, quando usar, força de evidência "comportamento, sem porquê"); product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (biblioteca de experimentos).
+- **Discussion Forums (Discovery / Data Analysis) (PDF p.150-153, impr. 134-137)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (força de evidência: workaround forte, feature request fraco); product-discovery-assistant: MÉDIA (técnica de descoberta de necessidades não atendidas sem entrevista).
+  - Decisão sugerida: usar em hypothesis-and-experiments; regra "feature request é evidência fraca, workaround é forte" também em product-discovery-assistant.
+- **Sales Force Feedback (Discovery / Data Analysis) (PDF p.154-157, impr. 138-141)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (experimento de dados + regra de força de evidência); product-discovery-assistant: MÉDIA (papéis de compra B2B para segmentar perguntas).
+  - Decisão sugerida: usar em hypothesis-and-experiments; papéis B2B como nota em product-discovery-assistant.
+- **Customer Support Analysis (Discovery / Data Analysis) (PDF p.158-161, impr. 142-145)**
+  - Relevância: hypothesis-and-experiments: MÉDIA; product-discovery-assistant: MÉDIA (fonte barata de sinal para melhorias em produto existente).
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Online Ad (Discovery / Interest Discovery) (PDF p.162-167, impr. 146-151)**
+  - Relevância: hypothesis-and-experiments: ALTA (experimento de interesse com critério de pausar, métricas, força "fraca, melhor com landing"); product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (biblioteca).
+- **Link Tracking (Discovery / Interest Discovery) (PDF p.168-171, impr. 152-155)**
+  - Relevância: hypothesis-and-experiments: MÉDIA; product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Feature Stub (Discovery / Interest Discovery) (PDF p.172-175, impr. 156-159)**
+  - Relevância: hypothesis-and-experiments: ALTA (critérios numéricos de sucesso, duração máxima, toggle); product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (candidato a regra).
+- **Variação: 404 Test e "Endless Meetings" (PDF p.176-177, impr. 160-161)**
+  - Relevância: hypothesis-and-experiments: ALTA (ordem/velocidade vs. risco; regra de quando NÃO usar 404 test); product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Email Campaign (Discovery / Interest Discovery) (PDF p.178-183, impr. 162-167)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (experimento + exemplo hipótese/experimento/evidência/insight/ação); product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments; o formato do caso (Hypothesis / Experiment / Evidence / Insights / Actions) como modelo de registro.
+- **Social Media Campaign (Discovery / Interest Discovery) (PDF p.184-187, impr. 168-171)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (hierarquia engajamento fraco < conversão forte); product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Referral Program (Discovery / Interest Discovery) (PDF p.188-191, impr. 172-175)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (critérios numéricos e funil de 3 taxas); product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **3D Print (Discovery / Discussion Prototypes) (PDF p.192-197, impr. 176-181)**
+  - Relevância: hypothesis-and-experiments: BAIXA-MÉDIA (princípio de subir fidelidade gradualmente); product-discovery-assistant: BAIXA (produto físico).
+  - Decisão sugerida: usar em hypothesis-and-experiments só a regra de ordem (baixa fidelidade antes de alta).
+- **Paper Prototype (Discovery / Discussion Prototypes) (PDF p.198-201, impr. 182-185)**
+  - Relevância: hypothesis-and-experiments: MÉDIA; product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo).
+- **Storyboard (Discovery / Discussion Prototypes) (PDF p.202-205, impr. 186-189)**
+  - Relevância: hypothesis-and-experiments: BAIXA-MÉDIA; product-discovery-assistant: MÉDIA (gerar 8-12 alternativas antes de convergir).
+  - Decisão sugerida: usar em hypothesis-and-experiments; a regra "8-12 alternativas" como dica em product-discovery-assistant.
+- **Data Sheet (Discovery / Discussion Prototypes) (PDF p.206-209, impr. 190-193)**
+  - Relevância: hypothesis-and-experiments: BAIXA; product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments só no catálogo (1 linha).
+- **Brochure (Discovery / Discussion Prototypes) (PDF p.210-215, impr. 194-199)**
+  - Relevância: hypothesis-and-experiments: ALTA (meta numérica definida antes, resultado vs. meta, segmentação como ação, falso negativo por baixa qualidade); product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (candidato a regra: risco de falso negativo por baixa fidelidade; definir meta antes).
+- **Explainer Video (Discovery / Discussion Prototypes) (PDF p.216-219, impr. 200-203) [pareamentos terminam em p.219; resto continua no próximo bloco se houver]**
+  - Relevância: hypothesis-and-experiments: MÉDIA; product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo).
+
+## Bloco 04_p220-292 (lido: 220-292; p.=PDF, s.=seção do ebook)
+
+- **Boomerang (PDF p.220-223) [Discovery / Discussion Prototypes; começa neste bloco]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, entrada da biblioteca de experimentos (aprender com produto alheio, métricas de tarefa); product-discovery-assistant: MÉDIA, técnica de descoberta de necessidades não atendidas.
+  - Decisão sugerida: usar em hypothesis-and-experiments (references de biblioteca de experimentos de descoberta).
+- **Pretend to Own (PDF p.224-229) [Discovery / Interaction Prototype]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, exemplo de evidência de engajamento fraca porém barata e de time box; product-discovery-assistant: BAIXA, aplica-se melhor a produto físico/pessoal.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo; exemplo de logbook com métrica).
+- **Product Box (PDF p.230-233) [Discovery / Preference & Prioritization]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, entrada do catálogo (preferência, evidência fraca); product-discovery-assistant: MÉDIA, dinâmica de grupo para refinar proposta de valor.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo).
+- **Speed Boat (PDF p.234-237) [Discovery / Preference & Prioritization]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, catálogo; severidade x urgência para priorizar; product-discovery-assistant: ALTA/MÉDIA, priorização de problemas de produto existente (MÉDIA).
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo) e como referência de priorização em product-discovery-assistant.
+- **Card Sorting (PDF p.238-241) [Discovery / Preference & Prioritization]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, catálogo; product-discovery-assistant: MÉDIA, ranking de jobs/pains/gains.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo).
+- **Buy a Feature (PDF p.242-245) [Discovery / Preference & Prioritization]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, catálogo e sequência (Buy a Feature, depois Feature Stub/Split Test); product-discovery-assistant: MÉDIA, priorização de backlog.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo; exemplo de "evidência fraca leva a evidência de ação").
+- **Divisor de seção 3.2 -> 3.3 "Validation" (PDF p.246-251)**
+  - Relevância: hypothesis-and-experiments: ALTA, taxonomia Discovery vs Validation e os tipos de experimento; product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (mapa de experimentos).
+- **Clickable Prototype (PDF p.252-255) [Validation / Interaction Prototype]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, catálogo; product-discovery-assistant: BAIXA/MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo).
+- **Single Feature MVP (PDF p.256-259) [Validation / Interaction Prototype]**
+  - Relevância: hypothesis-and-experiments: ALTA, regra de que alta fidelidade só depois de evidência de baixa fidelidade; métrica de custo de entrega; product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (ordem dos experimentos, força da evidência).
+- **Mash-Up (PDF p.260-263) [Validation / Interaction Prototype]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, catálogo e regra "só construir custom se o mash-up falhar ou não escalar"; product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo).
+- **Concierge (PDF p.264-269) [Validation / Interaction Prototype]**
+  - Relevância: hypothesis-and-experiments: ALTA, exemplo completo hipótese -> experimento -> evidência -> insight -> ação, e definição de lead time vs cycle time; product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo; caso como modelo de card; métricas de tempo).
+- **Life-Sized Prototype (PDF p.270-275) [Validation / Interaction Prototype]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, caso e regra de pré-evidência; product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo).
+- **Simple Landing Page (PDF p.276-281) [Validation / Call to Action]**
+  - Relevância: hypothesis-and-experiments: ALTA, benchmarks de conversão (2-5% média, 10-15% alvo de validação inicial), tráfego mínimo, mapeamento Value Map -> landing page, regras do que não fazer; product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (como candidatos a regra com a ressalva "regra de bolso dos autores").
+- **Crowdfunding (PDF p.282-285) [Validation / Call to Action]**
+  - Relevância: hypothesis-and-experiments: MÉDIA/ALTA, catálogo e força de evidência forte; product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo; força de evidência).
+- **Split Test (PDF p.286-289) [Validation / Call to Action]**
+  - Relevância: hypothesis-and-experiments: ALTA, regras de A/B (amostra pré-definida, não parar cedo, mudanças radicais no início, 50/50); product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (candidatos a regra).
+- **Presale (PDF p.290-292) [Validation / Call to Action; termina no fim do bloco]**
+  - Relevância: hypothesis-and-experiments: ALTA, escala de força da evidência por compromisso (e-mail fraco, pagamento forte); product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (catálogo; ordem de compromisso).
+
+## Bloco 05_p293-365 (lido: 293-365; p.=PDF, s.=seção do ebook)
+
+- **Pairings do Presale (continuação do cartão do bloco anterior) (PDF p.293) [continua do bloco anterior]**
+  - Relevância: hypothesis-and-experiments: MÉDIA, dá encadeamento de experimentos (antes/depois). product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments (tabela de sequências).
+- **Validation Survey (PDF p.294-299; impr. 278-283) EXPERIMENTO DE VALIDAÇÃO (categoria incerta: o cabeçalho extraído diz "VALIDATION / call to action", mas o índice a lista em interaction prototypes, p.364; ver Problemas)**
+  - Relevância: hypothesis-and-experiments: ALTA, critérios numéricos de sucesso (40%, 80%, >0%) e contexto de aplicação do Sean Ellis; product-discovery-assistant: MÉDIA, medir product/market fit e validar o Customer Profile.
+  - Decisão sugerida: usar em hypothesis-and-experiments (biblioteca de experimentos + critérios de sucesso) e product-discovery-assistant (validação de PMF).
+- **Wizard of Oz (PDF p.300-303; impr. 284-287) EXPERIMENTO DE VALIDAÇÃO / SIMULATION**
+  - Relevância: hypothesis-and-experiments: ALTA (diferença Wizard of Oz vs Concierge, métricas de evidência, pareamentos). product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Mock Sale (PDF p.304-309; impr. 288-293) EXPERIMENTO DE VALIDAÇÃO / SIMULATION**
+  - Relevância: hypothesis-and-experiments: ALTA (degraus de força da evidência: clique, e-mail, pagamento; regra de não perguntar preço; case). product-discovery-assistant: MÉDIA (testar disposição a pagar).
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Letter of Intent (LOI) (PDF p.310-315; impr. 294-299) EXPERIMENTO DE VALIDAÇÃO / SIMULATION**
+  - Relevância: hypothesis-and-experiments: ALTA (experimento B2B, regra de warm leads, discrepância declarado vs escrito). product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Pop-Up Store (PDF p.316-321; impr. 300-305) EXPERIMENTO DE VALIDAÇÃO / SIMULATION**
+  - Relevância: hypothesis-and-experiments: MÉDIA/ALTA (catálogo + exemplo de insight qualitativo vs quantitativo). product-discovery-assistant: MÉDIA (distinção symptom aware vs problem aware).
+  - Decisão sugerida: usar em hypothesis-and-experiments; considerar o insight "symptom aware" em product-discovery-assistant.
+- **Extreme Programming Spike (PDF p.322-325; impr. 306-309) EXPERIMENTO DE VALIDAÇÃO / SIMULATION**
+  - Relevância: hypothesis-and-experiments: MÉDIA (único experimento de feasibility do bloco, com time box e critério de aceitação definidos antes). product-discovery-assistant: BAIXA.
+  - Decisão sugerida: usar em hypothesis-and-experiments.
+- **Divisor da Seção 4 e abertura "Mindset" (PDF p.326-329; impr. 310-313)**
+  - Relevância: hypothesis-and-experiments: BAIXA. product-discovery-assistant: BAIXA.
+  - Decisão sugerida: descartar (divisória); a citação pode fundamentar o viés de confirmação.
+- **4.1 Avoid Experiment Pitfalls (PDF p.329-332; impr. 313-316)**
+  - Relevância: hypothesis-and-experiments: ALTA (checklist de armadilhas: dados incomparáveis, evidência fraca, viés de confirmação, poucos experimentos; mapeia diretamente em regras de qualidade). product-discovery-assistant: ALTA (viés de confirmação, hipóteses concorrentes, não terceirizar).
+  - Decisão sugerida: usar em hypothesis-and-experiments (regras anti-armadilha, checklist de revisão de um experimento) e product-discovery-assistant (ritual de síntese e viés).
+- **4.2 Lead Through Experimentation (PDF p.333-338; impr. 317-322)**
+  - Relevância: hypothesis-and-experiments: BAIXA/MÉDIA (princípio "evidence trumps opinion" e frases de revisão). product-discovery-assistant: MÉDIA (linguagem de facilitação, perguntas-modelo para o usuário, "strong opinions, weakly held").
+  - Decisão sugerida: usar parcialmente em product-discovery-assistant (perguntas de coaching); em hypothesis-and-experiments só o princípio "evidência prevalece sobre opinião".
+- **4.3 Organize for Experimentation (PDF p.339-343; impr. 323-327)**
+  - Relevância: hypothesis-and-experiments: BAIXA (contexto organizacional; os KPIs por estágio e a mistura desirability/feasibility/viability por estágio poderiam inspirar a ordem de experimentos, mas a tabela está truncada). product-discovery-assistant: BAIXA.
+  - Decisão sugerida: descartar o grosso (organizacional); possível referência à ideia de objetivos e KPIs por estágio, mas só após conferir a tabela no PDF.
+- **Divisor "Afterword" (PDF p.344-345; impr. 328-329)**
+  - Relevância: (não registrada)
+  - Decisão sugerida: (não registrada)
+- **Glossário (PDF p.346-348; impr. 330-332)**
+  - Relevância: hypothesis-and-experiments: MÉDIA (definições de referência e do vocabulário). product-discovery-assistant: MÉDIA.
+  - Decisão sugerida: usar para alinhar terminologia nas skills.
+- **Agradecimentos, autores, créditos, anúncios (PDF p.349-355; impr. 333-339)**
+  - Relevância: NENHUMA (exceto a lista de influências, que pode indicar fontes do método; [fora do livro] sem confirmar quem influenciou o quê).
+  - Decisão sugerida: descartar.
+- **Índice remissivo (PDF p.356-364; impr. 340-348)**
+  - Relevância: hypothesis-and-experiments: BAIXA, só como mapa (conferir cobertura dos blocos 1-4). product-discovery-assistant: NENHUMA.
+  - Decisão sugerida: descartar o texto; usar o mapa de páginas para checar se algum experimento do catálogo ficou sem nota nos blocos anteriores.
+- **Licença (PDF p.365; impr. n/a)**
+  - Relevância: (não registrada)
+  - Decisão sugerida: (não registrada)

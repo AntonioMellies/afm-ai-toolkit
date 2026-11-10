@@ -50,3 +50,13 @@ Seja detalhado em conceitos de ALTA relevância (regras, passos, catálogos, cri
 - Salve as notas no caminho indicado no seu prompt (arquivo .md novo; crie-o com Write).
 - Seu relatório final ao orquestrador deve ter no máximo 200 palavras: capítulos cobertos, 3-5 achados mais relevantes para os artefatos candidatos e qualquer problema. NÃO cole as notas no relatório.
 - Você só escreve o arquivo de notas. Não edite nenhum outro arquivo e não use a internet.
+
+## Adendo: livros em inglês e ebooks (rodada de produto, estratégia, métricas e banco de dados)
+
+Valem as regras acima, com estas diferenças:
+
+- **Idioma das citações.** Os livros desta rodada estão em inglês. Citações entre aspas são **literais, em inglês**, até 25 palavras. Paráfrases, conceitos e comentários ficam em português e **fora** de aspas. Nunca traduza dentro de aspas.
+- **Marcadores de ebook.** Os livros EPUB/AZW3 não têm páginas. O texto traz `=== SECAO N (arquivo): título ===`. Cite como `[s.N]` (N = número da seção do marcador) e registre o título da seção/capítulo; onde houver `## ` (título de capítulo dentro da seção), use-o. Nos PDFs continua `[p.N]`. A seção "Checklist de cobertura" usa "Primeira seção lida / Última seção lida" nesses livros (os verificadores leem os números).
+- **Páginas com pouco texto.** Páginas marcadas `[OCR]` vieram de OCR em inglês (psm 11) e têm ruído; páginas quase vazias são diagramas ou imagens. Registre em "Problemas de extração" quais blocos têm conteúdo visual não lido (canvas, tabelas desenhadas, ilustrações) e **não descreva o que não está no texto**.
+- **Auditoria.** Não há skill atual para auditar; em vez de "Auditoria da skill atual", registre ao fim "Candidatos a regra": procedimentos, critérios, escalas, fórmulas e armadilhas que um agente poderia aplicar, cada um com página/seção e citação literal.
+- O objetivo desta rodada é achar **regras específicas do livro** que um modelo sem o livro tenderia a errar ou omitir (ordem de passos, definições exatas, critérios numéricos, contra-exemplos), e separar isso de conhecimento geral.
