@@ -30,3 +30,17 @@ Modelo do agente: padrão do Claude Code; juiz: sonnet. Casos de 1 execução po
 - **Onde há ganho**, ele aparece quando a skill impõe uma regra que o comportamento padrão não segue (mensagem de commit sem listar arquivos, teste antes da correção, passos pequenos com testes). Amostra pequena: 3 execuções por braço e juiz automático, então é indício, não prova.
 - **Ativação.** O indicador `skill-fired` mostra que a skill nem sempre é acionada, sobretudo quando o pedido do usuário é direto ("só me dê o patch", "implemente"). Quando não é acionada, o resultado é igual ao baseline.
 - O critério do plano era cortar ou reduzir a `references/` a skill que não supera o baseline. Seis das nove skills ficaram em Δ ≈ 0 nestes casos. Elas foram mantidas porque (a) o conteúdo vem do texto dos livros ou das páginas oficiais, com rastreabilidade em `references/fontes.md`, e (b) os casos usados mediram conhecimento geral, não a regra específica de cada skill. Se a decisão for pelo corte, `security-backend-expert`, `domain-driven-design`, `production-ready-microservices-expert` (v1.1) e `frontend-implementation` são as candidatas, nessa ordem de evidência fraca.
+
+## Rodada 2 (2026-11-10): casos criados, ainda sem medição
+
+Foram criados 21 casos para `hypothesis-and-experiments`, `product-metrics`, `market-competitive-analysis`, `database-and-migrations-expert` e a atualização de `product-discovery-assistant`. Cada rubrica testa uma regra específica do livro que o modelo sem a skill tende a errar (critério de sucesso em número absoluto antes do teste; recusar entrevistas simuladas; churn com período misturado; sequência NOT NULL; gatilhos de sincronização sem ciclo; "o que teria que ser verdade" etc.).
+
+**Nenhum caso desta rodada foi medido.** A execução (3 execuções por braço) terminou com erro de API em todas as execuções (limite de uso de 5 horas atingido), então os `Δ` não existem e não há base para dizer que estas skills superam o baseline. Para medir depois que o limite renovar:
+
+```bash
+for s in hypothesis-and-experiments product-metrics market-competitive-analysis database-and-migrations-expert product-discovery-assistant; do
+  claude plugin eval . --case "$s-*" --runs 3 --ablation with-without -j 4 --trust-plugin --no-publish
+done
+```
+
+Pelo critério do repositório (AGENTS.md, passo 10), a skill que não superar o baseline vira `references/`. Esse corte ainda não foi decidido para estas cinco.

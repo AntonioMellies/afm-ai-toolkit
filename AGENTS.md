@@ -55,17 +55,21 @@ skills/frontend-implementation/                    ← React e Next.js para quem
 skills/designer-system-material-3/                 ← Material Design 3, Design Tokens
 skills/designer-system-material-3-enterprise-ux/   ← M3 para SaaS B2B, CRM, ERP
 skills/domain-driven-design/                       ← DDD estratégico e tático
-skills/product-discovery-assistant/                ← Product Discovery
+skills/database-and-migrations-expert/             ← Banco de dados em produção, migrações
+skills/product-discovery-assistant/                ← Product Discovery, árvore de oportunidades
+skills/hypothesis-and-experiments/                 ← Hipóteses, experimentos, evidência
+skills/product-metrics/                            ← Métricas de produto (Lean Analytics)
+skills/market-competitive-analysis/                ← Estratégia de mercado, mercado-alvo, preço
 skills/production-ready-microservices-expert/      ← Operação em produção
 ```
 
 Skills de grupo (orquestram as skills acima por afinidade, veja [Skills de grupo](#skills-de-grupo)):
 
 ```
-skills/backend-engineering/      ← DDD, Clean Architecture, Clean Code, refatoração, testes, depuração, Git, segurança, produção
+skills/backend-engineering/      ← DDD, Clean Architecture, Clean Code, refatoração, testes, depuração, Git, segurança, banco de dados, produção
 skills/software-architecture/    ← DDD estratégico, Hard Parts, Clean Architecture, produção
 skills/frontend-design-system/   ← Material Design 3, M3 Enterprise UX, Clean Code
-skills/product-strategy/         ← Product Discovery, DDD (linguagem), M3 Enterprise UX
+skills/product-strategy/         ← Product Discovery, hipóteses, métricas, mercado, DDD (linguagem), M3 Enterprise UX
 ```
 
 ## Formato obrigatório do SKILL.md

@@ -30,7 +30,11 @@ Biblioteca de **skills para agentes de IA**, independente de ferramenta. Todas a
 | Frontend Implementation | `skills/frontend-implementation/` | Implementar telas em React e Next.js (App Router), formulários, acessibilidade e testes de UI | Documentação oficial de React, Next.js, Testing Library e WCAG |
 | Material Design System Architect | `skills/designer-system-material-3/` | Projetar, auditar e gerar interfaces M3, tokens, componentes e Design Systems | [Material Design 3](https://m3.material.io), Google |
 | Material Enterprise SaaS Architect | `skills/designer-system-material-3-enterprise-ux/` | Projetar SaaS B2B, CRM, ERP e Backoffice com M3, produtividade e alta densidade | [Material Design 3](https://m3.material.io), Google |
-| Product Discovery Assistant | `skills/product-discovery-assistant/` | Conduzir discovery do zero ou achar oportunidades e melhorias em um projeto existente | [Product Manager Skills](https://github.com/deanpeters/Product-Manager-Skills), Dean Peters |
+| Database & Migrations Expert | `skills/database-and-migrations-expert/` | Evoluir o esquema de um banco em produção: período de transição, scripts de migração, ordem de deploy | *Refactoring Databases*, Scott W. Ambler e Pramod J. Sadalage |
+| Product Discovery Assistant | `skills/product-discovery-assistant/` | Conduzir discovery do zero ou achar oportunidades e melhorias em um projeto existente: árvore de oportunidades, entrevistas, Value Proposition Canvas | *Continuous Discovery Habits*, Teresa Torres; *Value Proposition Design*, Osterwalder et al.; [Product Manager Skills](https://github.com/deanpeters/Product-Manager-Skills), Dean Peters |
+| Hypothesis & Experiments | `skills/hypothesis-and-experiments/` | Hipótese testável, experimento, critério de sucesso definido antes, força da evidência, conversas com clientes | *Testing Business Ideas*, Bland e Osterwalder; *The Right It*, Alberto Savoia; *The Mom Test*, Rob Fitzpatrick |
+| Product Metrics | `skills/product-metrics/` | Métrica certa para o estágio e o modelo de negócio, churn, CAC, CLV, metas antes dos dados | *Lean Analytics*, Alistair Croll e Benjamin Yoskovitz |
+| Market & Competitive Analysis | `skills/market-competitive-analysis/` | Escolhas de estratégia, mercado-alvo e abismo, proposta de valor, precificação | *Playing to Win*, Lafley e Martin; *Crossing the Chasm*, Geoffrey Moore; *Monetizing Innovation*, Ramanujam e Tacke |
 
 ### Skills de grupo (por afinidade)
 
@@ -38,10 +42,10 @@ Pontos de entrada que coordenam as skills acima. Use quando a tarefa atravessa v
 
 | Skill de grupo | Pasta | Quando usar | Skills incluídas |
 |---|---|---|---|
-| Backend Engineering | `skills/backend-engineering/` | Feature de backend de ponta a ponta, revisão de serviço, refatoração de legado | `domain-driven-design`, `clean-architecture-expert`, `clean-code-expert`, `refactoring-expert`, `testing-tdd-expert`, `systematic-debugging`, `git-workflow-expert`, `security-backend-expert`, `production-ready-microservices-expert` |
+| Backend Engineering | `skills/backend-engineering/` | Feature de backend de ponta a ponta, revisão de serviço, refatoração de legado | `domain-driven-design`, `clean-architecture-expert`, `clean-code-expert`, `refactoring-expert`, `testing-tdd-expert`, `systematic-debugging`, `git-workflow-expert`, `security-backend-expert`, `database-and-migrations-expert`, `production-ready-microservices-expert` |
 | Software Architecture | `skills/software-architecture/` | Decompor monólito, desenhar sistema distribuído, revisar ou evoluir uma arquitetura | `domain-driven-design`, `architecture-hard-parts-expert`, `clean-architecture-expert`, `production-ready-microservices-expert` |
 | Frontend & Design System | `skills/frontend-design-system/` | Design System e telas, tela do token ao código, revisão de frontend, telas enterprise | `designer-system-material-3`, `designer-system-material-3-enterprise-ux`, `clean-code-expert` |
-| Product Strategy | `skills/product-strategy/` | Da ideia ao MVP, evolução de produto, validação com protótipo, PRD com domínio e fluxos | `product-discovery-assistant`, `domain-driven-design`, `designer-system-material-3-enterprise-ux` |
+| Product Strategy | `skills/product-strategy/` | Da ideia ao MVP, evolução de produto, validação com protótipo, escolha de mercado e métrica, PRD com domínio e fluxos | `product-discovery-assistant`, `hypothesis-and-experiments`, `product-metrics`, `market-competitive-analysis`, `domain-driven-design`, `designer-system-material-3-enterprise-ux` |
 
 Instale o grupo **junto com as skills incluídas**. Os scripts do repositório e os plugins já fazem isso; no `npx skills`, repita `--skill` para cada uma (veja [Como instalar](#como-instalar)).
 
